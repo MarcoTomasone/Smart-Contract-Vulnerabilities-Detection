@@ -605,6 +605,10 @@ INPUT .\Thesis.lof
 INPUT Thesis.lof
 INPUT Thesis.lof
 OUTPUT Thesis.lof
+INPUT .\Thesis.bbl
+INPUT Thesis.bbl
+INPUT .\Thesis.bbl
+INPUT Thesis.bbl
 INPUT Thesis.aux
 INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
