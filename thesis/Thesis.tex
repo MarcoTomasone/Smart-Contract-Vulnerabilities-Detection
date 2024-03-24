@@ -1,0 +1,87 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{newlfont,wrapfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{xspace}
+\usepackage{float}
+\usepackage{indentfirst}
+\usepackage{url}
+
+\textwidth=450pt\oddsidemargin=0pt
+\newenvironment{dedication}
+{%\clearpage           % we want a new page          %% I commented this
+\thispagestyle{empty}% no header and footer
+\vspace*{\stretch{1}}% some space at the top
+\itshape             % the text is in italics
+\raggedleft          % flush to the right margin
+}
+{\par % end the paragraph
+\vspace{\stretch{3}} % space at bottom is three times that at the top
+\clearpage           % finish off the page
+}
+
+\lstset{% This applies to ALL lstlisting
+  basicstyle=\small\ttfamily\color{black},%
+  breaklines=true,%
+  numbers=none,
+  moredelim=[s][\color{green!50!black}\ttfamily]{'}{'},% single quotes in green
+}%
+
+
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+    {{\Large{\textsc{Alma Mater Studiorum $\cdot$ Universit\`a di
+    Bologna}}}} \rule[0.1cm]{15.8cm}{0.1mm}
+    \rule[0.5cm]{15.8cm}{0.6mm}
+    {\small{\bf SCUOLA DI SCIENZE\\
+    Corso di Laurea Magistrale in Informatica }}
+    \end{center}
+    \vspace{15mm}
+    \begin{center}
+    {\LARGE{\bf Machine Learning}}\\
+    \vspace{3mm}
+    {\LARGE{\bf Vulneralibities Detection in SmartContracts }}\\
+    \vspace{3mm}
+    {\LARGE{\bf ..... }}\\
+    \end{center}
+    \vspace{40mm}
+    \par
+    \noindent
+    \begin{minipage}[t]{0.47\textwidth}
+    {\large{\bf Relatore:\\
+    Chiar.mo Prof.\\
+    Stefano Ferretti\\
+    \\
+    Correlatore:\\
+    Dott. Stefano Pio Zingaro\\
+    Dott. Saverio Giallorenzo\\
+    }}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.47\textwidth}\raggedleft
+    {\large{\bf Presentata da:\\
+    Marco Benito Tomasone}}
+    \end{minipage}
+    \vspace{20mm}
+    \begin{center}
+    {\large{\bf Sessione I\\%inserire il numero della sessione in cui ci si laurea
+    Anno Accademico 2023/2024}}%inserire l'anno accademico a cui si è iscritti
+    \end{center}
+    \end{titlepage}
+
+    \begin{dedication}
+        Alle nonne
+    \end{dedication}
+    \tableofcontents
+    \listoffigures
+\chapter{Introduzione}
+\chapter{Related Works}
+
+\end{document}
