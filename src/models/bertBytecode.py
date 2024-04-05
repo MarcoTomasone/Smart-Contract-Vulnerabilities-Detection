@@ -1,4 +1,5 @@
 # Importing stock ml libraries
+import re
 import numpy as np
 import pandas as pd
 from sklearn import metrics
@@ -11,14 +12,15 @@ from torch import cuda
 
 #region constants
 # Defining some key variables that will be used later on in the training
-MAX_LEN = 600
-TRAIN_BATCH_SIZE = 16
+MAX_LEN = 512
+TRAIN_BATCH_SIZE = 8
 VALID_BATCH_SIZE = 16
-EPOCHS = 10
+EPOCHS = 20
 LEARNING_RATE = 1e-05
 NUM_CLASSES = 6
 TOKENIZER = BertTokenizer.from_pretrained('bert-base-uncased')
 DEVICE = 'cuda' if cuda.is_available() else 'cpu'
+print(DEVICE)
 #endregion
 
 #region functions 
@@ -49,9 +51,9 @@ def transformData(example):
    return data
 
 def readAndPreprocessDataset():
-  train_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='train', ignore_verifications=True).map(transformData)
-  test_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='test', ignore_verifications=True).map(transformData)
-  val_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='validation', ignore_verifications=True).map(transformData)
+  train_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='train', cache_dir="./cache", ignore_verifications=True).map(transformData)
+  test_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='test', cache_dir="./cache",  ignore_verifications=True).map(transformData)
+  val_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='validation', cache_dir="./cache",  ignore_verifications=True).map(transformData)
   return train_set, test_set, val_set
 #endregion
 #region dataset
@@ -60,8 +62,8 @@ class CustomDataset(Dataset):
     def __init__(self, dataframe, tokenizer, max_len):
         self.tokenizer = tokenizer
         self.data = dataframe
-        self.sourceCode = dataframe.source_code
-        self.targets = self.data.label
+        self.sourceCode = dataframe["source_code"]
+        self.targets =  dataframe["label"]
         self.max_len = max_len
 
     def __len__(self):
@@ -96,7 +98,7 @@ class CustomDataset(Dataset):
 class BERTClass(torch.nn.Module):
     def __init__(self):
         super(BERTClass, self).__init__()
-        self.l1 = transformers.BertModel.from_pretrained('bert-base-uncased')
+        self.l1 = transformers.BertModel.from_pretrained('bert-base-uncased', cache_dir="./cache")
         self.l2 = torch.nn.Dropout(0.3)
         self.l3 = torch.nn.Linear(768, NUM_CLASSES)
     
