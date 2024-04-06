@@ -1,0 +1,25 @@
+\documentclass[../../Thesis.tex]{subfiles}
+\usepackage[italian]{babel}
+
+\begin{document}
+\chapter{Dataset}
+Il dataset \cite{rossini2022slitherauditedcontracts} utilizzato in questo progetto è un dataset disponibile pubblicamente sulla piattaforma HuggingFace una delle più importanti piattaforme per il Natural Language Processing. HF è un'infrastruttura open-source che fornisce accesso a una vasta gamma di modelli di deep learning pre-addestrati, tra cui alcuni dei più avanzati nel campo del NLP.
+Questo dataset contiene 106.474 smart contracts scritti in linguaggio Solidity un linguaggio di programmazione Touring completo divenuto lo standard per la scrittura di smart contracts su Ethereum. Ogni elemento nel dataset è composto da quattro elementi:
+\begin{itemize}
+    \item  \textbf{Address}: l'indirizzo del contratto
+    \item  \textbf{SourceCode}: il codice sorgente del contratto
+    \item  \textbf{ByteCode}: il codice bytecode del contratto
+    \item  \textbf{Slither}: il risultato dell'analisi statica del contratto con Slither, è un array che contiene valori che vanno da 1 a 5. 
+\end{itemize}
+\subsection{Vulnerabilità}
+In questo lavoro sono state prese in considerazione cinque classi di vulnerabilità diverse: 
+\begin{itemize}
+    \item Access-Control
+    \item Arithmetic
+    \item Other
+    \item Reentrancy
+    \item Safe
+    \item Unchecked-Calls
+\end{itemize}
+    
+\end{document}
