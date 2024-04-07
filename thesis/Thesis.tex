@@ -14,6 +14,8 @@
 \usepackage{indentfirst}
 \usepackage{url}
 
+\input{solidity-highlighting.tex}	%Solidoty highlighting
+
 \textwidth=450pt\oddsidemargin=0pt
 \newenvironment{dedication}
 {%\clearpage           % we want a new page          %% I commented this
@@ -83,10 +85,11 @@
     \tableofcontents
     \listoffigures
 \chapter{Introduzione}
+Nel mondo delle tecnologie blockchain, gli smart contracts hanno guadagnato popolarità grazie alla loro abilità di automatizzare e far rispettare gli accordi tra due soggetti senza la necessità di un intermediario. 
 Negli ultimi anni una delle tecnologie che sono spopolate e sono arrivate sulla bocca di tutti sono sicuramente la Blockchain e gli SmartContracts. Questi ultimi sono dei contratti digitali che permettono di eseguire delle operazioni in modo automatico e trasparente. Questi contratti sono scritti in un linguaggio di programmazione e vengono eseguiti su una macchina virtuale. Una delle principali caratteristiche peculiari degli SmartContracts è sicuramente la loro immutabilità, difatti una volta essere stati deployati sulla blockchain questi non possono più essere modificati.  Uno dei problemi principali degli SmartContracts è la sicurezza. Infatti, essendo dei contratti che vengono eseguiti in modo automatico, è possibile che ci siano delle vulnerabilità che possono essere sfruttate da malintenzionati. In questo lavoro di tesi verrà presentato un metodo per rilevare le vulnerabilità presenti negli SmartContracts. 
 \chapter{Related Works}
 In prima battuta questo lavoro è stato possibile grazie ad un lavoro precedente che ha permesso di creare un dataset di SmartContracts \cite{RossiniPaper1}. Questo dataset è stato creato da un gruppo di ricercatori dell'Università di Bologna. Questo primo lavoro su questo datataset ha principalmente impiegato delle tecniche di Deep Learning utilizzando delle reti neurali convoluzionali per la rilevazione delle vulnerabilità trasformando in codice Bytecode dei contratti in delle immagini RGB. Questo lavoro ha  come risultato principale la dimostrazione che utilizzando delle reti neurali convoluzionali è possibile rilevare le vulnerabilità presenti negli SmartContracts con delle buone performance, i migliori risultati si attestano con un MicroF1 score del 0.83\% e mostrano come i migliori risultati siano dati da delle resnet con delle convoluzioni unidimensionali. Successivamente, gli stessi autori hanno pubblicato una seconda analisi effettuata sul dataset utilizzando nuovi classificatori come CodeNet, SvinV2-T e Inception, mostrando come i migliori risultati  continuino ad essere quelli forniti da reti convoluzionali unidimensionali \cite{RossiniPaper2}.
-
+\subfile{Chapters/Dataset/Dataset.tex}
 \chapter{Metodologia}
 \section{BERT}
 Il modello BERT (Bidirectional Encoder Representations from Transformers) rappresenta un pilastro fondamentale nel campo del Natural Language Processing (NLP), grazie alla sua capacità di comprensione del contesto delle parole all'interno di una frase o di un testo più ampio. Questo modello, sviluppato da Google, si basa sull'architettura dei transformer, una classe di modelli neurali che ha dimostrato notevole successo nell'analisi del linguaggio naturale.

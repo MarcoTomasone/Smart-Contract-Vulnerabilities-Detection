@@ -6,45 +6,45 @@ The style file: plain.bst
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 Database file #1: Bibliography.bib
 Warning--I didn't find a database entry for "RossiniPaper2"
-You've used 2 entries,
+You've used 3 entries,
             2118 wiz_defined-function locations,
-            510 strings with 4437 characters,
-and the built_in function-call counts, 651 in all, are:
-= -- 58
-> -- 25
+            514 strings with 4565 characters,
+and the built_in function-call counts, 861 in all, are:
+= -- 78
+> -- 32
 < -- 1
-+ -- 10
-- -- 8
-* -- 34
-:= -- 104
-add.period$ -- 5
-call.type$ -- 2
-change.case$ -- 10
++ -- 14
+- -- 10
+* -- 40
+:= -- 139
+add.period$ -- 8
+call.type$ -- 3
+change.case$ -- 14
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 28
-empty$ -- 61
-format.name$ -- 8
-if$ -- 145
+cite$ -- 3
+duplicate$ -- 35
+empty$ -- 83
+format.name$ -- 10
+if$ -- 191
 int.to.chr$ -- 0
-int.to.str$ -- 2
+int.to.str$ -- 3
 missing$ -- 1
-newline$ -- 12
-num.names$ -- 4
-pop$ -- 18
+newline$ -- 17
+num.names$ -- 6
+pop$ -- 26
 preamble$ -- 1
-purify$ -- 8
+purify$ -- 11
 quote$ -- 0
-skip$ -- 25
+skip$ -- 32
 stack$ -- 0
-substring$ -- 30
-swap$ -- 10
+substring$ -- 36
+swap$ -- 11
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 8
+type$ -- 12
 warning$ -- 0
-while$ -- 6
-width$ -- 3
-write$ -- 21
+while$ -- 8
+width$ -- 4
+write$ -- 31
 (There was 1 warning)

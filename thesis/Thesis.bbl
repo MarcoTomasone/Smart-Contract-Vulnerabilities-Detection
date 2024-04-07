@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{reentrancy-historical}
+pcaversaccio.
+\newblock A historical collection of reentrancy attacks.
+\newblock https://github.com/pcaversaccio/reentrancy-attacks, 2023.
+
 \bibitem{rossini2022slitherauditedcontracts}
 Martina Rossini.
 \newblock Slither audited smart contracts dataset, 2022.

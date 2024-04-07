@@ -560,6 +560,12 @@ INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
 INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
 INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
 INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
+INPUT .\solidity-highlighting.tex
+INPUT solidity-highlighting.tex
+INPUT .\solidity-highlighting.tex
+INPUT solidity-highlighting.tex
+INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
+INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex\latex\xcolor\xcolor.sty
 INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
 INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
@@ -603,6 +609,9 @@ INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 OUTPUT c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Dataset\Dataset.pdf
 INPUT C:\Users\tomas\AppData\Local\MiKTeX\pdftex\config\pdftex.map
+INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
+INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt12.tfm
 INPUT c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Dataset\Dataset.aux
 INPUT C:\Users\tomas\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\tomas\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
@@ -610,3 +619,7 @@ INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
+INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
+INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt12.pfb
+INPUT C:\Users\tomas\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt12.pfb

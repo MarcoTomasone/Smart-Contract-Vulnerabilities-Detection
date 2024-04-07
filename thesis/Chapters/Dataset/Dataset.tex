@@ -21,5 +21,48 @@ In questo lavoro sono state prese in considerazione cinque classi di vulnerabili
     \item Safe
     \item Unchecked-Calls
 \end{itemize}
-    
+
+\subsubsection{Access-Control}
+
+\subsubsection{Arithmetic}
+\subsubsection{Other}
+\subsubsection{Reentrancy}
+La Reentrancy è una classe di vulnerabilità presente negli SmartContracts che permette ad un malintenzionato di rientrare nel contratto in modo inaspettato durante l'esecuzione della funzione originale. Questa vulnerabilità può essere utilizzata per rubare fondi e rappresenta la vulnerabilità più impattante dal punto di vista di perdita di fondi a seguito di attacchi.
+Il caso più famoso di questo attacco che lo ha anche reso noto è il caso di The DAO, un contratto che ha subito un attacco di reentrancy che ha portato alla perdita circa sessanta milioni di dollari in Ether, circa il 14\% di tutti gli Ether in circolazione all'epoca. Nonostante dal 2016 ad oggi siano stati fatti numerosi progressi nelle tecnologie e nelle misure di sicurezza questa vulnerabilità rimane comunque una delle minacce più pericolose per gli SmartContracts, poichè negli anni questo tipo di attacchi si è ripresentato notevole frequenza \cite{reentrancy-historical}. Un attacco di reentrancy può essere classificato in tre classi differenti:
+\begin{itemize}
+    \item \textbf{Mono-Function}: la funzione vulnerabile è la stesa che viene chiamata più volte dall'attaccante, prima del completamento delle sue invocazioni precedenti. Questo è il caso più semplice di attacco reentrancy e di conseguenza il più facile da individuare.
+    \item \textbf{Cross-Function}: questo caso è molto simile al caso di mono-function Reentrancy, ma in questo caso la funzione che viene chiamata dall'attaccante non è la stessa che fa la chiamata esterna. Questo tipo di attacco è possibile solo quando una funzione vulnerabile condivide il suo stato con un'altra funzione, risultando in un una situazione fortemente vantaggiosa per l'attaccante. 
+    \item \textbf{Cross-Contract}: questo tipo di attacco prende piede quando lo stato di un contratto è invocato in un altro contratto prima che viene correttamente aggiornato. Avviene solitamente quando più contratti condividono una variabile di stato comune e uno di loro la aggiorna in modo non sicuro. 
+\end{itemize}
+Mostreremo adesso alcuni esempi di contratti vulnerabili a questo tipo di attacco. 
+\begin{lstlisting}[language=Solidity]
+// UNSECURE
+function withdraw() external {
+    uint256 amount = balances[msg.sender];
+    (bool success,) = msg.sender.call{value: balances[msg.sender]}("");
+    require(success);
+    balances[msg.sender] = 0;
+}
+\end{lstlisting}
+In questo caso, il balance dell'utente viene aggiornato solo dopo che la chiamata esterna è stata completata. Questo permette all'attaccante di chiamare la funzione withdraw più volte prima che il balance venga settato a zero, permettendo all'attaccante di rubare fondi allo smart contract.
+Una versione più complessa dello stesso processo è il caso cross function, di cui mostriamo un esempio:
+\begin{lstlisting}[language=Solidity]
+    // UNSECURE
+function transfer(address to, uint amount) external {
+  if (balances[msg.sender] >= amount) {
+    balances[to] += amount;
+    balances[msg.sender] -= amount;
+  }
+}
+
+function withdraw() external {
+  uint256 amount = balances[msg.sender];
+  (bool success,) = msg.sender.call{value: balances[msg.sender]}("");
+  require(success);
+  balances[msg.sender] = 0;
+}
+\end{lstlisting}
+In questo esempio, l'attaccante può effettuare un attacco di tipo reentrancy avendo una avendo una funzione che chiama \texttt{transfer()} per trasferire fondi spesi prima che il bilancio sia settato a zero dalla funzione \texttt{withdraw()}.
+\subsubsection{Unchecked-Calls}
+
 \end{document}

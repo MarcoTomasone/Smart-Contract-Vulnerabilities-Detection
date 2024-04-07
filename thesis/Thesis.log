@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  6 APR 2024 18:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  7 APR 2024 22:24
 entering extended mode
 **c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Thesis.tex
 (c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Thesis.tex
@@ -390,29 +390,29 @@ Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 ) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+) (solidity-highlighting.tex) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count306
 \l__pdf_internal_box=\box68
 ) (Thesis.aux)
 \openout1 = `Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Info: Redefining \it@ocap on input line 38.
-LaTeX Info: Redefining \it@ccap on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Info: Redefining \it@ocap on input line 40.
+LaTeX Info: Redefining \it@ccap on input line 40.
 
 
 File italian.ldf warning: 
@@ -420,7 +420,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 38.
+italian.ldf    on input line 40.
 
 (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -442,24 +442,24 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 \c@lstlisting=\count313
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 42.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 44.
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 59--67
+Underfull \hbox (badness 10000) in paragraph at lines 61--69
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--67
+Underfull \hbox (badness 10000) in paragraph at lines 61--69
 
  []
 
@@ -485,15 +485,27 @@ Capitolo 1.
 ]
 Capitolo 2.
 
-LaTeX Warning: Citation `RossiniPaper2' on page 5 undefined on input line 88.
+LaTeX Warning: Citation `RossiniPaper2' on page 5 undefined on input line 91.
 
-[5
+(Chapters/Dataset/Dataset.tex [5
 
 ]
 Capitolo 3.
 [6
 
-] (Thesis.bbl [7]) [8
+]
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 40.
+ [7]) [8]
+Capitolo 4.
+[9
+
+] (Thesis.bbl [10]
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
+[]\OT1/cmr/m/n/12 pcaversaccio.  A hi-sto-ri-cal col-lec-tion of reen-tran-cy at-tacks.
+ []
+
+) [11
 
 ] (Thesis.aux)
 
@@ -501,17 +513,17 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 15914 strings out of 478927
- 305154 string characters out of 2852536
- 592213 words of memory out of 3000000
- 33464 multiletter control sequences out of 15000+600000
- 414246 words of font info for 70 fonts, out of 8000000 for 9000
+ 16457 strings out of 478927
+ 310790 string characters out of 2852536
+ 662162 words of memory out of 3000000
+ 33995 multiletter control sequences out of 15000+600000
+ 414920 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,5n,108p,1290b,263s stack positions out of 5000i,500n,10000p,200000b,80000s
-<C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Thesis.pdf (9 pages, 101773 bytes).
+ 102i,5n,108p,1290b,1497s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Thesis.pdf (12 pages, 134061 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
+ 89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

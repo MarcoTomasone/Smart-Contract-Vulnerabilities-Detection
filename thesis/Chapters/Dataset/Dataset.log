@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  6 APR 2024 18:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  7 APR 2024 22:17
 entering extended mode
 **c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Dataset/Dataset.tex
 (c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Dataset/Dataset.tex
@@ -393,7 +393,7 @@ Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 ) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-))) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+) (solidity-highlighting.tex))) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count306
 \l__pdf_internal_box=\box68
@@ -450,26 +450,32 @@ Capitolo 1.
 
 LaTeX Warning: Citation `rossini2022slitherauditedcontracts' on page 1 undefined on input line 6.
 
+
+LaTeX Warning: Citation `reentrancy-historical' on page 1 undefined on input line 31.
+
 [1
 
 
-{C:/Users/tomas/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Dataset\Dataset.aux)
+{C:/Users/tomas/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 40.
+ [2] [3] (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Dataset\Dataset.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 15832 strings out of 478927
- 304410 string characters out of 2852536
- 590368 words of memory out of 3000000
- 33411 multiletter control sequences out of 15000+600000
- 405583 words of font info for 34 fonts, out of 8000000 for 9000
+ 16365 strings out of 478927
+ 309671 string characters out of 2852536
+ 661610 words of memory out of 3000000
+ 33939 multiletter control sequences out of 15000+600000
+ 406220 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,5n,125p,547b,265s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Dataset\Dataset.pdf (1 page, 34319 bytes).
+ 122i,5n,125p,1197b,1429s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Dataset\Dataset.pdf (3 pages, 66312 bytes).
 PDF statistics:
- 24 PDF objects out of 1000 (max. 8388607)
+ 40 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
