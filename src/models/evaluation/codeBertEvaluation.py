@@ -2,14 +2,15 @@
 import re
 import numpy as np
 import pandas as pd
-from sklearn import metrics
 import transformers
 import torch
 from datasets import load_dataset
 from torch.utils.data import Dataset, DataLoader, RandomSampler, SequentialSampler
 from transformers import BertTokenizer, BertModel, BertConfig, AutoModel, AutoTokenizer
 from torch import cuda
+from sklearn.metrics import classification_report, precision_score, recall_score, f1_score, confusion_matrix, ConfusionMatrixDisplay
 
+  
 #region constants
 # Defining some key variables that will be used later on in the training
 MAX_LEN = 512
@@ -19,6 +20,7 @@ VALID_BATCH_SIZE = 16
 EPOCHS = 20
 LEARNING_RATE = 1e-05
 NUM_CLASSES = 5
+MODEL_NAME = 'CodeBERT'
 TOKENIZER = AutoTokenizer.from_pretrained('microsoft/codebert-base')
 DEVICE = 'cuda' if cuda.is_available() else 'cpu'
 #Additional Info when using cuda
@@ -71,11 +73,76 @@ def transformData(example):
    data["label"] = oneHotEncodeLabel(example["slither"])
    return data
 
-def readAndPreprocessDataset():
+def readAndPreprocessTrainSet():
   train_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='train', cache_dir="./cache", ignore_verifications=True).map(transformData)
+  return train_set
+
+def readAndPreprocessTestSet():
   test_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='test', cache_dir="./cache",  ignore_verifications=True).map(transformData)
+  return test_set
+
+def readAndPreprocessValSet():
   val_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='validation', cache_dir="./cache",  ignore_verifications=True).map(transformData)
-  return train_set, test_set, val_set
+  return  val_set
+
+def readAndPreprocessDataset():
+    train_set = readAndPreprocessTrainSet()
+    test_set = readAndPreprocessTestSet()
+    val_set = readAndPreprocessValSet()
+    return train_set, test_set, val_set
+
+
+def save_confusion_matrix_plot(y_true, y_pred, classes, file_path):
+    cm = confusion_matrix(y_true, y_pred)
+    disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=classes)
+    disp.plot(cmap=plt.cm.Blues)
+    plt.xlabel('Predicted labels')
+    plt.ylabel('True labels')
+    plt.title(f'Confusion Matrix {MODEL_NAME}')
+    plt.savefig(file_path, format='png')  # Salva l'immagine come file PNG
+    plt.close()  # Chiudi la figura per liberare la memoria
+
+
+def evaluate_model(predictions, ground_truth):
+    print("Ground Truth:\n", ground_truth)
+    print("\nPredictions:\n", predictions)
+    
+    threshold = 0.5
+    y_pred = []
+    
+    for sample in predictions:
+        y_pred.append([1 if i >= threshold else 0 for i in sample])
+        
+    y_pred = np.array(y_pred)
+
+    label_names = ['access-control', 'arithmetic', 'other', 'reentrancy', 'safe', 'unchecked-calls']
+
+    print("Classification Report:")
+    print(classification_report(ground_truth, y_pred, target_names=label_names))
+    
+    print("Precision of each label:")
+    print("None:", precision_score(ground_truth, y_pred, average=None))
+    print("micro:", precision_score(ground_truth, y_pred, average='micro'))
+    print("macro:", precision_score(ground_truth, y_pred, average='macro'))
+    print("weighted:", precision_score(ground_truth, y_pred, average='weighted'))
+    print("samples:", precision_score(ground_truth, y_pred, average='samples'))
+    
+    print("Recall of each label:")
+    print("None:", recall_score(ground_truth, y_pred, average=None))
+    print("micro:", recall_score(ground_truth, y_pred, average='micro'))
+    print("macro:", recall_score(ground_truth, y_pred, average='macro'))
+    print("weighted:", recall_score(ground_truth, y_pred, average='weighted'))
+    print("samples:", recall_score(ground_truth, y_pred, average='samples'))
+    
+    print("F1-score of each label:")
+    print("None:", f1_score(ground_truth, y_pred, average=None))
+    print("micro:", f1_score(ground_truth, y_pred, average='micro'))
+    print("macro:", f1_score(ground_truth, y_pred, average='macro'))
+    print("weighted:", f1_score(ground_truth, y_pred, average='weighted'))
+    print("samples:", f1_score(ground_truth, y_pred, average='samples'))
+
+    save_confusion_matrix_plot(ground_truth, y_pred, label_names, f'./confusion_matrix/{MODEL_NAME}_confusion_matrix.png')
+
 #endregion
 #region dataset
 class CustomDataset(Dataset):
@@ -133,17 +200,23 @@ class CodeBERTClass(torch.nn.Module):
 
 model = CodeBERTClass(NUM_CLASSES)
 model.to(DEVICE)
+model.load_state_dict(torch.load('./stateDict/epoch_19_model.pth'))
+
 
 def loss_fn(outputs, targets):
     return torch.nn.BCEWithLogitsLoss()(outputs, targets)
 
 optimizer = torch.optim.Adam(params =  model.parameters(), lr=LEARNING_RATE)
 #endregion
-trainSet, testSet, valSet = readAndPreprocessDataset()
+#trainSet, testSet, valSet = readAndPreprocessDataset()
 
-training_set = CustomDataset(trainSet, TOKENIZER, MAX_LEN)
+#training_set = CustomDataset(trainSet, TOKENIZER, MAX_LEN)
+
+testSet = readAndPreprocessTestSet()
+valSet = readAndPreprocessValSet()
 testing_set = CustomDataset(testSet, TOKENIZER, MAX_LEN)
 validation_set = CustomDataset(valSet, TOKENIZER, MAX_LEN)
+
 
 train_params = {'batch_size': TRAIN_BATCH_SIZE,
                 'shuffle': True,
@@ -155,9 +228,9 @@ test_params = {'batch_size': VALID_BATCH_SIZE,
                 'num_workers': 0
                 }
 
-training_loader = DataLoader(training_set, **train_params)
+#training_loader = DataLoader(training_set, **train_params)
 testing_loader = DataLoader(testing_set, **test_params)
-
+validation_loader = DataLoader(validation_set, **test_params)
 #region training
 def train(epoch):
     model.train() #Set the model to training mode, for dropout and batchnorm
@@ -185,7 +258,7 @@ def train(epoch):
     print(f'Epoch: {epoch}, Average Loss: {avg_loss}')
 
     # Salvataggio dei pesi del modello alla fine di ogni epoca
-    torch.save(model.state_dict(), f'./stateDict/epoch_{epoch}_model.pth')
+    torch.save(model.state_dict(), f'./stateDict/epoch_{epoch}_{MODEL_NAME}.pth')
 
     return avg_loss  # Restituzione della perdita media per monitorare l'andamento
 
@@ -205,7 +278,7 @@ def validation(epoch):
     return fin_outputs, fin_targets
 
 print("Starting training")
-
+"""
 for epoch in range(EPOCHS):
     print(f"Starting Epoch: {epoch}")
     train(epoch) 
@@ -217,4 +290,15 @@ for epoch in range(EPOCHS):
     print(f"Accuracy Score = {accuracy}")
     print(f"F1 Score (Micro) = {f1_score_micro}")
     print(f"F1 Score (Macro) = {f1_score_macro}")
+"""
+#validate test set and call evaluate model 
+print("Validating test set")
+outputs, targets = validation(0)
+evaluate_model(outputs, targets)
+
+#validate validation set and call evaluate model
+print("Validating validation set")
+outputs, targets = validation(0)
+evaluate_model(outputs, targets)
+
 #endregion

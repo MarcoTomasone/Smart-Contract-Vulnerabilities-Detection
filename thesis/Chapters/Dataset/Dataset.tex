@@ -63,6 +63,14 @@ function withdraw() external {
 }
 \end{lstlisting}
 In questo esempio, l'attaccante può effettuare un attacco di tipo reentrancy avendo una avendo una funzione che chiama \texttt{transfer()} per trasferire fondi spesi prima che il bilancio sia settato a zero dalla funzione \texttt{withdraw()}.
+Un nuovo tipo di attacchi sono gli attacchi Read-only Reentrancy, in 
 \subsubsection{Unchecked-Calls}
+In solidity si possono usare delle chiamate a funzione low level come `address.call()`
 
+
+
+\section{Exploratory Data Analysis}
+Prima della costruzione dei modelli è stata affrontata una fase di analisi esplorativa dei dati. Questa fase è stata svolta per comprendere meglio la struttura del dataset e dei contratti che si andavano a classificare, per individuare eventuali problemi. 
+Il dataset è diviso in tre sottoinsiemi: training, validation e test set.
+Il dataset di training è composto da 79.641 contratti, il dataset di validazione da 10.861 contratti e il dataset di test da 15.972 contratti.
 \end{document}
