@@ -1,117 +1,68 @@
 # Importing stock ml libraries
+import re
 import numpy as np
 import pandas as pd
 from sklearn import metrics
-import re
 import transformers
-from transformers import PreTrainedTokenizer
 import torch
 from datasets import load_dataset
 from torch.utils.data import Dataset, DataLoader, RandomSampler, SequentialSampler
 from transformers import BertTokenizer, BertModel, BertConfig
 from torch import cuda
-
+from pyevmasm import disassemble_hex
 #region constants
 # Defining some key variables that will be used later on in the training
 MAX_LEN = 512
+SAFE_IDX = 4
 TRAIN_BATCH_SIZE = 16
 VALID_BATCH_SIZE = 16
-EPOCHS = 10
+EPOCHS = 20
 LEARNING_RATE = 1e-05
-NUM_CLASSES = 6
-MODEL = 'bertBytecode'
+NUM_CLASSES = 5
 TOKENIZER = BertTokenizer.from_pretrained('bert-base-uncased')
 DEVICE = 'cuda' if cuda.is_available() else 'cpu'
+MODEL = 'bert-bytecode'
+#Additional Info when using cuda
 if DEVICE == 'cuda':
     print(torch.cuda.get_device_name(0))
     print('Memory Usage:')
     print('Allocated:', round(torch.cuda.memory_allocated(0)/1024**3,1), 'GB')
     print('Cached:   ', round(torch.cuda.memory_reserved(0)/1024**3,1), 'GB')
 #endregion
-#region Tokenizer
-class HexTokenizer(PreTrainedTokenizer):
-    def __init__(self,  max_length=None):
-        self.hex_dict = self._getHexDict()
-        self.ids_to_tokens = {i: self.hex_dict[i] for i in range(len(self.hex_dict))}
-        self.tokens_to_ids = {v: k for k, v in self.ids_to_tokens.items()}
-        self.max_length = max_length
-        tokenizer_kwargs = {"vocab_size": len(self.hex_dict)}
-        super().__init__(**tokenizer_kwargs)
-
-    def _getHexDict(self):
-      hex_dict = {i: f"{j:02x}".upper() for i, j in enumerate(range(256))}
-      hex_dict[256] = '<UNK>'
-      hex_dict[257] = '<PAD>'
-      hex_dict[258] = '<INIT>'
-      hex_dict[259] = '<END>'
-      return hex_dict
-
-    def get_vocab(self):
-        return self.tokens_to_ids
-
-    def encode(self, text):
-
-        # truncate the input with the maximum length
-        if self.max_length is not None and len(text) > self.max_length:
-            text = text[:self.max_length]
-
-
-        # convert pair of nibbles in a token
-        ids = []
-        for i in range(0, len(text), 2):
-            code = text[i:i+2]
-            if code == '0X':
-                ids.append(self.tokens_to_ids["<INIT>"])
-            elif code in self.tokens_to_ids:
-                ids.append(self.tokens_to_ids[code])
-            else:
-                # if the byte isn't in the vocabulary
-                ids.append(self.tokens_to_ids["<UNK>"])
-
-        # add padding
-        for i in range(self.max_length//2 - len(ids)):
-            ids.append(self.tokens_to_ids["<PAD>"])
-
-        # replace the last token with the end token
-        ids[-1] = self.tokens_to_ids["<END>"]
-        return ids
-
-    def decode(self, ids):
-        text = ''.join([self.ids_to_tokens[i] for i in ids])
-        return text
-#endregion
 
 #region functions 
-def remove_comments(string):
-    pattern = r"(\".*?\"|\'.*?\')|(/\*.*?\*/|//[^\r\n]*$)"
-    # first group captures quoted strings (double or single)
-    # second group captures comments (//single-line or /* multi-line */)
-    regex = re.compile(pattern, re.MULTILINE|re.DOTALL)
-    def _replacer(match):
-        # if the 2nd group is not None, then we have captured a real comment string.
-        if match.group(2) is not None:
-            return ""
-        else: # otherwise, we will return the 1st group
-            return match.group(1)
-    return regex.sub(_replacer, string)
+def oneHotEncodeLabel(label):
+    one_hot = np.zeros(NUM_CLASSES)
+    for elem in label:
+        if elem < SAFE_IDX:
+            one_hot[elem] = 1
+        elif elem > SAFE_IDX:
+            one_hot[elem-1] = 1
+    return one_hot
 
-def oneHotEncodeLabel(example):
-   hottedLabels = np.zeros(6, dtype=int)
-   hottedLabels[example] = 1
-   return hottedLabels
+def normalize_bytecode(bytecode):
+    opcode_list = disassemble_hex(bytecode).split('\n')
+    new_opcodes = []
+
+    for opcode in opcode_list:
+        if 'PUSH' in opcode:
+            opcode = opcode.split(' ')[0]  # Prendi solo il comando, escludendo i parametri
+        new_opcodes.append(opcode)
+
+    return new_opcodes
 
 def transformData(example):
    data= {}
-   data["source_code"] = remove_comments(example["source_code"])
-   data["bytecodeOrigin"] = example["bytecode"]
+   #data["source_code"] = deleteNewlineAndGetters(remove_comments(example["source_code"])) 
+   data["bytecode"] = normalize_bytecode["bytecode"]
    #data["bytecode"] = bytecode_tokenizer.encode(example["bytecode"])
    data["label"] = oneHotEncodeLabel(example["slither"])
    return data
 
 def readAndPreprocessDataset():
-  train_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='train', cache_dir="./cache", ignore_verifications=True).map(transformData)
-  test_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='test', cache_dir="./cache",  ignore_verifications=True).map(transformData)
-  val_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='validation', cache_dir="./cache",  ignore_verifications=True).map(transformData)
+  train_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='train', cache_dir="./cache", ignore_verifications=True).filter(lambda elem: elem['bytecode'] != '0x').map(transformData, remove_columns=['address',  'source_code', 'slither'])
+  test_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='test', cache_dir="./cache",  ignore_verifications=True).filter(lambda elem: elem['bytecode'] != '0x').map(transformData, remove_columns=['address',  'source_code', 'slither'])
+  val_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='validation', cache_dir="./cache",  ignore_verifications=True).filter(lambda elem: elem['bytecode'] != '0x').map(transformData, remove_columns=['address',  'source_code', 'slither'])
   return train_set, test_set, val_set
 #endregion
 #region dataset
@@ -120,7 +71,7 @@ class CustomDataset(Dataset):
     def __init__(self, dataframe, tokenizer, max_len):
         self.tokenizer = tokenizer
         self.data = dataframe
-        self.sourceCode = dataframe["source_code"]
+        self.bytecode = dataframe["bytecode"]
         self.targets =  dataframe["label"]
         self.max_len = max_len
 
@@ -128,18 +79,26 @@ class CustomDataset(Dataset):
         return len(self.sourceCode)
 
     def __getitem__(self, index):
-        sourceCode = str(self.sourceCode[index])
-        sourceCode = " ".join(sourceCode.split())
+        bytecode = str(self.bytecode[index])
+        bytecode = " ".join(bytecode.split())
 
-        # Utilizzo il metodo `encode` di HexTokenizer al posto di `encode_plus` di Hugging Face Tokenizer
-        ids = self.tokenizer.encode(sourceCode)
+        inputs = self.tokenizer.encode_plus(
+            bytecode,
+            None,
+            add_special_tokens=True,
+            max_length=self.max_len,
+            pad_to_max_length=True,
+            return_token_type_ids=True
+        )
+        ids = inputs['input_ids']
+        mask = inputs['attention_mask']
+        token_type_ids = inputs["token_type_ids"]
 
-        # Padding fino alla lunghezza massima
-        padding_length = self.max_len - len(ids)
-        ids += [self.tokenizer.hex_dict["<PAD>"]] * padding_length
 
         return {
             'ids': torch.tensor(ids, dtype=torch.long),
+            'mask': torch.tensor(mask, dtype=torch.long),
+            'token_type_ids': torch.tensor(token_type_ids, dtype=torch.long),
             'targets': torch.tensor(self.targets[index], dtype=torch.float)
         }
 #endregion
@@ -152,8 +111,8 @@ class BERTClass(torch.nn.Module):
         self.l2 = torch.nn.Dropout(0.3)
         self.l3 = torch.nn.Linear(768, NUM_CLASSES)
     
-    def forward(self, ids):
-        _, output_1= self.l1(ids,  return_dict=False)
+    def forward(self, ids, mask, token_type_ids):
+        _, output_1= self.l1(ids, attention_mask = mask, token_type_ids = token_type_ids, return_dict=False)
         output_2 = self.l2(output_1)
         output = self.l3(output_2)
         return output
@@ -167,10 +126,10 @@ def loss_fn(outputs, targets):
 optimizer = torch.optim.Adam(params =  model.parameters(), lr=LEARNING_RATE)
 #endregion
 trainSet, testSet, valSet = readAndPreprocessDataset()
-tokenizer = HexTokenizer(max_length=MAX_LEN * 2)
-training_set = CustomDataset(trainSet, tokenizer, MAX_LEN)
-testing_set = CustomDataset(testSet, tokenizer, MAX_LEN)
-validation_set = CustomDataset(valSet, tokenizer, MAX_LEN)
+
+training_set = CustomDataset(trainSet, TOKENIZER, MAX_LEN)
+testing_set = CustomDataset(testSet, TOKENIZER, MAX_LEN)
+validation_set = CustomDataset(valSet, TOKENIZER, MAX_LEN)
 
 train_params = {'batch_size': TRAIN_BATCH_SIZE,
                 'shuffle': True,
@@ -191,9 +150,11 @@ def train(epoch):
     total_loss = 0.0
     for batch_idx, data in enumerate(training_loader, 0):
         ids = data['ids'].to(DEVICE, dtype=torch.long)
+        mask = data['mask'].to(DEVICE, dtype=torch.long)
+        token_type_ids = data['token_type_ids'].to(DEVICE, dtype=torch.long)
         targets = data['targets'].to(DEVICE, dtype=torch.float)
 
-        outputs = model(ids)
+        outputs = model(ids, mask, token_type_ids)
 
         optimizer.zero_grad()
         loss = loss_fn(outputs, targets)
@@ -210,7 +171,7 @@ def train(epoch):
     print(f'Epoch: {epoch}, Average Loss: {avg_loss}')
 
     # Salvataggio dei pesi del modello alla fine di ogni epoca
-    torch.save(model.state_dict(), f'./stateDict/epoch_{epoch}_{MODEL}.pth')
+    torch.save(model.state_dict(), f'epoch_{epoch}_{MODEL}.pth')
 
     return avg_loss  # Restituzione della perdita media per monitorare l'andamento
 
@@ -221,8 +182,10 @@ def validation(epoch):
     with torch.no_grad():
         for _, data in enumerate(testing_loader, 0):
             ids = data['ids'].to(DEVICE, dtype = torch.long)
+            mask = data['mask'].to(DEVICE, dtype = torch.long)
+            token_type_ids = data['token_type_ids'].to(DEVICE, dtype = torch.long)
             targets = data['targets'].to(DEVICE, dtype = torch.float)
-            outputs = model(ids)
+            outputs = model(ids, mask, token_type_ids)
             fin_targets.extend(targets.cpu().detach().numpy().tolist())
             fin_outputs.extend(torch.sigmoid(outputs).cpu().detach().numpy().tolist())
     return fin_outputs, fin_targets

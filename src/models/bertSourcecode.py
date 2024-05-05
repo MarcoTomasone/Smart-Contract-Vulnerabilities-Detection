@@ -122,13 +122,11 @@ class BERTClass(torch.nn.Module):
         self.l1 = transformers.BertModel.from_pretrained('bert-base-uncased', cache_dir="./cache")
         self.l2 = torch.nn.Dropout(0.3)
         self.l3 = torch.nn.Linear(768, NUM_CLASSES)
-        self.sigmoid = torch.nn.Sigmoid()
     
     def forward(self, ids, mask, token_type_ids):
         _, output_1= self.l1(ids, attention_mask = mask, token_type_ids = token_type_ids, return_dict=False)
         output_2 = self.l2(output_1)
         output = self.l3(output_2)
-        output = self.sigmoid(output)
         return output
 
 model = BERTClass()
@@ -159,7 +157,6 @@ training_loader = DataLoader(training_set, **train_params)
 testing_loader = DataLoader(testing_set, **test_params)
 
 #region training
-
 def train(epoch):
     model.train() #Set the model to training mode, for dropout and batchnorm
     total_loss = 0.0
@@ -189,7 +186,7 @@ def train(epoch):
     torch.save(model.state_dict(), f'epoch_{epoch}_model.pth')
 
     return avg_loss  # Restituzione della perdita media per monitorare l'andamento
-        
+
 def validation(epoch):
     model.eval()
     fin_targets=[]
@@ -203,9 +200,12 @@ def validation(epoch):
             outputs = model(ids, mask, token_type_ids)
             fin_targets.extend(targets.cpu().detach().numpy().tolist())
             fin_outputs.extend(torch.sigmoid(outputs).cpu().detach().numpy().tolist())
-    return fin_outputs, fin_targets 
+    return fin_outputs, fin_targets
+
+print("Starting training")
 
 for epoch in range(EPOCHS):
+    print(f"Starting Epoch: {epoch}")
     train(epoch) 
     outputs, targets = validation(epoch)
     outputs = np.array(outputs) >= 0.5
