@@ -54,7 +54,7 @@ def normalize_bytecode(bytecode):
 def transformData(example):
    data= {}
    #data["source_code"] = deleteNewlineAndGetters(remove_comments(example["source_code"])) 
-   data["bytecode"] = normalize_bytecode["bytecode"]
+   data["bytecode"] = normalize_bytecode(example["bytecode"])
    #data["bytecode"] = bytecode_tokenizer.encode(example["bytecode"])
    data["label"] = oneHotEncodeLabel(example["slither"])
    return data
