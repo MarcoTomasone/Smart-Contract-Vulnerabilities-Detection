@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{sc-vulnerabilities}
+Zulfiqar~Ali Khan and Akbar Siami~Namin.
+\newblock Ethereum smart contracts: Vulnerabilities and their classifications.
+\newblock In {\em 2020 IEEE International Conference on Big Data (Big Data)},
+  pages 1--10, 2020.
+
 \bibitem{reentrancy-historical}
 pcaversaccio.
 \newblock A historical collection of reentrancy attacks.

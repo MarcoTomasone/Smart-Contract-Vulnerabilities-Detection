@@ -76,7 +76,7 @@ class CustomDataset(Dataset):
         self.max_len = max_len
 
     def __len__(self):
-        return len(self.sourceCode)
+        return len(self.bytecode)
 
     def __getitem__(self, index):
         bytecode = str(self.bytecode[index])
