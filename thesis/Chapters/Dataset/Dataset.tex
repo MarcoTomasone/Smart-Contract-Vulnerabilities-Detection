@@ -74,6 +74,32 @@ Un esempio di attacco che sfrutta l'overflow è stato l'attacco del 23 Aprile 20
 \end{figure}
 Dalla versione di Solidity 8.0  tutti i calcoli che superano i limiti di rappresentazione del tipo di dato vengono interrotti e viene lanciata un'eccezione. Questo permette di evitare che si verifichino overflow e underflow. Un'altra soluzione a questo tipo di errori è l'utilizzo della libreria SafeMath, che offre operazioni aritmetiche che controllano i limiti di rappresentazione del tipo di dato prima di effettuare i calcoli. Overflow e underflow sono le principali vulnerabilità di tipo aritmetico, ma non sono le uniche. Un'altra vulnerabilità di tipo aritmetico è rappresentata dalla divisione per zero. In Solidity nelle versioni precedenti alla 0.4 la divisione per zero non lancia un'eccezione, ma ritorna il valore 0, questo può portare a comportamenti inaspettati e a perdite di fondi.
 \subsubsection{Other}
+In questa classe di vulnerabilità rientrano tutte quelle vulnerabilità che non fanno parte delle altre classi. Uno degli esempi sono le vulnerabilità di \emph{uninitialized-state} che fanno capo a tutte quelle vulnerabilità a seguito di variabili che non vengono inizializzate correttamente. Le variabili in Solidity possono essere memorizzate in \emph{memory}, \emph{storage} o \emph{calldata}. Bisogna assicurarsi che questi diversi storage vengano compresi e inizializzati correttamente, poichè ad esempio inzializzare male i puntatori allo storage o lasciarli non inizializzati può portare a degli errori. Da Solidity 0.5.0 i puntatori allo storage non inizializzati non sono più un problema poichè contratti con puntatori non inizializzati risulteranno in errori di compilazione.  
+Un altra possibile vulnerabilità è detta \emph{incorrect-equality}. Questa vulnerabilità si verifica, solitamente, quando si controlla affinche un account ha abbastanza Ether o Tokens utilizzando una uguaglianza stretta, ciò è un qualcosa che un soggetto malevolo può facilmente manipolare per attaccare il contratto. Un esempio di questo tipo di vulnerabilità è il caso in cui il contratto entra in uno stato di \emph{GridLock}:
+\begin{lstlisting}[language=Solidity]
+    /**
+    * @dev        Locks up the value sent to contract in a new Lock
+    * @param      term         The length of the lock up
+    * @param      edgewareAddr The bytes representation of the target edgeware key
+    * @param      isValidator  Indicates if sender wishes to be a validator
+    */
+   function lock(Term term, bytes calldata edgewareAddr, bool isValidator)
+       external
+       payable
+       didStart
+       didNotEnd
+   {
+       uint256 eth = msg.value;
+       address owner = msg.sender;
+       uint256 unlockTime = unlockTimeForTerm(term);
+       // Create ETH lock contract
+       Lock lockAddr = (new Lock).value(eth)(owner, unlockTime);
+       // ensure lock contract has all ETH, or fail
+       assert(address(lockAddr).balance == msg.value); // BUG
+       emit Locked(owner, eth, lockAddr, term, edgewareAddr, isValidator, now);
+   }
+\end{lstlisting}
+In questo caso la vulnerabilità è rappresentata dall'assert che controlla che il contratto abbia ricevuto la quantità di Ether corretta. Il controllo si basa sull'assunzione che il contratto essendo creato alla riga precedente abbia saldo zero ed essendo precaricato proprio con \emph{msg.value} si suppone che il saldo del contratto sia uguale a \emph{msg.value}. In realtà gli Ether possono essere inviati ai contratti prima che vengano istanziati negli indirizzi stessi, poichè la generazione degli indirizzi dei contratti in Ethereum è un processo basato su dei nonce deterministici. L'attacco DoS che si basa su questa vulnerabilità in questo caso consiste nel pre-calcolare l'indirizzo del contatto \emph{Lock} e mandare dei Wei a quell'indirizzo. Questo forza la funzione \emph{lock} a fallire e a non creare il contratto, bloccando il contratto in uno stato di \emph{GridLock}.  Per risolvere questa problematica, si potrebbe adottare l'approccio di sostituire l'uguaglianza stretta con un confronto maggiore o uguale. 
 \subsubsection{Reentrancy}
 La Reentrancy è una classe di vulnerabilità presente negli SmartContracts che permette ad un malintenzionato di rientrare nel contratto in modo inaspettato durante l'esecuzione della funzione originale. Questa vulnerabilità può essere utilizzata per rubare fondi e rappresenta la vulnerabilità più impattante dal punto di vista di perdita di fondi a seguito di attacchi.
 Il caso più famoso di questo attacco che lo ha anche reso noto è il caso di The DAO, un contratto che ha subito un attacco di reentrancy che ha portato alla perdita circa sessanta milioni di dollari in Ether, circa il 14\% di tutti gli Ether in circolazione all'epoca. Nonostante dal 2016 ad oggi siano stati fatti numerosi progressi nelle tecnologie e nelle misure di sicurezza questa vulnerabilità rimane comunque una delle minacce più pericolose per gli SmartContracts, poichè negli anni questo tipo di attacchi si è ripresentato notevole frequenza \cite{reentrancy-historical}. Un attacco di reentrancy può essere classificato in tre classi differenti:
