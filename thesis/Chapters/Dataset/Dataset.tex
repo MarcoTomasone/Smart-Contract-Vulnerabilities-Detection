@@ -147,4 +147,11 @@ In solidity si possono usare delle chiamate a funzione low level come `address.c
 Prima della costruzione dei modelli è stata affrontata una fase di analisi esplorativa dei dati. Questa fase è stata svolta per comprendere meglio la struttura del dataset e dei contratti che si andavano a classificare, per individuare eventuali problemi. 
 Il dataset è diviso in tre sottoinsiemi: training, validation e test set.
 Il dataset di training è composto da 79.641 contratti, il dataset di validazione da 10.861 contratti e il dataset di test da 15.972 contratti.
+Per ongi entry del dataset (ogni contratto) il dataset fornisce quattro feature:
+- \emph{address:} l'indirizzo del contratto 
+- \emph{sourcecode:} il codice sorgente del contratto scritto in linguaggio Solidity
+- \emph{bytecode:} il codice bytecode del contratto, ottenuto a partire dalla compilazione del codice sorgente utilizzando il compilatore di Solidity. Questo bytecode è quello che viene eseguito sulla macchina virtuale di Ethereum (EVM). 
+- \emph{slither:} il risultato dell'analisi statica del contratto con Slither, un tool open-source per l'analisi statica di contratti scritti in Solidity. Questo risultato è un array di valori che vanno da 1 a 5, dove ogni numero  rappresenta la presenza di una vulnerabilità e 4 la sua assenza.
+Tutte le informazioni sono presenti per tutti i contratti tranne l'informazione relativa al bytecode, che risulta assente per 227 contratti nel training set, 30 nel validation set e 51 nel test set. Durante la fase di preprocessing questi contratti sono stati rimossi dal dataset. 
+
 \end{document}
