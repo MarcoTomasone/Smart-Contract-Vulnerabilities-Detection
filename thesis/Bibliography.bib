@@ -33,3 +33,117 @@
   pages={1-10},
   keywords={Conferences;Smart contracts;Blockchain;Big Data;Tools;Software;Safety;Smart Contract;Ethereum;EVM;vulnerabilities;Solidity;tools},
   doi={10.1109/BigData50022.2020.9439088}}
+
+  @article{Maian,
+  author       = {Ivica Nikolic and
+                  Aashish Kolluri and
+                  Ilya Sergey and
+                  Prateek Saxena and
+                  Aquinas Hobor},
+  title        = {Finding The Greedy, Prodigal, and Suicidal Contracts at Scale},
+  journal      = {CoRR},
+  volume       = {abs/1802.06038},
+  year         = {2018},
+  url          = {http://arxiv.org/abs/1802.06038},
+  eprinttype    = {arXiv},
+  eprint       = {1802.06038},
+  timestamp    = {Tue, 17 Sep 2019 14:15:19 +0200},
+  biburl       = {https://dblp.org/rec/journals/corr/abs-1802-06038.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+@misc{Mythril,
+  howpublished = {https://github.com/ConsenSys/mythril},
+  title        = { Mythril Github repository},
+}
+
+
+@misc{Oyente,
+  howpublished = {https://pypi.org/project/oyente/},
+  title        = { OPyente },
+}
+
+@article{Maian2,
+author       = {Bernhard Mueller},
+title        = {Smashing Ethereum Smart Contracts for Fun and Real Profit},
+journal      = { 9th HITB Security Conference},
+year         = {2018},
+}
+
+@inproceedings{ Oyente2,
+author = {Luu, Loi and Chu, Duc-Hiep and Olickel, Hrishi and Saxena, Prateek and Hobor, Aquinas},
+title = {Making Smart Contracts Smarter},
+year = {2016},
+isbn = {9781450341394},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2976749.2978309},
+doi = {10.1145/2976749.2978309},
+abstract = {Cryptocurrencies record transactions in a decentralized data structure called a blockchain. Two of the most popular cryptocurrencies, Bitcoin and Ethereum, support the feature to encode rules or scripts for processing transactions. This feature has evolved to give practical shape to the ideas of smart contracts, or full-fledged programs that are run on blockchains. Recently, Ethereum's smart contract system has seen steady adoption, supporting tens of thousands of contracts, holding millions dollars worth of virtual coins.In this paper, we investigate the security of running smart contracts based on Ethereum in an open distributed network like those of cryptocurrencies. We introduce several new security problems in which an adversary can manipulate smart contract execution to gain profit. These bugs suggest subtle gaps in the understanding of the distributed semantics of the underlying platform. As a refinement, we propose ways to enhance the operational semantics of Ethereum to make contracts less vulnerable. For developers writing contracts for the existing Ethereum system, we build a symbolic execution tool called Oyente to find potential security bugs. Among 19, 336 existing Ethereum contracts, Oyente flags 8, 833 of them as vulnerable, including the TheDAO bug which led to a 60 million US dollar loss in June 2016. We also discuss the severity of other attacks for several case studies which have source code available and confirm the attacks (which target only our accounts) in the main Ethereum network.},
+booktitle = {Proceedings of the 2016 ACM SIGSAC Conference on Computer and Communications Security},
+pages = {254–269},
+numpages = {16},
+keywords = {blockchain, cryptocurrencies, ethereum, smart contract, symbolic execution},
+location = {Vienna, Austria},
+series = {CCS '16}
+}
+
+@article{Manticore,
+  author       = {Mark Mossberg and
+                  Felipe Manzano and
+                  Eric Hennenfent and
+                  Alex Groce and
+                  Gustavo Grieco and
+                  Josselin Feist and
+                  Trent Brunson and
+                  Artem Dinaburg},
+  title        = {Manticore: {A} User-Friendly Symbolic Execution Framework for Binaries
+                  and Smart Contracts},
+  journal      = {CoRR},
+  volume       = {abs/1907.03890},
+  year         = {2019},
+  url          = {http://arxiv.org/abs/1907.03890},
+  eprinttype    = {arXiv},
+  eprint       = {1907.03890},
+  timestamp    = {Wed, 17 Jul 2019 10:27:36 +0200},
+  biburl       = {https://dblp.org/rec/journals/corr/abs-1907-03890.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{Securify,
+author = {Tsankov, Petar and Dan, Andrei and Drachsler-Cohen, Dana and Gervais, Arthur and Bünzli, Florian and Vechev, Martin},
+year = {2018},
+month = {10},
+pages = {67-82},
+title = {Securify: Practical Security Analysis of Smart Contracts},
+doi = {10.1145/3243734.3243780}
+}
+
+@inproceedings{SmartCheck,
+author = {Tikhomirov, Sergei and Voskresenskaya, Ekaterina and Ivanitskiy, Ivan and Takhaviev, Ramil and Marchenko, Evgeny and Alexandrov, Yaroslav},
+title = {SmartCheck: static analysis of ethereum smart contracts},
+year = {2018},
+isbn = {9781450357265},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3194113.3194115},
+doi = {10.1145/3194113.3194115},
+abstract = {Ethereum is a major blockchain-based platform for smart contracts - Turing complete programs that are executed in a decentralized network and usually manipulate digital units of value. Solidity is the most mature high-level smart contract language. Ethereum is a hostile execution environment, where anonymous attackers exploit bugs for immediate financial gain. Developers have a very limited ability to patch deployed contracts. Hackers steal up to tens of millions of dollars from flawed contracts, a well-known example being "The DAO", broken in June 2016. Advice on secure Ethereum programming practices is spread out across blogs, papers, and tutorials. Many sources are outdated due to a rapid pace of development in this field. Automated vulnerability detection tools, which help detect potentially problematic language constructs, are still underdeveloped in this area.We provide a comprehensive classification of code issues in Solidity and implement SmartCheck - an extensible static analysis tool that detects them1. SmartCheck translates Solidity source code into an XML-based intermediate representation and checks it against XPath patterns. We evaluated our tool on a big dataset of real-world contracts and compared the results with manual audit on three contracts. Our tool reflects the current state of knowledge on Solidity vulnerabilities and shows significant improvements over alternatives. SmartCheck has its limitations, as detection of some bugs requires more sophisticated techniques such as taint analysis or even manual audit. We believe though that a static analyzer should be an essential part of contract developers' toolbox, letting them fix simple bugs fast and allocate more effort to complex issues.},
+booktitle = {Proceedings of the 1st International Workshop on Emerging Trends in Software Engineering for Blockchain},
+pages = {9–16},
+numpages = {8},
+keywords = {static analysis, solidity, smart contracts, ethereum, bug detection},
+location = {Gothenburg, Sweden},
+series = {WETSEB '18}
+}
+
+@INPROCEEDINGS{Slither,
+  author={Feist, Josselin and Grieco, Gustavo and Groce, Alex},
+  booktitle={2019 IEEE/ACM 2nd International Workshop on Emerging Trends in Software Engineering for Blockchain (WETSEB)}, 
+  title={Slither: A Static Analysis Framework for Smart Contracts}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={8-15},
+  keywords={Tools;Smart contracts;Static analysis;Optimization;Security;Detectors;Blockchain;Smart Contract;Solidity;Static Analysis;Vulnerability Detection},
+  doi={10.1109/WETSEB.2019.00008}}

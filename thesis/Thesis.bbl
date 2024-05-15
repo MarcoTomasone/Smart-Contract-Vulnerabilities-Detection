@@ -1,10 +1,42 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{Mythril}
+Mythril github repository.
+\newblock https://github.com/ConsenSys/mythril.
+
+\bibitem{Oyente}
+Opyente.
+\newblock https://pypi.org/project/oyente/.
 
 \bibitem{sc-vulnerabilities}
 Zulfiqar~Ali Khan and Akbar Siami~Namin.
 \newblock Ethereum smart contracts: Vulnerabilities and their classifications.
 \newblock In {\em 2020 IEEE International Conference on Big Data (Big Data)},
   pages 1--10, 2020.
+
+\bibitem{Oyente2}
+Loi Luu, Duc-Hiep Chu, Hrishi Olickel, Prateek Saxena, and Aquinas Hobor.
+\newblock Making smart contracts smarter.
+\newblock In {\em Proceedings of the 2016 ACM SIGSAC Conference on Computer and
+  Communications Security}, CCS '16, page 254–269, New York, NY, USA, 2016.
+  Association for Computing Machinery.
+
+\bibitem{Manticore}
+Mark Mossberg, Felipe Manzano, Eric Hennenfent, Alex Groce, Gustavo Grieco,
+  Josselin Feist, Trent Brunson, and Artem Dinaburg.
+\newblock Manticore: {A} user-friendly symbolic execution framework for
+  binaries and smart contracts.
+\newblock {\em CoRR}, abs/1907.03890, 2019.
+
+\bibitem{Maian2}
+Bernhard Mueller.
+\newblock Smashing ethereum smart contracts for fun and real profit.
+\newblock {\em 9th HITB Security Conference}, 2018.
+
+\bibitem{Maian}
+Ivica Nikolic, Aashish Kolluri, Ilya Sergey, Prateek Saxena, and Aquinas Hobor.
+\newblock Finding the greedy, prodigal, and suicidal contracts at scale.
+\newblock {\em CoRR}, abs/1802.06038, 2018.
 
 \bibitem{reentrancy-historical}
 pcaversaccio.
@@ -22,5 +54,19 @@ Martina Rossini, Mirco Zichichi, and Stefano Ferretti.
 \newblock In {\em 2023 IEEE International Conference on Pervasive Computing and
   Communications Workshops and other Affiliated Events (PerCom Workshops)},
   pages 74--79, 2023.
+
+\bibitem{SmartCheck}
+Sergei Tikhomirov, Ekaterina Voskresenskaya, Ivan Ivanitskiy, Ramil Takhaviev,
+  Evgeny Marchenko, and Yaroslav Alexandrov.
+\newblock Smartcheck: static analysis of ethereum smart contracts.
+\newblock In {\em Proceedings of the 1st International Workshop on Emerging
+  Trends in Software Engineering for Blockchain}, WETSEB '18, page 9–16, New
+  York, NY, USA, 2018. Association for Computing Machinery.
+
+\bibitem{Securify}
+Petar Tsankov, Andrei Dan, Dana Drachsler-Cohen, Arthur Gervais, Florian
+  Bünzli, and Martin Vechev.
+\newblock Securify: Practical security analysis of smart contracts.
+\newblock pages 67--82, 10 2018.
 
 \end{thebibliography}
