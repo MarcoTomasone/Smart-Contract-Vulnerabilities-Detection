@@ -8,11 +8,36 @@ Mythril github repository.
 Opyente.
 \newblock https://pypi.org/project/oyente/.
 
+\bibitem{Deng}
+Weichu Deng, Huanchun Wei, Teng Huang, Cong Cao, Yun Peng, and Xuan Hu.
+\newblock Smart contract vulnerability detection based on deep learning and
+  multimodal decision fusion.
+\newblock {\em Sensors}, 23(16), 2023.
+
+\bibitem{Slither}
+Josselin Feist, Gustavo Grieco, and Alex Groce.
+\newblock Slither: A static analysis framework for smart contracts.
+\newblock In {\em 2019 IEEE/ACM 2nd International Workshop on Emerging Trends
+  in Software Engineering for Blockchain (WETSEB)}, pages 8--15, 2019.
+
+\bibitem{Huang}
+TonTon~Hsien{-}De Huang.
+\newblock Hunting the ethereum smart contract: Color-inspired inspection of
+  potential attacks.
+\newblock {\em CoRR}, abs/1807.01868, 2018.
+
 \bibitem{sc-vulnerabilities}
 Zulfiqar~Ali Khan and Akbar Siami~Namin.
 \newblock Ethereum smart contracts: Vulnerabilities and their classifications.
 \newblock In {\em 2020 IEEE International Conference on Big Data (Big Data)},
   pages 1--10, 2020.
+
+\bibitem{ESCORT}
+Oliver Lutz, Huili Chen, Hossein Fereidooni, Christoph Sendner, Alexandra
+  Dmitrienko, Ahmad{-}Reza Sadeghi, and Farinaz Koushanfar.
+\newblock {ESCORT:} ethereum smart contracts vulnerability detection using deep
+  neural network and transfer learning.
+\newblock {\em CoRR}, abs/2103.12607, 2021.
 
 \bibitem{Oyente2}
 Loi Luu, Duc-Hiep Chu, Hrishi Olickel, Prateek Saxena, and Aquinas Hobor.
@@ -20,6 +45,12 @@ Loi Luu, Duc-Hiep Chu, Hrishi Olickel, Prateek Saxena, and Aquinas Hobor.
 \newblock In {\em Proceedings of the 2016 ACM SIGSAC Conference on Computer and
   Communications Security}, CCS '16, page 254–269, New York, NY, USA, 2016.
   Association for Computing Machinery.
+
+\bibitem{Mezina}
+Anzhelika Mezina and Aleksandr Ometov.
+\newblock Detecting smart contract vulnerabilities with combined binary and
+  multiclass classification.
+\newblock {\em Cryptography}, 7(3), 2023.
 
 \bibitem{Manticore}
 Mark Mossberg, Felipe Manzano, Eric Hennenfent, Alex Groce, Gustavo Grieco,
@@ -68,5 +99,12 @@ Petar Tsankov, Andrei Dan, Dana Drachsler-Cohen, Arthur Gervais, Florian
   Bünzli, and Martin Vechev.
 \newblock Securify: Practical security analysis of smart contracts.
 \newblock pages 67--82, 10 2018.
+
+\bibitem{ContractWard}
+Wei Wang, Jingjing Song, Guangquan Xu, Yidong Li, Hao Wang, and Chunhua Su.
+\newblock Contractward: Automated vulnerability detection models for ethereum
+  smart contracts.
+\newblock {\em IEEE Transactions on Network Science and Engineering},
+  8(2):1133--1144, 2021.
 
 \end{thebibliography}

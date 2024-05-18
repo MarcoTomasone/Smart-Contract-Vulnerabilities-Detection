@@ -1,6 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1715449619 "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Dataset/Dataset.tex" "Chapters/Dataset/Dataset.pdf" "Dataset" 1715449623
-  "../../images/BECPrice.png" 0 -1 0 ""
+["pdflatex"] 1715959428 "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Dataset/Dataset.tex" "Chapters/Dataset/Dataset.pdf" "Dataset" 1715959431
   "C:/Users/tomas/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1630670581 14064 d1d06bbff9d4f1ae03b03f90fd21ef9f ""
   "C:/Users/tomas/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1630670499 9715383 c310c5e10878a246b2c909d39885981b ""
   "C:/Users/tomas/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1706286245 96335 df8c010454e20aca8cd003881ce07551 ""
@@ -145,13 +144,15 @@
   "C:/Users/tomas/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/tomas/AppData/Local/Programs/MiKTeX/tex/latex/wrapfig/wrapfig.sty" 1044406800 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "C:/Users/tomas/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1623005660 55589 34128738f682d033422ca125f82e5d62 ""
-  "Chapters/Dataset/../../Thesis.tex" 1712521449 7906 68415a84aab73439fa8c64ab01359684 ""
-  "Chapters/Dataset/../../images/BECPrice.png" 0 -1 0 ""
-  "Chapters/Dataset/Dataset.aux" 1715449619 34 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "Chapters/Dataset/Dataset.tex" 1715449618 16027 bdf24d2b811708d531d87081585249df ""
-  "Thesis.tex" 1712521449 7906 68415a84aab73439fa8c64ab01359684 ""
-  "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Dataset/Dataset.tex" 1715449618 16027 bdf24d2b811708d531d87081585249df ""
+  "Chapters/Dataset/../../Thesis.tex" 1715890476 6751 49272f91b178aeba3f6a68e648af4427 ""
+  "Chapters/Dataset/../../img/BECPrice.png" 1715112404 93199 51773457699b0d1985b74b2e9fadca6b ""
+  "Chapters/Dataset/Dataset.aux" 1715959430 1276 b9aab925dc3a0143b65e11942d75f3b8 "pdflatex"
+  "Chapters/Dataset/Dataset.tex" 1715959424 16024 085492c0523f172f5d0d37a13c164cf9 ""
+  "Thesis.tex" 1715890476 6751 49272f91b178aeba3f6a68e648af4427 ""
+  "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Dataset/Dataset.tex" 1715959424 16024 085492c0523f172f5d0d37a13c164cf9 ""
+  "img/BECPrice.png" 1715112404 93199 51773457699b0d1985b74b2e9fadca6b ""
   "solidity-highlighting.tex" 1712519765 2763 2b2925b59ea41ef6732bcf2aa822b574 ""
+  "use ../../img/BECPrice.png" 1715112404 93199 51773457699b0d1985b74b2e9fadca6b ""
   (generated)
   "Chapters/Dataset/Dataset.pdf"
   "Chapters/Dataset/Dataset.log"

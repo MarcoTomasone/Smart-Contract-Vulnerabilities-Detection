@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  17 MAY 2024 19:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  17 MAY 2024 17:23
 entering extended mode
-**c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/RelatedWork/RelatedWork.tex
-(c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/RelatedWork/RelatedWork.tex
+**c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Dataset/Dataset.tex
+(c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Dataset/Dataset.tex
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-08-27> (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/subfiles\subfiles.cls
 Document Class: subfiles 2020/11/14 v2.2 Multi-file projects (class)
@@ -397,8 +397,8 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count306
 \l__pdf_internal_box=\box68
-) (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\RelatedWork\RelatedWork.aux)
-\openout1 = `RelatedWork.aux'.
+) (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Dataset\Dataset.aux)
+\openout1 = `Dataset.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
@@ -448,68 +448,56 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 
 Capitolo 1.
 
-LaTeX Warning: Citation `Maian' on page 1 undefined on input line 10.
-
-
-LaTeX Warning: Citation `Maian2' on page 1 undefined on input line 10.
-
-
-LaTeX Warning: Citation `Oyente' on page 1 undefined on input line 10.
-
-
-LaTeX Warning: Citation `Oyente2' on page 1 undefined on input line 10.
-
-
-LaTeX Warning: Citation `Mythril' on page 1 undefined on input line 10.
-
-
-LaTeX Warning: Citation `Manticore' on page 1 undefined on input line 10.
-
-
-LaTeX Warning: Citation `Slither' on page 1 undefined on input line 11.
-
-
-LaTeX Warning: Citation `Securify' on page 1 undefined on input line 11.
-
-
-LaTeX Warning: Citation `SmartCheck' on page 1 undefined on input line 11.
-
-
-LaTeX Warning: Citation `ContractWard' on page 1 undefined on input line 12.
-
-
-LaTeX Warning: Citation `Mezina' on page 1 undefined on input line 12.
+LaTeX Warning: Citation `rossini2022slitherauditedcontracts' on page 1 undefined on input line 6.
 
 [1
 
 
 {C:/Users/tomas/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-
-LaTeX Warning: Citation `RossiniPaper1' on page 2 undefined on input line 14.
-
-
-LaTeX Warning: Citation `RossiniPaper2' on page 2 undefined on input line 14.
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 28.
 
 
-LaTeX Warning: Citation `Huang' on page 2 undefined on input line 14.
+LaTeX Warning: Citation `sc-vulnerabilities' on page 2 undefined on input line 37.
 
-[2] [3] (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\RelatedWork\RelatedWork.aux)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 37.
+(C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
+ (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
+ (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [2]
+<../../img/BECPrice.png, id=18, 502.87875pt x 353.82187pt>
+File: ../../img/BECPrice.png Graphic file (type png)
+<use ../../img/BECPrice.png>
+Package pdftex.def Info: ../../img/BECPrice.png  used on input line 71.
+(pdftex.def)             Requested size: 360.00137pt x 253.29384pt.
+ [3] [4 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/BECPrice.png>] [5]
+
+LaTeX Warning: Citation `reentrancy-historical' on page 6 undefined on input line 105.
+
+[6] [7] [8] (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Dataset\Dataset.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 15859 strings out of 478927
- 305067 string characters out of 2852536
- 603405 words of memory out of 3000000
- 33436 multiletter control sequences out of 15000+600000
- 404641 words of font info for 31 fonts, out of 8000000 for 9000
+ 16470 strings out of 478927
+ 311410 string characters out of 2852536
+ 723452 words of memory out of 3000000
+ 34015 multiletter control sequences out of 15000+600000
+ 411838 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,5n,125p,2014b,265s stack positions out of 5000i,500n,10000p,200000b,80000s
-<C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\RelatedWork\RelatedWork.pdf (3 pages, 40168 bytes).
+ 122i,6n,125p,1557b,1689s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Dataset\Dataset.pdf (8 pages, 198335 bytes).
 PDF statistics:
- 25 PDF objects out of 1000 (max. 8388607)
+ 75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
