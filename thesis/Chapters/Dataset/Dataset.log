@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  17 MAY 2024 17:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  19 MAY 2024 19:48
 entering extended mode
 **c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Dataset/Dataset.tex
 (c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Dataset/Dataset.tex
@@ -393,9 +393,32 @@ Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 ) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+ (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen263
+\captionmargin=\dimen264
+\caption@leftmargin=\dimen265
+\caption@rightmargin=\dimen266
+\caption@width=\dimen267
+\caption@indent=\dimen268
+\caption@parindent=\dimen269
+\caption@hangindent=\dimen270
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count306
+\c@continuedfloat=\count307
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: wrapfig package is loaded.
+) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+\c@subfigure=\count308
+\c@subtable=\count309
 ) (solidity-highlighting.tex))) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count306
+\l__color_backend_stack_int=\count310
 \l__pdf_internal_box=\box68
 ) (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Dataset\Dataset.aux)
 \openout1 = `Dataset.aux'.
@@ -427,16 +450,16 @@ italian.ldf    on input line 4.
 
 (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count307
-\scratchdimen=\dimen263
+\scratchcounter=\count311
+\scratchdimen=\dimen271
 \scratchbox=\box69
-\nofMPsegments=\count308
-\nofMParguments=\count309
+\nofMPsegments=\count312
+\nofMParguments=\count313
 \everyMPshowfont=\toks46
-\MPscratchCnt=\count310
-\MPscratchDim=\dimen264
-\MPnumerator=\count311
-\makeMPintoPDFobject=\count312
+\MPscratchCnt=\count314
+\MPscratchDim=\dimen272
+\MPnumerator=\count315
+\makeMPintoPDFobject=\count316
 \everyMPtoPDFconversion=\toks47
 ) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -444,7 +467,9 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\c@lstlisting=\count313
+\c@lstlisting=\count317
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 
 Capitolo 1.
 
@@ -481,23 +506,57 @@ Package pdftex.def Info: ../../img/BECPrice.png  used on input line 71.
 
 LaTeX Warning: Citation `reentrancy-historical' on page 6 undefined on input line 105.
 
-[6] [7] [8] (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Dataset\Dataset.aux)
+[6] [7]
+<../../img/SCTokensPreprocessed.png, id=38, 854.2314pt x 450.9648pt>
+File: ../../img/SCTokensPreprocessed.png Graphic file (type png)
+<use ../../img/SCTokensPreprocessed.png>
+Package pdftex.def Info: ../../img/SCTokensPreprocessed.png  used on input line 167.
+(pdftex.def)             Requested size: 220.50247pt x 116.40857pt.
+<../../img/BCTokensPreprocessed.png, id=39, 860.7357pt x 450.9648pt>
+File: ../../img/BCTokensPreprocessed.png Graphic file (type png)
+<use ../../img/BCTokensPreprocessed.png>
+Package pdftex.def Info: ../../img/BCTokensPreprocessed.png  used on input line 174.
+(pdftex.def)             Requested size: 220.50247pt x 115.52779pt.
+
+Overfull \hbox (32.10382pt too wide) in paragraph at lines 183--183
+[]\OT1/cmr/bx/n/17.28 Distribuzione del-le Clas-si e Ma-tri-ci di Co-occorrenza 
+ []
+
+[8]
+<../../img/TrainCo-occurrency.png, id=43, 678.6153pt x 570.933pt>
+File: ../../img/TrainCo-occurrency.png Graphic file (type png)
+<use ../../img/TrainCo-occurrency.png>
+Package pdftex.def Info: ../../img/TrainCo-occurrency.png  used on input line 217.
+(pdftex.def)             Requested size: 360.00137pt x 302.88052pt.
+ [9 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/SCTokensPreprocessed.png> <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/BCTokensPreprocessed.png>]
+<../../img/TestCo-occurrency.png, id=50, 672.8337pt x 570.933pt>
+File: ../../img/TestCo-occurrency.png Graphic file (type png)
+<use ../../img/TestCo-occurrency.png>
+Package pdftex.def Info: ../../img/TestCo-occurrency.png  used on input line 225.
+(pdftex.def)             Requested size: 360.00137pt x 305.48534pt.
+ [10 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/TrainCo-occurrency.png>]
+<../../img/ValCo-occurrency.png, id=55, 672.8337pt x 570.933pt>
+File: ../../img/ValCo-occurrency.png Graphic file (type png)
+<use ../../img/ValCo-occurrency.png>
+Package pdftex.def Info: ../../img/ValCo-occurrency.png  used on input line 233.
+(pdftex.def)             Requested size: 360.00137pt x 305.48534pt.
+ [11 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/TestCo-occurrency.png>] [12 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/ValCo-occurrency.png>] [13] (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Dataset\Dataset.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 16470 strings out of 478927
- 311410 string characters out of 2852536
- 723452 words of memory out of 3000000
- 34015 multiletter control sequences out of 15000+600000
+ 17891 strings out of 478927
+ 339501 string characters out of 2852536
+ 742497 words of memory out of 3000000
+ 35423 multiletter control sequences out of 15000+600000
  411838 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,6n,125p,1557b,1689s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Dataset\Dataset.pdf (8 pages, 198335 bytes).
+ 122i,9n,125p,1557b,1691s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Dataset\Dataset.pdf (13 pages, 452132 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
+ 106 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

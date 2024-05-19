@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  18 MAY 2024 17:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  19 MAY 2024 19:33
 entering extended mode
 **c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Thesis.tex
 (c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Thesis.tex
@@ -390,50 +390,73 @@ Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 ) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+ (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen263
+\captionmargin=\dimen264
+\caption@leftmargin=\dimen265
+\caption@rightmargin=\dimen266
+\caption@width=\dimen267
+\caption@indent=\dimen268
+\caption@parindent=\dimen269
+\caption@hangindent=\dimen270
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count306
+\c@continuedfloat=\count307
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: wrapfig package is loaded.
+) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+\c@subfigure=\count308
+\c@subtable=\count309
 ) (solidity-highlighting.tex) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count306
+\l__color_backend_stack_int=\count310
 \l__pdf_internal_box=\box68
-) (Thesis.aux)
+)
+No file Thesis.aux.
 \openout1 = `Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Info: Redefining \it@ocap on input line 40.
-LaTeX Info: Redefining \it@ccap on input line 40.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Info: Redefining \it@ocap on input line 44.
+LaTeX Info: Redefining \it@ccap on input line 44.
 
 File italian.ldf warning: 
 italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 40.
+italian.ldf    on input line 44.
 
 (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count307
-\scratchdimen=\dimen263
+\scratchcounter=\count311
+\scratchdimen=\dimen271
 \scratchbox=\box69
-\nofMPsegments=\count308
-\nofMParguments=\count309
+\nofMPsegments=\count312
+\nofMParguments=\count313
 \everyMPshowfont=\toks46
-\MPscratchCnt=\count310
-\MPscratchDim=\dimen264
-\MPnumerator=\count311
-\makeMPintoPDFobject=\count312
+\MPscratchCnt=\count314
+\MPscratchDim=\dimen272
+\MPnumerator=\count315
+\makeMPintoPDFobject=\count316
 \everyMPtoPDFconversion=\toks47
 ) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -441,42 +464,46 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\c@lstlisting=\count313
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 44.
+\c@lstlisting=\count317
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 48.
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 48.
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 61--69
+Underfull \hbox (badness 10000) in paragraph at lines 65--73
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--69
+Underfull \hbox (badness 10000) in paragraph at lines 65--73
 
  []
 
 [1
 
-{C:/Users/tomas/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [1] (Thesis.toc)
+{C:/Users/tomas/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [1]
+No file Thesis.toc.
 \tf@toc=\write4
 \openout4 = `Thesis.toc'.
 
- [2
+[2
 
 
-] (Thesis.lof)
+]
+No file Thesis.lof.
 \tf@lof=\write5
 \openout5 = `Thesis.lof'.
 
- [3
+[3
 
 ]
 Capitolo 1.
@@ -484,53 +511,155 @@ Capitolo 1.
 
 ]
 Capitolo 2.
+
+LaTeX Warning: Citation `Maian' on page 5 undefined on input line 10.
+
+
+LaTeX Warning: Citation `Maian2' on page 5 undefined on input line 10.
+
+
+LaTeX Warning: Citation `Oyente' on page 5 undefined on input line 10.
+
+
+LaTeX Warning: Citation `Oyente2' on page 5 undefined on input line 10.
+
+
+LaTeX Warning: Citation `Mythril' on page 5 undefined on input line 10.
+
+
+LaTeX Warning: Citation `Manticore' on page 5 undefined on input line 10.
+
+
+LaTeX Warning: Citation `Slither' on page 5 undefined on input line 11.
+
+
+LaTeX Warning: Citation `Securify' on page 5 undefined on input line 11.
+
+
+LaTeX Warning: Citation `SmartCheck' on page 5 undefined on input line 11.
+
+
+LaTeX Warning: Citation `ContractWard' on page 5 undefined on input line 12.
+
+
+LaTeX Warning: Citation `Mezina' on page 5 undefined on input line 12.
+
 [5
 
 ]
 
+LaTeX Warning: Citation `RossiniPaper1' on page 6 undefined on input line 14.
+
+
 LaTeX Warning: Citation `RossiniPaper2' on page 6 undefined on input line 14.
+
+
+LaTeX Warning: Citation `Huang' on page 6 undefined on input line 14.
+
+
+LaTeX Warning: Citation `Deng' on page 6 undefined on input line 15.
 
 [6]) (Chapters/Dataset/Dataset.tex [7]
 Capitolo 3.
+
+LaTeX Warning: Citation `rossini2022slitherauditedcontracts' on page 8 undefined on input line 6.
+
 [8
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 28.
- [9] [10]
-<Chapters/Dataset//../../img/BECPrice.png, id=49, 502.87875pt x 353.82187pt>
+
+
+LaTeX Warning: Citation `sc-vulnerabilities' on page 9 undefined on input line 37.
+
+[9]
+<Chapters/Dataset//../../img/BECPrice.png, id=45, 502.87875pt x 353.82187pt>
 File: Chapters/Dataset//../../img/BECPrice.png Graphic file (type png)
 <use Chapters/Dataset//../../img/BECPrice.png>
 Package pdftex.def Info: Chapters/Dataset//../../img/BECPrice.png  used on input line 71.
 (pdftex.def)             Requested size: 360.00137pt x 253.29384pt.
- [11 <./Chapters/Dataset//../../img/BECPrice.png>] [12] [13] [14]) [15]
-Capitolo 4.
-[16
+ [10] [11 <./Chapters/Dataset//../../img/BECPrice.png>] [12]
 
-] (Thesis.bbl [17] [18
+LaTeX Warning: Citation `reentrancy-historical' on page 13 undefined on input line 105.
+
+[13] [14]
+<Chapters/Dataset//../../img/SCTokensPreprocessed.png, id=65, 854.2314pt x 450.9648pt>
+File: Chapters/Dataset//../../img/SCTokensPreprocessed.png Graphic file (type png)
+<use Chapters/Dataset//../../img/SCTokensPreprocessed.png>
+Package pdftex.def Info: Chapters/Dataset//../../img/SCTokensPreprocessed.png  used on input line 167.
+(pdftex.def)             Requested size: 220.50247pt x 116.40857pt.
+<Chapters/Dataset//../../img/BCTokensPreprocessed.png, id=66, 860.7357pt x 450.9648pt>
+File: Chapters/Dataset//../../img/BCTokensPreprocessed.png Graphic file (type png)
+<use Chapters/Dataset//../../img/BCTokensPreprocessed.png>
+Package pdftex.def Info: Chapters/Dataset//../../img/BCTokensPreprocessed.png  used on input line 174.
+(pdftex.def)             Requested size: 220.50247pt x 115.52779pt.
+
+Overfull \hbox (32.10382pt too wide) in paragraph at lines 183--183
+[]\OT1/cmr/bx/n/17.28 Distribuzione del-le Clas-si e Ma-tri-ci di Co-occorrenza 
+ []
+
+
+LaTeX Warning: Reference `tab:class_distribution' on page 15 undefined on input line 189.
+
+[15]
+
+LaTeX Warning: Reference `tab:cooccurrence_train' on page 16 undefined on input line 211.
+
+
+LaTeX Warning: Reference `tab:cooccurrence_test' on page 16 undefined on input line 211.
+
+
+LaTeX Warning: Reference `tab:cooccurrence_val' on page 16 undefined on input line 211.
+
+
+Overfull \hbox (68.24763pt too wide) in paragraph at lines 217--229
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (62.3727pt too wide) in paragraph at lines 235--247
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (62.3727pt too wide) in paragraph at lines 253--265
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[16 <./Chapters/Dataset//../../img/SCTokensPreprocessed.png> <./Chapters/Dataset//../../img/BCTokensPreprocessed.png>] [17]) [18]
+Capitolo 4.
+[19
+
+] (Thesis.bbl [20] [21
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 73--76
 []\OT1/cmr/m/n/12 pcaversaccio.  A hi-sto-ri-cal col-lec-tion of reen-tran-cy at-tacks.
  []
 
-) [19] (Thesis.aux)
+))
+! Emergency stop.
+<*> ...Vulnerabilities-Detection/thesis/Thesis.tex
+                                                  
+*** (job aborted, no legal \end found)
 
-LaTeX Warning: There were undefined references.
-
- ) 
+ 
 Here is how much of TeX's memory you used:
- 16527 strings out of 478927
- 312178 string characters out of 2852536
- 724278 words of memory out of 3000000
- 34055 multiletter control sequences out of 15000+600000
+ 17896 strings out of 478927
+ 339054 string characters out of 2852536
+ 742240 words of memory out of 3000000
+ 35422 multiletter control sequences out of 15000+600000
  414920 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,6n,108p,2035b,1769s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Thesis.pdf (20 pages, 257842 bytes).
-PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 102i,9n,108p,2035b,1765s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

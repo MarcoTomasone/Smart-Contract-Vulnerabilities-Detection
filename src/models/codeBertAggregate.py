@@ -1,18 +1,21 @@
-# Importing stock ml libraries
 import re
 import numpy as np
 import pandas as pd
+import logging
 from sklearn import metrics
 import transformers
 import torch
 from datasets import load_dataset
 from torch.utils.data import Dataset, DataLoader, RandomSampler, SequentialSampler
-from transformers import BertTokenizer, BertModel, BertConfig, AutoModel, AutoTokenizer
-from torch import cuda
+from transformers import AutoModel, RobertaTokenizer
+from torch import cuda, nn
+from torch.nn.utils.rnn import pad_sequence
+
+logging.basicConfig(level=logging.INFO)
 
 #region constants
-# Defining some key variables that will be used later on in the training
 MAX_LEN = 512
+CODE_BLOCKS = 4
 SAFE_IDX = 4
 TRAIN_BATCH_SIZE = 8
 VALID_BATCH_SIZE = 16
@@ -20,9 +23,8 @@ EPOCHS = 20
 LEARNING_RATE = 1e-05
 NUM_CLASSES = 5
 MODEL = 'codeBertAgg'
-TOKENIZER = AutoTokenizer.from_pretrained('microsoft/codebert-base')
+TOKENIZER = RobertaTokenizer.from_pretrained('microsoft/codebert-base')
 DEVICE = 'cuda' if cuda.is_available() else 'cpu'
-#Additional Info when using cuda
 if DEVICE == 'cuda':
     print(torch.cuda.get_device_name(0))
     print('Memory Usage:')
@@ -33,26 +35,19 @@ if DEVICE == 'cuda':
 #region functions 
 def remove_comments(string):
     pattern = r"(\".*?\"|\'.*?\')|(/\*.*?\*/|//[^\r\n]*$)"
-    # first group captures quoted strings (double or single)
-    # second group captures comments (//single-line or /* multi-line */)
     regex = re.compile(pattern, re.MULTILINE|re.DOTALL)
     def _replacer(match):
-        # if the 2nd group is not None, then we have captured a real comment string.
         if match.group(2) is not None:
             return ""
-        else: # otherwise, we will return the 1st group
+        else:
             return match.group(1)
     return regex.sub(_replacer, string)
 
-
 def deleteNewlineAndGetters(string):
-    string = string.replace('\n', '') #delete newlines
-    # define regex to match all the getter functions with just a return statement
+    string = string.replace('\n', '')
     regex_getter = r'function\s+(_get|get)[a-zA-Z0-9_]+\([^\)]*\)\s(external|view|override|virtual|private|returns|public|\s)*\(([^)]*)\)\s*\{(\r\n|\r|\n|\s)*return\s*[^\}]*\}'
-    # delete all the getter functions matched 
     string = re.sub(regex_getter, '', string)
     return string
-
 
 def oneHotEncodeLabel(label):
     one_hot = np.zeros(NUM_CLASSES)
@@ -63,30 +58,28 @@ def oneHotEncodeLabel(label):
             one_hot[elem-1] = 1
     return one_hot
 
-
 def transformData(example):
    data= {}
    data["source_code"] = deleteNewlineAndGetters(remove_comments(example["source_code"])) 
    data["bytecodeOrigin"] = example["bytecode"]
-   #data["bytecode"] = bytecode_tokenizer.encode(example["bytecode"])
    data["label"] = oneHotEncodeLabel(example["slither"])
    return data
 
 def readAndPreprocessDataset():
   train_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='train', cache_dir="./cache", ignore_verifications=True).map(transformData)
-  test_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='test', cache_dir="./cache",  ignore_verifications=True).map(transformData)
-  val_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='validation', cache_dir="./cache",  ignore_verifications=True).map(transformData)
+  test_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='test', cache_dir="./cache", ignore_verifications=True).map(transformData)
+  val_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='validation', cache_dir="./cache", ignore_verifications=True).map(transformData)
   return train_set, test_set, val_set
 #endregion
 
 #region dataset
 class CustomDataset(Dataset):
-    def __init__(self, dataframe, tokenizer, max_len):
+    def __init__(self, dataframe, tokenizer, max_len=MAX_LEN * CODE_BLOCKS):
         self.tokenizer = tokenizer
         self.data = dataframe
+        self.max_len = max_len
         self.sourceCode = dataframe["source_code"]
         self.targets = dataframe["label"]
-        self.max_len = max_len
 
     def __len__(self):
         return len(self.sourceCode)
@@ -95,52 +88,50 @@ class CustomDataset(Dataset):
         sourceCode = str(self.sourceCode[index])
         sourceCode = " ".join(sourceCode.split())
 
-        tokens = self.tokenizer.tokenize(sourceCode)
-        num_chunks = len(tokens) // self.max_len + 1
+        if len(sourceCode) == 0:
+            raise ValueError(f"Source code at index {index} is empty.")
 
-        input_ids = []
-        attention_masks = []
-        for i in range(num_chunks):
-            chunk = tokens[i*self.max_len : (i+1)*self.max_len]
-            inputs = self.tokenizer.encode_plus(
-                chunk,
-                None,
-                add_special_tokens=True,
-                max_length=self.max_len,
-                pad_to_max_length=True,
-                return_token_type_ids=True
-            )
-            input_ids.append(inputs['input_ids'])
-            attention_masks.append(inputs['attention_mask'])
-
-        input_ids = torch.tensor(input_ids, dtype=torch.long)
-        attention_masks = torch.tensor(attention_masks, dtype=torch.long)
-        targets = torch.tensor(self.targets[index], dtype=torch.float)
+        inputs = self.tokenizer.encode_plus(
+            sourceCode,
+            None,
+            add_special_tokens=True,
+            max_length=self.max_len,
+            pad_to_max_length=True,
+            return_token_type_ids=True
+        )
+        ids = inputs['input_ids']
+        mask = inputs['attention_mask']
+        token_type_ids = inputs["token_type_ids"]
 
         return {
-            'input_ids': input_ids,
-            'attention_masks': attention_masks,
-            'targets': targets
+            'ids': torch.tensor(ids, dtype=torch.long),
+            'mask': torch.tensor(mask, dtype=torch.long),
+            'token_type_ids': torch.tensor(token_type_ids, dtype=torch.long),
+            'targets': torch.tensor(self.targets[index], dtype=torch.float)
         }
+
 #endregion
 
-#region model 
-class CodeBERTAggregatedClass(nn.Module):
+#region model
+class CodeBERTAggregatedClass(torch.nn.Module):
     def __init__(self, num_classes, aggregation='mean', dropout=0.3):
         super(CodeBERTAggregatedClass, self).__init__()
         self.codebert = AutoModel.from_pretrained('microsoft/codebert-base', cache_dir="./cache")
-        self.dropout = nn.Dropout(dropout)
-        self.fc = nn.Linear(self.codebert.config.hidden_size, num_classes)
+        self.dropout = torch.nn.Dropout(dropout)
+        self.fc = torch.nn.Linear(self.codebert.config.hidden_size, num_classes)
         self.aggregation = aggregation
 
-    def forward(self, input_ids, attention_masks):
-        batch_size, num_chunks, seq_len = input_ids.size()
+    def forward(self, input_ids, attention_masks, token_type_ids):
+        batch_size, seq_len = input_ids.size()
 
-        input_ids = input_ids.view(-1, seq_len)
-        attention_masks = attention_masks.view(-1, seq_len)
+        # Divide input_ids e attention_masks in blocchi di 512 token
+        num_chunks = (seq_len + 511) // 512
+        input_ids = input_ids[:, :512*num_chunks].view(batch_size * num_chunks, 512)
+        attention_masks = attention_masks[:, :512*num_chunks].view(batch_size * num_chunks, 512)
+        token_type_ids = token_type_ids[:, :512*num_chunks].view(batch_size * num_chunks, 512)
 
         with torch.no_grad():
-            outputs = self.codebert(input_ids=input_ids, attention_mask=attention_masks)
+            outputs = self.codebert(input_ids=input_ids, attention_mask=attention_masks, token_type_ids=token_type_ids)
 
         last_hidden_states = outputs.last_hidden_state
         cls_tokens = last_hidden_states[:, 0, :]
@@ -157,75 +148,72 @@ class CodeBERTAggregatedClass(nn.Module):
         aggregated_output = self.dropout(aggregated_output)
         output = self.fc(aggregated_output)
         return output
-
-model = CodeBERTAggregatedClass(NUM_CLASSES)
-model.to(DEVICE)
 #endregion
 
-def loss_fn(outputs, targets):
-    return nn.BCEWithLogitsLoss()(outputs, targets)
-
-optimizer = torch.optim.Adam(params=model.parameters(), lr=LEARNING_RATE)
-
+#region train
 def train(epoch):
     model.train()
-    total_loss = 0.0
     for batch_idx, data in enumerate(training_loader, 0):
-        input_ids = data['input_ids'].to(DEVICE, dtype=torch.long)
-        attention_masks = data['attention_masks'].to(DEVICE, dtype=torch.long)
+        print(f"Epoch: {epoch}")
+        print(f"Batch: {batch_idx}")
+        #print size of data 
+        print(data['ids'].size())
+        print(data['mask'].size())
+        print(data['token_type_ids'].size())
+
+        ids = data['ids'].to(DEVICE, dtype=torch.long)
+        mask = data['mask'].to(DEVICE, dtype=torch.long)
+        token_type_ids = data['token_type_ids'].to(DEVICE, dtype=torch.long)
         targets = data['targets'].to(DEVICE, dtype=torch.float)
 
-        outputs = model(input_ids, attention_masks)
+        outputs = model(input_ids=ids, attention_masks=mask, token_type_ids=token_type_ids)
+        loss = loss_fn(outputs, targets)
 
         optimizer.zero_grad()
-        loss = loss_fn(outputs, targets)
-        total_loss += loss.item()
-
-        if batch_idx % 500 == 0:
-            print(f'Epoch: {epoch}, Batch: {batch_idx}, Loss: {loss.item()}')
-
         loss.backward()
         optimizer.step()
 
-    avg_loss = total_loss / len(training_loader)
-    print(f'Epoch: {epoch}, Average Loss: {avg_loss}')
-    torch.save(model.state_dict(), f'./stateDict/epoch_{epoch}_{MODEL}.pth')
+        if batch_idx % 10 == 0:
+            print(f'Epoch: {epoch}, Loss:  {loss.item()}')
+#endregion
 
-    return avg_loss
-
-def validation(epoch):
+#region validate
+def validate(epoch):
     model.eval()
     fin_targets = []
     fin_outputs = []
     with torch.no_grad():
-        for _, data in enumerate(testing_loader, 0):
-            input_ids = data['input_ids'].to(DEVICE, dtype=torch.long)
-            attention_masks = data['attention_masks'].to(DEVICE, dtype=torch.long)
+        for _, data in enumerate(validation_loader, 0):
+            ids = data['ids'].to(DEVICE, dtype=torch.long)
+            mask = data['mask'].to(DEVICE, dtype=torch.long)
+            token_type_ids = data['token_type_ids'].to(DEVICE, dtype=torch.long)
             targets = data['targets'].to(DEVICE, dtype=torch.float)
-            outputs = model(input_ids, attention_masks)
+
+            outputs = model(input_ids=ids, attention_masks=mask, token_type_ids=token_type_ids)
+
             fin_targets.extend(targets.cpu().detach().numpy().tolist())
             fin_outputs.extend(torch.sigmoid(outputs).cpu().detach().numpy().tolist())
     return fin_outputs, fin_targets
+#endregion
 
-trainSet, testSet, valSet = readAndPreprocessDataset()
-training_set = CustomDataset(trainSet, TOKENIZER, MAX_LEN)
-testing_set = CustomDataset(testSet, TOKENIZER, MAX_LEN)
-validation_set = CustomDataset(valSet, TOKENIZER, MAX_LEN)
+#region execution
+train_set, test_set, val_set = readAndPreprocessDataset()
+training_set = CustomDataset(train_set, TOKENIZER)
+validation_set = CustomDataset(val_set, TOKENIZER)
+testing_set = CustomDataset(test_set, TOKENIZER)
 
-train_params = {'batch_size': TRAIN_BATCH_SIZE, 'shuffle': True, 'num_workers': 0}
-test_params = {'batch_size': VALID_BATCH_SIZE, 'shuffle': True, 'num_workers': 0}
+training_loader = DataLoader(training_set, batch_size=TRAIN_BATCH_SIZE, shuffle=True)
+validation_loader = DataLoader(validation_set, batch_size=VALID_BATCH_SIZE, shuffle=False)
+testing_loader = DataLoader(testing_set, batch_size=VALID_BATCH_SIZE, shuffle=False)
 
-training_loader = DataLoader(training_set, **train_params)
-testing_loader = DataLoader(testing_set, **test_params)
-
-print("Starting training")
-
-print("Starting training")
+model = CodeBERTAggregatedClass(num_classes=NUM_CLASSES).to(DEVICE)
+optimizer = torch.optim.Adam(params=model.parameters(), lr=LEARNING_RATE)
+loss_fn = nn.BCEWithLogitsLoss()
 
 for epoch in range(EPOCHS):
     print(f"Starting Epoch: {epoch}")
     train(epoch) 
-    outputs, targets = validation(epoch)
+    outputs, targets = validate(epoch)
     outputs = np.array(outputs) >= 0.5
     accuracy = metrics.accuracy_score(targets, outputs)
     f1_score_micro = metrics.f1_score(targets, outputs, average='micro')

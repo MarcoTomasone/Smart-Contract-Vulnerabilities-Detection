@@ -82,7 +82,6 @@ class CustomDataset(Dataset):
 
     def __init__(self, dataframe, tokenizer, max_len):
         self.tokenizer = tokenizer
-        self.data = dataframe
         self.sourceCode = dataframe["source_code"]
         self.targets =  dataframe["label"]
         self.max_len = max_len
@@ -121,7 +120,7 @@ class CodeBERTClass(torch.nn.Module):
         super(CodeBERTClass, self).__init__()
         self.num_classes = NUM_CLASSES
         self.codebert = AutoModel.from_pretrained('microsoft/codebert-base', cache_dir="./cache")
-        self.dropout = torch.nn.Dropout(0.3)
+        self.dropout = torch.nn.Dropout(0.2)
         self.fc = torch.nn.Linear(768, NUM_CLASSES)
     
     def forward(self, ids, mask, token_type_ids):

@@ -153,5 +153,107 @@ Per ongi entry del dataset (ogni contratto) il dataset fornisce quattro feature:
 - \emph{bytecode:} il codice bytecode del contratto, ottenuto a partire dalla compilazione del codice sorgente utilizzando il compilatore di Solidity. Questo bytecode è quello che viene eseguito sulla macchina virtuale di Ethereum (EVM). 
 - \emph{slither:} il risultato dell'analisi statica del contratto con Slither, un tool open-source per l'analisi statica di contratti scritti in Solidity. Questo risultato è un array di valori che vanno da 1 a 5, dove ogni numero  rappresenta la presenza di una vulnerabilità e 4 la sua assenza.
 Tutte le informazioni sono presenti per tutti i contratti tranne l'informazione relativa al bytecode, che risulta assente per 227 contratti nel training set, 30 nel validation set e 51 nel test set. Durante la fase di preprocessing questi contratti sono stati rimossi dal dataset. 
-Prima del preprocessing le lunghezze medie di SourceCode e ByteCode sono rispettivamente di 3155 token e 8120 token. Sul bytecode non è stato applicato nessun tipo di preprocessing per ridurre la dimensione dei dati. Per quanto riguarda il codice sorgente sono stati eliminati tutti i commenti e le funzioni getter monoistruzione, cioè tutte quelle funzioni \texttt{getX()} le quali abbiano come unica istruzione una istruzione di return, poichè sono state assunte come funzioni corrette, l'eliminazione di queste stringhe è avvenuta tramite una ricerca delle stringhe effettuata con una regex.
+ 
+Per ottenere una visione d'insieme delle lunghezze dei codici, abbiamo calcolato la lunghezza media del source code e del bytecode, prima del preprocessing le lunghezze medie di SourceCode e ByteCode sono rispettivamente di 3155 token e 8114 token.
+Abbiamo visualizzato la distribuzione delle lunghezze del source code utilizzando un istogramma. Per migliorare la leggibilità del grafico, abbiamo raggruppato i dati per quanto riguarda il source code in intervalli di 500 token. L'istogramma è accompagnato da una linea che indica la lunghezza media dei token rappresentata con una linea tratteggiata rossa.
+
+L'inclusione delle lunghezze medie fornisce un punto di riferimento utile per interpretare le distribuzioni e confrontare i singoli esempi di codice rispetto alla media del dataset. Queste analisi sono fondamentali per le successive fasi di preprocessing e modellazione, garantendo che i modelli possano gestire efficacemente la variabilità presente nei dati.
+Sul bytecode non è stato applicato nessun tipo di preprocessing per ridurre la dimensione dei dati. Per quanto riguarda il codice sorgente sono stati eliminati tutti i commenti e le funzioni getter monoistruzione, cioè tutte quelle funzioni \texttt{getX()} le quali abbiano come unica istruzione una istruzione di return, poichè sono state assunte come funzioni corrette, l'eliminazione di queste stringhe è avvenuta tramite una ricerca delle stringhe effettuata con una regex.
+Abbiamo unito i set di dati di addestramento, test e validazione in un unico DataFrame per analizzare le lunghezze del source code e del bytecode. In particolare, sono state calcolate rispettivamente le lunghezze del codice sorgente e del bytecode. Effettuando le rimozioni dei commenti la media del numero di token del sourcecode scende a 1511 token, mostrando come la rimozione dei commenti abbia un impatto minimo sulla lunghezza media del codice. Rimuovendo anche le funzioni getter monoistruzione la lunghezza media del source code scende a 1481 token.
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../../img/SCTokensPreprocessed.png}
+        \caption{Distribuzione delle Lunghezze del Source Code dopo il preprocessing}
+        \label{fig:sourcecode_length_distribution}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../../img/BCTokensPreprocessed.png}
+        \caption{Distribuzione delle Lunghezze del Bytecode dopo il preprocessing}
+        \label{fig:bytecode_length_distribution}
+    \end{subfigure}
+    \caption{Distribuzioni delle lunghezze del source code e del bytecode.}
+    \label{fig:length_distributions}
+\end{figure}
+Successivamente, la fase di esplorazione dei dati ha previsto l'analisi delle classi di vulnerabilità dei dati. 
+
+\section{Distribuzione delle Classi e Matrici di Co-occorrenza}
+
+In questa sezione, presentiamo la distribuzione delle classi e le matrici di co-occorrenza per i dataset di addestramento, test e validazione. Si precisa che i risultati di seguito proposti si riferiscono già al dataset da cui sono stati sottratti i contratti privi di bytecode.
+
+\subsection{Distribuzione delle Classi}
+
+La Tabella \ref{tab:class_distribution} mostra la distribuzione delle classi per i tre dataset. È evidente che la classe 'unchecked-calls' è la più frequente in tutti e tre i dataset, mentre la classe 'access-control' è la meno rappresentata.
+
+\begin{table}[h!]
+    \centering
+    \caption{Distribuzione delle Classi nei Dataset di Addestramento, Test e Validazione}
+    \label{tab:class_distribution}
+    \begin{tabular}{|l|c|c|c|}
+        \hline
+        \textbf{Class} & \textbf{Train Count} & \textbf{Test Count} & \textbf{Validation Count} \\
+        \hline
+        access-control & 11619 & 2331 & 1588 \\
+        arithmetic & 13472 & 2708 & 1835 \\
+        other & 20893 & 4193 & 2854 \\
+        reentrancy & 24099 & 4838 & 3289 \\
+        safe & 26979 & 5405 & 3676 \\
+        unchecked-calls & 36278 & 7276 & 4951 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Matrici di Co-occorrenza}
+Le Tabelle \ref{fig:train_cooccurrence_matrix}, \ref{fig:test_cooccurrence_matrix} e \ref{fig:val_cooccurrence_matrix} mostrano le matrici di co-occorrenza per i dataset di addestramento, test e validazione rispettivamente. Le matrici di co-occorrenza indicano la frequenza con cui ogni coppia di classi appare insieme nello stesso elemento.
+
+In questa sezione, vengono presentate le matrici di co-occorrenza per ogni split del dataset.
+
+\subsection{Matrice di Co-occorrenza nel Dataset di Addestramento}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../../img/TrainCo-occurrency.png}
+    \caption{Matrice di Co-occorrenza nel Dataset di Addestramento}
+    \label{fig:train_cooccurrence_matrix}
+\end{figure}
+
+\subsection{Matrice di Co-occorrenza nel Dataset di Test}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../../img/TestCo-occurrency.png}
+    \caption{Matrice di Co-occorrenza nel Dataset di Test}
+    \label{fig:test_cooccurrence_matrix}
+\end{figure}
+
+\subsection{Matrice di Co-occorrenza nel Dataset di Validazione}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../../img/ValCo-occurrency.png}
+    \caption{Matrice di Co-occorrenza nel Dataset di Validazione}
+    \label{fig:val_cooccurrence_matrix}
+\end{figure}
+
+\subsection{Commento sui Risultati}
+
+Dalla distribuzione delle classi nei diversi dataset, possiamo osservare che:
+
+\begin{itemize}
+    \item La classe 'unchecked-calls' è la più frequente in tutti e tre i dataset, con una presenza significativa soprattutto nel dataset di addestramento (36278 occorrenze).
+    \item La classe 'access-control' è la meno frequente, con il numero più basso di occorrenze nel dataset di validazione (1588 occorrenze).
+    \item Le classi 'safe' e 'reentrancy' sono anche abbastanza rappresentate, specialmente nel dataset di addestramento.
+\end{itemize}
+
+Analizzando le matrici di co-occorrenza, notiamo che:
+
+\begin{itemize}
+    \item Le classi 'safe' non co-occorrono con altre classi. Questo potrebbe indicare che i dati etichettati come 'safe' sono esclusivamente sicuri e non sovrapposti con altre categorie di vulnerabilità.
+    \item Le classi 'unchecked-calls' co-occorrono frequentemente con 'reentrancy', 'other', e 'access-control'. Questo suggerisce che i contratti con chiamate non verificate spesso presentano anche altri tipi di vulnerabilità.
+    \item Le classi 'arithmetic' e 'reentrancy' mostrano una co-occorrenza significativa, suggerendo che le vulnerabilità aritmetiche possono spesso essere associate a problemi di rientro.
+\end{itemize}
+
+Questi risultati evidenziano l'importanza di considerare la co-occorrenza delle classi quando si analizzano le vulnerabilità nei contratti intelligenti, poiché molte vulnerabilità non si verificano in isolamento ma tendono a manifestarsi insieme ad altre.
+
+
 \end{document}
