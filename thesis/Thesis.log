@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  26 MAY 2024 17:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  26 MAY 2024 20:02
 entering extended mode
 **c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Thesis.tex
 (c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Thesis.tex
@@ -663,51 +663,61 @@ Package pdftex.def Info: Chapters/Dataset//../../img/BECPrice.png  used on input
 Capitolo 4.
 [14
 
-]
-<Chapters/Methodology//../../img/SCTokensPreprocessed.png, id=261, 854.2314pt x 450.9648pt>
+] [15]
+<Chapters/Methodology//../../img/SCTokensPreprocessed.png, id=267, 854.2314pt x 450.9648pt>
 File: Chapters/Methodology//../../img/SCTokensPreprocessed.png Graphic file (type png)
 <use Chapters/Methodology//../../img/SCTokensPreprocessed.png>
-Package pdftex.def Info: Chapters/Methodology//../../img/SCTokensPreprocessed.png  used on input line 49.
+Package pdftex.def Info: Chapters/Methodology//../../img/SCTokensPreprocessed.png  used on input line 62.
 (pdftex.def)             Requested size: 220.50247pt x 116.40857pt.
-<Chapters/Methodology//../../img/BCTokensPreprocessed.png, id=262, 860.7357pt x 450.9648pt>
+<Chapters/Methodology//../../img/BCTokensPreprocessed.png, id=268, 860.7357pt x 450.9648pt>
 File: Chapters/Methodology//../../img/BCTokensPreprocessed.png Graphic file (type png)
 <use Chapters/Methodology//../../img/BCTokensPreprocessed.png>
-Package pdftex.def Info: Chapters/Methodology//../../img/BCTokensPreprocessed.png  used on input line 56.
+Package pdftex.def Info: Chapters/Methodology//../../img/BCTokensPreprocessed.png  used on input line 69.
 (pdftex.def)             Requested size: 220.50247pt x 115.52779pt.
- [15]
-Overfull \hbox (28.11864pt too wide) in paragraph at lines 74--88
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[16 <./Chapters/Methodology//../../img/SCTokensPreprocessed.png> <./Chapters/Methodology//../../img/BCTokensPreprocessed.png>]
+Overfull \hbox (28.11864pt too wide) in paragraph at lines 103--117
  [][] 
  []
 
-[16 <./Chapters/Methodology//../../img/SCTokensPreprocessed.png> <./Chapters/Methodology//../../img/BCTokensPreprocessed.png>]
-<Chapters/Methodology//../../img/class-distribution-relative.png, id=277, 497.2176pt x 475.5366pt>
+<Chapters/Methodology//../../img/class-distribution-relative.png, id=281, 497.2176pt x 475.5366pt>
 File: Chapters/Methodology//../../img/class-distribution-relative.png Graphic file (type png)
 <use Chapters/Methodology//../../img/class-distribution-relative.png>
-Package pdftex.def Info: Chapters/Methodology//../../img/class-distribution-relative.png  used on input line 96.
+Package pdftex.def Info: Chapters/Methodology//../../img/class-distribution-relative.png  used on input line 125.
 (pdftex.def)             Requested size: 202.49863pt x 193.67242pt.
-<Chapters/Methodology//../../img/class-distribution-absolute.png, id=278, 739.3221pt x 560.0925pt>
+<Chapters/Methodology//../../img/class-distribution-absolute.png, id=282, 739.3221pt x 560.0925pt>
 File: Chapters/Methodology//../../img/class-distribution-absolute.png Graphic file (type png)
 <use Chapters/Methodology//../../img/class-distribution-absolute.png>
-Package pdftex.def Info: Chapters/Methodology//../../img/class-distribution-absolute.png  used on input line 102.
+Package pdftex.def Info: Chapters/Methodology//../../img/class-distribution-absolute.png  used on input line 131.
 (pdftex.def)             Requested size: 202.49863pt x 153.4063pt.
- [17 <./Chapters/Methodology//../../img/class-distribution-relative.png> <./Chapters/Methodology//../../img/class-distribution-absolute.png>]
-<Chapters/Methodology//../../img/TrainCo-occurrency.png, id=290, 714.7503pt x 570.933pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17]
+<Chapters/Methodology//../../img/TrainCo-occurrency.png, id=292, 714.7503pt x 570.933pt>
 File: Chapters/Methodology//../../img/TrainCo-occurrency.png Graphic file (type png)
 <use Chapters/Methodology//../../img/TrainCo-occurrency.png>
-Package pdftex.def Info: Chapters/Methodology//../../img/TrainCo-occurrency.png  used on input line 117.
+Package pdftex.def Info: Chapters/Methodology//../../img/TrainCo-occurrency.png  used on input line 153.
 (pdftex.def)             Requested size: 314.99863pt x 251.62074pt.
-<Chapters/Methodology//../../img/TestCo-occurrency.png, id=291, 714.7503pt x 570.933pt>
+ [18 <./Chapters/Methodology//../../img/class-distribution-relative.png> <./Chapters/Methodology//../../img/class-distribution-absolute.png>]
+<Chapters/Methodology//../../img/TestCo-occurrency.png, id=301, 714.7503pt x 570.933pt>
 File: Chapters/Methodology//../../img/TestCo-occurrency.png Graphic file (type png)
 <use Chapters/Methodology//../../img/TestCo-occurrency.png>
-Package pdftex.def Info: Chapters/Methodology//../../img/TestCo-occurrency.png  used on input line 124.
+Package pdftex.def Info: Chapters/Methodology//../../img/TestCo-occurrency.png  used on input line 160.
 (pdftex.def)             Requested size: 314.99863pt x 251.62074pt.
- [18 <./Chapters/Methodology//../../img/TrainCo-occurrency.png>]
-<Chapters/Methodology//../../img/ValCo-occurrency.png, id=299, 714.7503pt x 570.933pt>
+<Chapters/Methodology//../../img/ValCo-occurrency.png, id=302, 714.7503pt x 570.933pt>
 File: Chapters/Methodology//../../img/ValCo-occurrency.png Graphic file (type png)
 <use Chapters/Methodology//../../img/ValCo-occurrency.png>
-Package pdftex.def Info: Chapters/Methodology//../../img/ValCo-occurrency.png  used on input line 131.
+Package pdftex.def Info: Chapters/Methodology//../../img/ValCo-occurrency.png  used on input line 167.
 (pdftex.def)             Requested size: 314.99863pt x 251.62074pt.
- [19 <./Chapters/Methodology//../../img/TestCo-occurrency.png> <./Chapters/Methodology//../../img/ValCo-occurrency.png>] [20]) (Chapters/Results/Results.tex [21]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[19 <./Chapters/Methodology//../../img/TrainCo-occurrency.png> <./Chapters/Methodology//../../img/TestCo-occurrency.png>] [20 <./Chapters/Methodology//../../img/ValCo-occurrency.png>]) (Chapters/Results/Results.tex [21]
 Capitolo 5.
 ) (Chapters/Conclusion/Conclusion.tex [22
 
@@ -730,17 +740,17 @@ Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: C18E7B474C34C0B537AD74137ABA5077;1292.
  ) 
 Here is how much of TeX's memory you used:
- 24550 strings out of 478927
- 442695 string characters out of 2852536
- 838369 words of memory out of 3000000
- 41784 multiletter control sequences out of 15000+600000
+ 24555 strings out of 478927
+ 442772 string characters out of 2852536
+ 838560 words of memory out of 3000000
+ 41787 multiletter control sequences out of 15000+600000
  414920 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,10n,108p,2035b,2019s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Thesis.pdf (26 pages, 651431 bytes).
+Output written on Thesis.pdf (26 pages, 653862 bytes).
 PDF statistics:
- 412 PDF objects out of 1000 (max. 8388607)
- 148 named destinations out of 1000 (max. 500000)
+ 416 PDF objects out of 1000 (max. 8388607)
+ 150 named destinations out of 1000 (max. 500000)
  133 words of extra memory for PDF output out of 10000 (max. 10000000)
 

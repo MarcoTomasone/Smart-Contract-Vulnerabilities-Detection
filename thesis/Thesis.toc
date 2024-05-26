@@ -11,9 +11,9 @@
 \contentsline {subsubsection}{Unchecked-Calls}{13}{section*.8}%
 \contentsline {chapter}{\numberline {4}Metodologia}{14}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Esplorazione dei dati}{14}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Distribuzione delle Classi e Matrici di Co-occorrenza}{16}{subsection.4.1.1}%
-\contentsline {subsubsection}{Distribuzione delle Classi}{17}{section*.10}%
-\contentsline {subsubsection}{Matrici di Co-occorrenza}{18}{section*.13}%
+\contentsline {subsection}{\numberline {4.1.1}Distribuzione delle Classi e Matrici di Co-occorrenza}{17}{subsection.4.1.1}%
+\contentsline {subsubsection}{Distribuzione delle Classi}{17}{section*.12}%
+\contentsline {subsubsection}{Matrici di Co-occorrenza}{18}{section*.15}%
 \contentsline {section}{\numberline {4.2}BERT}{20}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Results}{22}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Conclusioni}{23}{chapter.6}%

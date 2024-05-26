@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  26 MAY 2024 17:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  26 MAY 2024 20:02
 entering extended mode
 **c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Methodology/Methodology.tex
 (c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Methodology/Methodology.tex
@@ -603,62 +603,72 @@ LaTeX Warning: Citation `rossini2022slitherauditedcontracts' on page 1 undefined
 
 
 {C:/Users/tomas/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-<../../img/SCTokensPreprocessed.png, id=32, 854.2314pt x 450.9648pt>
-File: ../../img/SCTokensPreprocessed.png Graphic file (type png)
-<use ../../img/SCTokensPreprocessed.png>
-Package pdftex.def Info: ../../img/SCTokensPreprocessed.png  used on input line 49.
-(pdftex.def)             Requested size: 220.50247pt x 116.40857pt.
-<../../img/BCTokensPreprocessed.png, id=34, 860.7357pt x 450.9648pt>
-File: ../../img/BCTokensPreprocessed.png Graphic file (type png)
-<use ../../img/BCTokensPreprocessed.png>
-Package pdftex.def Info: ../../img/BCTokensPreprocessed.png  used on input line 56.
-(pdftex.def)             Requested size: 220.50247pt x 115.52779pt.
- [2]
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 74.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 40.
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (28.11864pt too wide) in paragraph at lines 74--88
+) [2]
+<../../img/SCTokensPreprocessed.png, id=38, 854.2314pt x 450.9648pt>
+File: ../../img/SCTokensPreprocessed.png Graphic file (type png)
+<use ../../img/SCTokensPreprocessed.png>
+Package pdftex.def Info: ../../img/SCTokensPreprocessed.png  used on input line 62.
+(pdftex.def)             Requested size: 220.50247pt x 116.40857pt.
+<../../img/BCTokensPreprocessed.png, id=40, 860.7357pt x 450.9648pt>
+File: ../../img/BCTokensPreprocessed.png Graphic file (type png)
+<use ../../img/BCTokensPreprocessed.png>
+Package pdftex.def Info: ../../img/BCTokensPreprocessed.png  used on input line 69.
+(pdftex.def)             Requested size: 220.50247pt x 115.52779pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[3 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/SCTokensPreprocessed.png> <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/BCTokensPreprocessed.png>]
+Overfull \hbox (28.11864pt too wide) in paragraph at lines 103--117
  [][] 
  []
 
-[3 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/SCTokensPreprocessed.png> <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/BCTokensPreprocessed.png>]
-<../../img/class-distribution-relative.png, id=51, 497.2176pt x 475.5366pt>
+<../../img/class-distribution-relative.png, id=55, 497.2176pt x 475.5366pt>
 File: ../../img/class-distribution-relative.png Graphic file (type png)
 <use ../../img/class-distribution-relative.png>
-Package pdftex.def Info: ../../img/class-distribution-relative.png  used on input line 96.
+Package pdftex.def Info: ../../img/class-distribution-relative.png  used on input line 125.
 (pdftex.def)             Requested size: 202.49863pt x 193.67242pt.
-<../../img/class-distribution-absolute.png, id=52, 739.3221pt x 560.0925pt>
+<../../img/class-distribution-absolute.png, id=56, 739.3221pt x 560.0925pt>
 File: ../../img/class-distribution-absolute.png Graphic file (type png)
 <use ../../img/class-distribution-absolute.png>
-Package pdftex.def Info: ../../img/class-distribution-absolute.png  used on input line 102.
+Package pdftex.def Info: ../../img/class-distribution-absolute.png  used on input line 131.
 (pdftex.def)             Requested size: 202.49863pt x 153.4063pt.
- [4 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/class-distribution-relative.png> <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/class-distribution-absolute.png>]
-<../../img/TrainCo-occurrency.png, id=65, 714.7503pt x 570.933pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4]
+<../../img/TrainCo-occurrency.png, id=67, 714.7503pt x 570.933pt>
 File: ../../img/TrainCo-occurrency.png Graphic file (type png)
 <use ../../img/TrainCo-occurrency.png>
-Package pdftex.def Info: ../../img/TrainCo-occurrency.png  used on input line 117.
+Package pdftex.def Info: ../../img/TrainCo-occurrency.png  used on input line 153.
 (pdftex.def)             Requested size: 314.99863pt x 251.62074pt.
-<../../img/TestCo-occurrency.png, id=66, 714.7503pt x 570.933pt>
+ [5 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/class-distribution-relative.png> <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/class-distribution-absolute.png>]
+<../../img/TestCo-occurrency.png, id=78, 714.7503pt x 570.933pt>
 File: ../../img/TestCo-occurrency.png Graphic file (type png)
 <use ../../img/TestCo-occurrency.png>
-Package pdftex.def Info: ../../img/TestCo-occurrency.png  used on input line 124.
+Package pdftex.def Info: ../../img/TestCo-occurrency.png  used on input line 160.
 (pdftex.def)             Requested size: 314.99863pt x 251.62074pt.
- [5 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/TrainCo-occurrency.png>]
-<../../img/ValCo-occurrency.png, id=76, 714.7503pt x 570.933pt>
+<../../img/ValCo-occurrency.png, id=79, 714.7503pt x 570.933pt>
 File: ../../img/ValCo-occurrency.png Graphic file (type png)
 <use ../../img/ValCo-occurrency.png>
-Package pdftex.def Info: ../../img/ValCo-occurrency.png  used on input line 131.
+Package pdftex.def Info: ../../img/ValCo-occurrency.png  used on input line 167.
 (pdftex.def)             Requested size: 314.99863pt x 251.62074pt.
- [6 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/TestCo-occurrency.png> <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/ValCo-occurrency.png>] [7] [8] (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Methodology\Methodology.aux)
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/TrainCo-occurrency.png> <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/TestCo-occurrency.png>] [7 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/ValCo-occurrency.png>] [8] (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Methodology\Methodology.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -666,17 +676,17 @@ Package rerunfilecheck Info: File `Methodology.out' has not changed.
 (rerunfilecheck)             Checksum: 60970A06716F571CFE49444DEF1F0773;681.
  ) 
 Here is how much of TeX's memory you used:
- 23783 strings out of 478927
- 432505 string characters out of 2852536
- 729761 words of memory out of 3000000
- 41188 multiletter control sequences out of 15000+600000
+ 23788 strings out of 478927
+ 432581 string characters out of 2852536
+ 732945 words of memory out of 3000000
+ 41191 multiletter control sequences out of 15000+600000
  411323 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  122i,10n,125p,1205b,527s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Methodology\Methodology.pdf (8 pages, 418912 bytes).
+Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Methodology\Methodology.pdf (8 pages, 422366 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 23 named destinations out of 1000 (max. 500000)
+ 126 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
  80 words of extra memory for PDF output out of 10000 (max. 10000000)
 

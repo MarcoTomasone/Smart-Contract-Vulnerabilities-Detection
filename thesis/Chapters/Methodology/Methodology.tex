@@ -34,8 +34,21 @@ Le vulnerabilità che sono state prese in questo lavoro sono le seguenti:
 Prima della costruzione dei modelli è stata affrontata una fase di analisi esplorativa dei dati. Questa fase è stata svolta per comprendere meglio la struttura del dataset e dei contratti da classificare, per individuare eventuali problemi. A livello pratico, questa fase di analisi esplorativa dei dati è stata eseguita utilizzando il linguaggio Python, con l'ausilio di librerie come Pandas, NumPy, Matplotlib e Seaborn per l'analisi e la visualizzazione dei dati.
 Il dataset è diviso in tre sottoinsiemi: training, validation e test set.
 Il dataset di training è composto da 79.641 contratti, il dataset di validazione da 10.861 contratti e il dataset di test da 15.972 contratti.
-Tutte le informazioni sono presenti per tutti i contratti tranne l'informazione relativa al bytecode, che risulta assente per 227 contratti nel training set, 30 nel validation set e 51 nel test set. Durante la fase di preprocessing questi contratti sono stati rimossi dal dataset. 
- 
+Tutte le informazioni sono presenti per tutti i contratti tranne l'informazione relativa al bytecode, che risulta essere assente per pochissimi contratti come visibile nella Tabella \ref{tab:no_bytecode_count}. 
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|l|c|c|}
+        \hline
+        \textbf{Dataset} & \textbf{Count} & \textbf{\%} \\
+        \hline
+        Train & 227 & 0.285\% \\
+        Test & 51 & 0.319\% \\
+        Validation & 30 & 0.276\% \\
+        \hline
+    \end{tabular}
+    \caption{Conteggio e Percentuale di Contratti Senza Bytecode per Dataset}
+    \label{tab:no_bytecode_count}
+\end{table}
 Per ottenere una visione d'insieme delle lunghezze dei contratti, abbiamo calcolato la lunghezza media del source code e del bytecode. Prima del preprocessing le lunghezze medie di SourceCode e ByteCode sono rispettivamente di 3155 token e 8114 token.
 Abbiamo visualizzato la distribuzione delle lunghezze del source code utilizzando un istogramma. Per migliorare la leggibilità del grafico, abbiamo raggruppato i dati per quanto riguarda il source code in intervalli di 500 token. L'istogramma è accompagnato da una linea che indica la lunghezza media dei token rappresentata con una linea tratteggiata rossa.
 
@@ -60,11 +73,27 @@ Abbiamo unito i set di dati di addestramento, test e validazione in un unico Dat
     \caption{Distribuzioni delle lunghezze del source code e del bytecode.}
     \label{fig:length_distributions}
 \end{figure}
-Successivamente, la fase di esplorazione dei dati ha previsto l'analisi delle classi di vulnerabilità dei dati. 
+Poichè successivamente andremo a classificare i contratti con dei modelli nella famiglia BERT che prendono in input sequenze di token lunghe al massimo 512 token abbiamo calcolato la percentuale di contratti che non superano questa soglia e in alcuni suoi multipli, per capire quanti contratti riusciamo a classificare per intero e quanti verranno troncati. I risultati sono mostrati nella Tabella \ref{tab:summary}.
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{Metrica} & \textbf{Sotto 512} & \textbf{Sotto 1024} & \textbf{Sotto 1536} & \textbf{Media} \\
+        \hline
+        \textbf{Source Code (\%)} & 21.90 & 46.04 & 64.77 & 62.21 \\
+        \textbf{Bytecode (\%)} & 1.56 & 6.31 & 8.75 & 58.69 \\
+        \hline
+    \end{tabular}
+    \caption{Percentuale di contratti sotto varie lunghezze in token.}
+    \label{tab:summary}
+\end{table}
+
+
+Diventa però importante notare, che per molti casi di contratti che superano i 5000 token questi sono così lunghi poichè riportano in calce al contratto anche il codice sorgente di librerie esterne, che non è di interesse per la classificazione delle vulnerabilità. 
+
 
 \subsection{Distribuzione delle Classi e Matrici di Co-occorrenza}
-
-In questa sezione, presentiamo la distribuzione delle classi e le matrici di co-occorrenza per i dataset di addestramento, test e validazione. Si precisa che i risultati di seguito proposti si riferiscono già al dataset da cui sono stati sottratti i contratti privi di bytecode.
+Successivamente, la fase di esplorazione dei dati ha previsto l'analisi delle classi di vulnerabilità dei dati. In questa sezione, presentiamo la distribuzione delle classi e le matrici di co-occorrenza per i dataset di addestramento, test e validazione. Si precisa che i risultati di seguito proposti si riferiscono già al dataset da cui sono stati sottratti i contratti privi di bytecode.
 
 \subsubsection{Distribuzione delle Classi}
 
@@ -106,7 +135,14 @@ Le Figure \ref{fig:relative_distribution} e \ref{fig:absolute_distribution} most
     \caption{Distribuzioni delle Classi nell'intero dataset, in termini relativi e assoluti.}
     \label{fig:class_distributions}
   \end{figure}
+  Dalla distribuzione delle classi nei diversi dataset, possiamo osservare che:
 
+  \begin{itemize}
+      \item Le classi sono distribuite in modo abbastanza uniforme nei dataset di addestramento, test e validazione, con percentuali simili tra i tre split per classe
+      \item La classe 'unchecked-calls' è la più frequente in tutti e tre i dataset, con una presenza significativa soprattutto nel dataset di addestramento (36278 occorrenze).
+      \item La classe 'access-control' è la meno frequente, con il numero più basso di occorrenze nel dataset di validazione (1588 occorrenze).
+      \item Le classi 'safe' e 'reentrancy' sono anche abbastanza rappresentate
+  \end{itemize}
 \subsubsection{Matrici di Co-occorrenza}
 Le Tabelle \ref{fig:train_cooccurrence_matrix}, \ref{fig:test_cooccurrence_matrix} e \ref{fig:val_cooccurrence_matrix} mostrano le matrici di co-occorrenza per i dataset di addestramento, test e validazione rispettivamente. Le matrici di co-occorrenza indicano la frequenza con cui ogni coppia di classi appare insieme nello stesso elemento.
 
@@ -133,18 +169,12 @@ In questa sezione, vengono presentate le matrici di co-occorrenza per ogni split
     \label{fig:val_cooccurrence_matrix}
 \end{figure}
 
-Dalla distribuzione delle classi nei diversi dataset, possiamo osservare che:
 
-\begin{itemize}
-    \item La classe 'unchecked-calls' è la più frequente in tutti e tre i dataset, con una presenza significativa soprattutto nel dataset di addestramento (36278 occorrenze).
-    \item La classe 'access-control' è la meno frequente, con il numero più basso di occorrenze nel dataset di validazione (1588 occorrenze).
-    \item Le classi 'safe' e 'reentrancy' sono anche abbastanza rappresentate, specialmente nel dataset di addestramento.
-\end{itemize}
 
 Analizzando le matrici di co-occorrenza, notiamo che:
 
 \begin{itemize}
-    \item Le classi 'safe' non co-occorrono con altre classi. Questo potrebbe indicare che i dati etichettati come 'safe' sono esclusivamente sicuri e non sovrapposti con altre categorie di vulnerabilità.
+    \item La classe safe, che rappresenta i contratti privi di vulnerabilità, correttamente non apparte contemporaneamente a nessuna delle altre classi. 
     \item Le classi 'unchecked-calls' co-occorrono frequentemente con 'reentrancy', 'other', e 'access-control'. Questo suggerisce che i contratti con chiamate non verificate spesso presentano anche altri tipi di vulnerabilità.
     \item Le classi 'arithmetic' e 'reentrancy' mostrano una co-occorrenza significativa, suggerendo che le vulnerabilità aritmetiche possono spesso essere associate a problemi di rientro.
 \end{itemize}
