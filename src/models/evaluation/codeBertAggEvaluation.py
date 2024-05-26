@@ -6,6 +6,7 @@ import logging
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn import metrics
+from sklearn.metrics import ConfusionMatrixDisplay
 import transformers
 import torch
 from datasets import load_dataset
@@ -83,9 +84,9 @@ def transformData(example):
     return data
 
 def readAndPreprocessDataset():
-    train_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='train', cache_dir="./cache", ignore_verifications=True).map(transformData)
-    test_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='test', cache_dir="./cache", ignore_verifications=True).map(transformData)
-    val_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='validation', cache_dir="./cache", ignore_verifications=True).map(transformData)
+    train_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='train', cache_dir="./cache", ignore_verifications=True).filter(lambda elem: elem['bytecode'] != '0x').map(transformData)
+    test_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='test', cache_dir="./cache", ignore_verifications=True).filter(lambda elem: elem['bytecode'] != '0x').map(transformData)
+    val_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='validation', cache_dir="./cache", ignore_verifications=True).filter(lambda elem: elem['bytecode'] != '0x').map(transformData)
     return train_set, test_set, val_set
 #endregion
 
@@ -164,14 +165,32 @@ class CodeBERTAggregatedClass(torch.nn.Module):
 #endregion
 
 #region evaluation
-def plot_and_save_confusion_matrix(confusion_matrix, class_names, dataset_type, output_dir):
-    for i, matrix in enumerate(confusion_matrix):
-        plt.figure(figsize=(10, 7))
-        sns.heatmap(matrix, annot=True, fmt='d', cmap='Blues', xticklabels=class_names, yticklabels=class_names)
-        plt.xlabel('Predicted')
-        plt.ylabel('True')
-        plt.title(f'{dataset_type} - Confusion Matrix for Class {class_names[i]}')
-        plt.savefig(os.path.join(output_dir, f'{dataset_type}_confusion_matrix_class_{class_names[i]}.png'))
+def plot_and_save_multilabel_confusion_matrices(y_true, y_pred, label_names, dataset_type, output_dir):
+    """
+    Plots and saves confusion matrices for each label in a multilabel setting.
+
+    Parameters:
+    - y_true: numpy array of true labels, shape (n_samples, n_labels)
+    - y_pred: numpy array of predicted labels, shape (n_samples, n_labels)
+    - label_names: list of strings, names of the labels
+    - dataset_type: string, type of dataset (e.g., 'train', 'validation', 'test')
+    - output_dir: string, directory to save the plots
+    """
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    for label_col in range(len(label_names)):
+        y_true_label = y_true[:, label_col]
+        y_pred_label = y_pred[:, label_col]
+
+        fig, ax = plt.subplots(figsize=(6, 6))
+        ConfusionMatrixDisplay.from_predictions(
+            y_true_label, y_pred_label, ax=ax, cmap=plt.cm.Blues, normalize='true', colorbar=True
+        )
+        ax.set_title(f"Confusion Matrix for {label_names[label_col]} ({dataset_type})")
+
+        output_path = os.path.join(output_dir, f'{dataset_type}_confusion_matrix_label_{label_names[label_col]}.png')
+        plt.savefig(output_path)
         plt.close()
 
 def evaluate_and_save(loader, dataset_type, output_dir):
@@ -205,7 +224,6 @@ def evaluate_and_save(loader, dataset_type, output_dir):
     f1_micro = metrics.f1_score(targets, predictions, average='micro')
     f1_macro = metrics.f1_score(targets, predictions, average='macro')
     f1_weighted = metrics.f1_score(targets, predictions, average='weighted')
-    confusion = metrics.multilabel_confusion_matrix(targets, predictions)
     classification_report = metrics.classification_report(targets, predictions, target_names=class_names, output_dict=True)
 
     logger.info(f'{dataset_type} Accuracy: {accuracy}')
@@ -240,7 +258,7 @@ def evaluate_and_save(loader, dataset_type, output_dir):
     metrics_df = pd.DataFrame(classification_report).transpose()
     metrics_df.to_csv(os.path.join(output_dir, f'{dataset_type}_classification_report.csv'))
 
-    plot_and_save_confusion_matrix(confusion, class_names, dataset_type, output_dir)
+    plot_and_save_multilabel_confusion_matrices(targets, predictions, class_names, dataset_type, output_dir)
 
     return accuracy, precision_micro, precision_macro, precision_weighted, recall_micro, recall_macro, recall_weighted, f1_micro, f1_macro, f1_weighted
 
@@ -264,10 +282,10 @@ model.load_state_dict(torch.load(f'./stateDictMean/best_model_{MODEL}.pth'))
 
 # Esegui l'evaluation su train, validation, e test set
 logger.info("Evaluating on training set...")
-evaluate_and_save(training_loader, 'train', './results_{MODE}/train')
+evaluate_and_save(training_loader, f'train', f'./results_{MODE}/train')
 
 logger.info("Evaluating on validation set...")
-evaluate_and_save(validation_loader, 'validation', './results_{MODE}/validation')
+evaluate_and_save(validation_loader, 'validation', f'./results_{MODE}/validation')
 
 logger.info("Evaluating on testing set...")
 evaluate_and_save(testing_loader, 'test', './results_{MODE}/test')
