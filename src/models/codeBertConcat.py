@@ -11,6 +11,7 @@ from transformers import AutoModel, RobertaTokenizer
 from torch import cuda, nn
 from torch.nn.utils.rnn import pad_sequence
 from tqdm import tqdm
+import matplotlib.pyplot as plt
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -123,29 +124,30 @@ class CodeBERTConcatenatedClass(torch.nn.Module):
         super(CodeBERTConcatenatedClass, self).__init__()
         self.codebert = AutoModel.from_pretrained('microsoft/codebert-base', cache_dir="./cache")
         self.dropout = torch.nn.Dropout(dropout)
-        # Moltiplica la dimensione del hidden_size per il numero di chunk che stai concatenando
+        # Multiply hidden_size by the number of chunks you're concatenating
         self.fc = torch.nn.Linear(self.codebert.config.hidden_size * CODE_BLOCKS, num_classes)
 
     def forward(self, input_ids, attention_masks):
         batch_size, seq_len = input_ids.size()
 
-        # Divide input_ids e attention_masks in blocchi di 512 token
+        # Divide input_ids and attention_masks into chunks of 512 tokens
         num_chunks = (seq_len + 511) // 512
-        input_ids = input_ids[:, :512*num_chunks].view(batch_size * num_chunks, 512)
-        attention_masks = attention_masks[:, :512*num_chunks].view(batch_size * num_chunks, 512)
+        input_ids = input_ids[:, :512*num_chunks].reshape(batch_size * num_chunks, 512)
+        attention_masks = attention_masks[:, :512*num_chunks].reshape(batch_size * num_chunks, 512)
 
         outputs = self.codebert(input_ids=input_ids, attention_mask=attention_masks)
 
         last_hidden_states = outputs.last_hidden_state
         cls_tokens = last_hidden_states[:, 0, :]
 
-        # Concatenare i token CLS dei vari chunk
-        cls_tokens = cls_tokens.view(batch_size, num_chunks, -1)
-        concatenated_output = cls_tokens.view(batch_size, -1)
+        # Concatenate the CLS tokens of the various chunks
+        cls_tokens = cls_tokens.reshape(batch_size, num_chunks, -1)
+        concatenated_output = cls_tokens.reshape(batch_size, -1)
 
         concatenated_output = self.dropout(concatenated_output)
         output = self.fc(concatenated_output)
         return output
+
 #endregion
 
 #region train
@@ -172,6 +174,7 @@ def train(epoch):
     avg_loss = total_loss / len(training_loader)
     logger.info(f'Epoch {epoch}, Average Loss: {avg_loss}')
     torch.save(model.state_dict(), f'./stateDictConcat/epoch_{epoch}_{MODEL}.pth')
+    return avg_loss
 #endregion
 
 #region validate
@@ -179,6 +182,7 @@ def validate(epoch):
     model.eval()
     fin_targets = []
     fin_outputs = []
+    total_loss = 0
     with torch.no_grad():
         for _, data in tqdm(enumerate(validation_loader), total=len(validation_loader)):
             ids = data['ids'].to(DEVICE, dtype=torch.long)
@@ -186,11 +190,14 @@ def validate(epoch):
             targets = data['targets'].to(DEVICE, dtype=torch.float)
 
             outputs = model(input_ids=ids, attention_masks=mask)
+            loss = loss_fn(outputs, targets)
+            total_loss += loss.item()
 
             fin_targets.extend(targets.cpu().detach().numpy().tolist())
             fin_outputs.extend(torch.sigmoid(outputs).cpu().detach().numpy().tolist())
 
-    return fin_outputs, fin_targets
+    avg_loss = total_loss / len(validation_loader)
+    return fin_outputs, fin_targets, avg_loss
 #endregion
 
 #region execution
@@ -209,13 +216,51 @@ loss_fn = nn.BCEWithLogitsLoss()
 
 best_accuracy = 0
 
+# Initialize lists to store metrics
+train_losses = []
+val_losses = []
+val_accuracies = []
+val_f1_scores = []
+
 for epoch in range(EPOCHS):
-    train(epoch)
-    fin_outputs, fin_targets = validate(epoch)
+    train_loss = train(epoch)
+    fin_outputs, fin_targets, val_loss = validate(epoch)
+    
+    # Calculate metrics
     accuracy = metrics.accuracy_score(np.array(fin_targets), np.array(fin_outputs) > 0.5)
-    logger.info(f"Epoch {epoch}, Accuracy: {accuracy}")
+    f1 = metrics.f1_score(np.array(fin_targets), np.array(fin_outputs) > 0.5, average='micro')
+    
+    # Log metrics
+    logger.info(f"Epoch {epoch}, Train Loss: {train_loss}, Validation Loss: {val_loss}, Accuracy: {accuracy}, F1: {f1}")
+    
+    # Store metrics
+    train_losses.append(train_loss)
+    val_losses.append(val_loss)
+    val_accuracies.append(accuracy)
+    val_f1_scores.append(f1)
 
     if accuracy > best_accuracy:
         torch.save(model.state_dict(), f'./stateDictConcat/best_model_{MODEL}.pth')
         best_accuracy = accuracy
+
+# Plot metrics
+plt.figure(figsize=(12, 6))
+plt.subplot(1, 2, 1)
+plt.plot(range(EPOCHS), train_losses, label='Train Loss')
+plt.plot(range(EPOCHS), val_losses, label='Validation Loss')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
+plt.title('Loss Over Epochs')
+plt.legend()
+
+plt.subplot(1, 2, 2)
+plt.plot(range(EPOCHS), val_accuracies, label='Validation Accuracy')
+plt.plot(range(EPOCHS), val_f1_scores, label='Validation F1 Score')
+plt.xlabel('Epochs')
+plt.ylabel('Score')
+plt.title('Accuracy and F1 Score Over Epochs')
+plt.legend()
+
+plt.tight_layout()
+plt.show()
 #endregion
