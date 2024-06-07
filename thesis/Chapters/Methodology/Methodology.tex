@@ -185,19 +185,69 @@ Questi risultati evidenziano l'importanza di considerare la co-occorrenza delle 
 \section{Modellazione}
 In questa sezione, descriviamo l'architettura dei modelli utilizzati per la classificazione dei contratti intelligenti. In particolare, presentiamo i dettagli relativi ai modelli BERT utilizzati, alle scelte di configurazione e alle strategie di addestramento.
 Come si evince dalla sezione precente le feature su cui i modelli dovranno basare le loro predizioni sono il codice sorgente e il bytecode dei contratti, cioè dati di natura testuale. La natura dei dati fa sì che problema possa essere affrontato efficacemente utilizzando tecniche di elaborazione del linguaggio naturale (NLP, Natural Language Processing).
-\section{Natural Language Processing, NLP}
 
-\subsection{Bert}
-Il modello BERT (Bidirectional Encoder Representations from Transformers) rappresenta un pilastro fondamentale nel campo del Natural Language Processing (NLP), grazie alla sua capacità di comprensione del contesto delle parole all'interno di una frase o di un testo più ampio. Questo modello, sviluppato da Google, si basa sull'architettura dei transformer, una classe di modelli neurali che ha dimostrato notevole successo nell'analisi del linguaggio naturale.
+\subsection{Natural Language Processing, NLP}
+L'Elaborazione del Linguaggio Naturale (NLP, da \emph{Natural Language Processing}) è un campo  di studi interdisciplinare che combina linguistica, informatica e intelligenza artificiale. Si occupa dell'interazione tra computer e linguaggio umano (naturale), in particolare del processamento, analisi e costruzione di modelli riguardanti grandi quantità di dati linguistici naturali \cite{jurafsky2009speech}. 
+Le due grandi sfide dell'NLP si possono riassumere in due grandi aree di ricerca: la comprensione del linguaggio e la generazione del linguaggio. La comprensione del linguaggio comprende compiti come l'analisi sintattica, l'analisi semantica, il riconoscimento delle entità nominate e la risoluzione delle coreferenze. Questi compiti sono cruciali per la conversione del linguaggio naturale in una rappresentazione formale che le macchine possano elaborare. L'analisi sintattica, ad esempio, mira a determinare la struttura grammaticale di una frase, mentre l'analisi semantica si concentra sulla comprensione del significato del testo. In secondo luogo 
+la generazione del linguaggio riguarda la produzione automatica di testo, che può includere la sintesi vocale, la traduzione automatica e la generazione di risposte automatiche in chatbot. Questo aspetto dell'NLP è fondamentale per creare sistemi che non solo comprendano il linguaggio umano, ma che possano anche comunicare in modo naturale e coerente con gli utenti.
 
-BERT si distingue per la sua capacità bidirezionale di elaborare il contesto linguistico. A differenza dei modelli NLP precedenti, che processavano il testo in modo sequenziale, interpretando le parole una dopo l'altra, BERT considera sia il contesto precedente sia quello successivo di ciascuna parola all'interno di una frase. Questo approccio bidirezionale consente a BERT di catturare relazioni semantiche più complesse e di fornire una rappresentazione più accurata del significato del testo.
+Negli ultimi  anni, il campo dell'NLP ha fatto enormi progressi passando dall'epoca delle schede perforate e dell'elaborazione batch (in cui l'analisi di una frase poteva richiedere fino a 7 minuti) all'era di Google e simili (in cui milioni di pagine web possono essere elaborate in meno di un secondo) \cite{6786458}, sino ad arrivare ai giorni d'oggi con l'avvento di modelli di deep learning. Per decenni, l'approccio alla ricerca nel campo dell'NLP prevedeva l'utilizzo di modelli shallow come SVM \cite{SVM} e regressione logistica allenati su feature sparse e fortemente multidimensionali. Negli ultimi anni, d'altro canto,  le reti neurali basati su rappresentazioni di vettori densi hanno prodotto risultati superiori su una grande vastità di task diversi nel mondo dell'NLP \cite{TrendsInNLP}. 
+Lo stato dell'arte attuale nell'NLP è in molti task rappresentato dall'introduzione di una nuova architettura, che è andata a sostituire i modelli RNN e LSTM \cite{LSTM} tradizionali, ovvero i modelli basati su Trasformer, introdotti per la prima volta nel paper "Attention is All You Need" da Vaswani et al. nel 2017 \cite{AttentionIsAllYouNeed}. I Transformer hanno rivoluzionato il campo grazie al meccanismo di self-attention, che consente al modello di valutare e ponderare l'importanza di ogni parola in una frase rispetto alle altre parole della stessa frase, indipendentemente dalla loro distanza posizionale. Questo approccio permette un'elaborazione parallela dei dati, in netto contrasto con la natura sequenziale delle RNN e degli LSTM, migliorando notevolmente l'efficienza computazionale. La struttura dei Transformer è organizzata in blocchi ripetuti di encoder e decoder, dove l'encoder elabora l'input costruendo una rappresentazione interna, e il decoder utilizza questa rappresentazione per generare l'output. Questa architettura ha dimostrato prestazioni eccezionali in molte applicazioni di NLP, tra cui la traduzione automatica, la comprensione e la generazione del linguaggio, la sintesi del testo e il riassunto automatico. Dall'architettura dei Transformer sono derivati molti modelli di successo, tra cui i modelli BERT, la famiglia di modelli GPT e altri. 
+\subsection{BERT, Bidirectional Encoder Representations from Transformers}
+Il modello BERT (Bidirectional Encoder Representations from Transformers) è stato presentato da Devlin et al. nel 2018 \cite{BERT}. BERT è un modello di deep learning pre-addestrato per l'elaborazione del linguaggio naturale. BERT è stato allenato su un corpus di testo molto ampio, comprendente 3.3 miliardi di parole, utilizzando due task di apprendimento supervisionato: il \emph{Masked Language Model} (MLM) e il \emph{Next Sentence Prediction} (NSP). Il Masked Language Model maschera randomicamente alcuni dei token in pinput e l'obiettivo del modello è quello di predire l'id nel vocabolario della parola mascherata basandosi solo sul contesto che la circonda, considerando sia il contesto a sinistra che a destra della parola mascherata, in modo da catturare il contesto bidirezionale. Il Next Sentence Prediction, invece, prevede se una frase è la successiva rispetto a un'altra frase. Questo task è stato introdotto per insegnare al modello a comprendere il contesto e la coerenza tra le frasi. Al momento della sua pubblicazione BERT rappresentava lo stato dell'arte in ben undici diversi task nel campo dell'NLP ed è stato il primo modello a raggiungere state-of-the-art performance in molti task sentence-level e token-level, superando anche molte architetture specifiche per task. 
 
-Il funzionamento di BERT può essere compreso attraverso due fasi principali: l'addestramento e l'utilizzo.
+\subsubsection{Architettura}
+L'architettura del modello BERT è un encoder bidirezionale multi-strato basato sui Transformer, come descritto nell'implementazione originale di Vaswani et al. (2017) \cite{AttentionIsAllYouNeed}. I parametri principali di un'architettura di BERT sono il numero di strati $L$, la dimensione nascosta $H$ e il numero di self-attention heads $A$. All'interno dell'architettura di BERT, due concetti fondamentali sono la \textit{hidden size} e le \textit{attention heads}.
 
-Durante la fase di addestramento, BERT viene esposto a enormi quantità di testo, proveniente da varie fonti e domini. Utilizzando un processo noto come "pre-addestramento", il modello apprende i modelli linguistici e il contesto delle parole. Questo pre-addestramento coinvolge due compiti principali: la predizione di parole mascherate e la predizione della successione di frasi. Nel primo compito, BERT impara a prevedere le parole mancanti in una frase fornita, mentre nel secondo compito, il modello apprende a determinare se due frasi sono consecutive in un testo o sono state estratte casualmente da testi diversi.
+La \textbf{hidden size} ($H$) si riferisce alla dimensione dei vettori di rappresentazione nelle varie fasi di elaborazione del modello. In termini pratici, rappresenta la dimensionalità dello spazio in cui le rappresentazioni intermedie dei token vengono proiettate durante l'elaborazione nel modello Transformer. Questa dimensione influisce direttamente sulla capacità del modello di catturare le informazioni a partire dai dati in input; una hidden size maggiore consente al modello di rappresentare e processare informazioni più dettagliate, a costo però di un incremento dei requisiti computazionali.
 
-Una volta completata la fase di addestramento, BERT può essere utilizzato per una vasta gamma di compiti NLP senza la necessità di ulteriori addestramenti specifici. Durante l'utilizzo, il modello riceve in input una sequenza di token, che possono essere parole, frammenti di testo o segmenti di frasi. Ogni token viene rappresentato come un vettore di caratteristiche, derivato dal contesto bidirezionale fornito da BERT durante l'addestramento. Queste rappresentazioni vettoriali possono essere utilizzate per svariati compiti, come classificazione di testo, analisi del sentiment, risposta alle domande, traduzione automatica e molto altro ancora.
+Le \textbf{attention heads} ($A$) sono un componente cruciale del meccanismo di self-attention nei Transformer. Ogni attention head esegue una funzione di attenzione, ovvero calcolare un insieme di pesi che determinano l'importanza relativa di ogni token nella sequenza di input rispetto agli altri token, permettendo così al modello di concentrarsi su diverse parti della sequenza di input simultaneamente. 
 
-In sintesi, il modello BERT ha rivoluzionato il campo del NLP introducendo una comprensione più approfondita e contestualizzata del linguaggio naturale. La sua capacità di catturare il contesto bidirezionale delle parole ha portato a miglioramenti significativi nelle prestazioni dei sistemi NLP su una vasta gamma di compiti e applicazioni. BERT rimane un pilastro fondamentale nell'ambito della comprensione automatica del linguaggio umano, consentendo a macchine e sistemi di interagire e comprendere il linguaggio umano in modo più naturale e preciso.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Modello & Layers $L$ & Hidden Size $H$ & Self-Attention Heads $A$ \\
+        \hline
+        BERT\textsubscript{BASE} & 12 & 768 & 12 \\
+        \hline
+        BERT\textsubscript{LARGE} & 24 & 1024 & 16 \\
+        \hline
+    \end{tabular}
+    \caption{Parametri principali dei modelli BERT\textsubscript{BASE} e BERT\textsubscript{LARGE}}
+    \label{tab:bert_params}
+\end{table}
+
+BERT è stato preaddestrato con un embedding WordPiece \cite{WordPiece} con un vocabolario di 30.000 token. Il primo token di ogni sequenza è sempre un token di classificazione speciale ([CLS]). L'hidden state finale corrispondente a questo token è utilizzato come rappresentazione aggregata della sequenza per i task di classificazione, che è proprio il modo in cui BERT verrà utilizzato in questo lavoro. BERT può gestire più sequenze di token in input, ciascuna delle quali è seguita da un token speciale ([SEP]).
+
+Per un dato token, la sua rappresentazione di input è costruita sommando i corrispondenti token, segmento e embedding di posizione.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/bert_base_large.jpg}
+    \caption{Architettura di Transformers, BERT\textsubscript{BASE} e BERT\textsubscript{LARGE}}
+    \label{fig:bert_input}
+\end{figure}
+
+\subsubsection{Parametri del Modello}
+In tutti i casi, la dimensione feed-forward (o filter size) è impostata a $4H$, cioè 3072 per $H = 768$ e 4096 per $H = 1024$.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lccc}
+        \toprule
+        Modello & Numero di Strati $L$ & Dimensione Nascosta $H$ & Teste di Self-Attention $A$ \\
+        \midrule
+        BERT\textsubscript{BASE} & 12 & 768 & 12 \\
+        BERT\textsubscript{LARGE} & 24 & 1024 & 16 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Parametri principali dei modelli BERT\textsubscript{BASE} e BERT\textsubscript{LARGE}.}
+    \label{tab:bert_params}
+\end{table}
+
+
+
+
 
 \end{document}

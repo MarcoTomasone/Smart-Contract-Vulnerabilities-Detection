@@ -8,11 +8,34 @@ Mythril github repository.
 Opyente.
 \newblock https://pypi.org/project/oyente/.
 
+\bibitem{SiteAnnotationTransformer}
+Jonathan Sum Khalid~Almubarak Austin~Huang, Suraj~Subramanian and Stella
+  Biderman.
+\newblock The annotated transformer.
+\newblock https://nlp.seas.harvard.edu/annotated-transformer/.
+
+\bibitem{6786458}
+Erik Cambria and Bebo White.
+\newblock Jumping nlp curves: A review of natural language processing research
+  [review article].
+\newblock {\em IEEE Computational Intelligence Magazine}, 9(2):48--57, 2014.
+
 \bibitem{Deng}
 Weichu Deng, Huanchun Wei, Teng Huang, Cong Cao, Yun Peng, and Xuan Hu.
 \newblock Smart contract vulnerability detection based on deep learning and
   multimodal decision fusion.
 \newblock {\em Sensors}, 23(16), 2023.
+
+\bibitem{BERT}
+Jacob Devlin, Ming{-}Wei Chang, Kenton Lee, and Kristina Toutanova.
+\newblock {BERT:} pre-training of deep bidirectional transformers for language
+  understanding.
+\newblock {\em CoRR}, abs/1810.04805, 2018.
+
+\bibitem{SVM}
+Theodoros Evgeniou and Massimiliano Pontil.
+\newblock Support vector machines: Theory and applications.
+\newblock volume 2049, pages 249--257, 09 2001.
 
 \bibitem{Slither}
 Josselin Feist, Gustavo Grieco, and Alex Groce.
@@ -20,11 +43,21 @@ Josselin Feist, Gustavo Grieco, and Alex Groce.
 \newblock In {\em 2019 IEEE/ACM 2nd International Workshop on Emerging Trends
   in Software Engineering for Blockchain (WETSEB)}, pages 8--15, 2019.
 
+\bibitem{LSTM}
+Sepp Hochreiter and J\"{u}rgen Schmidhuber.
+\newblock Long short-term memory.
+\newblock {\em Neural Comput.}, 9(8):1735–1780, nov 1997.
+
 \bibitem{Huang}
 TonTon~Hsien{-}De Huang.
 \newblock Hunting the ethereum smart contract: Color-inspired inspection of
   potential attacks.
 \newblock {\em CoRR}, abs/1807.01868, 2018.
+
+\bibitem{jurafsky2009speech}
+Daniel Jurafsky and James~H Martin.
+\newblock {\em Speech and Language Processing}.
+\newblock Pearson Prentice Hall, 2nd edition, 2009.
 
 \bibitem{sc-vulnerabilities}
 Zulfiqar~Ali Khan and Akbar Siami~Namin.
@@ -86,6 +119,14 @@ Martina Rossini, Mirco Zichichi, and Stefano Ferretti.
   Communications Workshops and other Affiliated Events (PerCom Workshops)},
   pages 74--79, 2023.
 
+\bibitem{rush-2018-annotated}
+Alexander Rush.
+\newblock The annotated transformer.
+\newblock In Eunjeong~L. Park, Masato Hagiwara, Dmitrijs Milajevs, and Liling
+  Tan, editors, {\em Proceedings of Workshop for {NLP} Open Source Software
+  ({NLP}-{OSS})}, pages 52--60, Melbourne, Australia, July 2018. Association
+  for Computational Linguistics.
+
 \bibitem{SmartCheck}
 Sergei Tikhomirov, Ekaterina Voskresenskaya, Ivan Ivanitskiy, Ramil Takhaviev,
   Evgeny Marchenko, and Yaroslav Alexandrov.
@@ -100,11 +141,22 @@ Petar Tsankov, Andrei Dan, Dana Drachsler-Cohen, Arthur Gervais, Florian
 \newblock Securify: Practical security analysis of smart contracts.
 \newblock pages 67--82, 10 2018.
 
+\bibitem{AttentionIsAllYouNeed}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N. Gomez, Lukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need.
+\newblock {\em CoRR}, abs/1706.03762, 2017.
+
 \bibitem{ContractWard}
 Wei Wang, Jingjing Song, Guangquan Xu, Yidong Li, Hao Wang, and Chunhua Su.
 \newblock Contractward: Automated vulnerability detection models for ethereum
   smart contracts.
 \newblock {\em IEEE Transactions on Network Science and Engineering},
   8(2):1133--1144, 2021.
+
+\bibitem{TrendsInNLP}
+Tom Young, Devamanyu Hazarika, Soujanya Poria, and Erik Cambria.
+\newblock Recent trends in deep learning based natural language processing.
+\newblock {\em CoRR}, abs/1708.02709, 2017.
 
 \end{thebibliography}

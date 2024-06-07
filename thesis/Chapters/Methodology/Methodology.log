@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  27 MAY 2024 23:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  7 JUN 2024 19:48
 entering extended mode
 **c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Methodology/Methodology.tex
 (c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Methodology/Methodology.tex
@@ -590,7 +590,6 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 4.
 LaTeX Info: Redefining \pageref on input line 4.
 LaTeX Info: Redefining \nameref on input line 4.
- (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Methodology\Methodology.out) (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Methodology\Methodology.out)
 \@outlinefile=\write4
 \openout4 = `Methodology.out'.
 
@@ -603,8 +602,11 @@ LaTeX Warning: Citation `rossini2022slitherauditedcontracts' on page 1 undefined
 
 
 {C:/Users/tomas/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+
+LaTeX Warning: Reference `tab:no_bytecode_count' on page 2 undefined on input line 37.
+
 LaTeX Font Info:    Trying to load font information for U+lasy on input line 40.
- (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
+(C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
@@ -615,31 +617,44 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [2]
-<../../img/SCTokensPreprocessed.png, id=46, 854.2314pt x 450.9648pt>
+<../../img/SCTokensPreprocessed.png, id=23, 854.2314pt x 450.9648pt>
 File: ../../img/SCTokensPreprocessed.png Graphic file (type png)
 <use ../../img/SCTokensPreprocessed.png>
 Package pdftex.def Info: ../../img/SCTokensPreprocessed.png  used on input line 62.
 (pdftex.def)             Requested size: 220.50247pt x 116.40857pt.
-<../../img/BCTokensPreprocessed.png, id=48, 860.7357pt x 450.9648pt>
+<../../img/BCTokensPreprocessed.png, id=25, 860.7357pt x 450.9648pt>
 File: ../../img/BCTokensPreprocessed.png Graphic file (type png)
 <use ../../img/BCTokensPreprocessed.png>
 Package pdftex.def Info: ../../img/BCTokensPreprocessed.png  used on input line 69.
 (pdftex.def)             Requested size: 220.50247pt x 115.52779pt.
 
 
+LaTeX Warning: Reference `tab:summary' on page 3 undefined on input line 76.
+
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [3 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/SCTokensPreprocessed.png> <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/BCTokensPreprocessed.png>]
+
+LaTeX Warning: Reference `tab:class_distribution' on page 4 undefined on input line 100.
+
+
 Overfull \hbox (28.11864pt too wide) in paragraph at lines 103--117
  [][] 
  []
 
-<../../img/class-distribution-relative.png, id=63, 497.2176pt x 475.5366pt>
+
+LaTeX Warning: Reference `fig:relative_distribution' on page 4 undefined on input line 121.
+
+
+LaTeX Warning: Reference `fig:absolute_distribution' on page 4 undefined on input line 121.
+
+<../../img/class-distribution-relative.png, id=35, 497.2176pt x 475.5366pt>
 File: ../../img/class-distribution-relative.png Graphic file (type png)
 <use ../../img/class-distribution-relative.png>
 Package pdftex.def Info: ../../img/class-distribution-relative.png  used on input line 125.
 (pdftex.def)             Requested size: 202.49863pt x 193.67242pt.
-<../../img/class-distribution-absolute.png, id=64, 739.3221pt x 560.0925pt>
+<../../img/class-distribution-absolute.png, id=36, 739.3221pt x 560.0925pt>
 File: ../../img/class-distribution-absolute.png Graphic file (type png)
 <use ../../img/class-distribution-absolute.png>
 Package pdftex.def Info: ../../img/class-distribution-absolute.png  used on input line 131.
@@ -648,18 +663,27 @@ Package pdftex.def Info: ../../img/class-distribution-absolute.png  used on inpu
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [4]
-<../../img/TrainCo-occurrency.png, id=75, 714.7503pt x 570.933pt>
+
+LaTeX Warning: Reference `fig:train_cooccurrence_matrix' on page 5 undefined on input line 147.
+
+
+LaTeX Warning: Reference `fig:test_cooccurrence_matrix' on page 5 undefined on input line 147.
+
+
+LaTeX Warning: Reference `fig:val_cooccurrence_matrix' on page 5 undefined on input line 147.
+
+<../../img/TrainCo-occurrency.png, id=45, 714.7503pt x 570.933pt>
 File: ../../img/TrainCo-occurrency.png Graphic file (type png)
 <use ../../img/TrainCo-occurrency.png>
 Package pdftex.def Info: ../../img/TrainCo-occurrency.png  used on input line 153.
 (pdftex.def)             Requested size: 314.99863pt x 251.62074pt.
- [5 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/class-distribution-relative.png> <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/class-distribution-absolute.png>]
-<../../img/TestCo-occurrency.png, id=86, 714.7503pt x 570.933pt>
+[5 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/class-distribution-relative.png> <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/class-distribution-absolute.png>]
+<../../img/TestCo-occurrency.png, id=54, 714.7503pt x 570.933pt>
 File: ../../img/TestCo-occurrency.png Graphic file (type png)
 <use ../../img/TestCo-occurrency.png>
 Package pdftex.def Info: ../../img/TestCo-occurrency.png  used on input line 160.
 (pdftex.def)             Requested size: 314.99863pt x 251.62074pt.
-<../../img/ValCo-occurrency.png, id=87, 714.7503pt x 570.933pt>
+<../../img/ValCo-occurrency.png, id=55, 714.7503pt x 570.933pt>
 File: ../../img/ValCo-occurrency.png Graphic file (type png)
 <use ../../img/ValCo-occurrency.png>
 Package pdftex.def Info: ../../img/ValCo-occurrency.png  used on input line 167.
@@ -668,25 +692,44 @@ Package pdftex.def Info: ../../img/ValCo-occurrency.png  used on input line 167.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/TrainCo-occurrency.png> <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/TestCo-occurrency.png>] [7 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/ValCo-occurrency.png>] [8] [9] (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Methodology\Methodology.aux)
+[6 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/TrainCo-occurrency.png> <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/TestCo-occurrency.png>] [7 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/ValCo-occurrency.png>]
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Citation `jurafsky2009speech' on page 8 undefined on input line 190.
 
-Package rerunfilecheck Info: File `Methodology.out' has not changed.
-(rerunfilecheck)             Checksum: C22119B133DC009FB4397352C1DA8051;1025.
- ) 
-Here is how much of TeX's memory you used:
- 23793 strings out of 478927
- 432645 string characters out of 2852536
- 732945 words of memory out of 3000000
- 41193 multiletter control sequences out of 15000+600000
- 411323 words of font info for 58 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 122i,10n,125p,1205b,527s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Methodology\Methodology.pdf (9 pages, 424882 bytes).
-PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
- 28 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
 
+LaTeX Warning: Citation `6786458' on page 8 undefined on input line 194.
+
+
+LaTeX Warning: Citation `SVM' on page 8 undefined on input line 194.
+
+
+LaTeX Warning: Citation `TrendsInNLP' on page 8 undefined on input line 194.
+
+
+LaTeX Warning: Citation `LSTM' on page 8 undefined on input line 195.
+
+
+LaTeX Warning: Citation `AttentionIsAllYouNeed' on page 8 undefined on input line 195.
+
+[8]
+Overfull \hbox (0.79622pt too wide) in paragraph at lines 196--196
+[]\OT1/cmr/bx/n/14.4 BERT, Bi-di-rec-tio-nal En-co-der Re-pre-sen-ta-tions from Tran-
+ []
+
+
+LaTeX Warning: Citation `BERT' on page 9 undefined on input line 197.
+
+
+LaTeX Warning: Citation `AttentionIsAllYouNeed' on page 9 undefined on input line 200.
+
+[9]
+Overfull \hbox (3.91705pt too wide) in paragraph at lines 204--205
+[]\OT1/cmr/m/n/12 Le \OT1/cmr/bx/n/12 at-ten-tion heads \OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A$\OT1/cmr/m/n/12 ) so-no un com-po-nen-te cru-cia-le del mec-ca-ni-smo di self-attention
+ []
+
+
+LaTeX Warning: Citation `WordPiece' on page 10 undefined on input line 221.
+
+
+!pdfTeX error: pdflatex (file ./img/bert_base_large.jpg): reading JPEG image failed (no JPEG header found)
+ ==> Fatal error occurred, no output PDF file produced!

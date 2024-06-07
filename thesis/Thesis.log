@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  26 MAY 2024 20:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  7 JUN 2024 19:40
 entering extended mode
 **c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Thesis.tex
 (c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Thesis.tex
@@ -519,7 +519,8 @@ Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
 File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count320
 \l__pdf_internal_box=\box68
-) (Thesis.aux)
+)
+No file Thesis.aux.
 \openout1 = `Thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
@@ -542,7 +543,6 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 45.
 LaTeX Font Info:    ... okay on input line 45.
 LaTeX Info: Redefining \it@ocap on input line 45.
 LaTeX Info: Redefining \it@ccap on input line 45.
-
 
 File italian.ldf warning: 
 italian.ldf    With OT1 encoding guillemets are poorly faked
@@ -587,7 +587,6 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 45.
 LaTeX Info: Redefining \pageref on input line 45.
 LaTeX Info: Redefining \nameref on input line 45.
- (Thesis.out) (Thesis.out)
 \@outlinefile=\write4
 \openout4 = `Thesis.out'.
 
@@ -618,14 +617,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--72
 <to be read again> 
                    \relax 
 l.87     \end{dedication}
-                          [1] (Thesis.toc)
+                          [1]
 \tf@toc=\write5
 \openout5 = `Thesis.toc'.
 
  [2
 
 
-] (Thesis.lof)
+]
 \tf@lof=\write6
 \openout6 = `Thesis.lof'.
 
@@ -637,11 +636,53 @@ Capitolo 1.
 
 ]
 Capitolo 2.
+
+LaTeX Warning: Citation `Maian' on page 5 undefined on input line 10.
+
+
+LaTeX Warning: Citation `Maian2' on page 5 undefined on input line 10.
+
+
+LaTeX Warning: Citation `Oyente' on page 5 undefined on input line 10.
+
+
+LaTeX Warning: Citation `Oyente2' on page 5 undefined on input line 10.
+
+
+LaTeX Warning: Citation `Mythril' on page 5 undefined on input line 10.
+
+
+LaTeX Warning: Citation `Manticore' on page 5 undefined on input line 10.
+
+
+LaTeX Warning: Citation `Slither' on page 5 undefined on input line 11.
+
+
+LaTeX Warning: Citation `Securify' on page 5 undefined on input line 11.
+
+
+LaTeX Warning: Citation `SmartCheck' on page 5 undefined on input line 11.
+
+
+LaTeX Warning: Citation `ContractWard' on page 5 undefined on input line 12.
+
+
+LaTeX Warning: Citation `Mezina' on page 5 undefined on input line 12.
+
 [5
 
 ]
 
+LaTeX Warning: Citation `RossiniPaper1' on page 6 undefined on input line 14.
+
+
 LaTeX Warning: Citation `RossiniPaper2' on page 6 undefined on input line 14.
+
+
+LaTeX Warning: Citation `Huang' on page 6 undefined on input line 14.
+
+
+LaTeX Warning: Citation `Deng' on page 6 undefined on input line 15.
 
 [6]) (Chapters/Dataset/Dataset.tex [7]
 Capitolo 3.
@@ -651,44 +692,71 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 12.
+
+LaTeX Warning: Citation `sc-vulnerabilities' on page 8 undefined on input line 21.
+
 [8
 
 ] [9]
-<Chapters/Dataset//../../img/BECPrice.png, id=171, 502.87875pt x 353.82187pt>
+<Chapters/Dataset//../../img/BECPrice.png, id=83, 502.87875pt x 353.82187pt>
 File: Chapters/Dataset//../../img/BECPrice.png Graphic file (type png)
 <use Chapters/Dataset//../../img/BECPrice.png>
 Package pdftex.def Info: Chapters/Dataset//../../img/BECPrice.png  used on input line 55.
 (pdftex.def)             Requested size: 360.00137pt x 253.29384pt.
- [10 <./Chapters/Dataset//../../img/BECPrice.png>] [11] [12]) (Chapters/Methodology/Methodology.tex [13]
+ [10 <./Chapters/Dataset//../../img/BECPrice.png>] [11]
+
+LaTeX Warning: Citation `reentrancy-historical' on page 12 undefined on input line 89.
+
+[12]) (Chapters/Methodology/Methodology.tex [13]
 Capitolo 4.
+
+LaTeX Warning: Citation `rossini2022slitherauditedcontracts' on page 14 undefined on input line 17.
+
 [14
 
-] [15]
-<Chapters/Methodology//../../img/SCTokensPreprocessed.png, id=267, 854.2314pt x 450.9648pt>
+]
+
+LaTeX Warning: Reference `tab:no_bytecode_count' on page 15 undefined on input line 37.
+
+[15]
+<Chapters/Methodology//../../img/SCTokensPreprocessed.png, id=177, 854.2314pt x 450.9648pt>
 File: Chapters/Methodology//../../img/SCTokensPreprocessed.png Graphic file (type png)
 <use Chapters/Methodology//../../img/SCTokensPreprocessed.png>
 Package pdftex.def Info: Chapters/Methodology//../../img/SCTokensPreprocessed.png  used on input line 62.
 (pdftex.def)             Requested size: 220.50247pt x 116.40857pt.
-<Chapters/Methodology//../../img/BCTokensPreprocessed.png, id=268, 860.7357pt x 450.9648pt>
+<Chapters/Methodology//../../img/BCTokensPreprocessed.png, id=178, 860.7357pt x 450.9648pt>
 File: Chapters/Methodology//../../img/BCTokensPreprocessed.png Graphic file (type png)
 <use Chapters/Methodology//../../img/BCTokensPreprocessed.png>
 Package pdftex.def Info: Chapters/Methodology//../../img/BCTokensPreprocessed.png  used on input line 69.
 (pdftex.def)             Requested size: 220.50247pt x 115.52779pt.
 
 
+LaTeX Warning: Reference `tab:summary' on page 16 undefined on input line 76.
+
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [16 <./Chapters/Methodology//../../img/SCTokensPreprocessed.png> <./Chapters/Methodology//../../img/BCTokensPreprocessed.png>]
+
+LaTeX Warning: Reference `tab:class_distribution' on page 17 undefined on input line 100.
+
+
 Overfull \hbox (28.11864pt too wide) in paragraph at lines 103--117
  [][] 
  []
 
-<Chapters/Methodology//../../img/class-distribution-relative.png, id=281, 497.2176pt x 475.5366pt>
+
+LaTeX Warning: Reference `fig:relative_distribution' on page 17 undefined on input line 121.
+
+
+LaTeX Warning: Reference `fig:absolute_distribution' on page 17 undefined on input line 121.
+
+<Chapters/Methodology//../../img/class-distribution-relative.png, id=187, 497.2176pt x 475.5366pt>
 File: Chapters/Methodology//../../img/class-distribution-relative.png Graphic file (type png)
 <use Chapters/Methodology//../../img/class-distribution-relative.png>
 Package pdftex.def Info: Chapters/Methodology//../../img/class-distribution-relative.png  used on input line 125.
 (pdftex.def)             Requested size: 202.49863pt x 193.67242pt.
-<Chapters/Methodology//../../img/class-distribution-absolute.png, id=282, 739.3221pt x 560.0925pt>
+<Chapters/Methodology//../../img/class-distribution-absolute.png, id=188, 739.3221pt x 560.0925pt>
 File: Chapters/Methodology//../../img/class-distribution-absolute.png Graphic file (type png)
 <use Chapters/Methodology//../../img/class-distribution-absolute.png>
 Package pdftex.def Info: Chapters/Methodology//../../img/class-distribution-absolute.png  used on input line 131.
@@ -697,18 +765,27 @@ Package pdftex.def Info: Chapters/Methodology//../../img/class-distribution-abso
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [17]
-<Chapters/Methodology//../../img/TrainCo-occurrency.png, id=292, 714.7503pt x 570.933pt>
+
+LaTeX Warning: Reference `fig:train_cooccurrence_matrix' on page 18 undefined on input line 147.
+
+
+LaTeX Warning: Reference `fig:test_cooccurrence_matrix' on page 18 undefined on input line 147.
+
+
+LaTeX Warning: Reference `fig:val_cooccurrence_matrix' on page 18 undefined on input line 147.
+
+<Chapters/Methodology//../../img/TrainCo-occurrency.png, id=197, 714.7503pt x 570.933pt>
 File: Chapters/Methodology//../../img/TrainCo-occurrency.png Graphic file (type png)
 <use Chapters/Methodology//../../img/TrainCo-occurrency.png>
 Package pdftex.def Info: Chapters/Methodology//../../img/TrainCo-occurrency.png  used on input line 153.
 (pdftex.def)             Requested size: 314.99863pt x 251.62074pt.
- [18 <./Chapters/Methodology//../../img/class-distribution-relative.png> <./Chapters/Methodology//../../img/class-distribution-absolute.png>]
-<Chapters/Methodology//../../img/TestCo-occurrency.png, id=301, 714.7503pt x 570.933pt>
+[18 <./Chapters/Methodology//../../img/class-distribution-relative.png> <./Chapters/Methodology//../../img/class-distribution-absolute.png>]
+<Chapters/Methodology//../../img/TestCo-occurrency.png, id=207, 714.7503pt x 570.933pt>
 File: Chapters/Methodology//../../img/TestCo-occurrency.png Graphic file (type png)
 <use Chapters/Methodology//../../img/TestCo-occurrency.png>
 Package pdftex.def Info: Chapters/Methodology//../../img/TestCo-occurrency.png  used on input line 160.
 (pdftex.def)             Requested size: 314.99863pt x 251.62074pt.
-<Chapters/Methodology//../../img/ValCo-occurrency.png, id=302, 714.7503pt x 570.933pt>
+<Chapters/Methodology//../../img/ValCo-occurrency.png, id=208, 714.7503pt x 570.933pt>
 File: Chapters/Methodology//../../img/ValCo-occurrency.png Graphic file (type png)
 <use Chapters/Methodology//../../img/ValCo-occurrency.png>
 Package pdftex.def Info: Chapters/Methodology//../../img/ValCo-occurrency.png  used on input line 167.
@@ -717,40 +794,44 @@ Package pdftex.def Info: Chapters/Methodology//../../img/ValCo-occurrency.png  u
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[19 <./Chapters/Methodology//../../img/TrainCo-occurrency.png> <./Chapters/Methodology//../../img/TestCo-occurrency.png>] [20 <./Chapters/Methodology//../../img/ValCo-occurrency.png>]) (Chapters/Results/Results.tex [21]
-Capitolo 5.
-) (Chapters/Conclusion/Conclusion.tex [22
+[19 <./Chapters/Methodology//../../img/TrainCo-occurrency.png> <./Chapters/Methodology//../../img/TestCo-occurrency.png>] [20 <./Chapters/Methodology//../../img/ValCo-occurrency.png>]
 
-]
-Capitolo 6.
-) (Thesis.bbl [23
+LaTeX Warning: Citation `jurafsky2009speech' on page 21 undefined on input line 190.
 
-] [24
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 73--76
-[]\OT1/cmr/m/n/12 pcaversaccio.  A hi-sto-ri-cal col-lec-tion of reen-tran-cy at-tacks.
+LaTeX Warning: Citation `6786458' on page 21 undefined on input line 194.
+
+
+LaTeX Warning: Citation `SVM' on page 21 undefined on input line 194.
+
+
+LaTeX Warning: Citation `TrendsInNLP' on page 21 undefined on input line 194.
+
+
+LaTeX Warning: Citation `LSTM' on page 21 undefined on input line 195.
+
+
+LaTeX Warning: Citation `AttentionIsAllYouNeed' on page 21 undefined on input line 195.
+
+[21]
+Overfull \hbox (0.79622pt too wide) in paragraph at lines 196--196
+[]\OT1/cmr/bx/n/14.4 BERT, Bi-di-rec-tio-nal En-co-der Re-pre-sen-ta-tions from Tran-
  []
 
-) [25] (Thesis.aux)
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Citation `BERT' on page 22 undefined on input line 197.
 
-Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: C18E7B474C34C0B537AD74137ABA5077;1292.
- ) 
-Here is how much of TeX's memory you used:
- 24555 strings out of 478927
- 442772 string characters out of 2852536
- 838560 words of memory out of 3000000
- 41787 multiletter control sequences out of 15000+600000
- 414920 words of font info for 73 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 102i,10n,108p,2035b,2019s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Thesis.pdf (26 pages, 653862 bytes).
-PDF statistics:
- 416 PDF objects out of 1000 (max. 8388607)
- 150 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
 
+LaTeX Warning: Citation `AttentionIsAllYouNeed' on page 22 undefined on input line 200.
+
+[22]
+Overfull \hbox (3.91705pt too wide) in paragraph at lines 204--205
+[]\OT1/cmr/m/n/12 Le \OT1/cmr/bx/n/12 at-ten-tion heads \OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A$\OT1/cmr/m/n/12 ) so-no un com-po-nen-te cru-cia-le del mec-ca-ni-smo di self-attention
+ []
+
+
+LaTeX Warning: Citation `WordPiece' on page 23 undefined on input line 221.
+
+
+!pdfTeX error: pdflatex (file ./img/bert_base_large.jpg): reading JPEG image failed (no JPEG header found)
+ ==> Fatal error occurred, no output PDF file produced!
