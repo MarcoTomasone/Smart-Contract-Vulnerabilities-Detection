@@ -8,12 +8,6 @@ Mythril github repository.
 Opyente.
 \newblock https://pypi.org/project/oyente/.
 
-\bibitem{SiteAnnotationTransformer}
-Jonathan Sum Khalid~Almubarak Austin~Huang, Suraj~Subramanian and Stella
-  Biderman.
-\newblock The annotated transformer.
-\newblock https://nlp.seas.harvard.edu/annotated-transformer/.
-
 \bibitem{6786458}
 Erik Cambria and Bebo White.
 \newblock Jumping nlp curves: A review of natural language processing research
@@ -43,16 +37,36 @@ Josselin Feist, Gustavo Grieco, and Alex Groce.
 \newblock In {\em 2019 IEEE/ACM 2nd International Workshop on Emerging Trends
   in Software Engineering for Blockchain (WETSEB)}, pages 8--15, 2019.
 
+\bibitem{CodeBERT}
+Zhangyin Feng, Daya Guo, Duyu Tang, Nan Duan, Xiaocheng Feng, Ming Gong, Linjun
+  Shou, Bing Qin, Ting Liu, Daxin Jiang, and Ming Zhou.
+\newblock Codebert: {A} pre-trained model for programming and natural
+  languages.
+\newblock {\em CoRR}, abs/2002.08155, 2020.
+
 \bibitem{LSTM}
 Sepp Hochreiter and J\"{u}rgen Schmidhuber.
 \newblock Long short-term memory.
 \newblock {\em Neural Comput.}, 9(8):1735–1780, nov 1997.
+
+\bibitem{SiteAnnotationTransformer}
+Austin Huang, Suraj Subramanian, Jonathan Sum, Khalid Almubarak, and Stella
+  Biderman.
+\newblock The annotated transformer.
+\newblock https://nlp.seas.harvard.edu/annotated-transformer/.
 
 \bibitem{Huang}
 TonTon~Hsien{-}De Huang.
 \newblock Hunting the ethereum smart contract: Color-inspired inspection of
   potential attacks.
 \newblock {\em CoRR}, abs/1807.01868, 2018.
+
+\bibitem{CodeBERTDataset}
+Hamel Husain, Ho{-}Hsiang Wu, Tiferet Gazit, Miltiadis Allamanis, and Marc
+  Brockschmidt.
+\newblock Codesearchnet challenge: Evaluating the state of semantic code
+  search.
+\newblock {\em CoRR}, abs/1909.09436, 2019.
 
 \bibitem{jurafsky2009speech}
 Daniel Jurafsky and James~H Martin.
@@ -64,6 +78,12 @@ Zulfiqar~Ali Khan and Akbar Siami~Namin.
 \newblock Ethereum smart contracts: Vulnerabilities and their classifications.
 \newblock In {\em 2020 IEEE International Conference on Big Data (Big Data)},
   pages 1--10, 2020.
+
+\bibitem{RoBERTa}
+Yinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer
+  Levy, Mike Lewis, Luke Zettlemoyer, and Veselin Stoyanov.
+\newblock Roberta: {A} robustly optimized {BERT} pretraining approach.
+\newblock {\em CoRR}, abs/1907.11692, 2019.
 
 \bibitem{ESCORT}
 Oliver Lutz, Huili Chen, Hossein Fereidooni, Christoph Sendner, Alexandra
@@ -127,6 +147,12 @@ Alexander Rush.
   ({NLP}-{OSS})}, pages 52--60, Melbourne, Australia, July 2018. Association
   for Computational Linguistics.
 
+\bibitem{DistillBERT}
+Victor Sanh, Lysandre Debut, Julien Chaumond, and Thomas Wolf.
+\newblock Distilbert, a distilled version of {BERT:} smaller, faster, cheaper
+  and lighter.
+\newblock {\em CoRR}, abs/1910.01108, 2019.
+
 \bibitem{SmartCheck}
 Sergei Tikhomirov, Ekaterina Voskresenskaya, Ivan Ivanitskiy, Ramil Takhaviev,
   Evgeny Marchenko, and Yaroslav Alexandrov.
@@ -153,6 +179,17 @@ Wei Wang, Jingjing Song, Guangquan Xu, Yidong Li, Hao Wang, and Chunhua Su.
   smart contracts.
 \newblock {\em IEEE Transactions on Network Science and Engineering},
   8(2):1133--1144, 2021.
+
+\bibitem{WordPiece}
+Yonghui Wu, Mike Schuster, Zhifeng Chen, Quoc~V. Le, Mohammad Norouzi, Wolfgang
+  Macherey, Maxim Krikun, Yuan Cao, Qin Gao, Klaus Macherey, Jeff Klingner,
+  Apurva Shah, Melvin Johnson, Xiaobing Liu, Lukasz Kaiser, Stephan Gouws,
+  Yoshikiyo Kato, Taku Kudo, Hideto Kazawa, Keith Stevens, George Kurian,
+  Nishant Patil, Wei Wang, Cliff Young, Jason Smith, Jason Riesa, Alex Rudnick,
+  Oriol Vinyals, Greg Corrado, Macduff Hughes, and Jeffrey Dean.
+\newblock Google's neural machine translation system: Bridging the gap between
+  human and machine translation.
+\newblock {\em CoRR}, abs/1609.08144, 2016.
 
 \bibitem{TrendsInNLP}
 Tom Young, Devamanyu Hazarika, Soujanya Poria, and Erik Cambria.

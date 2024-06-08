@@ -218,36 +218,118 @@ Le \textbf{attention heads} ($A$) sono un componente cruciale del meccanismo di 
     \label{tab:bert_params}
 \end{table}
 
-BERT è stato preaddestrato con un embedding WordPiece \cite{WordPiece} con un vocabolario di 30.000 token. Il primo token di ogni sequenza è sempre un token di classificazione speciale ([CLS]). L'hidden state finale corrispondente a questo token è utilizzato come rappresentazione aggregata della sequenza per i task di classificazione, che è proprio il modo in cui BERT verrà utilizzato in questo lavoro. BERT può gestire più sequenze di token in input, ciascuna delle quali è seguita da un token speciale ([SEP]).
+BERT è stato preaddestrato con un embedding WordPiece \cite{WordPiece} con un vocabolario di 30.000 token. Il primo token di ogni sequenza è sempre un token di classificazione speciale ([CLS]). L'hidden state finale corrispondente a questo token è utilizzato come rappresentazione aggregata della sequenza per i task di classificazione, che è proprio il modo in cui BERT verrà utilizzato in questo lavoro. BERT può gestire più sequenze di token in input, ciascuna delle quali è seguita da un token speciale ([SEP]), che permette di disambiguare l'appartenenza di un token ad una sequenza piuttosto che ad un'altra. 
 
-Per un dato token, la sua rappresentazione di input è costruita sommando i corrispondenti token, segmento e embedding di posizione.
-
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{img/bert_base_large.jpg}
+    \includegraphics[width=\textwidth]{../../img/bert_base_large.jpg}
     \caption{Architettura di Transformers, BERT\textsubscript{BASE} e BERT\textsubscript{LARGE}}
     \label{fig:bert_input}
 \end{figure}
 
-\subsubsection{Parametri del Modello}
-In tutti i casi, la dimensione feed-forward (o filter size) è impostata a $4H$, cioè 3072 per $H = 768$ e 4096 per $H = 1024$.
+Per ogni token in input, BERT calcola un embedding che è dato dalla somma di tre componenti come è possibile vedere in Figura \ref{fig:bert_embedding}:
+\begin{itemize}
+    \item \textbf{Token Embeddings}: sono i vettori di embedding per ciascun token nel vocabolario. Questi embedding sono allenati durante il pre-addestramento e sono aggiornati durante il fine-tuning. BERT utilizza una tecnica chiamata Wordpiece tokenization, in cui le parole vengono
+    suddivise in sottostringhe più piccole chiamate wordpieces. Questa tecnica permette di
+    creare un vocabolario flessibile contenente sia parole che sotto-parole, per esempio
+    prefissi, suffissi o singoli caratteri. Il vocabolario così creato è in grado di gestire tutte le
+    possibili sequenze di caratteri e di evitare l’utilizzo di token OOV (Out Of Vocabulary) \cite{WordPiece}.
+    \item \textbf{Segment Embeddings}: sono i vettori di embedding che indicano a quale sequenza appartiene ciascun token. Questi embedding sono utilizzati per distinguere tra le due sequenze di input in un task di classificazione di sequenza.
+    \item \textbf{Position Embeddings}: sono una componente critica per aiutare il modello a comprendere la posizione di ciascun token all’interno di una sequenza di testo. Questi embedding consentono a BERT di distinguere tra parole con lo stesso contenuto ma posizionate in posizioni diverse all’interno della frase. Ciò contribuisce a catturare le relazioni tra le parole in modo più completo e consente a BERT di eccellere in una vasta gamma di compiti di elaborazione del linguaggio naturale.
+\end{itemize}
 
-\begin{table}[h]
+\begin{figure}[H]
     \centering
-    \begin{tabular}{lccc}
-        \toprule
-        Modello & Numero di Strati $L$ & Dimensione Nascosta $H$ & Teste di Self-Attention $A$ \\
-        \midrule
-        BERT\textsubscript{BASE} & 12 & 768 & 12 \\
-        BERT\textsubscript{LARGE} & 24 & 1024 & 16 \\
-        \bottomrule
-    \end{tabular}
-    \caption{Parametri principali dei modelli BERT\textsubscript{BASE} e BERT\textsubscript{LARGE}.}
-    \label{tab:bert_params}
-\end{table}
+    \includegraphics[width=\textwidth]{../../img/bert-input.png}
+    \caption{Rappresentazione degli input di BERT}
+    \label{fig:bert_embedding}
+\end{figure}
+
+\subsubsection{Pre-Training}
+Il pre-training di BERT è stato effettuato usando due task di apprendimento non supervisionato: 
+\begin{itemize}
+    \item \textbf{Masked Language Model (MLM)}: in questo task venivano mascherate il 15\% dei token in input e si voleva far si che il modello predicesse i token mascherati. Questo processo in letteratura viene anche spesso chiamato \emph{Cloze} \cite{Taylor1953}. In questo caso i vettori dell'hidden layer finale che si riferisce al token mascherato venivano dati in input ad una funzione softmax sul vocabolario per predire il token mascherato. Per non creare troppo divario tra il pre-addestramento e il fine-tuning, durante questa fase di pre-training con MLM il token speciale [MASK] veniva utilizzato solo l'80\% delle volte, il 10\% delle volte veniva sostituito con un token casuale e il 10\% delle volte veniva lasciato il token originario.
+    \item \textbf{Next Sentence Prediction (NSP)}: in molti task di NLP, come Question-Answering è necessario che i modelli siano in grado di comprendere relazioni tra due frasi. Per far si che il modello imparasse a riconoscere le relazioni tra frasi BERT è stato pre-addestrato su un task di predizione della frase successiva. Nello specifico, prese due frasi A e B il modello doveva predire se la frase B fosse la successiva rispetto alla frase A, questo nel dataset di training era vero nel 50\% dei casi. 
+\end{itemize}
+
+\subsubsection{Fine-tuning di BERT}
+
+Il fine-tuning di BERT consiste nell'adattare il modello pre-allenato a compiti specifici, come la classificazione del testo, l'analisi del sentimento, il \textit{question answering} e altri. BERT utilizza l'architettura \textit{Transformer}, che permette di modellare relazioni complesse tra le parole di un testo grazie al meccanismo di \textit{self-attention}. Questo consente a BERT di processare sia singoli testi che coppie di testi.
+
+Durante il fine-tuning, il modello pre-allenato viene ulteriormente addestrato su un dataset specifico del compito da risolvere, modificando tutti i parametri del modello. Questo include i pesi dei livelli di \textit{self-attention}, le rappresentazioni degli \textit{hidden layers} e i parametri degli strati di output. Ad esempio, per un compito di classificazione del testo, il token [CLS], che rappresenta l'intera sequenza, viene utilizzato per determinare la classe del testo. Per compiti a livello di token, come il \textit{named entity recognition} (NER), ogni token del testo viene etichettato individualmente.
+
+Il processo di fine-tuning richiede meno risorse computazionali rispetto al pre-allenamento. Con l'uso di GPU o TPU, il fine-tuning può essere completato in poche ore, rendendo BERT un'opzione potente e versatile per una varietà di applicazioni di elaborazione del linguaggio naturale.
+
+\subsection{DistilBERT}
+Nel 2020 è stato presentato DistilBERT, un modello più piccolo e più veloce rispetto a BERT, sviluppato da Sanh et al. \cite{DistilBERT}. Il modello presentato dichiara che DistilBERT è in grado di ridurre la complessità di BERT del 40\% pur mantenendo il 97\% delle prestazioni di BERT ed essere 60\% più veloce. 
+
+I risultati di DistilBERT sono stati ottenuti grazie ad una tecnica chiamata \emph{knowledge distillation}, che è una tecnica di compressione in cui modello più piccolo, detto \emph{modello studente}, è allenato per riprodurre i comportamenti di un modello più grande (o un insieme di modelli) detto \emph{modello insegnante}. Questo processo di distillazione permette di ridurre la complessità del modello studente, riducendo il numero di parametri e la complessità computazionale, mantenendo allo stesso tempo le prestazioni del modello più grande. Nell'apprendimento supervisionato, un modello di classificazione è generalmente allenato per predire l'istanza di una classi massimizzando la stima di probabilità di quella label. Un modello che funziona in maniera ottima predirrà una probabilità alta sulla classe corretta e probabilità vicine allo zero per le classi errate. 
+
+Il training del modello student si basa su una combinazione di tecniche di distillazione del modello e di apprendimento supervisionato. Viene calcolata una  \textit{distillation loss} utilizzando le \textit{soft target probabilities} del modello insegnante. Questa perdita è definita come:
+
+$$
+L_{ce} = \sum_i t_i \log(s_i)
+$$
+
+dove $t_i$ (rispettivamente $s_i$) è una probabilità stimata dall'insegnante (rispettivamente dallo studente). Questa funzione obiettivo fornisce un segnale di training ricco sfruttando l'intera distribuzione dell'insegnante. Seguendo \cite{Hinton2015}, viene utilizzata una \textit{softmax-temperature}, definita come:
+
+$$
+p_i = \frac{\exp(z_i / T)}{\sum_j \exp(z_j / T)}
+$$
+
+dove $T$ controlla la morbidezza della distribuzione di output e $z_i$ è il punteggio del modello per la classe $i$. La stessa temperatura $T$ viene applicata sia allo studente che all'insegnante durante il training, mentre in fase di inferenza, $T$ è impostata a 1 per tornare ad una funzione \textit{softmax} standard.
+
+L'obiettivo finale del training è una combinazione lineare della distillation loss $L_{ce}$ con la loss di  training supervisionato, cioè la loss del \textit{masked language modeling} $L_{mlm}$. Per allineare le direzioni dei vettori hidden state del modello student e teacher è stata aggiunta una  \textit{cosine embedding loss}, $L_{cos}$. La Loss finale è quindi definita come:
+$$
+L = \alpha L_{ce} + \beta L_{mlm} + \gamma L_{cos}
+$$
+
+Dove $\alpha$, $\beta$, e $\gamma$ sono pesi che bilanciano i diversi termini di loss. Questa combinazione permette di mantenere la qualità del modello distillato avvicinandolo il più possibile alla performance del modello insegnante.
+
+\subsubsection{Architettura}
+L'architettura del DistilBERT è simile a quella di BERT, ma con alcune differenze chiave. Vengono eliminati i \emph{token-type embedding} e la dimensione in termini di layer viene dimezzata. Sono state ottimizzate la maggior parte delle operazioni usate nell'architettura dei Transformer, come i \emph{linear layer} e \emph{layer normalisation} ed è stato dimostrato che ridurre la dimensione dell'hidden state non ha un impatto significativo sulle prestazioni del modello, quindi è rimasta invariata. Per l'inizializzazione del modello student è stato utilizzato un layer del modello BERT poichè hanno la stessa dimensione. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{../../img/DistilBERT-Architecture.png}
+    \caption{Architettura di DistilBERT}
+    \label{fig:distilbert}
+\end{figure}
+
+\subsection{RoBERTa e CodeBERT}
+A partire da BERT, nel 2019 è stato presentato RoBERTa (Robustly optimized BERT approach) da Liu et al. \cite{RoBERTa}. RoBERTa è un modello di deep learning pre-addestrato per l'elaborazione del linguaggio naturale, che migliora le prestazioni di BERT attraverso una serie di modifiche e ottimizzazioni. 
 
 
+Il modello CodeBERT è un modello presentato per la prima volta da Microsoft nel 2020 \cite{CodeBERT}. Il modello è stato costruito con la stessa architettura del modello RoBERTa-base, avendo quindi un numero totale di parametri pari a 125M. 
 
+Nella fase di pretraining per questo modello l'input è stata una concatenazione di due segmenti: 
+
+\section{Fase di Pre-Training di CodeBERT}
+
+Nella fase di pre-training, l'input è costituito dalla concatenazione di due segmenti con un token separatore speciale, ovvero: $$[CLS], w_1, w_2, \ldots, w_n, [SEP], c_1, c_2, \ldots, c_m, [EOS]$$. Un segmento è testo in linguaggio naturale e l'altro è codice di un determinato linguaggio di programmazione. [CLS] è un token speciale posizionato all'inizio dei due segmenti, la cui rappresentazione nascosta finale viene considerata come la rappresentazione aggregata della sequenza per task di classificazione o ranking. Seguendo il metodo standard di elaborazione del testo nei \textit{Transformer}, è stato considerato un testo in linguaggio naturale come una sequenza di parole, splittandolo utilizzando in \textit{WordPiece}. Allo stesso modo, il codice sorgente è stato considerato come una sequenza di token.
+L'output di CodeBERT offre: 
+\begin{itemize}
+    \item la rappresentazione vettoriale contestuale di ciascun token, sia per il linguaggio naturale che per il codice
+    \item la rappresentazione di [CLS], che funziona come rappresentazione aggregata della sequenza, allo stesso modo che in BERT.
+\end{itemize}
+I dati di training che sono stati utilizzati nel pretraining sono sia dati \emph{bimodali}, ovvero dati che contengono sia testo scritto in linguaggio naturale che codice di un linguaggio di programmazione, che dati \emph{unimodali}, ovvero dati che contengono solo codice senza linguaggio naturale. 
+
+I dati sono stati raccolti da repository Github, dove un datapoint:
+\begin{itemize}
+    \item \emph{bimodale:} è rappresentato da una singola funzione a cui è associata della documentazione in linguaggio naturale.
+    \item \emph{unimodale:} è rappresentato da una singola funzione senza documentazione in 
+    linguaggio naturale.
+\end{itemize}
+Nello specifico, è stato utilizzato un dataset offerto da \cite{CodeBERTDataset} che contiene 2.1M di dati bimodali e 6.4M di dati unimodali suddivisi in 6 linguaggi di programmazione: Python, Java, JavaScript, Ruby, Go e PHP. Tutti i dati erano provenienti da repository pubblici e open-source su Github e sono stati filtrati sulla base cinque criteri:
+\begin{enumerate}
+    \item ogni progetto deve essere usato da almeno un altro progetto 
+    \item ogni documentazione viene troncata al primo paragrafo
+    \item le documentazioni inferiori a tre token sono state rimosse
+    \item funzioni piu corte di tre linee di codice sono state rimosse
+    \item le funzioni che abbiamo nel nome la sottostringa "test" sono state rimosse
+\end{enumerate}
+
+Il pretraining di è stato effettuato utilizzando due diverse funzioni obiettivo. Il primo metodo è stato il MLM, che è stato utilizzato per preaddestrare il modello a predire i token mascherati, questo è stato applicato sui dati bimodali. Anche in questo caso, seguendo l'approccio usato dal modello BERT originario \cite{BERT},  sono stati mascherati il 15\% dei token tra token appartenenti al linguaggio naturale e token facenti parte del codice sorgente. Il secondo metodo applicato è stato il \emph{replaced token detection} che utilizza i dati unimodali. 
 
 
 \end{document}
