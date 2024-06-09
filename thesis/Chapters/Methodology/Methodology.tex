@@ -194,6 +194,7 @@ la generazione del linguaggio riguarda la produzione automatica di testo, che pu
 Negli ultimi  anni, il campo dell'NLP ha fatto enormi progressi passando dall'epoca delle schede perforate e dell'elaborazione batch (in cui l'analisi di una frase poteva richiedere fino a 7 minuti) all'era di Google e simili (in cui milioni di pagine web possono essere elaborate in meno di un secondo) \cite{6786458}, sino ad arrivare ai giorni d'oggi con l'avvento di modelli di deep learning. Per decenni, l'approccio alla ricerca nel campo dell'NLP prevedeva l'utilizzo di modelli shallow come SVM \cite{SVM} e regressione logistica allenati su feature sparse e fortemente multidimensionali. Negli ultimi anni, d'altro canto,  le reti neurali basati su rappresentazioni di vettori densi hanno prodotto risultati superiori su una grande vastità di task diversi nel mondo dell'NLP \cite{TrendsInNLP}. 
 Lo stato dell'arte attuale nell'NLP è in molti task rappresentato dall'introduzione di una nuova architettura, che è andata a sostituire i modelli RNN e LSTM \cite{LSTM} tradizionali, ovvero i modelli basati su Trasformer, introdotti per la prima volta nel paper "Attention is All You Need" da Vaswani et al. nel 2017 \cite{AttentionIsAllYouNeed}. I Transformer hanno rivoluzionato il campo grazie al meccanismo di self-attention, che consente al modello di valutare e ponderare l'importanza di ogni parola in una frase rispetto alle altre parole della stessa frase, indipendentemente dalla loro distanza posizionale. Questo approccio permette un'elaborazione parallela dei dati, in netto contrasto con la natura sequenziale delle RNN e degli LSTM, migliorando notevolmente l'efficienza computazionale. La struttura dei Transformer è organizzata in blocchi ripetuti di encoder e decoder, dove l'encoder elabora l'input costruendo una rappresentazione interna, e il decoder utilizza questa rappresentazione per generare l'output. Questa architettura ha dimostrato prestazioni eccezionali in molte applicazioni di NLP, tra cui la traduzione automatica, la comprensione e la generazione del linguaggio, la sintesi del testo e il riassunto automatico. Dall'architettura dei Transformer sono derivati molti modelli di successo, tra cui i modelli BERT, la famiglia di modelli GPT e altri. 
 \subsection{BERT, Bidirectional Encoder Representations from Transformers}
+
 Il modello BERT (Bidirectional Encoder Representations from Transformers) è stato presentato da Devlin et al. nel 2018 \cite{BERT}. BERT è un modello di deep learning pre-addestrato per l'elaborazione del linguaggio naturale. BERT è stato allenato su un corpus di testo molto ampio, comprendente 3.3 miliardi di parole, utilizzando due task di apprendimento supervisionato: il \emph{Masked Language Model} (MLM) e il \emph{Next Sentence Prediction} (NSP). Il Masked Language Model maschera randomicamente alcuni dei token in pinput e l'obiettivo del modello è quello di predire l'id nel vocabolario della parola mascherata basandosi solo sul contesto che la circonda, considerando sia il contesto a sinistra che a destra della parola mascherata, in modo da catturare il contesto bidirezionale. Il Next Sentence Prediction, invece, prevede se una frase è la successiva rispetto a un'altra frase. Questo task è stato introdotto per insegnare al modello a comprendere il contesto e la coerenza tra le frasi. Al momento della sua pubblicazione BERT rappresentava lo stato dell'arte in ben undici diversi task nel campo dell'NLP ed è stato il primo modello a raggiungere state-of-the-art performance in molti task sentence-level e token-level, superando anche molte architetture specifiche per task. 
 
 \subsubsection{Architettura}
@@ -217,7 +218,7 @@ Le \textbf{attention heads} ($A$) sono un componente cruciale del meccanismo di 
     \caption{Parametri principali dei modelli BERT\textsubscript{BASE} e BERT\textsubscript{LARGE}}
     \label{tab:bert_params}
 \end{table}
-
+\label{sec:bert}
 BERT è stato preaddestrato con un embedding WordPiece \cite{WordPiece} con un vocabolario di 30.000 token. Il primo token di ogni sequenza è sempre un token di classificazione speciale ([CLS]). L'hidden state finale corrispondente a questo token è utilizzato come rappresentazione aggregata della sequenza per i task di classificazione, che è proprio il modo in cui BERT verrà utilizzato in questo lavoro. BERT può gestire più sequenze di token in input, ciascuna delle quali è seguita da un token speciale ([SEP]), che permette di disambiguare l'appartenenza di un token ad una sequenza piuttosto che ad un'altra. 
 
 \begin{figure}[H]
@@ -297,7 +298,7 @@ L'architettura del DistilBERT è simile a quella di BERT, ma con alcune differen
 \end{figure}
 
 \subsection{RoBERTa e CodeBERT}
-A partire da BERT, nel 2019 è stato presentato RoBERTa (Robustly optimized BERT approach) da Liu et al. \cite{RoBERTa}. RoBERTa è un modello di deep learning pre-addestrato per l'elaborazione del linguaggio naturale, che migliora le prestazioni di BERT attraverso una serie di modifiche e ottimizzazioni. 
+A partire da BERT, nel 2019 è stato presentato RoBERTa (Robustly optimized BERT approach) da Liu et al. \cite{RoBERTa}. RoBERTa è un modello di deep learning pre-addestrato per l'elaborazione del linguaggio naturale, che migliora le prestazioni di BERT attraverso una serie di modifiche e ottimizzazioni. A livello architetturale, BERT e RoBERTa sono quasi identici, entrambi basati sull'architettura \textit{Transformer} con encoder bidirezionali. Tuttavia, le differenze principali tra i due risiedono nel processo di pre-training e nelle scelte di ottimizzazione. BERT utilizza due obiettivi di pre-training: il \textit{Masked Language Modeling} (MLM) e il \textit{Next Sentence Prediction} (NSP), mentre RoBERTa si concentra esclusivamente su MLM, eliminando l'obiettivo NSP. RoBERTa introduce anche il \textit{dynamic masking}, dove le maschere applicate ai token cambiano ad ogni epoca di training, rispetto al \textit{static masking} utilizzato da BERT. Inoltre, RoBERTa utilizza una quantità di dati di training molto più grande e adotta configurazioni di iperparametri più aggressive, come dimensioni del batch maggiori e tassi di apprendimento più elevati. Queste modifiche rendono RoBERTa più efficace e robusto, migliorando le sue performance su una varietà di compiti di elaborazione del linguaggio naturale rispetto a BERT.
 
 
 Il modello CodeBERT è un modello presentato per la prima volta da Microsoft nel 2020 \cite{CodeBERT}. Il modello è stato costruito con la stessa architettura del modello RoBERTa-base, avendo quindi un numero totale di parametri pari a 125M. 
@@ -329,7 +330,131 @@ Nello specifico, è stato utilizzato un dataset offerto da \cite{CodeBERTDataset
     \item le funzioni che abbiamo nel nome la sottostringa "test" sono state rimosse
 \end{enumerate}
 
-Il pretraining di è stato effettuato utilizzando due diverse funzioni obiettivo. Il primo metodo è stato il MLM, che è stato utilizzato per preaddestrare il modello a predire i token mascherati, questo è stato applicato sui dati bimodali. Anche in questo caso, seguendo l'approccio usato dal modello BERT originario \cite{BERT},  sono stati mascherati il 15\% dei token tra token appartenenti al linguaggio naturale e token facenti parte del codice sorgente. Il secondo metodo applicato è stato il \emph{replaced token detection} che utilizza i dati unimodali. 
+Il pretraining di è stato effettuato utilizzando due diverse funzioni obiettivo. Il primo metodo è stato il MLM, che è stato utilizzato per preaddestrare il modello a predire i token mascherati, questo è stato applicato sui dati bimodali. Anche in questo caso, seguendo l'approccio usato dal modello BERT originario \cite{BERT},  sono stati mascherati il 15\% dei token tra token appartenenti al linguaggio naturale e token facenti parte del codice sorgente. Il secondo metodo applicato è stato il \emph{replaced token detection} che utilizza sia i dati bimodati che quelli unimodali.  Durante il pre-training, alcuni token nell'input originale, che può essere testo in linguaggio naturale o codice, vengono sostituiti con token casuali. Il compito del modello è quindi rilevare quali token sono stati sostituiti. Il processo funziona nel seguente modo: il modello riceve una sequenza di token contenente sia token originali che token sostituiti. Per ogni token, il modello deve prevedere una probabilità che indichi se il token è stato sostituito o meno. L'obiettivo di training per RTD è minimizzare la perdita di classificazione binaria tra i token originali e quelli sostituiti. Questo metodo sfrutta l'intero contesto della sequenza, permettendo a CodeBERT di apprendere rappresentazioni più ricche e accurate sia per il linguaggio naturale che per il codice.
+
+Per quanto riguarda il fine-tuning, allo stesso modo di BERT, CodeBERT può essere specializzato su task specifici tunando tutti i suoi parametri in modo molto efficiente. Il modello ha ottenuto performance allo stato dell'arte per task che includono ricerca di codice tramite linguaggio naturale, generazione di documentazione a partire dal codice. 
 
 
+\section{Implementazione}
+I tre modelli precedenti, BERT, DistilBERT e CodeBERT sono quelli scelti ed utilizzati in questo lavoro per la classificazione di vulnerabilità degli smart contracts. I task di classificazione possono dividersi in tre categorie principali: 
+\begin{itemize}
+    \item \textbf{Classificazione Binaria:} in cui il modello deve predire se un dato elemento appartiene o meno ad una classe specifica. Facendo un esempio nel contesto degli smart contracts, un task di classificazione binaria comporterebbe la predizione della presenza o meno di vulnerabilità in uno smart contract. 
+    \item \textbf{Classificazione Multiclasse:} in cui il modello deve predire, all'interno di un insieme di classi, a quale classe appartiene un dato elemento, posto che possa appartenere ad una sola classe. Ad esempio, un task di classificazione multiclasse potrebbe essere quello di prevedere la vulnerabilità presente in uno smart contract posto che questo possa avere un solo tipo di vulnerabilità.
+    \item \textbf{Classificazione Multilabel:} in cui il modello deve predire, all'interno di un insieme di classi, a quali classi appartiene un dato elemento, posto che possa appartenere a più classi contemporaneamente. 
+\end{itemize}
+Questo lavoro è stato affrontato come un task di classificazione multilabel, in quanto uno smart contract può avere più di una vulnerabilità contemporaneamente. 
+
+Il codice per il pre-processing dei dati, la costruzione, il training e la valutazione dei modelli è stato scritto in Python. Python è un linguaggio di programmazione Touring-completo ad alto livello, ampiamente riconosciuto per la sua semplicità e leggibilità. La vasta disponibilità di librerie e strumenti specifici per l'elaborazione del linguaggio naturale e l'apprendimento automatico, come NumPy, Pandas e Scikit-learn, rende Python una scelta ideale per questo tipo di ricerca. Inoltre, Python è supportato da una vasta comunità di sviluppatori e ricercatori, che lo rendono uno dei linguaggi più utilizzati a livello mondiale per la manipolazione di dati e per lo sviluppo di modelli di Machine e Deep Learning. In aiuto a Python è stata utilizzata la libreria PyTorch,  una libreria di deep learning altamente performante e flessibile, sviluppata da Facebook AI Research (FAIR) \cite{Pytorch}. PyTorch offre un'interfaccia intuitiva e dinamica per la costruzione e l'addestramento di modelli di apprendimento profondo, facilitando la sperimentazione e l'ottimizzazione dei modelli. Inoltre, PyTorch è supportato da una comunità di ricerca attiva e in crescita, che contribuisce con numerosi modelli pre-addestrati e risorse che accelerano lo sviluppo e la valutazione dei modelli. Queste caratteristiche rendono Python e PyTorch l'ovvia scelta per questo lavoro.
+
+Fondamentali per lo sviluppo sono state altre due librerie offerte da HuggingFace, rispettivamente Transformers e Datasets. Transformers è una libreria open-source che offre un'implementazione di modelli di apprendimento profondo pre-addestrati, tra cui BERT, RoBERTa, DistilBERT e molti altri. Questa libreria offre un'interfaccia semplice e intuitiva per caricare, costruire e addestrare modelli di apprendimento profondo, facilitando la sperimentazione e l'ottimizzazione dei modelli. Datasets, invece, è una libreria open-source che offre un'interfaccia semplice e intuitiva per caricare e manipolare dataset che sono stati caricati sulla piattaforma HuggingFace. Questa libreria offre una vasta gamma di dataset pre-caricati, tra cui il dataset \textit{rossini2022slitherauditedcontracts} utilizzato in questo lavoro, semplificando il processo di raccolta dei dati. 
+
+Di seguito, verranno presentati tutti gli esperimenti effettuati e i vari modelli costruiti, i cui risultati verranno poi discussi nel capitolo \ref{chap:results} successivo.
+
+\subsection{BERT-base}
+Il primo modello ricostruito è stato un modello BERT base. Il modello pretrainato a cui si è fatto riferimento è stato \textit{bert-base-uncased}, un modello BERT base pre-addestrato su un corpus di testo in lingua inglese. Dopo essere stato caricato il modello ne viene estratto il pooling output per il primo token, il token [CLS] che come descritto nella sezione \ref{sec:bert} è utilizzato come rappresentazione aggregata della sequenza per task di classificazione. Questo output viene poi passato ad un layer di classificazione lineare, che prende in input un vettore di dimensione pari all'hidden state di BERT, quindi 768, e restitusce un vettore di output con dimensione pari al numero di classi (nel nostro caso 5). Questo vettore di output viene poi passato ad una funzione di attivazione softmax, che restituisce una distribuzione di probabilità su tutte le classi. Questo modello viene utilizzato per la classificazione sia del codice sorgente che del bytecode dei contratti. Mostriamo ora un esempio di codice per la costruzione del modello: 
+\begin{python}
+    class BERTClassifier(torch.nn.Module):
+    def __init__(self):
+        super(BERTClassifier, self).__init__()
+        self.bert_model = transformers.BertModel.from_pretrained('bert-base-uncased')
+        self.dropout = torch.nn.Dropout(0.3)
+        self.linear = torch.nn.Linear(768, NUM_CLASSES)
+    
+    def forward(self, input_ids, attention_mask, token_type_ids):
+        _, pooled_output = self.bert_model(input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids, return_dict=False)
+        dropout_output = self.dropout(pooled_output)
+        linear_output = self.linear(dropout_output)
+        return linear_output
+\end{python}
+Il \emph{pooled_output} è la rappresentazione vettoriale estratta dal modello BERT che rappresenta un'aggregazione delle informazioni apprese dal testo di input. Questa rappresentazione viene ottenuta tramite un processo di "pooling" delle rappresentazioni dei token di input prodotte dal modello BERT.
+Il layer di Dropout è stato aggiunto per evitare l'overfitting del modello. Il modello è stato addestrato utilizzando l'ottimizzatore Adam con un learning rate di $1 \times 10^{-5}$ e una dimensione del batch di 8.
+\subsubsection{Loss Function}
+La funzione di loss scelta è stata la BCEWithLogitsLoss, che è stata utilizzata per la classificazione multilabel. 
+La funzione di perdita \textit{BCEWithLogitsLoss} è una combinazione efficiente della \textit{Binary Cross Entropy} (BCE) e di una funzione logistica di attivazione, spesso utilizzata per compiti di classificazione binaria in reti neurali. Questa funzione di loss applica un'attivazione sigmoide ad una Binary Cross Entropy. 
+$$
+\ell(x, y) = L = \begin{bmatrix} l_1, \ldots, l_N \end{bmatrix}^\top, \quad l_n = -w_n \left[ y_n \cdot \log \sigma(x_n) + (1 - y_n) \cdot \log (1 - \sigma(x_n)) \right],
+$$
+
+\subsection{DistilBERT}
+La costruzione di un modello DistilBERT avviene in modo pressochè identico a quello del modello BERT. Anche in questo caso si è utilizzato il modello pre-addestrato \textit{distilbert-base-uncased}, proveniente dalla libreria Transformers. Mostriamo ora il codice per la costruzione del modello:
+\begin{python}
+    class DistilBERTClass(torch.nn.Module):
+    def __init__(self, NUM_CLASSES):
+        super(DistilBERTClass, self).__init__()
+        self.num_classes = NUM_CLASSES
+        self.distilbert = DistilBertModel.from_pretrained('distilbert-base-uncased')
+        self.dropout = torch.nn.Dropout(0.3)
+        self.fc = torch.nn.Linear(768, NUM_CLASSES)
+    
+    def forward(self, input_ids, attention_mask):
+        outputs = self.distilbert(input_ids=input_ids, attention_mask=attention_mask)
+        pooled_output = outputs.last_hidden_state[:, 0]
+        pooled_output = self.dropout(pooled_output)
+        output = self.fc(pooled_output)
+        return output
+\end{python}
+Anche in questo caso, il modello è stato addestrato utilizzando l'ottimizzatore Adam con un learning rate di $1 \times 10^{-5}$ e una dimensione del batch di 8 e la funzione di loss BCEWithLogitsLoss. Come per il modello BERT, il layer di Dropout è stato aggiunto per evitare l'overfitting del modello.
+
+Come si può notare dal codice sopra riportato, a differenza del modello BERT, il modello DistilBERT non prende in input i token type ids, in quanto non sono presenti nella struttura del modello DistilBERT.
+
+\subsection{CodeBERT}
+Anche il modello CodeBERT è stato costruito in modo simile ai modelli BERT e DistilBERT. Il modello pre-addestrato utilizzato è stato \textit{microsoft/codebert-base}, proveniente dalla libreria Transformers. Mostriamo ora il codice per la costruzione del modello:
+\begin{python}
+    class CodeBERTClass(torch.nn.Module):
+        def __init__(self, NUM_CLASSES):
+            super(CodeBERTClass, self).__init__()
+            self.num_classes = NUM_CLASSES
+            self.codebert = AutoModel.from_pretrained('microsoft/codebert-base')
+            self.dropout = torch.nn.Dropout(0.3)
+            self.fc = torch.nn.Linear(768, NUM_CLASSES)
+        
+        def forward(self, ids, mask):
+            outputs = self.codebert(input_ids=ids, attention_mask=mask)
+            pooled_output = outputs.pooler_output
+            pooled_output = self.dropout(pooled_output)
+            output = self.fc(pooled_output)
+            return output
+\end{python}
+Anche in questo caso, il modello è stato addestrato utilizzando l'ottimizzatore Adam con un learning rate di $1 \times 10^{-5}$ e una dimensione del batch di 8 e la funzione di loss BCEWithLogitsLoss. Come per i modelli BERT e DistilBERT, il layer di Dropout è stato aggiunto per evitare l'overfitting del modello.
+
+\subsection{CodeBERT con aggregazione}
+Uno dei problemi principali riscontrati nel training dei precedenti modelli è i modelli della famiglia BERT hanno una capacità massima in input di 512 token. I nostri smart contract, come visto precedentemente hanno una lunghezza media di circa 1500 token, dare quindi in input al modello solo 512 token significa far si che il modello analizzi, in molti casi, solo una piccola porzione iniziale dei nostri contratti. Per ovviare a questo problema, è stato deciso di dividere i nostri contratti in sotto-contratti di lunghezza massima 512 token e poi aggregare gli embedding prodotti da CodeBERT per ogni sotto-contratto tramite delle funzioni di aggregazione come media e massimo. Questo approccio permette di far si che il modello possa analizzare l'intero contratto, anche se in sotto-parti. Mostriamo ora il codice per la costruzione del modello: 
+\begin{python}
+    class CodeBERTAggregatedClass(torch.nn.Module):
+        def __init__(self, num_classes, aggregation='mean', dropout=0.3):
+            super(CodeBERTAggregatedClass, self).__init__()
+            self.codebert = AutoModel.from_pretrained('microsoft/codebert-base', cache_dir="./cache")
+            self.dropout = torch.nn.Dropout(dropout)
+            self.fc = torch.nn.Linear(self.codebert.config.hidden_size, num_classes)
+            self.aggregation = aggregation
+
+        def forward(self, input_ids, attention_masks):
+            batch_size, seq_len = input_ids.size()
+
+            # Divide input_ids e attention_masks in blocchi di 512 token
+            num_chunks = (seq_len + 511) // 512
+            input_ids = input_ids[:, :512*num_chunks].view(batch_size * num_chunks, 512)
+            attention_masks = attention_masks[:, :512*num_chunks].view(batch_size * num_chunks, 512)
+
+            outputs = self.codebert(input_ids=input_ids, attention_mask=attention_masks)
+
+            last_hidden_states = outputs.last_hidden_state
+            cls_tokens = last_hidden_states[:, 0, :]
+
+            cls_tokens = cls_tokens.view(batch_size, num_chunks, -1)
+
+            if self.aggregation == 'mean':
+                aggregated_output = torch.mean(cls_tokens, dim=1)
+            elif self.aggregation == 'max':
+                aggregated_output, _ = torch.max(cls_tokens, dim=1)
+            else:
+                raise ValueError("Aggregation must be 'mean' or 'max'")
+
+            aggregated_output = self.dropout(aggregated_output)
+            output = self.fc(aggregated_output)
+            return output
+\end{python}
+Questo approccio è stato testato sia con la funzione di aggregazione \emph{mean} che con la funzione di aggregazione \emph{max}, che restituiscono rispettivamente la media e il massimo degli embedding prodotti da CodeBERT per ogni sotto-contratto. Inoltre, sono stati testati aprrocci per entrambi in cui venivano utilizzati due o tre blocchi di codice, quindi si classificavano rispettivamente 1024 e 1536 token.
+
+\subsection{Train e Validation}
 \end{document}

@@ -122,6 +122,15 @@ Ivica Nikolic, Aashish Kolluri, Ilya Sergey, Prateek Saxena, and Aquinas Hobor.
 \newblock Finding the greedy, prodigal, and suicidal contracts at scale.
 \newblock {\em CoRR}, abs/1802.06038, 2018.
 
+\bibitem{Pytorch}
+Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory
+  Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, Alban
+  Desmaison, Andreas K{\"{o}}pf, Edward~Z. Yang, Zach DeVito, Martin Raison,
+  Alykhan Tejani, Sasank Chilamkurthy, Benoit Steiner, Lu~Fang, Junjie Bai, and
+  Soumith Chintala.
+\newblock Pytorch: An imperative style, high-performance deep learning library.
+\newblock {\em CoRR}, abs/1912.01703, 2019.
+
 \bibitem{reentrancy-historical}
 pcaversaccio.
 \newblock A historical collection of reentrancy attacks.
