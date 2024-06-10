@@ -366,7 +366,7 @@ Il primo modello ricostruito è stato un modello BERT base. Il modello pretraina
         linear_output = self.linear(dropout_output)
         return linear_output
 \end{python}
-Il \emph{pooled_output} è la rappresentazione vettoriale estratta dal modello BERT che rappresenta un'aggregazione delle informazioni apprese dal testo di input. Questa rappresentazione viene ottenuta tramite un processo di "pooling" delle rappresentazioni dei token di input prodotte dal modello BERT.
+Il \emph{pooled\_output} è la rappresentazione vettoriale estratta dal modello BERT che rappresenta un'aggregazione delle informazioni apprese dal testo di input. Questa rappresentazione viene ottenuta tramite un processo di "pooling" delle rappresentazioni dei token di input prodotte dal modello BERT.
 Il layer di Dropout è stato aggiunto per evitare l'overfitting del modello. Il modello è stato addestrato utilizzando l'ottimizzatore Adam con un learning rate di $1 \times 10^{-5}$ e una dimensione del batch di 8.
 \subsubsection{Loss Function}
 La funzione di loss scelta è stata la BCEWithLogitsLoss, che è stata utilizzata per la classificazione multilabel. 
@@ -455,6 +455,42 @@ Uno dei problemi principali riscontrati nel training dei precedenti modelli è i
             return output
 \end{python}
 Questo approccio è stato testato sia con la funzione di aggregazione \emph{mean} che con la funzione di aggregazione \emph{max}, che restituiscono rispettivamente la media e il massimo degli embedding prodotti da CodeBERT per ogni sotto-contratto. Inoltre, sono stati testati aprrocci per entrambi in cui venivano utilizzati due o tre blocchi di codice, quindi si classificavano rispettivamente 1024 e 1536 token.
+\subsection{CodeBert con concatenazione}
+Un altro approccio complementare alla risoluzione del problema legato al massimo numero di token che i modelli della famiglia BERT possono accettare come input è stato quello di concatenare gli embedding prodotti da CodeBERT per ogni sotto-contratto. Questo approccio permette di mantenere l'informazione relativa a tutti i token del contratto e di fornire al modello un'informazione più completa. Mostriamo ora il codice per la costruzione del modello:
+\begin{python}
+    class CodeBERTConcatenatedClass(torch.nn.Module):
+    def __init__(self, num_classes, dropout=0.3):
+        super(CodeBERTConcatenatedClass, self).__init__()
+        self.codebert = AutoModel.from_pretrained('microsoft/codebert-base', cache_dir="./cache")
+        self.dropout = torch.nn.Dropout(dropout)
+        # Multiply hidden_size by the number of chunks you're concatenating
+        self.fc = torch.nn.Linear(self.codebert.config.hidden_size * CODE_BLOCKS, num_classes)
 
+    def forward(self, input_ids, attention_masks):
+        batch_size, seq_len = input_ids.size()
+
+        # Divide input_ids and attention_masks into chunks of 512 tokens
+        num_chunks = (seq_len + 511) // 512
+        input_ids = input_ids[:, :512*num_chunks].reshape(batch_size * num_chunks, 512)
+        attention_masks = attention_masks[:, :512*num_chunks].reshape(batch_size * num_chunks, 512)
+
+        outputs = self.codebert(input_ids=input_ids, attention_mask=attention_masks)
+
+        last_hidden_states = outputs.last_hidden_state
+        cls_tokens = last_hidden_states[:, 0, :]
+
+        # Concatenate the CLS tokens of the various chunks
+        cls_tokens = cls_tokens.reshape(batch_size, num_chunks, -1)
+        concatenated_output = cls_tokens.reshape(batch_size, -1)
+
+        concatenated_output = self.dropout(concatenated_output)
+        output = self.fc(concatenated_output)
+        return output
+\end{python}
+In questo caso, si divide la stringa in input in chunk da 512 token e si ottengono gli embedding prodotti da codeBERT per ognuno di questi chunk. Questi embedding vengono poi concatenati e passati ad un layer di classificazione lineare. Anche in questo caso l'approccio è stato testato sia con due che con tre blocchi di codice, quindi si classificavano rispettivamente 1024 e 1536 token. 
 \subsection{Train e Validation}
+Tutti i modelli sono stati addestrati (o fine-tunati) per 20 epoche, con un learning rate di $1 \times 10^{-5}$. Per evitare l'overfitting, è stato utilizzato un layer di Dropout con un rate del 30\%. La funzione di loss utilizzata è stata la BCEWithLogitsLoss, che è stata utilizzata per la classificazione multilabel. L'ottimizzatore utilizzato è stato Adam. I modelli sono stati addestrati su una GPU NVIDIA 2080Ti. A seguito di limitazioni dovute alla potenza di calcolo e alla grandezza del dataset in alcuni casi è stato necessario ridurre la batch size. Nello specifico, per i modelli di aggregazione e concatenazione che utilizzavano due blocchi di codice (1024 token) la batch size è stata ridotta a 4, mentre per i modelli che utilizzavano tre blocchi di codice (1536 token) la batch size è stata ridotta a 2. Questa potrebbe essere sicuramente una limitazione al lavoro, in quanto una batch size ridotta potrebbe portare ad un addestramento più lento e a risultati meno accurati. Si rimanda a futura ricerca la possibilità di addestrare i modelli con potenze di calcolo maggiori per effettuare dei tuning dei parametri più accurati. 
+
+\section{Gemini}
+Gemini è un 
 \end{document}

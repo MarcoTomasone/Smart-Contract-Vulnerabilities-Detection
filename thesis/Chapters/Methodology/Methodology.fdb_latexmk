@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1717946977 "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Methodology/Methodology.tex" "Chapters/Methodology/Methodology.pdf" "Methodology" 1717946984
+["pdflatex"] 1718036822 "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Methodology/Methodology.tex" "Chapters/Methodology/Methodology.pdf" "Methodology" 1718036832
   "C:/Users/tomas/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1630670581 14064 d1d06bbff9d4f1ae03b03f90fd21ef9f ""
   "C:/Users/tomas/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1630670499 9715383 c310c5e10878a246b2c909d39885981b ""
   "C:/Users/tomas/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1717941714 96335 df8c010454e20aca8cd003881ce07551 ""
@@ -12,7 +12,6 @@
   "C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1233955454 940 228d6584342e91276bf566bcf9716b83 ""
   "C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
-  "C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmitt10.tfm" 1136768653 768 2297ad2ac26f37e67f756dad27c77d68 ""
   "C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
   "C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi8.tfm" 1136768653 1520 eccf95517727cb11801f4f1aee3a21b4 ""
@@ -33,7 +32,6 @@
   "C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/latex-fonts/lasy8.tfm" 1136768653 520 7bb3abb160b19e0ed6ac404bb59052b7 ""
   "C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247596666 32080 340ef9bf63678554ee606688e7b5339d ""
   "C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1247596667 30251 6afa5cb1d0204815a708a080681d4674 ""
-  "C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmitt10.pfb" 1247596666 26057 4749ebe351ca6b60601cf0ab49d1bf5d ""
   "C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1247596667 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
   "C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1247596666 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
@@ -200,11 +198,11 @@
   "Chapters/Methodology/../../img/bert_base_large.jpg" 1717841703 78839 54ddf3481c25e8093698b5fcddcddca1 ""
   "Chapters/Methodology/../../img/class-distribution-absolute.png" 1716736871 37300 0777e4bd77fff857978c533b37f877c8 ""
   "Chapters/Methodology/../../img/class-distribution-relative.png" 1716736889 43636 70a995a28570027f584a025c0d27a9d6 ""
-  "Chapters/Methodology/Methodology.aux" 1717946977 34 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "Chapters/Methodology/Methodology.out" 0 -1 0 "pdflatex"
-  "Chapters/Methodology/Methodology.tex" 1717946976 50030 8dc749036a4c2bafe0623e9a414593bf ""
+  "Chapters/Methodology/Methodology.aux" 1718036831 9302 1a2002d8cb03bcf4da0d9e6c93a9cb84 "pdflatex"
+  "Chapters/Methodology/Methodology.out" 1718036831 2916 182b9a50fe2a25e10d1413cbeec84c44 "pdflatex"
+  "Chapters/Methodology/Methodology.tex" 1718036818 53571 a037dad89843af3c0ef6a2d13ca0f6c3 ""
   "Thesis.tex" 1717941703 2861 f191fdf4903965aa21d18b63d3291617 ""
-  "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Methodology/Methodology.tex" 1717946976 50030 8dc749036a4c2bafe0623e9a414593bf ""
+  "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Methodology/Methodology.tex" 1718036818 53571 a037dad89843af3c0ef6a2d13ca0f6c3 ""
   "img/BCTokensPreprocessed.png" 1716139187 54197 28cdf48a5528a18177415d43d3f1c824 ""
   "img/DistilBERT-Architecture.png" 1717865587 40461 efc0acab0b251db1452c9220676acdf9 ""
   "img/SCTokensPreprocessed.png" 1716139175 45867 cb15e931e1c0032cad20822476546771 ""
@@ -227,7 +225,7 @@
   "use ../../img/class-distribution-absolute.png" 1716736871 37300 0777e4bd77fff857978c533b37f877c8 ""
   "use ../../img/class-distribution-relative.png" 1716736889 43636 70a995a28570027f584a025c0d27a9d6 ""
   (generated)
+  "Chapters/Methodology/Methodology.log"
   "Chapters/Methodology/Methodology.aux"
   "Chapters/Methodology/Methodology.pdf"
   "Chapters/Methodology/Methodology.out"
-  "Chapters/Methodology/Methodology.log"
