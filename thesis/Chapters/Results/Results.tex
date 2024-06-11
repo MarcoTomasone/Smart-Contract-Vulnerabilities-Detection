@@ -4,4 +4,31 @@
 \begin{document}
 \chapter{Results}
 \label{chap:results}
+
+\begin{itemize}
+    \item \textbf{True Positives (TP)}: Il numero di casi in cui il modello ha correttamente predetto la presenza di una classe.
+    \item \textbf{True Negatives (TN)}: Il numero di casi in cui il modello ha correttamente predetto l'assenza di una classe.
+    \item \textbf{False Positives (FP)}: Il numero di casi in cui il modello ha erroneamente predetto la presenza di una classe che in realtà non era presente.
+    \item \textbf{False Negatives (FN)}: Il numero di casi in cui il modello ha erroneamente predetto l'assenza di una classe che in realtà era presente.
+\end{itemize}
+
+\section*{Formula per l'accuracy:}
+La formula per calcolare l'accuracy in un problema di classificazione multilabel utilizzando TP, TN, FP e FN è la seguente:
+$$
+\text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
+$$
+
+\section{Discussione:}
+La definizione di TP, TN, FP e FN fornisce una chiara comprensione delle diverse situazioni di classificazione che il modello può incontrare. TP e TN rappresentano le predizioni corrette del modello, mentre FP e FN indicano gli errori di classificazione. L'accuracy combina TP e TN per fornire una misura globale della capacità del modello di classificare correttamente le istanze. Tuttavia, è importante considerare il contesto del problema e valutare se l'accuracy è la metrica più appropriata in base alle caratteristiche specifiche del dataset e agli obiettivi della classificazione.
+
+
+Nel contesto della classificazione multilabel, l'accuracy rappresenta una metrica importante per valutare le performance dei modelli. L'accuracy, definita come la frazione di istanze correttamente classificate rispetto al totale delle istanze, può essere espressa mediante la seguente formula:
+
+\[
+\text{Accuracy} = \frac{\text{Numero di istanze correttamente classificate}}{\text{Numero totale di istanze}}
+\]
+
+Uno dei vantaggi principali dell'accuracy è la sua intuitiva interpretazione: rappresenta la percentuale di predizioni corrette rispetto al totale. Tuttavia, l'utilizzo dell'accuracy può presentare alcune limitazioni. Ad esempio, in presenza di classi sbilanciate, l'accuracy può essere fuorviante, poiché potrebbe essere influenzata in modo significativo da classi di maggioranza. Inoltre, poiché l'accuracy considera solo se tutte le classi predette corrispondono esattamente alle classi di ground truth, non fornisce informazioni dettagliate sulle performance di ciascuna classe. Questo significa che può non essere la metrica più indicativa per problemi in cui il focus è sulle performance di classi specifiche. Pertanto, mentre l'accuracy fornisce una valutazione complessiva delle prestazioni del modello, è consigliabile integrarla con altre metriche, come precision, recall e F1 score, per ottenere una valutazione più completa e accurata della classificazione multilabel.
+
+
 \end{document}

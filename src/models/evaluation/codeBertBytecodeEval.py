@@ -24,12 +24,12 @@ logger.info("Starting script...")
 
 #region constants
 MAX_LEN = 512
-CODE_BLOCKS = 2
+CODE_BLOCKS = 1
 SAFE_IDX = 4
 VALID_BATCH_SIZE = 16
 NUM_CLASSES = 5
-MODEL = 'codeBertAggMean'
-MODE = "Mean2"
+MODEL = 'codeBertBytecode'
+MODE = "base"
 TOKENIZER = RobertaTokenizer.from_pretrained('microsoft/codebert-base')
 DEVICE = 'cuda' if cuda.is_available() else 'cpu'
 if DEVICE == 'cuda':
@@ -78,7 +78,7 @@ def oneHotEncodeLabel(label):
 
 def transformData(example):
     data = {}
-    data["source_code"] = deleteNewlineAndGetters(remove_comments(example["source_code"]))
+    # No need to process bytecode; it's already in hex format
     data["bytecodeOrigin"] = example["bytecode"]
     data["label"] = oneHotEncodeLabel(example["slither"])
     return data
@@ -96,21 +96,24 @@ class CustomDataset(Dataset):
         self.tokenizer = tokenizer
         self.data = dataframe
         self.max_len = max_len
-        self.sourceCode = dataframe["source_code"]
+        self.bytecode = dataframe["bytecodeOrigin"]
         self.targets = dataframe["label"]
 
     def __len__(self):
-        return len(self.sourceCode)
+        return len(self.bytecode)
 
     def __getitem__(self, index):
-        sourceCode = str(self.sourceCode[index])
-        sourceCode = " ".join(sourceCode.split())
+        bytecode = str(self.bytecode[index])
+        # Remove the "0x" prefix if it exists
+        if bytecode.startswith("0x"):
+            bytecode = bytecode[2:]
 
-        if len(sourceCode) == 0:
-            raise ValueError(f"Source code at index {index} is empty.")
+        # Split the bytecode into tokens of 2 characters each
+        bytecode_tokens = [bytecode[i:i+2] for i in range(0, len(bytecode), 2)]
+        bytecode_text = ' '.join(bytecode_tokens)  # Create a string with spaces between tokens
 
         inputs = self.tokenizer.encode_plus(
-            sourceCode,
+            bytecode_text,
             None,
             add_special_tokens=True,
             max_length=self.max_len,
@@ -128,7 +131,6 @@ class CustomDataset(Dataset):
         }
 #endregion
 
-#region model
 class CodeBERTAggregatedClass(torch.nn.Module):
     def __init__(self, num_classes, aggregation='mean', dropout=0.3):
         super(CodeBERTAggregatedClass, self).__init__()
@@ -271,18 +273,18 @@ training_set = CustomDataset(train_set, TOKENIZER)
 validation_set = CustomDataset(val_set, TOKENIZER)
 testing_set = CustomDataset(test_set, TOKENIZER)
 
-# Definisci i DataLoader
+# Define the DataLoaders
 training_loader = DataLoader(training_set, batch_size=VALID_BATCH_SIZE, shuffle=False, pin_memory=True, num_workers=4)
 validation_loader = DataLoader(validation_set, batch_size=VALID_BATCH_SIZE, shuffle=False, pin_memory=True, num_workers=4)
 testing_loader = DataLoader(testing_set, batch_size=VALID_BATCH_SIZE, shuffle=False, pin_memory=True, num_workers=4)
 
-# Carica il modello pre-addestrato
+# Load the pretrained model
 model = CodeBERTAggregatedClass(num_classes=NUM_CLASSES).to(DEVICE)
-model.load_state_dict(torch.load(f'./stateDictMean/best_model_{MODEL}.pth'))
+model.load_state_dict(torch.load(f'./stateDict_codeBertBytecode/best_model_{MODEL}.pth'))
 
-# Esegui l'evaluation su train, validation, e test set
+# Evaluate on train, validation, and test sets
 logger.info("Evaluating on training set...")
-evaluate_and_save(training_loader, f'train', f'./results_{MODE}/train')
+evaluate_and_save(training_loader, 'train', f'./results_{MODE}/train')
 
 logger.info("Evaluating on validation set...")
 evaluate_and_save(validation_loader, 'validation', f'./results_{MODE}/validation')

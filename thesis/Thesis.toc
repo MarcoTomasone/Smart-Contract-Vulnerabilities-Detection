@@ -30,6 +30,8 @@
 \contentsline {subsection}{\numberline {4.4.2}DistilBERT}{32}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}CodeBERT}{33}{subsection.4.4.3}%
 \contentsline {subsection}{\numberline {4.4.4}CodeBERT con aggregazione}{33}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}Train e Validation}{34}{subsection.4.4.5}%
-\contentsline {chapter}{\numberline {5}Results}{35}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusioni}{36}{chapter.6}%
+\contentsline {subsection}{\numberline {4.4.5}CodeBert con concatenazione}{34}{subsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.4.6}Train e Validation}{36}{subsection.4.4.6}%
+\contentsline {section}{\numberline {4.5}Gemini}{36}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Results}{39}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusioni}{40}{chapter.6}%

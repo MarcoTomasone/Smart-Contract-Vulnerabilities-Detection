@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex Thesis"] 1717953176 "Thesis.aux" "Thesis.bbl" "Thesis" 1717953185
-  "Bibliography.bib" 1717940705 23076 b40b96eecc99053dc2a36f7d57ef472c ""
+["bibtex Thesis"] 1718041596 "Thesis.aux" "Thesis.bbl" "Thesis" 1718041602
+  "Bibliography.bib" 1718039994 23590 e362794818400926d0b799a5bd8e6a29 ""
   "C:/Users/tomas/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291868336 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "Thesis.aux" 1717953184 12327 7e6ab0a65c477eabe3c934a98b213b04 "pdflatex"
+  "Thesis.aux" 1718041601 12656 f229cd08bb0d7ac25288a413a925908d "pdflatex"
   (generated)
   "Thesis.bbl"
   "Thesis.blg"
-["pdflatex"] 1717953181 "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Thesis.tex" "Thesis.pdf" "Thesis" 1717953185
+["pdflatex"] 1718041597 "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Thesis.tex" "Thesis.pdf" "Thesis" 1718041602
   "C:/Users/tomas/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1630670581 14064 d1d06bbff9d4f1ae03b03f90fd21ef9f ""
   "C:/Users/tomas/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1630670499 9715383 c310c5e10878a246b2c909d39885981b ""
   "C:/Users/tomas/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1717941714 96335 df8c010454e20aca8cd003881ce07551 ""
@@ -211,15 +211,15 @@
   "Chapters/Methodology//../../img/bert_base_large.jpg" 1717841703 78839 54ddf3481c25e8093698b5fcddcddca1 ""
   "Chapters/Methodology//../../img/class-distribution-absolute.png" 1716736871 37300 0777e4bd77fff857978c533b37f877c8 ""
   "Chapters/Methodology//../../img/class-distribution-relative.png" 1716736889 43636 70a995a28570027f584a025c0d27a9d6 ""
-  "Chapters/Methodology/Methodology.tex" 1717953159 50033 b43e2f19aa4ed656468f44a6e8e430be ""
+  "Chapters/Methodology/Methodology.tex" 1718041582 59210 53871d63a819cb3c374e141dd26eb4a0 ""
   "Chapters/RelatedWork/RelatedWork.tex" 1716046898 7198 87aadc95fd2bdb41f571c112bc520c9d ""
   "Chapters/Results/Results.tex" 1717941115 148 18065148e5406e16cfbdf50104b4af99 ""
-  "Thesis.aux" 1717953184 12327 7e6ab0a65c477eabe3c934a98b213b04 "pdflatex"
-  "Thesis.bbl" 1717953177 8576 50d087eec1d6aff98aa241ab924c090d "bibtex Thesis"
-  "Thesis.lof" 1717953184 1464 227f3cc7e0227492df6383bdb103f8c2 "pdflatex"
-  "Thesis.out" 1717953184 3246 2260adaa9bf718079e4bd3b006fed8d5 "pdflatex"
+  "Thesis.aux" 1718041601 12656 f229cd08bb0d7ac25288a413a925908d "pdflatex"
+  "Thesis.bbl" 1718041597 9019 617f99019b9960380d9ad9f9da2b7d86 "bibtex Thesis"
+  "Thesis.lof" 1718041601 1464 227f3cc7e0227492df6383bdb103f8c2 "pdflatex"
+  "Thesis.out" 1718041601 3534 47b8e9ce6112a6f4eb0f9fb1fc39fe30 "pdflatex"
   "Thesis.tex" 1717941703 2861 f191fdf4903965aa21d18b63d3291617 ""
-  "Thesis.toc" 1717953184 2590 85e479b33083fa9eaee8d742c44c2f4e "pdflatex"
+  "Thesis.toc" 1718041601 2755 2ea4d06845b15715349c0650742c2751 "pdflatex"
   "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Thesis.tex" 1717941703 2861 f191fdf4903965aa21d18b63d3291617 ""
   "solidity-highlighting.tex" 1712519765 2763 2b2925b59ea41ef6732bcf2aa822b574 ""
   "use Chapters/Dataset//../../img/BECPrice.png" 1715112404 93199 51773457699b0d1985b74b2e9fadca6b ""
@@ -234,9 +234,9 @@
   "use Chapters/Methodology//../../img/class-distribution-absolute.png" 1716736871 37300 0777e4bd77fff857978c533b37f877c8 ""
   "use Chapters/Methodology//../../img/class-distribution-relative.png" 1716736889 43636 70a995a28570027f584a025c0d27a9d6 ""
   (generated)
+  "Thesis.lof"
   "Thesis.aux"
   "Thesis.log"
-  "Thesis.toc"
-  "Thesis.lof"
   "Thesis.out"
   "Thesis.pdf"
+  "Thesis.toc"

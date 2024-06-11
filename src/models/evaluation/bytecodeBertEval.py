@@ -1,43 +1,35 @@
-import os
-import re
 import numpy as np
 import pandas as pd
-import logging
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn import metrics
-from sklearn.metrics import ConfusionMatrixDisplay
-import transformers
+import re
 import torch
+import transformers
+from transformers import BertTokenizer, BertModel
 from datasets import load_dataset
 from torch.utils.data import Dataset, DataLoader
-from transformers import AutoModel, RobertaTokenizer
-from torch import cuda, nn
+from torch import cuda
 from tqdm import tqdm
+import logging
+from sklearn import metrics
+import os
+import matplotlib.pyplot as plt
+from sklearn.metrics import ConfusionMatrixDisplay
 
-# Set up logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
-
-print("Start!")
-logger.info("Starting script...")
-
-#region constants
+# Constants
 MAX_LEN = 512
-CODE_BLOCKS = 2
-SAFE_IDX = 4
 VALID_BATCH_SIZE = 16
 NUM_CLASSES = 5
-MODEL = 'codeBertAggMean'
-MODE = "Mean2"
-TOKENIZER = RobertaTokenizer.from_pretrained('microsoft/codebert-base')
+SAFE_IDX = 4
+MODEL = 'bertBytecode'
+MODE = "bytecode"
+TOKENIZER_TYPE = 'bert'  # Use standard BERT tokenizer
 DEVICE = 'cuda' if cuda.is_available() else 'cpu'
+
 if DEVICE == 'cuda':
-    logger.info(f"Using GPU: {torch.cuda.get_device_name(0)}")
-    logger.info(f"Memory Usage: Allocated: {round(torch.cuda.memory_allocated(0)/1024**3,1)} GB, Cached: {round(torch.cuda.memory_reserved(0)/1024**3,1)} GB")
-else:
-    logger.info("NO GPU AVAILABLE!")
-#endregion
+    print(torch.cuda.get_device_name(0))
+    print('Memory Usage:')
+    print('Allocated:', round(torch.cuda.memory_allocated(0) / 1024**3, 1), 'GB')
+    print('Cached:   ', round(torch.cuda.memory_reserved(0) / 1024**3, 1), 'GB')
+
 
 #region class mapping
 class_mapping = {
@@ -50,23 +42,12 @@ class_mapping = {
 class_names = [class_mapping[i] for i in range(NUM_CLASSES)]
 #endregion
 
-#region functions
-def remove_comments(string):
-    pattern = r"(\".*?\"|\'.*?\')|(/\*.*?\*/|//[^\r\n]*$)"
-    regex = re.compile(pattern, re.MULTILINE|re.DOTALL)
-    def _replacer(match):
-        if match.group(2) is not None:
-            return ""
-        else:
-            return match.group(1)
-    return regex.sub(_replacer, string)
 
-def deleteNewlineAndGetters(string):
-    string = string.replace('\n', '')
-    regex_getter = r'function\s+(_get|get)[a-zA-Z0-9_]+\([^\)]*\)\s(external|view|override|virtual|private|returns|public|\s)*\(([^)]*)\)\s*\{(\r\n|\r|\n|\s)*return\s*[^\}]*\}'
-    string = re.sub(regex_getter, '', string)
-    return string
+# Logging setup
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
+# Helper Functions
 def oneHotEncodeLabel(label):
     one_hot = np.zeros(NUM_CLASSES)
     for elem in label:
@@ -77,94 +58,69 @@ def oneHotEncodeLabel(label):
     return one_hot
 
 def transformData(example):
-    data = {}
-    data["source_code"] = deleteNewlineAndGetters(remove_comments(example["source_code"]))
-    data["bytecodeOrigin"] = example["bytecode"]
-    data["label"] = oneHotEncodeLabel(example["slither"])
-    return data
+    return {
+        "bytecode": example["bytecode"],
+        "label": oneHotEncodeLabel(example["slither"])
+    }
 
 def readAndPreprocessDataset():
     train_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='train', cache_dir="./cache", ignore_verifications=True).filter(lambda elem: elem['bytecode'] != '0x').map(transformData)
     test_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='test', cache_dir="./cache", ignore_verifications=True).filter(lambda elem: elem['bytecode'] != '0x').map(transformData)
     val_set = load_dataset("mwritescode/slither-audited-smart-contracts", 'big-multilabel', split='validation', cache_dir="./cache", ignore_verifications=True).filter(lambda elem: elem['bytecode'] != '0x').map(transformData)
     return train_set, test_set, val_set
-#endregion
 
-#region dataset
+# Custom Dataset Class
 class CustomDataset(Dataset):
-    def __init__(self, dataframe, tokenizer, max_len=MAX_LEN * CODE_BLOCKS):
+    def __init__(self, dataframe, tokenizer, max_len):
         self.tokenizer = tokenizer
         self.data = dataframe
-        self.max_len = max_len
-        self.sourceCode = dataframe["source_code"]
+        self.bytecode = dataframe["bytecode"]
         self.targets = dataframe["label"]
+        self.max_len = max_len
 
     def __len__(self):
-        return len(self.sourceCode)
+        return len(self.bytecode)
 
     def __getitem__(self, index):
-        sourceCode = str(self.sourceCode[index])
-        sourceCode = " ".join(sourceCode.split())
+        bytecode = str(self.bytecode[index])
+        # Remove the "0x" prefix if it exists
+        if bytecode.startswith("0x"):
+            bytecode = bytecode[2:]
 
-        if len(sourceCode) == 0:
-            raise ValueError(f"Source code at index {index} is empty.")
-
-        inputs = self.tokenizer.encode_plus(
-            sourceCode,
-            None,
-            add_special_tokens=True,
+        # Split the bytecode into tokens of 2 characters each
+        bytecode_tokens = [bytecode[i:i+2] for i in range(0, len(bytecode), 2)]
+        bytecode_text = ' '.join(bytecode_tokens)  # Create a string with spaces between tokens
+        
+        encoding = self.tokenizer.encode_plus(
+            bytecode_text,
             max_length=self.max_len,
             padding='max_length',
             truncation=True,
-            return_token_type_ids=False
+            return_tensors='pt'
         )
-        ids = inputs['input_ids']
-        mask = inputs['attention_mask']
+        ids = encoding['input_ids'].flatten()
+        mask = encoding['attention_mask'].flatten()
 
         return {
             'ids': torch.tensor(ids, dtype=torch.long),
             'mask': torch.tensor(mask, dtype=torch.long),
             'targets': torch.tensor(self.targets[index], dtype=torch.float)
         }
-#endregion
 
-#region model
-class CodeBERTAggregatedClass(torch.nn.Module):
-    def __init__(self, num_classes, aggregation='mean', dropout=0.3):
-        super(CodeBERTAggregatedClass, self).__init__()
-        self.codebert = AutoModel.from_pretrained('microsoft/codebert-base', cache_dir="./cache")
-        self.dropout = torch.nn.Dropout(dropout)
-        self.fc = torch.nn.Linear(self.codebert.config.hidden_size, num_classes)
-        self.aggregation = aggregation
-
+# BERT Model Class
+class BERTClass(torch.nn.Module):
+    def __init__(self):
+        super(BERTClass, self).__init__()
+        self.l1 = BertModel.from_pretrained('bert-base-uncased', cache_dir="./cache")
+        self.l2 = torch.nn.Dropout(0.3)
+        self.l3 = torch.nn.Linear(768, NUM_CLASSES)
+    
     def forward(self, input_ids, attention_masks):
-        batch_size, seq_len = input_ids.size()
+        _, output_1 = self.l1(input_ids=input_ids, attention_mask=attention_masks, return_dict=False)
+        output_2 = self.l2(output_1)
+        return self.l3(output_2)
 
-        # Divide input_ids e attention_masks in blocchi di 512 token
-        num_chunks = (seq_len + 511) // 512
-        input_ids = input_ids[:, :512*num_chunks].view(batch_size * num_chunks, 512)
-        attention_masks = attention_masks[:, :512*num_chunks].view(batch_size * num_chunks, 512)
 
-        outputs = self.codebert(input_ids=input_ids, attention_mask=attention_masks)
-
-        last_hidden_states = outputs.last_hidden_state
-        cls_tokens = last_hidden_states[:, 0, :]
-
-        cls_tokens = cls_tokens.view(batch_size, num_chunks, -1)
-
-        if self.aggregation == 'mean':
-            aggregated_output = torch.mean(cls_tokens, dim=1)
-        elif self.aggregation == 'max':
-            aggregated_output, _ = torch.max(cls_tokens, dim=1)
-        else:
-            raise ValueError("Aggregation must be 'mean' or 'max'")
-
-        aggregated_output = self.dropout(aggregated_output)
-        output = self.fc(aggregated_output)
-        return output
-#endregion
-
-#region evaluation
 def plot_and_save_multilabel_confusion_matrices(y_true, y_pred, label_names, dataset_type, output_dir):
     """
     Plots and saves confusion matrices for each label in a multilabel setting.
@@ -262,23 +218,26 @@ def evaluate_and_save(loader, dataset_type, output_dir):
 
     return accuracy, precision_micro, precision_macro, precision_weighted, recall_micro, recall_macro, recall_weighted, f1_micro, f1_macro, f1_weighted
 
-#endregion
+trainSet, testSet, valSet = readAndPreprocessDataset()
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 
-#region execution
-train_set, test_set, val_set = readAndPreprocessDataset()
+training_set = CustomDataset(trainSet, tokenizer, MAX_LEN)
+testing_set = CustomDataset(testSet, tokenizer, MAX_LEN)
+validation_set = CustomDataset(valSet, tokenizer, MAX_LEN)
 
-training_set = CustomDataset(train_set, TOKENIZER)
-validation_set = CustomDataset(val_set, TOKENIZER)
-testing_set = CustomDataset(test_set, TOKENIZER)
+train_params = {'batch_size': VALID_BATCH_SIZE, 'shuffle': False, 'num_workers': 0}
+test_params = {'batch_size': VALID_BATCH_SIZE, 'shuffle': False, 'num_workers': 0}
 
-# Definisci i DataLoader
-training_loader = DataLoader(training_set, batch_size=VALID_BATCH_SIZE, shuffle=False, pin_memory=True, num_workers=4)
-validation_loader = DataLoader(validation_set, batch_size=VALID_BATCH_SIZE, shuffle=False, pin_memory=True, num_workers=4)
-testing_loader = DataLoader(testing_set, batch_size=VALID_BATCH_SIZE, shuffle=False, pin_memory=True, num_workers=4)
 
-# Carica il modello pre-addestrato
-model = CodeBERTAggregatedClass(num_classes=NUM_CLASSES).to(DEVICE)
-model.load_state_dict(torch.load(f'./stateDictMean/best_model_{MODEL}.pth'))
+model = BERTClass()
+model.to(DEVICE)
+# Load the pretrained model
+model.load_state_dict(torch.load(f'./stateDict_{TOKENIZER_TYPE}/best_model_{MODEL}.pth'))
+
+training_loader = DataLoader(training_set, **train_params)
+testing_loader = DataLoader(testing_set, **test_params)
+validation_loader = DataLoader(validation_set, **test_params)
+
 
 # Esegui l'evaluation su train, validation, e test set
 logger.info("Evaluating on training set...")

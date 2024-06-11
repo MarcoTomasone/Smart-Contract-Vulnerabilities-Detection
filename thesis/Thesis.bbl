@@ -189,6 +189,20 @@ Wei Wang, Jingjing Song, Guangquan Xu, Yidong Li, Hao Wang, and Chunhua Su.
 \newblock {\em IEEE Transactions on Network Science and Engineering},
   8(2):1133--1144, 2021.
 
+\bibitem{Gemini}
+Wikipedia.
+\newblock {Gemini (language model)} --- {W}ikipedia{,} the free encyclopedia.
+\newblock
+  \url{http://en.wikipedia.org/w/index.php?title=Gemini\%20(language\%20model)&oldid=1227938870},
+  2024.
+
+\bibitem{DeepMind}
+Wikipedia.
+\newblock {Google DeepMind} --- {W}ikipedia{,} the free encyclopedia.
+\newblock
+  \url{http://en.wikipedia.org/w/index.php?title=Google\%20DeepMind&oldid=1228075682},
+  2024.
+
 \bibitem{WordPiece}
 Yonghui Wu, Mike Schuster, Zhifeng Chen, Quoc~V. Le, Mohammad Norouzi, Wolfgang
   Macherey, Maxim Krikun, Yuan Cao, Qin Gao, Klaus Macherey, Jeff Klingner,
