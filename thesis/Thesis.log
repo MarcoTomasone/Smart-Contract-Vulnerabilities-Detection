@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  10 JUN 2024 19:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  11 JUN 2024 23:25
 entering extended mode
 **c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Thesis.tex
 (c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Thesis.tex
@@ -851,7 +851,7 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
  [9]
-<Chapters/Dataset//../../img/BECPrice.png, id=242, 502.87875pt x 353.82187pt>
+<Chapters/Dataset//../../img/BECPrice.png, id=259, 502.87875pt x 353.82187pt>
 File: Chapters/Dataset//../../img/BECPrice.png Graphic file (type png)
 <use Chapters/Dataset//../../img/BECPrice.png>
 Package pdftex.def Info: Chapters/Dataset//../../img/BECPrice.png  used on input line 55.
@@ -1035,12 +1035,12 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-<Chapters/Methodology//../../img/SCTokensPreprocessed.png, id=338, 854.2314pt x 450.9648pt>
+<Chapters/Methodology//../../img/SCTokensPreprocessed.png, id=355, 854.2314pt x 450.9648pt>
 File: Chapters/Methodology//../../img/SCTokensPreprocessed.png Graphic file (type png)
 <use Chapters/Methodology//../../img/SCTokensPreprocessed.png>
 Package pdftex.def Info: Chapters/Methodology//../../img/SCTokensPreprocessed.png  used on input line 62.
 (pdftex.def)             Requested size: 220.50247pt x 116.40857pt.
-<Chapters/Methodology//../../img/BCTokensPreprocessed.png, id=339, 860.7357pt x 450.9648pt>
+<Chapters/Methodology//../../img/BCTokensPreprocessed.png, id=356, 860.7357pt x 450.9648pt>
 File: Chapters/Methodology//../../img/BCTokensPreprocessed.png Graphic file (type png)
 <use Chapters/Methodology//../../img/BCTokensPreprocessed.png>
 Package pdftex.def Info: Chapters/Methodology//../../img/BCTokensPreprocessed.png  used on input line 69.
@@ -1079,12 +1079,12 @@ Overfull \hbox (28.11864pt too wide) in paragraph at lines 103--117
  [][] 
  []
 
-<Chapters/Methodology//../../img/class-distribution-relative.png, id=352, 497.2176pt x 475.5366pt>
+<Chapters/Methodology//../../img/class-distribution-relative.png, id=369, 497.2176pt x 475.5366pt>
 File: Chapters/Methodology//../../img/class-distribution-relative.png Graphic file (type png)
 <use Chapters/Methodology//../../img/class-distribution-relative.png>
 Package pdftex.def Info: Chapters/Methodology//../../img/class-distribution-relative.png  used on input line 125.
 (pdftex.def)             Requested size: 202.49863pt x 193.67242pt.
-<Chapters/Methodology//../../img/class-distribution-absolute.png, id=353, 739.3221pt x 560.0925pt>
+<Chapters/Methodology//../../img/class-distribution-absolute.png, id=370, 739.3221pt x 560.0925pt>
 File: Chapters/Methodology//../../img/class-distribution-absolute.png Graphic file (type png)
 <use Chapters/Methodology//../../img/class-distribution-absolute.png>
 Package pdftex.def Info: Chapters/Methodology//../../img/class-distribution-absolute.png  used on input line 131.
@@ -1101,18 +1101,18 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
-<Chapters/Methodology//../../img/TrainCo-occurrency.png, id=363, 714.7503pt x 570.933pt>
+<Chapters/Methodology//../../img/TrainCo-occurrency.png, id=380, 714.7503pt x 570.933pt>
 File: Chapters/Methodology//../../img/TrainCo-occurrency.png Graphic file (type png)
 <use Chapters/Methodology//../../img/TrainCo-occurrency.png>
 Package pdftex.def Info: Chapters/Methodology//../../img/TrainCo-occurrency.png  used on input line 153.
 (pdftex.def)             Requested size: 314.99863pt x 251.62074pt.
  [18 <./Chapters/Methodology//../../img/class-distribution-relative.png> <./Chapters/Methodology//../../img/class-distribution-absolute.png>]
-<Chapters/Methodology//../../img/TestCo-occurrency.png, id=372, 714.7503pt x 570.933pt>
+<Chapters/Methodology//../../img/TestCo-occurrency.png, id=389, 714.7503pt x 570.933pt>
 File: Chapters/Methodology//../../img/TestCo-occurrency.png Graphic file (type png)
 <use Chapters/Methodology//../../img/TestCo-occurrency.png>
 Package pdftex.def Info: Chapters/Methodology//../../img/TestCo-occurrency.png  used on input line 160.
 (pdftex.def)             Requested size: 314.99863pt x 251.62074pt.
-<Chapters/Methodology//../../img/ValCo-occurrency.png, id=373, 714.7503pt x 570.933pt>
+<Chapters/Methodology//../../img/ValCo-occurrency.png, id=390, 714.7503pt x 570.933pt>
 File: Chapters/Methodology//../../img/ValCo-occurrency.png Graphic file (type png)
 <use Chapters/Methodology//../../img/ValCo-occurrency.png>
 Package pdftex.def Info: Chapters/Methodology//../../img/ValCo-occurrency.png  used on input line 167.
@@ -1210,7 +1210,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-<Chapters/Methodology//../../img/bert_base_large.jpg, id=411, 692.5875pt x 417.05812pt>
+<Chapters/Methodology//../../img/bert_base_large.jpg, id=428, 692.5875pt x 417.05812pt>
 File: Chapters/Methodology//../../img/bert_base_large.jpg Graphic file (type jpg)
 <use Chapters/Methodology//../../img/bert_base_large.jpg>
 Package pdftex.def Info: Chapters/Methodology//../../img/bert_base_large.jpg  used on input line 226.
@@ -1239,7 +1239,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
-<Chapters/Methodology//../../img/bert-input.png, id=420, 617.30624pt x 189.70876pt>
+<Chapters/Methodology//../../img/bert-input.png, id=437, 617.30624pt x 189.70876pt>
 File: Chapters/Methodology//../../img/bert-input.png Graphic file (type png)
 <use Chapters/Methodology//../../img/bert-input.png>
 Package pdftex.def Info: Chapters/Methodology//../../img/bert-input.png  used on input line 244.
@@ -1346,7 +1346,7 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 [26]
-<Chapters/Methodology//../../img/DistilBERT-Architecture.png, id=438, 284.39583pt x 133.83333pt>
+<Chapters/Methodology//../../img/DistilBERT-Architecture.png, id=455, 284.39583pt x 133.83333pt>
 File: Chapters/Methodology//../../img/DistilBERT-Architecture.png Graphic file (type png)
 <use Chapters/Methodology//../../img/DistilBERT-Architecture.png>
 Package pdftex.def Info: Chapters/Methodology//../../img/DistilBERT-Architecture.png  used on input line 295.
@@ -1615,23 +1615,100 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 ) (Chapters/Results/Results.tex [38]
 Capitolo 5.
-) (Chapters/Conclusion/Conclusion.tex [39
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¹ in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+[39
 
 ]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ² in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ² in font cmr12!
+ [40]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ² in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ² in font cmr12!
+ [41]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¹ in font cmr12!
+<C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_access-control.png, id=667, 433.62pt x 433.62pt>
+File: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_access-control.png Graphic file (type png)
+<use C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_access-control.png>
+Package pdftex.def Info: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_access-control.png  used on input line 113.
+(pdftex.def)             Requested size: 85.5011pt x 85.4984pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--114
+[]\OT1/cmr/m/n/10.95 (a) |Access-
+ []
+
+<C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_arithmetic.png, id=668, 433.62pt x 433.62pt>
+File: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_arithmetic.png Graphic file (type png)
+<use C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_arithmetic.png>
+Package pdftex.def Info: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_arithmetic.png  used on input line 118.
+(pdftex.def)             Requested size: 85.5011pt x 85.4984pt.
+<C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_other.png, id=669, 433.62pt x 433.62pt>
+File: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_other.png Graphic file (type png)
+<use C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_other.png>
+Package pdftex.def Info: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_other.png  used on input line 123.
+(pdftex.def)             Requested size: 85.5011pt x 85.4984pt.
+<C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_reentrancy.png, id=670, 433.62pt x 433.62pt>
+File: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_reentrancy.png Graphic file (type png)
+<use C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_reentrancy.png>
+Package pdftex.def Info: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_reentrancy.png  used on input line 128.
+(pdftex.def)             Requested size: 85.5011pt x 85.4984pt.
+<C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_unchecked-calls.png, id=671, 433.62pt x 433.62pt>
+File: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_unchecked-calls.png Graphic file (type png)
+<use C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_unchecked-calls.png>
+Package pdftex.def Info: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_unchecked-calls.png  used on input line 133.
+(pdftex.def)             Requested size: 85.5011pt x 85.4984pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+[]\OT1/cmr/m/n/10.95 (e) |Un-chec-ked
+ []
+
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(Chapters/Conclusion/Conclusion.tex [42] [43 <C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_access-control.png> <C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_arithmetic.png> <C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_other.png> <C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_reentrancy.png> <C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_unchecked-calls.png>]
 Capitolo 6.
-) (Thesis.bbl [40
+) (Thesis.bbl [44
 
 ]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
- [41
+ [45
 
 ]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
- [42]
+ [46]
 Underfull \hbox (badness 10000) in paragraph at lines 135--138
 []\OT1/cmr/m/n/12 pcaversaccio.  A hi-sto-ri-cal col-lec-tion of reen-tran-cy at-tacks.
  []
@@ -1651,30 +1728,30 @@ Underfull \hbox (badness 1092) in paragraph at lines 193--198
 \OT1/cmr/m/n/12 pe-dia.  []$\OT1/cmtt/m/n/12 http : / / en . wikipedia . org / w / index . php ? title = Gemini % 20(language %
  []
 
-[43]
+[47]
 Underfull \hbox (badness 10000) in paragraph at lines 200--205
 \OT1/cmtt/m/n/12 wikipedia . org / w / index . php ? title = Google % 20DeepMind & oldid = 1228075682$[]\OT1/cmr/m/n/12 ,
  []
 
-) [44] (Thesis.aux)
+) [48] (Thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 47B8E9CE6112A6F4EB0F9FB1FC39FE30;3534.
+(rerunfilecheck)             Checksum: 6C5CED69BEE3E707D7C5F9363E851DAE;3955.
  ) 
 Here is how much of TeX's memory you used:
- 24985 strings out of 478927
- 452167 string characters out of 2852536
- 1155052 words of memory out of 3000000
- 42015 multiletter control sequences out of 15000+600000
+ 25059 strings out of 478927
+ 457524 string characters out of 2852536
+ 1155058 words of memory out of 3000000
+ 42068 multiletter control sequences out of 15000+600000
  415257 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,12n,108p,2035b,2153s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsltt10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Thesis.pdf (45 pages, 943398 bytes).
+Output written on Thesis.pdf (49 pages, 1054883 bytes).
 PDF statistics:
- 807 PDF objects out of 1000 (max. 8388607)
- 333 named destinations out of 1000 (max. 500000)
- 252 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 859 PDF objects out of 1000 (max. 8388607)
+ 347 named destinations out of 1000 (max. 500000)
+ 301 words of extra memory for PDF output out of 10000 (max. 10000000)
 

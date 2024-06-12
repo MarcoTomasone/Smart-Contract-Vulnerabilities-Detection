@@ -4,31 +4,135 @@
 \begin{document}
 \chapter{Results}
 \label{chap:results}
-
+Questo capitolo di questo lavoro di tesi è dedicato alla presentazione dei risultati ottenuti dai vari esperimenti effettuati durante il lavoro. Nello specifico verranno presentati i risultati in fase di test dei modelli utilizzati oltre che i risultati in test ottenuti a partire dalle API del modello Gemini. Prima dei risultati, verranno introdotte le metriche scelte per valutare i modelli.
+\section{Metriche di Valutazione}
+Le metriche di valutazione sono utilizzate per misurare le prestazioni di un modello di classificazione. Esse sono calcolate confrontando le previsioni del modello con le etichette reali del dataset. Le metriche di valutazione più comuni includono Accuracy, Precision, Recall e F1 Score. Queste metriche sono calcolate a partire dalle seguenti misurazioni: True Positives (TP), True Negatives (TN), False Positives (FP) e False Negatives (FN).\\
 \begin{itemize}
-    \item \textbf{True Positives (TP)}: Il numero di casi in cui il modello ha correttamente predetto la presenza di una classe.
-    \item \textbf{True Negatives (TN)}: Il numero di casi in cui il modello ha correttamente predetto l'assenza di una classe.
-    \item \textbf{False Positives (FP)}: Il numero di casi in cui il modello ha erroneamente predetto la presenza di una classe che in realtà non era presente.
-    \item \textbf{False Negatives (FN)}: Il numero di casi in cui il modello ha erroneamente predetto l'assenza di una classe che in realtà era presente.
+    \item \textbf{True Positives (TP)}: Il numero di istanze correttamente classificate come appartenenti a una certa classe.
+    \item \textbf{True Negatives (TN)}: Il numero di istanze correttamente classificate come non appartenenti a una certa classe.
+    \item \textbf{False Positives (FP)}: Il numero di istanze erroneamente classificate come appartenenti a una certa classe.
+    \item \textbf{False Negatives (FN)}: Il numero di istanze erroneamente classificate come non appartenenti a una certa classe.
 \end{itemize}
 
-\section*{Formula per l'accuracy:}
-La formula per calcolare l'accuracy in un problema di classificazione multilabel utilizzando TP, TN, FP e FN è la seguente:
-$$
-\text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
-$$
+Le metriche, calcolate a partire da queste misurazioni, utilizzate in questo lavoro di tesi sono:
 
-\section{Discussione:}
-La definizione di TP, TN, FP e FN fornisce una chiara comprensione delle diverse situazioni di classificazione che il modello può incontrare. TP e TN rappresentano le predizioni corrette del modello, mentre FP e FN indicano gli errori di classificazione. L'accuracy combina TP e TN per fornire una misura globale della capacità del modello di classificare correttamente le istanze. Tuttavia, è importante considerare il contesto del problema e valutare se l'accuracy è la metrica più appropriata in base alle caratteristiche specifiche del dataset e agli obiettivi della classificazione.
+\subsection*{Accuracy}
+L'Accuracy misura la proporzione di previsioni corrette sul totale delle istanze e viene calcolata come:
+$$ \text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN} $$
+Pro: Facile da interpretare e calcolare.\\
+Contro: In un contesto multilabel con classi sbilanciate, può essere fuorviante perché non considera la distribuzione delle classi.
 
+\subsection*{Precision}
+La Precision (Micro, Macro, Weighted) misura la proporzione di istanze rilevanti tra quelle recuperate. Le formulazioni sono:
+\begin{itemize}
+    \item \textbf{Micro Precision}: Aggrega i contributi di tutte le classi per calcolare la precision complessiva.
+    $$ \text{Micro Precision} = \frac{\sum TP}{\sum TP + \sum FP} $$
+    \item \textbf{Macro Precision}: Calcola la precision per ogni classe e poi ne fa la media.
+    $$ \text{Macro Precision} = \frac{1}{N} \sum_{i=1}^{N} \text{Precision}_i $$
+    \item \textbf{Weighted Precision}: Calcola la precision per ogni classe ponderata per il numero di veri positivi.
+    $$ \text{Weighted Precision} = \frac{\sum_{i=1}^{N} \text{Precision}_i \times w_i}{\sum_{i=1}^{N} w_i} $$
+\end{itemize}
+Pro: Indica quanto rilevanti sono le previsioni fatte.\\
+Contro: Può essere ingannevole se il modello ha pochi falsi positivi ma molti falsi negativi.
 
-Nel contesto della classificazione multilabel, l'accuracy rappresenta una metrica importante per valutare le performance dei modelli. L'accuracy, definita come la frazione di istanze correttamente classificate rispetto al totale delle istanze, può essere espressa mediante la seguente formula:
+\subsection*{Recall}
+La Recall (Micro, Macro, Weighted) misura la proporzione di istanze rilevanti che sono state recuperate. Le formulazioni sono:
+\begin{itemize}
+    \item \textbf{Micro Recall}: Aggrega i contributi di tutte le classi per calcolare la recall complessiva.
+    $$ \text{Micro Recall} = \frac{\sum TP}{\sum TP + \sum FN} $$
+    \item \textbf{Macro Recall}: Calcola la recall per ogni classe e poi ne fa la media.
+    $$ \text{Macro Recall} = \frac{1}{N} \sum_{i=1}^{N} \text{Recall}_i $$
+    \item \textbf{Weighted Recall}: Calcola la recall per ogni classe ponderata per il numero di veri positivi.
+    $$ \text{Weighted Recall} = \frac{\sum_{i=1}^{N} \text{Recall}_i \times w_i}{\sum_{i=1}^{N} w_i} $$
+\end{itemize}
+Pro: Indica quanto bene il modello è in grado di identificare tutte le istanze rilevanti.\\
+Contro: Può essere fuorviante se il modello ha molti falsi positivi.
 
-\[
-\text{Accuracy} = \frac{\text{Numero di istanze correttamente classificate}}{\text{Numero totale di istanze}}
-\]
+\subsection*{F1 Score}
+L'F1 Score (Micro, Macro, Weighted) è la media armonica di precision e recall, offrendo un bilanciamento tra le due. Le formulazioni sono:
+\begin{itemize}
+    \item \textbf{Micro F1}: Combina micro precision e micro recall.
+    $$ \text{Micro F1} = 2 \times \frac{\text{Micro Precision} \times \text{Micro Recall}}{\text{Micro Precision} + \text{Micro Recall}} $$
+    \item \textbf{Macro F1}: Calcola l'F1 score per ogni classe e poi ne fa la media.
+    $$ \text{Macro F1} = \frac{1}{N} \sum_{i=1}^{N} \text{F1}_i $$
+    \item \textbf{Weighted F1}: Calcola l'F1 score per ogni classe ponderata per il numero di veri positivi.
+    $$ \text{Weighted F1} = \frac{\sum_{i=1}^{N} \text{F1}_i \times w_i}{\sum_{i=1}^{N} w_i} $$
+\end{itemize}
+Pro: Bilancia precision e recall in un'unica metrica.\\
+Contro: Può essere difficile da interpretare in presenza di classi molto sbilanciate.
 
-Uno dei vantaggi principali dell'accuracy è la sua intuitiva interpretazione: rappresenta la percentuale di predizioni corrette rispetto al totale. Tuttavia, l'utilizzo dell'accuracy può presentare alcune limitazioni. Ad esempio, in presenza di classi sbilanciate, l'accuracy può essere fuorviante, poiché potrebbe essere influenzata in modo significativo da classi di maggioranza. Inoltre, poiché l'accuracy considera solo se tutte le classi predette corrispondono esattamente alle classi di ground truth, non fornisce informazioni dettagliate sulle performance di ciascuna classe. Questo significa che può non essere la metrica più indicativa per problemi in cui il focus è sulle performance di classi specifiche. Pertanto, mentre l'accuracy fornisce una valutazione complessiva delle prestazioni del modello, è consigliabile integrarla con altre metriche, come precision, recall e F1 score, per ottenere una valutazione più completa e accurata della classificazione multilabel.
+\section{Risultati}
+In questa sezione verranno presentati i risultati ottenuti dai vari esperimenti effettuati durante il lavoro di tesi. Verranno presentati i risultati di tutti gli esperimenti fatti, si quelli relativi ai modelli di classificazione utilizzati e presentati nel capitolo precedente che quelli relativi ai risultati ottenuti a partire delle API del modello Gemini. 
 
+\subsection{Risultati Gemini}
 
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{Metrica} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1 Score} \\
+        \hline
+        \textbf{Micro} & - & 0.3271 & 0.1872 & 0.2382 \\
+        \textbf{Macro} & - & 0.3137 & 0.1706 & 0.1800 \\
+        \textbf{Weighted} & - & 0.3490 & 0.1872 & 0.2056 \\
+        \hline
+        \textbf{Overall Accuracy} & 0.2754 & - & - & - \\
+        \hline
+    \end{tabular}
+    \caption{Metriche di Valutazione del Modello Gemini}
+\end{table}
+
+Il seguente classification report dettaglia le metriche di precision, recall e f1-score per ciascuna delle classi:
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{Classe} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+        \hline
+        access-control & 0.24 & 0.04 & 0.06 & 171 \\
+        arithmetic & 0.19 & 0.04 & 0.07 & 198 \\
+        other & 0.28 & 0.49 & 0.36 & 282 \\
+        reentrancy & 0.41 & 0.08 & 0.14 & 364 \\
+        unchecked-calls & 0.45 & 0.20 & 0.28 & 475 \\
+        \hline
+        micro avg & 0.33 & 0.19 & 0.24 & 1490 \\
+        macro avg & 0.31 & 0.17 & 0.18 & 1490 \\
+        weighted avg & 0.35 & 0.19 & 0.21 & 1490 \\
+        samples avg & 0.18 & 0.12 & 0.13 & 1490 \\
+        \hline
+    \end{tabular}
+    \caption{Classification Report del Modello Gemini}
+\end{table}
+
+I risultati del modello Gemini mostrano una performance complessivamente modesta nelle metriche di valutazione. L'Accuracy del 27.54\% suggerisce che meno di un terzo delle previsioni del modello sono corrette. La Precision micro di 32.71\% indica che, tra le istanze classificate positivamente, solo un terzo sono effettivamente corrette, mentre la Precision macro e weighted, rispettivamente 31.37\% e 34.90\%, mostrano una variabilità nella performance sulle diverse classi. Il Recall micro di 18.72\% evidenzia che il modello riesce a identificare meno di un quinto delle istanze rilevanti, con valori macro e weighted simili, indicando che il modello ha difficoltà a catturare tutte le istanze corrette. L'F1 Score, che bilancia precision e recall, è basso in tutte le versioni (micro: 23.82\%, macro: 17.96\%, weighted: 20.56\%), suggerendo un compromesso non soddisfacente tra la capacità del modello di evitare falsi positivi e falsi negativi. Il report di classificazione per singole classi conferma queste osservazioni, mostrando prestazioni particolarmente deboli in classi come "access-control" e "arithmetic". Questi risultati indicano la necessità di miglioramenti significativi nel modello per una classificazione multilabel più accurata e bilanciata. Mostriamo ora le confusion matrix per ogni classe per il modello Gemini.
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.1999\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_access-control}
+        \caption{Access-Control}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.1999\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_arithmetic}
+        \caption{Arithmetic}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.1999\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_other}
+        \caption{Other}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.1999\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_reentrancy}
+        \caption{Reentrancy}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.1999\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_unchecked-calls}
+        \caption{Unchecked Calls}
+    \end{subfigure}
+    \caption{Confusion Matrices per le diverse classi}
+\end{figure}
 \end{document}

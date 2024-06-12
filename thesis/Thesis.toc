@@ -34,4 +34,7 @@
 \contentsline {subsection}{\numberline {4.4.6}Train e Validation}{36}{subsection.4.4.6}%
 \contentsline {section}{\numberline {4.5}Gemini}{36}{section.4.5}%
 \contentsline {chapter}{\numberline {5}Results}{39}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusioni}{40}{chapter.6}%
+\contentsline {section}{\numberline {5.1}Metriche di Valutazione}{39}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Risultati}{41}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Risultati Gemini}{42}{subsection.5.2.1}%
+\contentsline {chapter}{\numberline {6}Conclusioni}{44}{chapter.6}%
