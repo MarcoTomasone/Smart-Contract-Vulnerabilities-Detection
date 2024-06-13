@@ -1,40 +1,53 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {chapter}{\numberline {1}Introduzione}{4}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Lavori Correlati}{5}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Dataset}{8}{chapter.3}%
-\contentsline {subsection}{\numberline {3.0.1}Vulnerabilità}{8}{subsection.3.0.1}%
-\contentsline {subsubsection}{Access-Control}{8}{section*.3}%
-\contentsline {subsubsection}{Arithmetic}{8}{section*.4}%
-\contentsline {subsubsection}{Other}{11}{section*.6}%
-\contentsline {subsubsection}{Reentrancy}{12}{section*.7}%
-\contentsline {subsubsection}{Unchecked-Calls}{13}{section*.8}%
-\contentsline {chapter}{\numberline {4}Metodologia}{14}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Esplorazione dei dati}{14}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Distribuzione delle Classi e Matrici di Co-occorrenza}{17}{subsection.4.1.1}%
-\contentsline {subsubsection}{Distribuzione delle Classi}{17}{section*.12}%
-\contentsline {subsubsection}{Matrici di Co-occorrenza}{18}{section*.15}%
-\contentsline {section}{\numberline {4.2}Modellazione}{20}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Natural Language Processing, NLP}{21}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}BERT, Bidirectional Encoder Representations from Transformers}{22}{subsection.4.2.2}%
-\contentsline {subsubsection}{Architettura}{22}{section*.19}%
-\contentsline {subsubsection}{Pre-Training}{24}{section*.23}%
-\contentsline {subsubsection}{Fine-tuning di BERT}{25}{section*.24}%
-\contentsline {subsection}{\numberline {4.2.3}DistilBERT}{25}{subsection.4.2.3}%
-\contentsline {subsubsection}{Architettura}{27}{section*.25}%
-\contentsline {subsection}{\numberline {4.2.4}RoBERTa e CodeBERT}{27}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}Fase di Pre-Training di CodeBERT}{28}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Implementazione}{29}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}BERT-base}{31}{subsection.4.4.1}%
-\contentsline {subsubsection}{Loss Function}{32}{section*.27}%
-\contentsline {subsection}{\numberline {4.4.2}DistilBERT}{32}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}CodeBERT}{33}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}CodeBERT con aggregazione}{33}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}CodeBert con concatenazione}{34}{subsection.4.4.5}%
-\contentsline {subsection}{\numberline {4.4.6}Train e Validation}{36}{subsection.4.4.6}%
-\contentsline {section}{\numberline {4.5}Gemini}{36}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Results}{39}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Metriche di Valutazione}{39}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Risultati}{41}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Risultati Gemini}{42}{subsection.5.2.1}%
-\contentsline {chapter}{\numberline {6}Conclusioni}{44}{chapter.6}%
+\contentsline {chapter}{\numberline {1}Introduzione}{5}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Lavori Correlati}{6}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Dataset}{9}{chapter.3}%
+\contentsline {subsection}{\numberline {3.0.1}Vulnerabilità}{9}{subsection.3.0.1}%
+\contentsline {subsubsection}{Access-Control}{9}{section*.3}%
+\contentsline {subsubsection}{Arithmetic}{9}{section*.4}%
+\contentsline {subsubsection}{Other}{12}{section*.6}%
+\contentsline {subsubsection}{Reentrancy}{13}{section*.7}%
+\contentsline {subsubsection}{Unchecked-Calls}{14}{section*.8}%
+\contentsline {chapter}{\numberline {4}Metodologia}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Esplorazione dei dati}{15}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Analisi delle Lunghezze dei contratti}{18}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Distribuzione delle Classi e Matrici di Co-occorrenza}{19}{subsection.4.1.2}%
+\contentsline {subsubsection}{Distribuzione delle Classi}{19}{section*.13}%
+\contentsline {subsubsection}{Matrici di Co-occorrenza}{21}{section*.16}%
+\contentsline {section}{\numberline {4.2}Modellazione}{23}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Natural Language Processing, NLP}{24}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}BERT, Bidirectional Encoder Representations from Transformers}{25}{subsection.4.2.2}%
+\contentsline {subsubsection}{Architettura}{25}{section*.21}%
+\contentsline {subsubsection}{Pre-Training}{28}{section*.25}%
+\contentsline {subsubsection}{Fine-tuning di BERT}{28}{section*.26}%
+\contentsline {subsection}{\numberline {4.2.3}DistilBERT}{29}{subsection.4.2.3}%
+\contentsline {subsubsection}{Architettura}{30}{section*.27}%
+\contentsline {subsection}{\numberline {4.2.4}RoBERTa e CodeBERT}{30}{subsection.4.2.4}%
+\contentsline {subsubsection}{Fase di Pre-Training di CodeBERT}{31}{section*.29}%
+\contentsline {section}{\numberline {4.3}Implementazione}{33}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Pre-Processing dei Dati}{34}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}BERT-base}{37}{subsection.4.3.2}%
+\contentsline {subsubsection}{Loss Function}{38}{section*.30}%
+\contentsline {subsection}{\numberline {4.3.3}DistilBERT}{38}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}CodeBERT}{39}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}CodeBERT con aggregazione}{40}{subsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.3.6}CodeBert con concatenazione}{41}{subsection.4.3.6}%
+\contentsline {subsection}{\numberline {4.3.7}Train e Validation}{42}{subsection.4.3.7}%
+\contentsline {section}{\numberline {4.4}Gemini}{42}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Results}{45}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Metriche di Valutazione}{45}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Risultati}{47}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Risultati modelli sul Bytecode}{48}{subsection.5.2.1}%
+\contentsline {subsubsection}{BERT}{48}{section*.35}%
+\contentsline {subsubsection}{CodeBert}{48}{section*.37}%
+\contentsline {subsection}{\numberline {5.2.2}Risultati sul Codice Sorgente Solidity}{49}{subsection.5.2.2}%
+\contentsline {subsubsection}{BERT}{49}{section*.39}%
+\contentsline {subsubsection}{CodeBert}{49}{section*.40}%
+\contentsline {subsubsection}{DistilBert}{49}{section*.41}%
+\contentsline {subsubsection}{CodeBert Concatenazione di due chunk}{49}{section*.42}%
+\contentsline {subsubsection}{CodeBert Concatenazione di tre chunk}{50}{section*.44}%
+\contentsline {subsubsection}{CodeBert Aggregazione di due chunk}{50}{section*.46}%
+\contentsline {subsubsection}{CodeBert Aggregazione di tre chunk}{51}{section*.49}%
+\contentsline {subsection}{\numberline {5.2.3}Risultati Gemini}{52}{subsection.5.2.3}%
+\contentsline {chapter}{\numberline {6}Conclusioni}{55}{chapter.6}%

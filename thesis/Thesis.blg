@@ -13,45 +13,45 @@ Warning--to sort, need author or key in Oyente
 Warning--to sort, need author or key in Mythril
 Warning--empty booktitle in SVM
 Warning--empty booktitle in Securify
-You've used 35 entries,
+You've used 36 entries,
             2118 wiz_defined-function locations,
-            710 strings with 11489 characters,
-and the built_in function-call counts, 13538 in all, are:
-= -- 1209
-> -- 993
+            718 strings with 11671 characters,
+and the built_in function-call counts, 13864 in all, are:
+= -- 1240
+> -- 1011
 < -- 9
-+ -- 396
-- -- 358
-* -- 1017
-:= -- 2340
-add.period$ -- 105
-call.type$ -- 35
-change.case$ -- 282
++ -- 404
+- -- 364
+* -- 1043
+:= -- 2397
+add.period$ -- 108
+call.type$ -- 36
+change.case$ -- 288
 chr.to.int$ -- 0
-cite$ -- 39
-duplicate$ -- 436
-empty$ -- 829
-format.name$ -- 358
-if$ -- 2744
+cite$ -- 40
+duplicate$ -- 447
+empty$ -- 852
+format.name$ -- 364
+if$ -- 2810
 int.to.chr$ -- 0
-int.to.str$ -- 35
-missing$ -- 29
-newline$ -- 175
-num.names$ -- 68
-pop$ -- 300
+int.to.str$ -- 36
+missing$ -- 30
+newline$ -- 180
+num.names$ -- 70
+pop$ -- 304
 preamble$ -- 1
-purify$ -- 247
+purify$ -- 252
 quote$ -- 0
-skip$ -- 367
+skip$ -- 374
 stack$ -- 0
-substring$ -- 405
-swap$ -- 111
+substring$ -- 423
+swap$ -- 112
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 138
+type$ -- 142
 warning$ -- 4
-while$ -- 85
-width$ -- 37
-write$ -- 377
+while$ -- 88
+width$ -- 38
+write$ -- 388
 (There were 8 warnings)

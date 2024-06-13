@@ -63,47 +63,248 @@ Contro: Può essere difficile da interpretare in presenza di classi molto sbilan
 
 \section{Risultati}
 In questa sezione verranno presentati i risultati ottenuti dai vari esperimenti effettuati durante il lavoro di tesi. Verranno presentati i risultati di tutti gli esperimenti fatti, si quelli relativi ai modelli di classificazione utilizzati e presentati nel capitolo precedente che quelli relativi ai risultati ottenuti a partire delle API del modello Gemini. 
+\subsection{Risultati modelli sul Bytecode}
+In questa sezione verranno mostrati i risultati ottenuti dai modelli di classificazione utilizzati per la classificazione del bytecode. I modelli utilizzati sono stati allenati sul dataset di training, validati sul dataset di validazione e testati sul dataset di test. I risultati ottenuti sono stati calcolati utilizzando le metriche di valutazione precedentemente descritte.\\
+Per quanto riguarda il bytecode è stato dapprima utilizzato un modello BERT ed un modello CodeBert per la classificazione del bytecode utilizzando 512 token in input. Successivamente, poichè i risultati migliori sono stati ottenuti dal modello CodeBert, questo è stato il modello scelto per gli esperimenti successivi.\\
+\subsubsection{BERT}
+L'accuratezza del modello è del 70,48\%. La precision, recall e f1-score per ciascuna delle classi sono mostrate nel classification report sottostante.\\
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lcccc}
+\hline
+\textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+\hline
+access-control & 0.87 & 0.67 & 0.76 & 2331 \\
+arithmetic & 0.88 & 0.59 & 0.71 & 2708 \\
+other & 0.81 & 0.73 & 0.76 & 4193 \\
+reentrancy & 0.88 & 0.78 & 0.83 & 4838 \\
+unchecked-calls & 0.90 & 0.87 & 0.88 & 7276 \\
+\hline
+\textbf{Micro avg} & 0.8726 & 0.7654 & 0.8155 & 21346 \\
+\textbf{Macro avg} & 0.8694 & 0.7287 & 0.7895 & 21346 \\
+\textbf{Weighted avg} & 0.8724 & 0.7654 & 0.8126 & 21346 \\
+\textbf{Samples avg} & 0.5200 & 0.5000 & 0.5000 & 21346 \\
+\hline
+\end{tabular}
+\caption{Classification Report}
+\end{table}
+
+\subsubsection{CodeBert}
+
+L'accuratezza del modello è del 72,54\%. La precision, recall e f1-score per ciascuna delle classi sono mostrate nel classification report sottostante.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lcccc}
+\hline
+\textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+\hline
+access-control & 0.87 & 0.72 & 0.79 & 2331 \\
+arithmetic & 0.81 & 0.69 & 0.75 & 2708 \\
+other & 0.85 & 0.73 & 0.78 & 4193 \\
+reentrancy & 0.88 & 0.81 & 0.84 & 4838 \\
+unchecked-calls & 0.93 & 0.86 & 0.89 & 7276 \\
+\hline
+\textbf{Micro avg} & 0.8800 & 0.7869 & 0.8309 & 21346 \\
+\textbf{Macro avg} & 0.8661 & 0.7622 & 0.8104 & 21346 \\
+\textbf{Weighted avg} & 0.8787 & 0.7869 & 0.8298 & 21346 \\
+\textbf{Samples avg} & 0.5400 & 0.5100 & 0.5100 & 21346 \\
+\hline
+\end{tabular}
+\caption{Classification Report del modello CodeBert sul bytecode}
+\end{table}
+
+\subsection{Risultati sul Codice Sorgente Solidity}
+Questa sezione presenta i risultati ottenuti nei modelli di classificazione utilizzati che prendevano in input in codice sorgente Solidity. Anche in questo caso, i  modelli utilizzati sono stati allenati sul dataset di training, validati sul dataset di validazione e testati sul dataset di test ed i risultati ottenuti sono stati calcolati utilizzando le metriche di valutazione precedentemente descritte.\\
+Allo stesso modo del bytecode, è stato dapprima utilizzato un modello BERT ed un modello CodeBert per la classificazione del codice sorgente Solidity utilizzando 512 token in input. Successivamente, poichè i risultati migliori sono stati ottenuti dal modello CodeBert,  è stato utilizzato questo modello per gli esperimenti successivi in cui si utilizzavano porzioni piu ampie dei dati a disposizione.\\
+\subsubsection{BERT}
+\subsubsection{CodeBert}
+
+\subsubsection{DistilBert}
+\subsubsection{CodeBert Concatenazione di due chunk}
+L'accuratezza del modello è del 76,36\%. La precision, recall e f1-score per ciascuna delle classi sono mostrate nel classification report sottostante.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lcccc}
+\hline
+\textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+\hline
+access-control & 0.86 & 0.78 & 0.82 & 2331 \\
+arithmetic & 0.81 & 0.81 & 0.81 & 2708 \\
+other & 0.82 & 0.78 & 0.80 & 4193 \\
+reentrancy & 0.90 & 0.80 & 0.85 & 4838 \\
+unchecked-calls & 0.94 & 0.91 & 0.93 & 7276 \\
+\hline
+\textbf{Micro avg} & 0.8819 & 0.8342 & 0.8574 & 21346 \\
+\textbf{Macro avg} & 0.8662 & 0.8172 & 0.8406 & 21346 \\
+\textbf{Weighted avg} & 0.8821 & 0.8342 & 0.8571 & 21346 \\
+\textbf{Samples avg} & 0.5700 & 0.5600 & 0.5500 & 21346 \\
+\hline
+\end{tabular}
+\caption{Classification Report del modello codeBERT con concatenazione di due chunk}
+\end{table}
+\subsubsection{CodeBert Concatenazione di tre chunk}
+L'accuratezza del modello è del 79,39\%. La precision, recall e f1-score per ciascuna delle classi sono mostrate nel classification report sottostante.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lcccc}
+\hline
+\textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+\hline
+access-control & 0.87 & 0.82 & 0.84 & 2331 \\
+arithmetic & 0.90 & 0.81 & 0.85 & 2708 \\
+other & 0.87 & 0.79 & 0.83 & 4193 \\
+reentrancy & 0.91 & 0.84 & 0.87 & 4838 \\
+unchecked-calls & 0.95 & 0.93 & 0.94 & 7276 \\
+\hline
+\textbf{Micro avg} & 0.9103 & 0.8561 & 0.8824 & 21346 \\
+\textbf{Macro avg} & 0.8994 & 0.8387 & 0.8677 & 21346 \\
+\textbf{Weighted avg} & 0.9093 & 0.8561 & 0.8816 & 21346 \\
+\textbf{Samples avg} & 0.5900 & 0.5700 & 0.5700 & 21346 \\
+\hline
+\end{tabular}
+\caption{Classification Report del modello codeBERT con concatenazione di tre chunk}
+\end{table}
+
+\subsubsection{CodeBert Aggregazione di due chunk}
+\textbf{Aggregazione con funzione Max}\\
+L'accuratezza del modello è del 76.50\%. La precisione, il recall e l'F1-score per ciascuna delle classi sono mostrati nel classification report sottostante.
+
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{lcccc}
+    \hline
+    \textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+    \hline
+    access-control & 0.87 & 0.77 & 0.82 & 2331 \\
+    arithmetic & 0.83 & 0.80 & 0.82 & 2708 \\
+    other & 0.80 & 0.80 & 0.80 & 4193 \\
+    reentrancy & 0.90 & 0.81 & 0.85 & 4838 \\
+    unchecked-calls & 0.94 & 0.91 & 0.93 & 7276 \\
+    \hline
+    \textbf{Micro avg} & 0.8816 & 0.8369 & 0.8586 & 21346 \\
+    \textbf{Macro avg} & 0.8687 & 0.8181 & 0.8422 & 21346 \\
+    \textbf{Weighted avg} & 0.8821 & 0.8369 & 0.8585 & 21346 \\
+    \textbf{Samples avg} & 0.5700 & 0.5600 & 0.5600 & 21346 \\
+    \hline
+    \end{tabular}
+    \caption{Classification Report del modello codeBERT con aggregazione di due chunk}
+    \end{table}
+
+\textbf{Aggregazione con funzione Mean}\\
+L'accuratezza del modello è del 75.84\%. La precisione, il recall e l'F1-score per ciascuna delle classi sono mostrati nel classification report sottostante.
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{lcccc}
+    \hline
+    \textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+    \hline
+    access-control & 0.84 & 0.77 & 0.81 & 2331 \\
+    arithmetic & 0.82 & 0.80 & 0.81 & 2708 \\
+    other & 0.81 & 0.77 & 0.79 & 4193 \\
+    reentrancy & 0.90 & 0.80 & 0.85 & 4838 \\
+    unchecked-calls & 0.94 & 0.90 & 0.92 & 7276 \\
+    \hline
+    \textbf{Micro avg} & 0.8830 & 0.8233 & 0.8521 & 21346 \\
+    \textbf{Macro avg} & 0.8657 & 0.8068 & 0.8350 & 21346 \\
+    \textbf{Weighted avg} & 0.8833 & 0.8233 & 0.8520 & 21346 \\
+    \textbf{Samples avg} & 0.5700 & 0.5500 & 0.5500 & 21346 \\
+    \hline
+    \end{tabular}
+    \caption{Classification Report del modello con aggregazione di due chunk}
+    \end{table}
+
+
+    
+\subsubsection{CodeBert Aggregazione di tre chunk}
+\textbf{Aggregazione con funzione Max}\\
+L'accuratezza del modello è del 79.08\%. La precisione, il recall e l'F1-score per ciascuna delle classi sono mostrati nel classification report sottostante.
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{lcccc}
+    \hline
+    \textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+    \hline
+    access-control & 0.87 & 0.83 & 0.85 & 2331 \\
+    arithmetic & 0.86 & 0.84 & 0.85 & 2708 \\
+    other & 0.84 & 0.82 & 0.83 & 4193 \\
+    reentrancy & 0.91 & 0.84 & 0.87 & 4838 \\
+    unchecked-calls & 0.95 & 0.94 & 0.94 & 7276 \\
+    \hline
+    \textbf{Micro avg} & 0.8983 & 0.8671 & 0.8824 & 21346 \\
+    \textbf{Macro avg} & 0.8855 & 0.8524 & 0.8685 & 21346 \\
+    \textbf{Weighted avg} & 0.8983 & 0.8671 & 0.8822 & 21346 \\
+    \textbf{Samples avg} & 0.5900 & 0.5800 & 0.5700 & 21346 \\
+    \hline
+    \end{tabular}
+    \caption{Classification Report del modello con aggregazione di tre chunk e funzione Max}
+    \end{table}
+    
+
+\textbf{Aggregazione con funzione Mean}\\
+L'accuratezza del modello è del 78.97\%. La precisione, il recall e l'F1-score per ciascuna delle classi sono mostrati nel classification report sottostante.
+
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{lcccc}
+    \hline
+    \textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+    \hline
+    access-control & 0.89 & 0.82 & 0.85 & 2331 \\
+    arithmetic & 0.89 & 0.81 & 0.85 & 2708 \\
+    other & 0.83 & 0.83 & 0.83 & 4193 \\
+    reentrancy & 0.92 & 0.82 & 0.86 & 4838 \\
+    unchecked-calls & 0.95 & 0.93 & 0.94 & 7276 \\
+    \hline
+    \textbf{Micro avg} & 0.9047 & 0.8566 & 0.8800 & 21346 \\
+    \textbf{Macro avg} & 0.8959 & 0.8411 & 0.8672 & 21346 \\
+    \textbf{Weighted avg} & 0.9051 & 0.8566 & 0.8797 & 21346 \\
+    \textbf{Samples avg} & 0.5900 & 0.5700 & 0.5700 & 21346 \\
+    \hline
+    \end{tabular}
+    \caption{Classification Report del modello codeBERT con aggregazione mean di tre chunk}
+    \end{table}
+    
 
 \subsection{Risultati Gemini}
 
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{|l|c|c|c|c|}
-        \hline
-        \textbf{Metrica} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1 Score} \\
-        \hline
-        \textbf{Micro} & - & 0.3271 & 0.1872 & 0.2382 \\
-        \textbf{Macro} & - & 0.3137 & 0.1706 & 0.1800 \\
-        \textbf{Weighted} & - & 0.3490 & 0.1872 & 0.2056 \\
-        \hline
-        \textbf{Overall Accuracy} & 0.2754 & - & - & - \\
-        \hline
-    \end{tabular}
-    \caption{Metriche di Valutazione del Modello Gemini}
-\end{table}
+In questa sezione verranno presentati i risultati ottenuti a partire dalle API del modello Gemini. I risultati ottenuti sono stati calcolati utilizzando le metriche di valutazione precedentemente descritte.\\
+L'accuratezza del modello è del 27.54\%. La precisione, il recall e l'F1-score per ciascuna delle classi sono mostrati nel classification report sottostante.
 
-Il seguente classification report dettaglia le metriche di precision, recall e f1-score per ciascuna delle classi:
 
-\begin{table}[h!]
+\begin{table}[H]
     \centering
-    \begin{tabular}{|l|c|c|c|c|}
-        \hline
-        \textbf{Classe} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
-        \hline
-        access-control & 0.24 & 0.04 & 0.06 & 171 \\
-        arithmetic & 0.19 & 0.04 & 0.07 & 198 \\
-        other & 0.28 & 0.49 & 0.36 & 282 \\
-        reentrancy & 0.41 & 0.08 & 0.14 & 364 \\
-        unchecked-calls & 0.45 & 0.20 & 0.28 & 475 \\
-        \hline
-        micro avg & 0.33 & 0.19 & 0.24 & 1490 \\
-        macro avg & 0.31 & 0.17 & 0.18 & 1490 \\
-        weighted avg & 0.35 & 0.19 & 0.21 & 1490 \\
-        samples avg & 0.18 & 0.12 & 0.13 & 1490 \\
-        \hline
+    \small
+    \begin{tabular}{lcccc}
+    \hline
+    \textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+    \hline
+    access-control & 0.24 & 0.04 & 0.06 & 171 \\
+    arithmetic & 0.19 & 0.04 & 0.07 & 198 \\
+    other & 0.28 & 0.49 & 0.36 & 282 \\
+    reentrancy & 0.41 & 0.08 & 0.14 & 364 \\
+    unchecked-calls & 0.45 & 0.20 & 0.28 & 475 \\
+    \hline
+    \textbf{Micro avg} & 0.3271 & 0.1872 & 0.2382 & 1490 \\
+    \textbf{Macro avg} & 0.3137 & 0.1706 & 0.1800 & 1490 \\
+    \textbf{Weighted avg} & 0.3490 & 0.1872 & 0.2056 & 1490 \\
+    \textbf{Samples avg} & 0.1800 & 0.1200 & 0.1300 & 1490 \\
+    \hline
     \end{tabular}
-    \caption{Classification Report del Modello Gemini}
-\end{table}
+    \caption{Classification Report del modello Gemini}
+    \end{table}
+    
 
 I risultati del modello Gemini mostrano una performance complessivamente modesta nelle metriche di valutazione. L'Accuracy del 27.54\% suggerisce che meno di un terzo delle previsioni del modello sono corrette. La Precision micro di 32.71\% indica che, tra le istanze classificate positivamente, solo un terzo sono effettivamente corrette, mentre la Precision macro e weighted, rispettivamente 31.37\% e 34.90\%, mostrano una variabilità nella performance sulle diverse classi. Il Recall micro di 18.72\% evidenzia che il modello riesce a identificare meno di un quinto delle istanze rilevanti, con valori macro e weighted simili, indicando che il modello ha difficoltà a catturare tutte le istanze corrette. L'F1 Score, che bilancia precision e recall, è basso in tutte le versioni (micro: 23.82\%, macro: 17.96\%, weighted: 20.56\%), suggerendo un compromesso non soddisfacente tra la capacità del modello di evitare falsi positivi e falsi negativi. Il report di classificazione per singole classi conferma queste osservazioni, mostrando prestazioni particolarmente deboli in classi come "access-control" e "arithmetic". Questi risultati indicano la necessità di miglioramenti significativi nel modello per una classificazione multilabel più accurata e bilanciata. Mostriamo ora le confusion matrix per ogni classe per il modello Gemini.
 \begin{figure}[h!]

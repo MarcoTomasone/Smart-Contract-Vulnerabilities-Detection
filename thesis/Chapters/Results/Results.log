@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  11 JUN 2024 23:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  12 JUN 2024 20:01
 entering extended mode
 **c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Results/Results.tex
 (c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Results/Results.tex
@@ -8,7 +8,7 @@ Document Class: subfiles 2020/11/14 v2.2 Multi-file projects (class)
 Preamble taken from file `../../Thesis.tex'
 (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/import\import.sty
 Package: import 2020/04/01  v 6.2
-) (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Thesis.tex (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+) (../../Thesis.tex (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
 Document Class: report 2021/02/12 v1.4n Standard LaTeX document class
 (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
 File: size12.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
@@ -528,7 +528,7 @@ File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 \l__pdf_internal_box=\box68
 ))
 Package: xparse 2021-08-27 L3 Experimental document command parser
-)) (solidity-highlighting.tex))) (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Results\Results.aux)
+)) (../..//solidity-highlighting.tex))) (Results.aux)
 \openout1 = `Results.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
@@ -596,7 +596,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 4.
 LaTeX Info: Redefining \pageref on input line 4.
 LaTeX Info: Redefining \nameref on input line 4.
- (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Results\Results.out) (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Results\Results.out)
+ (Results.out) (Results.out)
 \@outlinefile=\write4
 \openout4 = `Results.out'.
 
@@ -641,7 +641,57 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
- [3]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--69
+
+ []
+
+[3]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+
+ []
+
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+[4]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--123
+
+ []
+
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+[5]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+ [6]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+ [7]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+ [8]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -654,55 +704,55 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
-<C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_access-control.png, id=47, 433.62pt x 433.62pt>
+<C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_access-control.png, id=95, 433.62pt x 433.62pt>
 File: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_access-control.png Graphic file (type png)
 <use C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_access-control.png>
-Package pdftex.def Info: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_access-control.png  used on input line 113.
+Package pdftex.def Info: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_access-control.png  used on input line 314.
 (pdftex.def)             Requested size: 89.95743pt x 89.95131pt.
-<C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_arithmetic.png, id=49, 433.62pt x 433.62pt>
+<C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_arithmetic.png, id=97, 433.62pt x 433.62pt>
 File: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_arithmetic.png Graphic file (type png)
 <use C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_arithmetic.png>
-Package pdftex.def Info: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_arithmetic.png  used on input line 118.
+Package pdftex.def Info: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_arithmetic.png  used on input line 319.
 (pdftex.def)             Requested size: 89.95743pt x 89.95131pt.
-<C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_other.png, id=50, 433.62pt x 433.62pt>
+<C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_other.png, id=98, 433.62pt x 433.62pt>
 File: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_other.png Graphic file (type png)
 <use C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_other.png>
-Package pdftex.def Info: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_other.png  used on input line 123.
+Package pdftex.def Info: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_other.png  used on input line 324.
 (pdftex.def)             Requested size: 89.95743pt x 89.95131pt.
-<C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_reentrancy.png, id=51, 433.62pt x 433.62pt>
+<C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_reentrancy.png, id=99, 433.62pt x 433.62pt>
 File: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_reentrancy.png Graphic file (type png)
 <use C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_reentrancy.png>
-Package pdftex.def Info: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_reentrancy.png  used on input line 128.
+Package pdftex.def Info: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_reentrancy.png  used on input line 329.
 (pdftex.def)             Requested size: 89.95743pt x 89.95131pt.
-<C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_unchecked-calls.png, id=52, 433.62pt x 433.62pt>
+<C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_unchecked-calls.png, id=100, 433.62pt x 433.62pt>
 File: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_unchecked-calls.png Graphic file (type png)
 <use C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_unchecked-calls.png>
-Package pdftex.def Info: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_unchecked-calls.png  used on input line 133.
+Package pdftex.def Info: C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_unchecked-calls.png  used on input line 334.
 (pdftex.def)             Requested size: 89.95743pt x 89.95131pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--134
+Underfull \hbox (badness 10000) in paragraph at lines 335--335
 []\OT1/cmr/m/n/10.95 (e) |Un-chec-ked
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[4] [5 <C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_access-control.png> <C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_arithmetic.png> <C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_other.png> <C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_reentrancy.png> <C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_unchecked-calls.png>] (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Results\Results.aux)
+[9] [10 <C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_access-control.png> <C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_arithmetic.png> <C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_other.png> <C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_reentrancy.png> <C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_unchecked-calls.png>] (Results.aux)
 Package rerunfilecheck Info: File `Results.out' has not changed.
-(rerunfilecheck)             Checksum: 2956229A36034B4A93BAA647B6AC9E79;496.
+(rerunfilecheck)             Checksum: A8D4F1887CE6D72EA8BB55EBD3D4D826;979.
  ) 
 Here is how much of TeX's memory you used:
- 23700 strings out of 478927
- 435973 string characters out of 2852536
- 734336 words of memory out of 3000000
- 41103 multiletter control sequences out of 15000+600000
- 411154 words of font info for 57 fonts, out of 8000000 for 9000
+ 23736 strings out of 478927
+ 435886 string characters out of 2852536
+ 731345 words of memory out of 3000000
+ 41114 multiletter control sequences out of 15000+600000
+ 412816 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,9n,125p,1466b,528s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Results\Results.pdf (5 pages, 208757 bytes).
+ 122i,9n,125p,1466b,519s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Results.pdf (10 pages, 238990 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
- 70 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 170 PDF objects out of 1000 (max. 8388607)
+ 40 named destinations out of 1000 (max. 500000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

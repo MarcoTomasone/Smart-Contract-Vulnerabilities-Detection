@@ -136,6 +136,12 @@ pcaversaccio.
 \newblock A historical collection of reentrancy attacks.
 \newblock https://github.com/pcaversaccio/reentrancy-attacks, 2023.
 
+\bibitem{logisticReg}
+Joanne Peng, Kuk Lee, and Gary Ingersoll.
+\newblock An introduction to logistic regression analysis and reporting.
+\newblock {\em Journal of Educational Research - J EDUC RES}, 96:3--14, 09
+  2002.
+
 \bibitem{rossini2022slitherauditedcontracts}
 Martina Rossini.
 \newblock Slither audited smart contracts dataset, 2022.
