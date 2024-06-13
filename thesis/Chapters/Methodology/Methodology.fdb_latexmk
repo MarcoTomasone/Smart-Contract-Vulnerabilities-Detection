@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1718290280 "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Methodology/Methodology.tex" "Chapters/Methodology/Methodology.pdf" "Methodology" 1718290288
+["pdflatex"] 1718296390 "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Methodology/Methodology.tex" "Chapters/Methodology/Methodology.pdf" "Methodology" 1718296444
   "C:/Users/tomas/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1630670581 14064 d1d06bbff9d4f1ae03b03f90fd21ef9f ""
   "C:/Users/tomas/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tctt1000.pk" 1718287646 9492 e78b0bc3bf55946554c90eea65135d91 ""
   "C:/Users/tomas/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1630670499 9715383 c310c5e10878a246b2c909d39885981b ""
@@ -191,7 +191,7 @@
   "C:/Users/tomas/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/tomas/AppData/Local/Programs/MiKTeX/tex/latex/wrapfig/wrapfig.sty" 1044406800 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "C:/Users/tomas/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1623005660 55589 34128738f682d033422ca125f82e5d62 ""
-  "Chapters/Methodology/../../Thesis.tex" 1718285126 2832 c2ac29d38ee4cdff6a27fd37e75d9367 ""
+  "Chapters/Methodology/../../Thesis.tex" 1718292405 2851 7265bf8159afd8406cf02ad3b32ff61b ""
   "Chapters/Methodology/../../img/BCTokensPreprocessed.png" 1716139187 54197 28cdf48a5528a18177415d43d3f1c824 ""
   "Chapters/Methodology/../../img/DistilBERT-Architecture.png" 1717865587 40461 efc0acab0b251db1452c9220676acdf9 ""
   "Chapters/Methodology/../../img/SCTokensPreprocessed.png" 1716139175 45867 cb15e931e1c0032cad20822476546771 ""
@@ -202,11 +202,11 @@
   "Chapters/Methodology/../../img/bert_base_large.jpg" 1717841703 78839 54ddf3481c25e8093698b5fcddcddca1 ""
   "Chapters/Methodology/../../img/class-distribution-absolute.png" 1716736871 37300 0777e4bd77fff857978c533b37f877c8 ""
   "Chapters/Methodology/../../img/class-distribution-relative.png" 1716736889 43636 70a995a28570027f584a025c0d27a9d6 ""
-  "Chapters/Methodology/Methodology.aux" 1718290285 10396 751ed79668e4788b406509ba6cb3c612 "pdflatex"
-  "Chapters/Methodology/Methodology.out" 1718290285 3131 1da1284167f1214a3a949db566e5a2b2 "pdflatex"
-  "Chapters/Methodology/Methodology.tex" 1718290272 73036 c48ea51d174ac99e347b2d1ca4a7d948 ""
-  "Thesis.tex" 1718285126 2832 c2ac29d38ee4cdff6a27fd37e75d9367 ""
-  "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Methodology/Methodology.tex" 1718290272 73036 c48ea51d174ac99e347b2d1ca4a7d948 ""
+  "Chapters/Methodology/Methodology.aux" 1718296395 10395 e82a65537b80e4017ccfe37f344b8758 "pdflatex"
+  "Chapters/Methodology/Methodology.out" 1718296395 3131 1da1284167f1214a3a949db566e5a2b2 "pdflatex"
+  "Chapters/Methodology/Methodology.tex" 1718296441 71437 235aa5dc4631e0f38ab02805cecbb4d6 ""
+  "Thesis.tex" 1718292405 2851 7265bf8159afd8406cf02ad3b32ff61b ""
+  "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Methodology/Methodology.tex" 1718296441 71437 235aa5dc4631e0f38ab02805cecbb4d6 ""
   "img/BCTokensPreprocessed.png" 1716139187 54197 28cdf48a5528a18177415d43d3f1c824 ""
   "img/DistilBERT-Architecture.png" 1717865587 40461 efc0acab0b251db1452c9220676acdf9 ""
   "img/SCTokensPreprocessed.png" 1716139175 45867 cb15e931e1c0032cad20822476546771 ""
@@ -229,7 +229,7 @@
   "use ../../img/class-distribution-absolute.png" 1716736871 37300 0777e4bd77fff857978c533b37f877c8 ""
   "use ../../img/class-distribution-relative.png" 1716736889 43636 70a995a28570027f584a025c0d27a9d6 ""
   (generated)
-  "Chapters/Methodology/Methodology.out"
   "Chapters/Methodology/Methodology.aux"
   "Chapters/Methodology/Methodology.log"
   "Chapters/Methodology/Methodology.pdf"
+  "Chapters/Methodology/Methodology.out"

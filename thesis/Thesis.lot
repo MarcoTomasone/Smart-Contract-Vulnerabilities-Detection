@@ -1,0 +1,23 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Percentuali di ogni split rispetto al totale\relax }}{20}{table.caption.10}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Conteggio e Percentuale di Contratti Senza Bytecode per Dataset\relax }}{20}{table.caption.11}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Percentuale di contratti sotto varie lunghezze in token.\relax }}{22}{table.caption.13}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Distribuzione delle Classi nei Dataset di Addestramento, Test, Validazione e Completo\relax }}{22}{table.caption.15}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Percentuale dnelle classi in cui la classe stessa non è l'unica vulnerabilità presente.\relax }}{26}{table.caption.21}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Parametri principali dei modelli BERT\textsubscript {BASE} e BERT\textsubscript {LARGE}\relax }}{28}{table.caption.23}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Classification Report\relax }}{51}{table.caption.37}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Classification Report del modello CodeBert sul bytecode\relax }}{52}{table.caption.39}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Classification Report del modello codeBERT con concatenazione di due chunk\relax }}{53}{table.caption.44}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Classification Report del modello codeBERT con concatenazione di tre chunk\relax }}{53}{table.caption.46}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Classification Report del modello codeBERT con aggregazione di due chunk\relax }}{54}{table.caption.48}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Classification Report del modello con aggregazione di due chunk\relax }}{54}{table.caption.49}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces Classification Report del modello con aggregazione di tre chunk e funzione Max\relax }}{55}{table.caption.51}%
+\contentsline {table}{\numberline {5.8}{\ignorespaces Classification Report del modello codeBERT con aggregazione mean di tre chunk\relax }}{55}{table.caption.52}%
+\contentsline {table}{\numberline {5.9}{\ignorespaces Classification Report del modello Gemini\relax }}{56}{table.caption.53}%
+\addvspace {10\p@ }

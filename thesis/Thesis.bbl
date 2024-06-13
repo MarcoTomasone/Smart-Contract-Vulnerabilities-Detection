@@ -8,6 +8,12 @@ Mythril github repository.
 Opyente.
 \newblock https://pypi.org/project/oyente/.
 
+\bibitem{DBLP:journals/corr/abs-2106-13422}
+Rachit Agarwal, Tanmay Thapliyal, and Sandeep~Kumar Shukla.
+\newblock Vulnerability and transaction behavior based detection of malicious
+  smart contracts.
+\newblock {\em CoRR}, abs/2106.13422, 2021.
+
 \bibitem{6786458}
 Erik Cambria and Bebo White.
 \newblock Jumping nlp curves: A review of natural language processing research

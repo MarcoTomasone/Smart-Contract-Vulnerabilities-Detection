@@ -3,16 +3,16 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Andamento del prezzo di BEC prima e dopo l'attacco\relax }}{11}{figure.caption.5}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Andamento del prezzo di BEC prima e dopo l'attacco\relax }}{14}{figure.caption.6}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Distribuzioni delle lunghezze del source code e del bytecode.\relax }}{19}{figure.caption.11}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Distribuzioni delle Classi nell'intero dataset, in termini relativi e assoluti.\relax }}{20}{figure.caption.15}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Matrice di Co-occorrenza nel Dataset di Addestramento\relax }}{21}{figure.caption.17}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Matrice di Co-occorrenza nel Dataset di Test\relax }}{22}{figure.caption.18}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Matrice di Co-occorrenza nel Dataset di Validazione\relax }}{22}{figure.caption.19}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Architettura di Transformers, BERT\textsubscript {BASE} e BERT\textsubscript {LARGE}\relax }}{27}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Rappresentazione degli input di BERT\relax }}{28}{figure.caption.24}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Architettura di DistilBERT\relax }}{31}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Distribuzioni delle lunghezze del source code e del bytecode.\relax }}{21}{figure.caption.12}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Distribuzioni delle Classi nell'intero dataset, in termini relativi e assoluti.\relax }}{23}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Matrice di Co-occorrenza nel Dataset di Addestramento\relax }}{24}{figure.caption.18}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Matrice di Co-occorrenza nel Dataset di Test\relax }}{24}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Matrice di Co-occorrenza nel Dataset di Validazione\relax }}{25}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Architettura di Transformers, BERT\textsubscript {BASE} e BERT\textsubscript {LARGE}\relax }}{29}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Rappresentazione degli input di BERT\relax }}{30}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Architettura di DistilBERT\relax }}{33}{figure.caption.29}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Confusion Matrices per le diverse classi\relax }}{54}{figure.caption.53}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Confusion Matrices per le diverse classi\relax }}{57}{figure.caption.54}%
 \addvspace {10\p@ }

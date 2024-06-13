@@ -28,28 +28,7 @@ Questo dataset contiene informazioni su ben 106.474 Smart Contracts pubblicati s
 \end{itemize}
 Le vulnerabilità che sono state prese in questo lavoro sono le seguenti:
 \begin{itemize}
-    \item Access-Control stato effettuato usando due task di apprendimento non
-    supervisionato:
-     Masked Language Model (MLM): in questo task venivano mascherate il 15%
-    dei token in input e si voleva far si che il modello predicesse i token mascherati.
-    Questo processo in letteratura viene anche spesso chiamato Cloze [?]. In questo ca-
-    so i vettori dell’hidden layer finale che si riferisce al token mascherato venivano dati
-    in input ad una funzione softmax sul vocabolario per predire il token mascherato.
-    Per non creare troppo divario tra il pre-addestramento e il fine-tuning, durante
-    questa fase di pre-training con MLM il token speciale [MASK] veniva utilizzato
-    solo l’80\% delle volte, il 10\% delle volte veniva sostituito con un token casuale e il
-    10\% delle volte veniva lasciato il token originario.
-    Next Sentence Prediction (NSP): in molti task di NLP, come Question-Answering
-    necessario che i modelli siano in grado di comprendere relazioni tra due frasi. Per
-    far si che il modello imparasse a riconoscere le relazioni tra frasi BERT stato pre-
-    addestrato su un task di predizione della frase successiva. Nello specifico, prese
-    due frasi A e B il modello doveva predire se la frase B fosse la successiva rispetto
-    alla frase A, questo nel dataset di training era vero nel 50% dei casi.
-    Fine-tuning di BERT
-    Il fine-tuning di BERT consiste nell’adattare il modello pre-allenato a compiti specifi-
-    ci, come la classificazione del testo, l’analisi del sentimento, il question answering e altri.
-    13
-    BERT
+    \item Access-Control
     \item Arithmetic
     \item Other
     \item Reentrancy
