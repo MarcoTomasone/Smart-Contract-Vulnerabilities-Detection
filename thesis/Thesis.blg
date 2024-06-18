@@ -13,46 +13,50 @@ Warning--I didn't find a database entry for "Hinton2015"
 Warning--to sort, need author or key in Oyente
 Warning--to sort, need author or key in Mythril
 Warning--empty booktitle in SVM
+Warning--empty journal in Bitcoin
 Warning--empty booktitle in Securify
-You've used 37 entries,
+Warning--empty journal in Ethereum
+Warning--empty year in Ethereum
+Warning--empty booktitle in Blockchain
+You've used 46 entries,
             2118 wiz_defined-function locations,
-            725 strings with 11908 characters,
-and the built_in function-call counts, 14139 in all, are:
-= -- 1266
-> -- 1029
-< -- 9
-+ -- 411
-- -- 370
-* -- 1061
-:= -- 2449
-add.period$ -- 111
-call.type$ -- 37
-change.case$ -- 294
+            776 strings with 13081 characters,
+and the built_in function-call counts, 16535 in all, are:
+= -- 1498
+> -- 1129
+< -- 10
++ -- 453
+- -- 402
+* -- 1190
+:= -- 2857
+add.period$ -- 138
+call.type$ -- 46
+change.case$ -- 337
 chr.to.int$ -- 0
-cite$ -- 41
-duplicate$ -- 457
-empty$ -- 869
-format.name$ -- 370
-if$ -- 2864
+cite$ -- 54
+duplicate$ -- 571
+empty$ -- 1061
+format.name$ -- 402
+if$ -- 3369
 int.to.chr$ -- 0
-int.to.str$ -- 37
-missing$ -- 31
-newline$ -- 185
-num.names$ -- 72
-pop$ -- 308
+int.to.str$ -- 46
+missing$ -- 39
+newline$ -- 229
+num.names$ -- 90
+pop$ -- 361
 preamble$ -- 1
-purify$ -- 257
+purify$ -- 291
 quote$ -- 0
-skip$ -- 382
+skip$ -- 472
 stack$ -- 0
-substring$ -- 428
-swap$ -- 113
-text.length$ -- 9
+substring$ -- 501
+swap$ -- 139
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 146
-warning$ -- 4
-while$ -- 90
-width$ -- 39
-write$ -- 399
-(There were 9 warnings)
+type$ -- 182
+warning$ -- 8
+while$ -- 110
+width$ -- 48
+write$ -- 491
+(There were 13 warnings)

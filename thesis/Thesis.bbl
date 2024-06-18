@@ -14,6 +14,13 @@ Rachit Agarwal, Tanmay Thapliyal, and Sandeep~Kumar Shukla.
   smart contracts.
 \newblock {\em CoRR}, abs/2106.13422, 2021.
 
+\bibitem{Tassonomia}
+Vitalik Buterin.
+\newblock On public and private blockchains.
+\newblock
+  \url{https://blog.ethereum.org/2015/08/07/on-public-and-private-blockchains},
+  2015.
+
 \bibitem{6786458}
 Erik Cambria and Bebo White.
 \newblock Jumping nlp curves: A review of natural language processing research
@@ -123,6 +130,11 @@ Bernhard Mueller.
 \newblock Smashing ethereum smart contracts for fun and real profit.
 \newblock {\em 9th HITB Security Conference}, 2018.
 
+\bibitem{Bitcoin}
+Satoshi Nakamoto.
+\newblock Bitcoin: A peer-to-peer electronic cash system.
+\newblock May 2009.
+
 \bibitem{Maian}
 Ivica Nikolic, Aashish Kolluri, Ilya Sergey, Prateek Saxena, and Aquinas Hobor.
 \newblock Finding the greedy, prodigal, and suicidal contracts at scale.
@@ -174,6 +186,21 @@ Victor Sanh, Lysandre Debut, Julien Chaumond, and Thomas Wolf.
   and lighter.
 \newblock {\em CoRR}, abs/1910.01108, 2019.
 
+\bibitem{szabo1996smart}
+Nick Szabo.
+\newblock Smart contracts: Building blocks for digital markets.
+\newblock {\em Extropy}, 1996.
+
+\bibitem{Szabo_1997}
+Nick Szabo.
+\newblock Formalizing and securing relationships on public networks.
+\newblock {\em First Monday}, 2(9), Sep. 1997.
+
+\bibitem{SCReview}
+Hamed Taherdoost.
+\newblock Smart contracts in blockchain technology: A critical review.
+\newblock {\em Information}, 14:117, 02 2023.
+
 \bibitem{SmartCheck}
 Sergei Tikhomirov, Ekaterina Voskresenskaya, Ivan Ivanitskiy, Ramil Takhaviev,
   Evgeny Marchenko, and Yaroslav Alexandrov.
@@ -187,6 +214,12 @@ Petar Tsankov, Andrei Dan, Dana Drachsler-Cohen, Arthur Gervais, Florian
   Bünzli, and Martin Vechev.
 \newblock Securify: Practical security analysis of smart contracts.
 \newblock pages 67--82, 10 2018.
+
+\bibitem{Blackcoin}
+Pavel Vasin.
+\newblock Blackcoin’s proof-of-stake protocol v2.
+\newblock {\em URL: https://blackcoin. co/blackcoin-pos-protocol-v2-whitepaper.
+  pdf}, 71, 2014.
 
 \bibitem{AttentionIsAllYouNeed}
 Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
@@ -215,6 +248,10 @@ Wikipedia.
   \url{http://en.wikipedia.org/w/index.php?title=Google\%20DeepMind&oldid=1228075682},
   2024.
 
+\bibitem{Ethereum}
+Gavin Wood.
+\newblock Ethereum: A secure decentralised generalised transaction ledger.
+
 \bibitem{WordPiece}
 Yonghui Wu, Mike Schuster, Zhifeng Chen, Quoc~V. Le, Mohammad Norouzi, Wolfgang
   Macherey, Maxim Krikun, Yuan Cao, Qin Gao, Klaus Macherey, Jeff Klingner,
@@ -230,5 +267,18 @@ Yonghui Wu, Mike Schuster, Zhifeng Chen, Quoc~V. Le, Mohammad Norouzi, Wolfgang
 Tom Young, Devamanyu Hazarika, Soujanya Poria, and Erik Cambria.
 \newblock Recent trends in deep learning based natural language processing.
 \newblock {\em CoRR}, abs/1708.02709, 2017.
+
+\bibitem{Peercoin}
+Wenbing Zhao, Shunkun Yang, Xiong Luo, and Jiong Zhou.
+\newblock On peercoin proof of stake for blockchain consensus.
+\newblock In {\em Proceedings of the 2021 3rd International Conference on
+  Blockchain Technology}, ICBCT '21, page 129–134, New York, NY, USA, 2021.
+  Association for Computing Machinery.
+
+\bibitem{Blockchain}
+Zibin Zheng, Shaoan Xie, Hong-Ning Dai, Xiangping Chen, and Huaimin Wang.
+\newblock An overview of blockchain technology: Architecture, consensus, and
+  future trends.
+\newblock 06 2017.
 
 \end{thebibliography}
