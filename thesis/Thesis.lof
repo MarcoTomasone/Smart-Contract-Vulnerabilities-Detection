@@ -2,17 +2,18 @@
 \babel@toc {italian}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Esempio di architettura di una blockchain\relax }}{11}{figure.caption.4}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Andamento del prezzo di BEC prima e dopo l'attacco\relax }}{20}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Esempio di architettura di una blockchain\relax }}{12}{figure.caption.4}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Andamento del prezzo di BEC prima e dopo l'attacco\relax }}{21}{figure.caption.6}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Distribuzioni delle lunghezze del source code e del bytecode.\relax }}{30}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Distribuzioni delle Classi nell'intero dataset, in termini relativi e assoluti.\relax }}{32}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Matrice di Co-occorrenza nel Dataset di Addestramento\relax }}{33}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Matrice di Co-occorrenza nel Dataset di Test\relax }}{33}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Matrice di Co-occorrenza nel Dataset di Validazione\relax }}{34}{figure.caption.20}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Architettura di Transformers, BERT\textsubscript {BASE} e BERT\textsubscript {LARGE}\relax }}{38}{figure.caption.24}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Rappresentazione degli input di BERT\relax }}{39}{figure.caption.25}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Architettura di DistilBERT\relax }}{42}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Distribuzioni delle lunghezze del source code e del bytecode.\relax }}{31}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Distribuzioni delle Classi nell'intero dataset, in termini relativi e assoluti.\relax }}{33}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Matrice di Co-occorrenza nel Dataset di Addestramento\relax }}{34}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Matrice di Co-occorrenza nel Dataset di Test\relax }}{34}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Matrice di Co-occorrenza nel Dataset di Validazione\relax }}{35}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Architettura di Transformers, BERT\textsubscript {BASE} e BERT\textsubscript {LARGE}\relax }}{39}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Rappresentazione degli input di BERT\relax }}{40}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Architettura di DistilBERT\relax }}{43}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Confronto tra i tre metodi di fusione. (a) Fusione basata su caratteristiche. (b) Fusione basata su decisioni. (c) Fusione Ibrida.\relax }}{55}{figure.caption.32}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Confusion Matrices per le diverse classi\relax }}{66}{figure.caption.54}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Confusion Matrices per le diverse classi\relax }}{73}{figure.caption.67}%
 \addvspace {10\p@ }

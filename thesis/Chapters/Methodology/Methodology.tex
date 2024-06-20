@@ -616,6 +616,29 @@ In questo caso, si divide la stringa in input in chunk da 512 token e si ottengo
 \subsection{Train e Validation}
 Tutti i modelli sono stati addestrati (o fine-tunati) per 20 epoche, con un learning rate di $1 \times 10^{-5}$. Per evitare l'overfitting, è stato utilizzato un layer di Dropout con un rate del 30\%. La funzione di loss utilizzata è stata la BCEWithLogitsLoss, che è stata utilizzata per la classificazione multilabel. L'ottimizzatore utilizzato è stato Adam. I modelli sono stati addestrati su una GPU NVIDIA 2080Ti. A seguito di limitazioni dovute alla potenza di calcolo e alla grandezza del dataset in alcuni casi è stato necessario ridurre la batch size. Nello specifico, per i modelli di aggregazione e concatenazione che utilizzavano due blocchi di codice (1024 token) la batch size è stata ridotta a 4, mentre per i modelli che utilizzavano tre blocchi di codice (1536 token) la batch size è stata ridotta a 2. Questa potrebbe essere sicuramente una limitazione al lavoro, in quanto una batch size ridotta potrebbe portare ad un addestramento più lento e a risultati meno accurati. Si rimanda a futura ricerca la possibilità di addestrare i modelli con potenze di calcolo maggiori per effettuare dei tuning dei parametri più accurati. 
 
+\section{Stacking}
+Seguendo l'approccio proposto da \cite{Deng} è stato effettuato un esperimento di stacking per combinare il miglior modello costruito sul codice sorgente e il miglior modello costruito sul bytecode.
+
+Per multimodalità si intende la descrizione dello stesso oggetto da punti di vista differenti. I nostri smart contracts, nel nostro dataset, ad esempio, vengono rappresentati sia dal codice sorgente che dal bytecode. Questi due punti di vista sono due punti di vista diversi ma che rappresentano la stessa cosa in modo diverso. L'idea alla base è quella che modalità diverse della stessa rappresentazione possano fornire informazioni complementari che possono essere utilizzate per migliorare le prestazioni del modello. Esistono tre modi per combinare le informazioni provenienti da diverse modalità, visibili in figura \ref{fig:fusion_methods}:
+\begin{itemize}
+    \item \textbf{Fusione Basata su Caratteristiche}: le caratteristiche estratte da diverse modalità vengono combinate direttamente e l'unione delle stesse viene utilizzata per l'addestramento del modello. Questa tecnica permette di combinare le informazioni estratte da diverse modalità in un'unica rappresentazione, ma può rendere il training molto più complesso poichè spesso si lavora con feature altamente dimensionali e dati eterogenei.
+    \item \textbf{Fusione Basata su Decisioni}: si addestrano modelli separati per ciascuna modalità e si combinano le decisioni ottenute da ciascun modello per allenare un meta-classificatore che fornisce il risultato finale. Questa tecnica ha il grande vantaggio di riuscire a unire dati eterogenei ma può soffrire di una perdita di informazioni.
+    \item \textbf{Fusione Ibrida}: combina le caratteristiche della fusione basata su caratteristiche e la fusione basata su decisioni. Questa tecnica combina i vantaggi delle due tecniche di fusione precedenti, ma rende il modello e l'apprendimento più complesso.
+\end{itemize} 
+\
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{../../img/fusion_methods.png}
+    \caption{Confronto tra i tre metodi di fusione. (a) Fusione basata su caratteristiche. (b) Fusione basata su decisioni. (c) Fusione Ibrida.}
+    \label{fig:fusion_methods}
+\end{figure}
+
+In questo lavoro, è stato utilizzato un approccio di fusione basato su decisioni, in cui i modelli costruiti su codice sorgente e bytecode sono stati addestrati separatamente e le decisioni di entrambi i modelli sono state combinate per addestrare un meta-classificatore che fornisce il risultato finale. 
+
+Questo approccio è stato testato con differenti modelli utilizzati come meta-+classificatori, tra cui un modello di regressione logistica, un modello di support vector machine, un modello di random forest, un decision tree ed un modello Bayesiano. Tutti i modelli sono stati addestrati utilizzando la libreria Scikit-learn e l'API MultiOutputClassifier, che permette di addestrare un classificatore multilabel su più target e sono stati tunati gli iperparametri specifici di ogni modello utilizzando la funzione GridSearchCV.
+
+I risultati ottenuti sono stati confrontati con i modelli costruiti su codice sorgente e bytecode per valutare l'efficacia dell'approccio di stacking.
+
 \section{Gemini}
 Gemini è una famiglia di large language model multimodali sviluppato da Deep Mind Google, l'azienda fondata nel 2010 con sede a Londra che ha il compito di fare ricerca e sviluppo nel campo dell'intelligenza artificiale \cite{DeepMind}. 
 Questa famiglia di modelli, è nata come successore di LaMDA e PaLM2, e comprende Gemini Ultra, Gemini Pro e Gemini Nano. Questi modelli sono stati poi resi famosi per dar vita al chatbot Gemini di Google, che si pone come principale competitor di GPT-4 di OpenAI \cite{Gemini}. 

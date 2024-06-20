@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  13 JUN 2024 18:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  20 JUN 2024 21:15
 entering extended mode
 **c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Methodology/Methodology.tex
 (c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Methodology/Methodology.tex
@@ -702,12 +702,12 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-<../../img/SCTokensPreprocessed.png, id=96, 854.2314pt x 450.9648pt>
+<../../img/SCTokensPreprocessed.png, id=100, 854.2314pt x 450.9648pt>
 File: ../../img/SCTokensPreprocessed.png Graphic file (type png)
 <use ../../img/SCTokensPreprocessed.png>
 Package pdftex.def Info: ../../img/SCTokensPreprocessed.png  used on input line 81.
 (pdftex.def)             Requested size: 220.50247pt x 116.40857pt.
-<../../img/BCTokensPreprocessed.png, id=98, 860.7357pt x 450.9648pt>
+<../../img/BCTokensPreprocessed.png, id=102, 860.7357pt x 450.9648pt>
 File: ../../img/BCTokensPreprocessed.png Graphic file (type png)
 <use ../../img/BCTokensPreprocessed.png>
 Package pdftex.def Info: ../../img/BCTokensPreprocessed.png  used on input line 88.
@@ -740,12 +740,12 @@ Overfull \hbox (28.11864pt too wide) in paragraph at lines 122--136
  [][] 
  []
 
-<../../img/class-distribution-relative.png, id=118, 497.2176pt x 475.5366pt>
+<../../img/class-distribution-relative.png, id=122, 497.2176pt x 475.5366pt>
 File: ../../img/class-distribution-relative.png Graphic file (type png)
 <use ../../img/class-distribution-relative.png>
 Package pdftex.def Info: ../../img/class-distribution-relative.png  used on input line 144.
 (pdftex.def)             Requested size: 202.49863pt x 193.67242pt.
-<../../img/class-distribution-absolute.png, id=119, 739.3221pt x 560.0925pt>
+<../../img/class-distribution-absolute.png, id=123, 739.3221pt x 560.0925pt>
 File: ../../img/class-distribution-absolute.png Graphic file (type png)
 <use ../../img/class-distribution-absolute.png>
 Package pdftex.def Info: ../../img/class-distribution-absolute.png  used on input line 150.
@@ -760,18 +760,18 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-<../../img/TrainCo-occurrency.png, id=131, 714.7503pt x 570.933pt>
+<../../img/TrainCo-occurrency.png, id=135, 714.7503pt x 570.933pt>
 File: ../../img/TrainCo-occurrency.png Graphic file (type png)
 <use ../../img/TrainCo-occurrency.png>
 Package pdftex.def Info: ../../img/TrainCo-occurrency.png  used on input line 172.
 (pdftex.def)             Requested size: 314.99863pt x 251.62074pt.
  [6 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/class-distribution-relative.png> <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/class-distribution-absolute.png>]
-<../../img/TestCo-occurrency.png, id=142, 714.7503pt x 570.933pt>
+<../../img/TestCo-occurrency.png, id=146, 714.7503pt x 570.933pt>
 File: ../../img/TestCo-occurrency.png Graphic file (type png)
 <use ../../img/TestCo-occurrency.png>
 Package pdftex.def Info: ../../img/TestCo-occurrency.png  used on input line 179.
 (pdftex.def)             Requested size: 314.99863pt x 251.62074pt.
-<../../img/ValCo-occurrency.png, id=143, 714.7503pt x 570.933pt>
+<../../img/ValCo-occurrency.png, id=147, 714.7503pt x 570.933pt>
 File: ../../img/ValCo-occurrency.png Graphic file (type png)
 <use ../../img/ValCo-occurrency.png>
 Package pdftex.def Info: ../../img/ValCo-occurrency.png  used on input line 186.
@@ -933,7 +933,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-<../../img/bert_base_large.jpg, id=169, 692.5875pt x 417.05812pt>
+<../../img/bert_base_large.jpg, id=173, 692.5875pt x 417.05812pt>
 File: ../../img/bert_base_large.jpg Graphic file (type jpg)
 <use ../../img/bert_base_large.jpg>
 Package pdftex.def Info: ../../img/bert_base_large.jpg  used on input line 269.
@@ -967,7 +967,7 @@ Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 [12 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/bert_base_large.jpg>]
-<../../img/bert-input.png, id=185, 617.30624pt x 189.70876pt>
+<../../img/bert-input.png, id=189, 617.30624pt x 189.70876pt>
 File: ../../img/bert-input.png Graphic file (type png)
 <use ../../img/bert-input.png>
 Package pdftex.def Info: ../../img/bert-input.png  used on input line 287.
@@ -1072,7 +1072,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-<../../img/DistilBERT-Architecture.png, id=199, 284.39583pt x 133.83333pt>
+<../../img/DistilBERT-Architecture.png, id=203, 284.39583pt x 133.83333pt>
 File: ../../img/DistilBERT-Architecture.png Graphic file (type png)
 <use ../../img/DistilBERT-Architecture.png>
 Package pdftex.def Info: ../../img/DistilBERT-Architecture.png  used on input line 338.
@@ -1351,18 +1351,65 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
 
 
-LaTeX Warning: Citation `DeepMind' on page 27 undefined on input line 620.
+LaTeX Warning: Citation `Deng' on page 27 undefined on input line 620.
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-
-LaTeX Warning: Citation `Gemini' on page 27 undefined on input line 621.
-
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
 [27]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ² in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¹ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ² in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¹ in font cmr12!
+<../../img/fusion_methods.png, id=433, 408.77719pt x 152.82094pt>
+File: ../../img/fusion_methods.png Graphic file (type png)
+<use ../../img/fusion_methods.png>
+Package pdftex.def Info: ../../img/fusion_methods.png  used on input line 631.
+(pdftex.def)             Requested size: 450.0pt x 168.2411pt.
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¹ in font cmr12!
+
+Overfull \hbox (16.40488pt too wide) in paragraph at lines 638--639
+[]\OT1/cmr/m/n/12 Questo ap-proc-cio  sta-to te-sta-to con dif-fe-ren-ti mo-del-li uti-liz-za-ti co-me meta-+classificatori,
+ []
+
+[28 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/fusion_methods.png>]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+
+
+LaTeX Warning: Citation `DeepMind' on page 29 undefined on input line 643.
+
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+
+LaTeX Warning: Citation `Gemini' on page 29 undefined on input line 644.
+
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1393,6 +1440,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
+[29]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1409,9 +1457,9 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
- [28]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
+ [30]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1428,25 +1476,25 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
- [29] [30] (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Methodology\Methodology.aux)
+ [31] (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Methodology\Methodology.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Methodology.out' has not changed.
-(rerunfilecheck)             Checksum: 1DA1284167F1214A3A949DB566E5A2B2;3131.
+(rerunfilecheck)             Checksum: 16B4AB7A25D803E63397677E27266D8D;3226.
  ) 
 Here is how much of TeX's memory you used:
- 24602 strings out of 478927
- 445026 string characters out of 2852536
- 1139720 words of memory out of 3000000
- 41762 multiletter control sequences out of 15000+600000
+ 24614 strings out of 478927
+ 445311 string characters out of 2852536
+ 1139887 words of memory out of 3000000
+ 41770 multiletter control sequences out of 15000+600000
  412304 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  122i,13n,125p,1618b,2350s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1000.pk> <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsltt10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Methodology\Methodology.pdf (30 pages, 797570 bytes).
+Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Methodology\Methodology.pdf (31 pages, 829325 bytes).
 PDF statistics:
- 577 PDF objects out of 1000 (max. 8388607)
- 246 named destinations out of 1000 (max. 500000)
- 207 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 591 PDF objects out of 1000 (max. 8388607)
+ 249 named destinations out of 1000 (max. 500000)
+ 220 words of extra memory for PDF output out of 10000 (max. 10000000)
 
