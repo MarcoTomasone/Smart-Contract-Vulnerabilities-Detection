@@ -27,6 +27,13 @@ Erik Cambria and Bebo White.
   [review article].
 \newblock {\em IEEE Computational Intelligence Magazine}, 9(2):48--57, 2014.
 
+\bibitem{DAO}
+Phil Daian.
+\newblock Analysis of the dao exploit.
+\newblock
+  \url{https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/},
+  June 18, 2016.
+
 \bibitem{Deng}
 Weichu Deng, Huanchun Wei, Teng Huang, Cong Cao, Yun Peng, and Xuan Hu.
 \newblock Smart contract vulnerability detection based on deep learning and
@@ -86,6 +93,11 @@ Daniel Jurafsky and James~H Martin.
 \newblock {\em Speech and Language Processing}.
 \newblock Pearson Prentice Hall, 2nd edition, 2009.
 
+\bibitem{Zeus}
+Sukrit Kalra, Seep Goel, Mohan Dhawan, and Subodh Sharma.
+\newblock Zeus: Analyzing safety of smart contracts.
+\newblock In {\em Network and Distributed System Security Symposium}, 2018.
+
 \bibitem{sc-vulnerabilities}
 Zulfiqar~Ali Khan and Akbar Siami~Namin.
 \newblock Ethereum smart contracts: Vulnerabilities and their classifications.
@@ -135,6 +147,11 @@ Satoshi Nakamoto.
 \newblock Bitcoin: A peer-to-peer electronic cash system.
 \newblock May 2009.
 
+\bibitem{Suicidal}
+Ivica Nikolic, Aashish Kolluri, Ilya Sergey, Prateek Saxena, and Aquinas Hobor.
+\newblock Finding the greedy, prodigal, and suicidal contracts at scale.
+\newblock {\em CoRR}, abs/1802.06038, 2018.
+
 \bibitem{Maian}
 Ivica Nikolic, Aashish Kolluri, Ilya Sergey, Prateek Saxena, and Aquinas Hobor.
 \newblock Finding the greedy, prodigal, and suicidal contracts at scale.
@@ -152,13 +169,17 @@ Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory
 \bibitem{reentrancy-historical}
 pcaversaccio.
 \newblock A historical collection of reentrancy attacks.
-\newblock https://github.com/pcaversaccio/reentrancy-attacks, 2023.
+\newblock \url{https://github.com/pcaversaccio/reentrancy-attacks}, 2023.
 
 \bibitem{logisticReg}
 Joanne Peng, Kuk Lee, and Gary Ingersoll.
 \newblock An introduction to logistic regression analysis and reporting.
 \newblock {\em Journal of Educational Research - J EDUC RES}, 96:3--14, 09
   2002.
+
+\bibitem{careSC}
+Daniel Perez and Benjamin Livshits.
+\newblock Smart contract vulnerabilities: Does anyone care?, 02 2019.
 
 \bibitem{rossini2022slitherauditedcontracts}
 Martina Rossini.
@@ -179,6 +200,11 @@ Alexander Rush.
   Tan, editors, {\em Proceedings of Workshop for {NLP} Open Source Software
   ({NLP}-{OSS})}, pages 52--60, Melbourne, Australia, July 2018. Association
   for Computational Linguistics.
+
+\bibitem{SurveySC}
+Gernot Salzer and Monika Di~Angelo.
+\newblock A survey of tools for analyzing ethereum smart contracts.
+\newblock 04 2019.
 
 \bibitem{DistillBERT}
 Victor Sanh, Lysandre Debut, Julien Chaumond, and Thomas Wolf.
@@ -234,6 +260,14 @@ Wei Wang, Jingjing Song, Guangquan Xu, Yidong Li, Hao Wang, and Chunhua Su.
 \newblock {\em IEEE Transactions on Network Science and Engineering},
   8(2):1133--1144, 2021.
 
+\bibitem{SCEnhancement}
+Yajing Wang, Jingsha He, Nafei Zhu, Yuzi Yi, Qingqing Zhang, Hongyu Song, and
+  Ruixin Xue.
+\newblock Security enhancement technologies for smart contracts in the
+  blockchain: A survey.
+\newblock {\em Transactions on Emerging Telecommunications Technologies}, 32,
+  12 2021.
+
 \bibitem{Gemini}
 Wikipedia.
 \newblock {Gemini (language model)} --- {W}ikipedia{,} the free encyclopedia.
@@ -280,5 +314,12 @@ Zibin Zheng, Shaoan Xie, Hong-Ning Dai, Xiangping Chen, and Huaimin Wang.
 \newblock An overview of blockchain technology: Architecture, consensus, and
   future trends.
 \newblock 06 2017.
+
+\bibitem{Vulnerabilities}
+Kaden Zipfel.
+\newblock Smart contract vulnerabilities.
+\newblock
+  \url{https://github.com/kadenzipfel/smart-contract-vulnerabilities?tab=readme-ov-file
+  }, 2023.
 
 \end{thebibliography}

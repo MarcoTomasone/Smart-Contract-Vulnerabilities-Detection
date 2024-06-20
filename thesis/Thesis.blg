@@ -5,6 +5,8 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: plain.bst
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 Database file #1: Bibliography.bib
+Warning--entry type for "careSC" isn't style-file defined
+--line 686 of file Bibliography.bib
 Warning--I didn't find a database entry for "DataAct"
 Warning--I didn't find a database entry for "RossiniPaper2"
 Warning--I didn't find a database entry for "Taylor1953"
@@ -14,49 +16,50 @@ Warning--to sort, need author or key in Oyente
 Warning--to sort, need author or key in Mythril
 Warning--empty booktitle in SVM
 Warning--empty journal in Bitcoin
+Warning--empty booktitle in SurveySC
 Warning--empty booktitle in Securify
 Warning--empty journal in Ethereum
 Warning--empty year in Ethereum
 Warning--empty booktitle in Blockchain
-You've used 46 entries,
+You've used 53 entries,
             2118 wiz_defined-function locations,
-            776 strings with 13081 characters,
-and the built_in function-call counts, 16535 in all, are:
-= -- 1498
-> -- 1129
+            810 strings with 14036 characters,
+and the built_in function-call counts, 18526 in all, are:
+= -- 1671
+> -- 1258
 < -- 10
-+ -- 453
-- -- 402
-* -- 1190
-:= -- 2857
-add.period$ -- 138
-call.type$ -- 46
-change.case$ -- 337
++ -- 505
+- -- 446
+* -- 1312
+:= -- 3206
+add.period$ -- 158
+call.type$ -- 53
+change.case$ -- 380
 chr.to.int$ -- 0
-cite$ -- 54
-duplicate$ -- 571
-empty$ -- 1061
-format.name$ -- 402
-if$ -- 3369
+cite$ -- 62
+duplicate$ -- 639
+empty$ -- 1215
+format.name$ -- 446
+if$ -- 3774
 int.to.chr$ -- 0
-int.to.str$ -- 46
-missing$ -- 39
-newline$ -- 229
-num.names$ -- 90
-pop$ -- 361
+int.to.str$ -- 53
+missing$ -- 43
+newline$ -- 263
+num.names$ -- 104
+pop$ -- 422
 preamble$ -- 1
-purify$ -- 291
+purify$ -- 327
 quote$ -- 0
-skip$ -- 472
+skip$ -- 526
 stack$ -- 0
-substring$ -- 501
-swap$ -- 139
+substring$ -- 537
+swap$ -- 147
 text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 182
-warning$ -- 8
-while$ -- 110
-width$ -- 48
-write$ -- 491
-(There were 13 warnings)
+type$ -- 210
+warning$ -- 9
+while$ -- 124
+width$ -- 55
+write$ -- 560
+(There were 15 warnings)
