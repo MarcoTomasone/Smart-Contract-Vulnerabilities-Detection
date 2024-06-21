@@ -10,21 +10,22 @@
 \contentsline {table}{\numberline {3.5}{\ignorespaces Percentuale dnelle classi in cui la classe stessa non è l'unica vulnerabilità presente.\relax }}{36}{table.caption.21}%
 \contentsline {table}{\numberline {3.6}{\ignorespaces Parametri principali dei modelli BERT\textsubscript {BASE} e BERT\textsubscript {LARGE}\relax }}{38}{table.caption.23}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Classification Report del modello BERT sul bytecode\relax }}{62}{table.caption.38}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Classification Report del modello CodeBert sul bytecode\relax }}{63}{table.caption.40}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Classification Report per il modello Code Bert con aggregazione a due chunk usando la media\relax }}{63}{table.caption.42}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Classification Report per il modello Code Bert con aggregazione a due chunk usando il massimo\relax }}{64}{table.caption.43}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces Classification Report per CodeBert con aggregazione a tre chunk usando la media\relax }}{64}{table.caption.45}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces Classification Report per CodeBert con aggregazione a tre chunk usando il massimo\relax }}{65}{table.caption.46}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces Classification Report per CodeBERT con concatenazione di due chunk\relax }}{65}{table.caption.48}%
-\contentsline {table}{\numberline {4.8}{\ignorespaces Classification Report del modello codeBERT con concatenazione di due chunk\relax }}{67}{table.caption.54}%
-\contentsline {table}{\numberline {4.9}{\ignorespaces Classification Report del modello codeBERT con concatenazione di tre chunk\relax }}{67}{table.caption.56}%
-\contentsline {table}{\numberline {4.10}{\ignorespaces Classification Report del modello codeBERT con aggregazione di due chunk\relax }}{68}{table.caption.58}%
-\contentsline {table}{\numberline {4.11}{\ignorespaces Classification Report del modello con aggregazione di due chunk\relax }}{68}{table.caption.59}%
-\contentsline {table}{\numberline {4.12}{\ignorespaces Classification Report del modello con aggregazione di tre chunk e funzione Max\relax }}{69}{table.caption.61}%
-\contentsline {table}{\numberline {4.13}{\ignorespaces Classification Report del modello codeBERT con aggregazione mean di tre chunk\relax }}{69}{table.caption.62}%
-\contentsline {table}{\numberline {4.14}{\ignorespaces Classification Report per il modello Decision Tree\relax }}{70}{table.caption.63}%
-\contentsline {table}{\numberline {4.15}{\ignorespaces Classification Report per il modello di Regressione Logistica\relax }}{71}{table.caption.64}%
-\contentsline {table}{\numberline {4.16}{\ignorespaces Classification Report per il modello Random Forest\relax }}{72}{table.caption.65}%
-\contentsline {table}{\numberline {4.17}{\ignorespaces Classification Report del modello Gemini\relax }}{72}{table.caption.66}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Classification Report del modello BERT sul bytecode\relax }}{64}{table.caption.33}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Classification Report del modello CodeBert sul bytecode\relax }}{64}{table.caption.34}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Classification Report per il modello CodeBERT sul bytecode con aggregazione a due chunk usando la media\relax }}{65}{table.caption.36}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Classification Report per il modello codeBERT sul bytecode con aggregazione a due chunk usando il massimo\relax }}{65}{table.caption.38}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Classification Report per CodeBERT sul bytecode con aggregazione a tre chunk usando la media\relax }}{66}{table.caption.40}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Classification Report per CodeBERT con aggregazione a tre chunk usando il massimo\relax }}{66}{table.caption.42}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Classification Report per CodeBERT con concatenazione di due chunk\relax }}{67}{table.caption.44}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces Classification Report per il modello CodeBERT concatenando tre chunk\relax }}{67}{table.caption.46}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces Classification Report per il modello di CodeBERT\relax }}{68}{table.caption.47}%
+\contentsline {table}{\numberline {4.10}{\ignorespaces Classification Report del modello CodeBERT con concatenazione di due chunk\relax }}{69}{table.caption.49}%
+\contentsline {table}{\numberline {4.11}{\ignorespaces Classification Report del modello codeBERT con concatenazione di tre chunk\relax }}{69}{table.caption.51}%
+\contentsline {table}{\numberline {4.12}{\ignorespaces Classification Report del modello codeBERT con aggregazione di due chunk\relax }}{70}{table.caption.53}%
+\contentsline {table}{\numberline {4.13}{\ignorespaces Classification Report del modello CodeBERT con aggregazione di due chunk\relax }}{70}{table.caption.55}%
+\contentsline {table}{\numberline {4.14}{\ignorespaces Classification Report del modello con aggregazione di tre chunk usando la funzione Max\relax }}{71}{table.caption.57}%
+\contentsline {table}{\numberline {4.15}{\ignorespaces Classification Report del modello con aggregazione di tre chunk usando la funzione Mean\relax }}{71}{table.caption.59}%
+\contentsline {table}{\numberline {4.16}{\ignorespaces Confronto delle performance dei cinque modelli\relax }}{73}{table.caption.60}%
+\contentsline {table}{\numberline {4.17}{\ignorespaces Classification Report per il modello di Regressione Logistica\relax }}{74}{table.caption.61}%
+\contentsline {table}{\numberline {4.18}{\ignorespaces Classification Report del modello Gemini\relax }}{74}{table.caption.62}%
 \addvspace {10\p@ }

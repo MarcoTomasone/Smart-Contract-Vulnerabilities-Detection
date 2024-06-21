@@ -1,0 +1,57 @@
+\documentclass[../../Thesis.tex]{subfiles}
+\usepackage[italian]{babel}
+
+\begin{document}
+
+\chapter*{Appendice}
+\section*{Iperparametri del modello Alberi di Decisione}
+Gli iperparametri scelti per il modello di decision tree sono stati: 
+\begin{itemize}
+    \item \textbf{Criterion}: gini
+    \item \textbf{Max Depth}: 15
+    \item \textbf{Min Samples Leaf}: 1
+    \item \textbf{Min Samples Split}: 2
+    \item \textbf{Splitter}: random
+\end{itemize}
+
+\section*{Iperparametri del modello Random Forest}
+
+Gli iperparametri scelti per il modello di random forest sono stati:
+\begin{itemize}
+    \item \textbf{Max Depth}: 15
+    \item \textbf{Min Samples Leaf}: 4
+    \item \textbf{Min Samples Split}: 10
+    \item \textbf{N Estimators}: 300
+    \item \textbf{Bootstrap}: True
+\end{itemize}
+Per l'eliminazione del comportamento di overfitting, gli iperparametri scelti sono stati:
+\begin{itemize}
+    \item \textbf{Max Depth}: 10
+    \item \textbf{Min Samples Leaf}: 2
+    \item \textbf{Min Samples Split}: 10
+    \item \textbf{N Estimators}: 100
+    \item \textbf{Bootstrap}: True
+\end{itemize}
+
+\section*{Iperparametri del modello Support Vector Machine}
+Gli iperparametri scelti per il modello di support vector machine sono stati:
+\begin{itemize}
+    \item \textbf{C}: 1
+    \item \textbf{Kernel}: rbf
+    \item \textbf{Gamma}: scale
+\end{itemize}
+
+\section*{Iperparametri del modello Gaussian NaiveBayes}
+L'iperparametro scelto per il modello di Gaussian NaiveBayes è stato:
+\begin{itemize}
+    \item \textbf{Var Smoothing}: 1e-09
+\end{itemize}
+
+\section*{Iperparametri del modello Logistic Regression}
+Gli iperparametri scelti per il modello di logistic regression sono stati:
+\begin{itemize}
+    \item \textbf{C}: 1
+    \item \textbf{Max Iter}: 100
+    \item \textbf{Solver}: liblinear
+\end{itemize}
+\end{document}

@@ -4,26 +4,45 @@
 \begin{document}
 \chapter{Results}
 \label{chap:results}
-Questo capitolo di questo lavoro di tesi è dedicato alla presentazione dei risultati ottenuti dai vari esperimenti effettuati durante il lavoro. Nello specifico verranno presentati i risultati in fase di test dei modelli utilizzati oltre che i risultati in test ottenuti a partire dalle API del modello Gemini. Prima dei risultati, verranno introdotte le metriche scelte per valutare i modelli.
+Questo capitolo finale del lavoro di tesi è dedicato alla valutazione e all'analisi dei risultati ottenuti da tutti gli esperimenti condotti. Nei prossimi paragrafi verrà introdotta la struttura del capitolo. 
+
+Inizieremo introducendo le metriche di valutazione utilizzate per misurare le prestazioni dei modelli, cercando di fornire una panoramica delle metriche utilizzate e delle loro applicazioni. 
+
+Successivamente, presenteremo i risultati ottenuti dai modelli di classificazione applicati alla classificazione del bytecode. 
+A seguire, verranno illustrati i risultati dei modelli utilizzati per la classificazione del codice sorgente Solidity. In entrambi i casi, verranno presentati i risultati di tutti gli esperimenti nelle varie configurazioni, seguite da un'analisi dei risultati ottenuti.
+
+Dopo aver esaminato i risultati dei modelli sulle diverse modalità in input, presenteremo i risultati ottenuti tramite lo stacking dei modelli. Questa tecnica avanzata, che combina più modelli per migliorare la precisione e la robustezza delle previsioni, sarà discussa in termini di efficacia rispetto ai singoli modelli utilizzati.
+
+Infine, concluderemo con la presentazione dei risultati ottenuti dal modello Gemini di Google. Questa sezione fornirà un'analisi critica delle performance del modello Gemini, confrontandole con i risultati ottenuti dai modelli precedenti e valutando il suo contributo complessivo all'interno del contesto della ricerca.
+
+Attraverso questa struttura, il capitolo mira a offrire una valutazione completa e rigorosa dei risultati sperimentali, fornendo al lettore una chiara comprensione delle implicazioni e delle potenziali applicazioni delle tecniche sviluppate durante il lavoro di tesi.
 \section{Metriche di Valutazione}
-Le metriche di valutazione sono utilizzate per misurare le prestazioni di un modello di classificazione. Esse sono calcolate confrontando le previsioni del modello con le etichette reali del dataset. Le metriche di valutazione più comuni includono Accuracy, Precision, Recall e F1 Score. Queste metriche sono calcolate a partire dalle seguenti misurazioni: True Positives (TP), True Negatives (TN), False Positives (FP) e False Negatives (FN).\\
+
+In questo capitolo verranno introdotte le metriche di valutazione utilizzate per analizzare le performance dei modelli implementati. Le metriche di valutazione sono strumenti fondamentali per misurare l'efficacia di un modello di classificazione, confrontando le sue previsioni con le etichette reali del dataset. Le metriche sono calcolate a partire dalle seguenti misurazioni:
+
 \begin{itemize}
-    \item \textbf{True Positives (TP)}: Il numero di istanze correttamente classificate come appartenenti a una certa classe.
-    \item \textbf{True Negatives (TN)}: Il numero di istanze correttamente classificate come non appartenenti a una certa classe.
-    \item \textbf{False Positives (FP)}: Il numero di istanze erroneamente classificate come appartenenti a una certa classe.
-    \item \textbf{False Negatives (FN)}: Il numero di istanze erroneamente classificate come non appartenenti a una certa classe.
+\item \textbf{True Positives (TP)}: Il numero di istanze correttamente classificate come appartenenti a una specifica classe.
+\item \textbf{True Negatives (TN)}: Il numero di istanze correttamente classificate come non appartenenti a una specifica classe.
+\item \textbf{False Positives (FP)}: Il numero di istanze erroneamente classificate come appartenenti a una specifica classe.
+\item \textbf{False Negatives (FN)}: Il numero di istanze erroneamente classificate come non appartenenti a una specifica classe.
 \end{itemize}
 
-Le metriche, calcolate a partire da queste misurazioni, utilizzate in questo lavoro di tesi sono:
+Queste misurazioni costituiscono la base per il calcolo delle diverse metriche di valutazione, che forniscono una visione dettagliata delle prestazioni del modello in vari aspetti chiave.
 
-\subsection*{Accuracy}
-L'Accuracy misura la proporzione di previsioni corrette sul totale delle istanze e viene calcolata come:
+\subsection{Accuracy}
+L'accuracy misura la proporzione degli esempi che sono stati correttamente classificati. Più precisamente, è la somma dei true positives e dei true negatives diviso per il numero totale di istanze. La formula per il calcolo dell'accuracy è la seguente:
 $$ \text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN} $$
-Pro: Facile da interpretare e calcolare.\\
-Contro: In un contesto multilabel con classi sbilanciate, può essere fuorviante perché non considera la distribuzione delle classi.
+L'accuracy è semplice da interpretare e calcolare, specialmente in contesti di classificazione binaria. Tuttavia, in contesti di classificazione multilabel con classi sbilanciate, può risultare fuorviante poiché non considera la distribuzione delle classi.
 
-\subsection*{Precision}
-La Precision (Micro, Macro, Weighted) misura la proporzione di istanze rilevanti tra quelle recuperate. Le formulazioni sono:
+Ad esempio, in un problema di classificazione multilabel dove ciascuna istanza può appartenere a più classi contemporaneamente, consideriamo un dataset con le seguenti distribuzioni: il 70\% delle istanze appartiene alla classe A, il 20\% alla classe B, e il 10\% alla classe C. Un modello che classifica tutte le istanze come appartenenti solo alla classe A potrebbe ottenere un'accuracy elevata, ignorando completamente le classi B e C. Questo risultato non rifletterebbe adeguatamente la capacità del modello di gestire tutte le classi presenti. 
+
+Pertanto, sebbene l'accuracy possa fornire una misura rapida delle performance di un modello, è importante considerarla insieme ad altre metriche di valutazione, come precision, recall e F1-score, specialmente in contesti di classificazione multilabel, per ottenere una visione più completa e accurata delle capacità del modello.
+
+\subsection{Precision}
+La Precision misura la proporzione di predizioni corrette tra tutte le predizioni di una certa classe. In altre parole è la proporzione dei true positive rispetto a tutte le predizioni positive.
+$$Precision = \frac{ TP}{ TP + FP} $$
+In un contesto di classificazione multilabel, la precision può essere calcolata in tre modi differenti:
+
 \begin{itemize}
     \item \textbf{Micro Precision}: Aggrega i contributi di tutte le classi per calcolare la precision complessiva.
     $$ \text{Micro Precision} = \frac{\sum TP}{\sum TP + \sum FP} $$
@@ -32,11 +51,12 @@ La Precision (Micro, Macro, Weighted) misura la proporzione di istanze rilevanti
     \item \textbf{Weighted Precision}: Calcola la precision per ogni classe ponderata per il numero di veri positivi.
     $$ \text{Weighted Precision} = \frac{\sum_{i=1}^{N} \text{Precision}_i \times w_i}{\sum_{i=1}^{N} w_i} $$
 \end{itemize}
-Pro: Indica quanto rilevanti sono le previsioni fatte.\\
-Contro: Può essere ingannevole se il modello ha pochi falsi positivi ma molti falsi negativi.
+La precision ha il vantaggio che indica quanto rilevanti siano le previsioni fatte, cioè la proporzione di istanze classificate correttamente tra quelle classificate come positive. In contesti in cui è importante evitare falsi positivi la precision è una metrica molto utile. Al contrario, se il modello ha pochi falsi positivi ma molti falsi negativi, la precisio può essere ingannevole. La precision non è molto utile se considerata isolatamente, poichè non rifletta la capacità del modello di identificare tutte le istanze rilevanti.
 
-\subsection*{Recall}
-La Recall (Micro, Macro, Weighted) misura la proporzione di istanze rilevanti che sono state recuperate. Le formulazioni sono:
+\subsection{Recall}
+La Recall misura la proporzione di istanze rilevanti che sono state recuperate. Di conseguenza, è la proporzione dei veri positivi su tutti i positivi.
+$$Recall = \frac{ TP}{TP + FN} $$
+Anche la Recall, come la precision, in un contesto multilabel può essere calcolata in tre modi differenti:
 \begin{itemize}
     \item \textbf{Micro Recall}: Aggrega i contributi di tutte le classi per calcolare la recall complessiva.
     $$ \text{Micro Recall} = \frac{\sum TP}{\sum TP + \sum FN} $$
@@ -45,11 +65,13 @@ La Recall (Micro, Macro, Weighted) misura la proporzione di istanze rilevanti ch
     \item \textbf{Weighted Recall}: Calcola la recall per ogni classe ponderata per il numero di veri positivi.
     $$ \text{Weighted Recall} = \frac{\sum_{i=1}^{N} \text{Recall}_i \times w_i}{\sum_{i=1}^{N} w_i} $$
 \end{itemize}
-Pro: Indica quanto bene il modello è in grado di identificare tutte le istanze rilevanti.\\
-Contro: Può essere fuorviante se il modello ha molti falsi positivi.
+A differenza delle Precision, la recall indica quanto bene il modello riesce a identificare tutte le istanze rilevanti di una classe, cioè la proporzione di veri positivi tra tutte le istanze che avrebbero dovuto essere classificate come positive. La recall è particolarmente utile in contesti in cui è importante evitare falsi negativi, come il rilevamento di malattie o, come nel nostro caso, la rilevazione delle vulnerabilità all'interno degli Smart Contracts. Tuttavia, la recall non è molto utile se considerata isolatamente, poichè non riflette la capacità del modello di evitare falsi positivi.
 
-\subsection*{F1 Score}
-L'F1 Score (Micro, Macro, Weighted) è la media armonica di precision e recall, offrendo un bilanciamento tra le due. Le formulazioni sono:
+\subsection{F1 Score}
+L'F1-score è la media armonica della precision e della recall, ed è utilizzato per trovare un equilibrio tra queste due metriche, soprattutto in contesti con classi sbilanciate. 
+$$ F1 = 2 \times \frac{Precision \times Recall}{Precision + Recall} $$
+Nella classificazione multilabel, l'F1-score può essere calcolato in tre modi distinti: Micro, Macro e Weighted. 
+
 \begin{itemize}
     \item \textbf{Micro F1}: Combina micro precision e micro recall.
     $$ \text{Micro F1} = 2 \times \frac{\text{Micro Precision} \times \text{Micro Recall}}{\text{Micro Precision} + \text{Micro Recall}} $$
@@ -58,16 +80,18 @@ L'F1 Score (Micro, Macro, Weighted) è la media armonica di precision e recall, 
     \item \textbf{Weighted F1}: Calcola l'F1 score per ogni classe ponderata per il numero di veri positivi.
     $$ \text{Weighted F1} = \frac{\sum_{i=1}^{N} \text{F1}_i \times w_i}{\sum_{i=1}^{N} w_i} $$
 \end{itemize}
-Pro: Bilancia precision e recall in un'unica metrica.\\
-Contro: Può essere difficile da interpretare in presenza di classi molto sbilanciate.
+Il grande vantaggio dell'F1 score è quello di integrare sia la precision che la recall, offrendo una misura bilanciata delle perfonace del modello, che è particolamente utile quando si ha un compromesso tra queste due metriche. L'F1 score è particolarmente utile in contesti in cui le classi sono sbilanciate, poichè considera sia i falsi positivi che i falsi negativi.
+Di contro, l'F1 score può essere meno interpretabile rispetto alla precision e alla recall, poichè offrendo un compromesso tra le due non rende chiaro su quale delle due il modello eccelle e su quale fallisce. Inoltre, in contesti con necessità specifiche come minimizzare i falsi negativi (dando priorità alla recall) o minimizzare i falsi positivi (dando priorità alla precision), l'F1 score potrebbe non fornire l'informazione più rilevante.
+
+In conclusione, in questo lavoro di tesi, verranno prese in considerazione tutte le metriche sopra descritte, ma, data la natura del problema, poichè avere falsi negativi è molto più grave che avere falsi positivi, verrà data maggiore importanza alla recall rispetto alla precision. 
 
  
 \section{Risultati modelli sul Bytecode}
-In questa sezione verranno mostrati i risultati ottenuti dai modelli di classificazione utilizzati per la classificazione del bytecode. I modelli utilizzati sono stati allenati sul dataset di training, validati sul dataset di validazione e testati sul dataset di test. I risultati ottenuti sono stati calcolati utilizzando le metriche di valutazione precedentemente descritte.\\
-Per quanto riguarda il bytecode è stato dapprima utilizzato un modello BERT ed un modello CodeBert per la classificazione del bytecode utilizzando 512 token in input. Successivamente, poichè i risultati migliori sono stati ottenuti dal modello CodeBert, questo è stato il modello scelto per gli esperimenti successivi.\\
-\subsubsection{BERT}
-L'accuratezza del modello è del 70,48\%. La precision, recall e f1-score per ciascuna delle classi sono mostrate nel classification report sottostante.\\
+In questa sezione verranno presentati i risultati ottenuti dai modelli di classificazione utilizzati per la classificazione del bytecode. I modelli sono stati allenati sul dataset di training, validati sul dataset di validazione e testati sul dataset di test. Le metriche di valutazione, descritte nelle sezioni precedenti, sono state utilizzate per calcolare le prestazioni dei modelli.
 
+Per la classificazione del bytecode, inizialmente sono stati utilizzati due modelli: BERT e CodeBERT, con in input ls sequenza massima di 512 token. Dopo aver confrontato i risultati, il modello CodeBERT ha dimostrato prestazioni superiori rispetto al modello BERT. Di conseguenza, CodeBERT è stato scelto per gli esperimenti successivi.
+\subsection{BERT}
+L'accuratezza del modello è del 70,48\%. Di seguito il classification report del modello:
 \begin{table}[H]
 \centering
 \small
@@ -90,10 +114,9 @@ unchecked-calls & 0.90 & 0.87 & 0.88 & 7276 \\
 \caption{Classification Report del modello BERT sul bytecode}
 \end{table}
 
-\subsubsection{CodeBert}
+\subsection{CodeBert}
 
-L'accuratezza del modello è del 72,54\%. La precision, recall e f1-score per ciascuna delle classi sono mostrate nel classification report sottostante.
-
+L'accuratezza del modello è del 72,54\%. Di seguito il classification report del modello: 
 \begin{table}[H]
 \centering
 \small
@@ -116,10 +139,9 @@ unchecked-calls & 0.93 & 0.86 & 0.89 & 7276 \\
 \caption{Classification Report del modello CodeBert sul bytecode}
 \end{table}
 
-\subsubsection{CodeBert Aggregazione di due chunk}
-\textbf{Aggregazione con funzione Mean}\\
-L'accuratezza del modello è del 76.13\%. La precisione, il recall e l'F1-score per ciascuna delle classi sono mostrati nel classification report sottostante.
-
+\subsection{CodeBert Aggregazione di due chunk}
+\subsubsection{Aggregazione con funzione Mean}
+L'accuratezza del modello è del 76.13\%. Di seguito il classification report del modello:
 \begin{table}[H]
     \centering
     \small
@@ -139,13 +161,13 @@ L'accuratezza del modello è del 76.13\%. La precisione, il recall e l'F1-score 
     \textbf{Samples avg} & 0.5600 & 0.5500 & 0.5500 & 21346 \\
     \hline
     \end{tabular}
-    \caption{Classification Report per il modello Code Bert con aggregazione a due chunk usando la media}
+    \caption{Classification Report per il modello CodeBERT sul bytecode con aggregazione a due chunk usando la media}
     \end{table}
     
     
 
-\textbf{Aggregazione con funzione Max}\\
-L'accuratezza del modello è del 76.10\%. La precisione, il recall e l'F1-score per ciascuna delle classi sono mostrati nel classification report sottostante.
+\subsubsection{Aggregazione con funzione Max}
+L'accuratezza del modello è del 76.10\%. Di seguito il classification report del modello:
 \begin{table}[H]
     \centering
     \small
@@ -165,12 +187,12 @@ L'accuratezza del modello è del 76.10\%. La precisione, il recall e l'F1-score 
     \textbf{Samples avg} & 0.5700 & 0.5600 & 0.5500 & 21346 \\
     \hline
     \end{tabular}
-    \caption{Classification Report per il modello Code Bert con aggregazione a due chunk usando il massimo}
+    \caption{Classification Report per il modello codeBERT sul bytecode con aggregazione a due chunk usando il massimo}
     \end{table}
 
-\subsubsection{CodeBert Aggregazione di tre chunk}
-    \textbf{Aggregazione con funzione Mean}\\
-    L'accuratezza del modello è del 76.75\%. La precisione, il recall e l'F1-score per ciascuna delle classi sono mostrati nel classification report sottostante.
+\subsection{CodeBert Aggregazione di tre chunk}
+    \subsubsection{Aggregazione con funzione Mean}
+    L'accuratezza del modello è del 76.75\%. Di seguito il classification report del modello:
     
     \begin{table}[H]
         \centering
@@ -191,13 +213,13 @@ L'accuratezza del modello è del 76.10\%. La precisione, il recall e l'F1-score 
         \textbf{Samples avg} & 0.5700 & 0.5600 & 0.5500 & 21346 \\
         \hline
         \end{tabular}
-        \caption{Classification Report per CodeBert con aggregazione a tre chunk usando la media}
+        \caption{Classification Report per CodeBERT sul bytecode con aggregazione a tre chunk usando la media}
     \end{table}
         
         
     
-\textbf{Aggregazione con funzione Max}\\
-L'accuratezza del modello è del 76.60\%. La precisione, il recall e l'F1-score per ciascuna delle classi sono mostrati nel classification report sottostante.
+\subsubsection{Aggregazione con funzione Max}
+L'accuratezza del modello è del 76.60\%. Di seguito il classification report del modello:
 \begin{table}[H]
 \centering
 \small
@@ -217,12 +239,12 @@ unchecked-calls & 0.92 & 0.92 & 0.92 & 7276 \\
 \textbf{Samples avg} & 0.5700 & 0.5600 & 0.5500 & 21346 \\
 \hline
 \end{tabular}
-\caption{Classification Report per CodeBert con aggregazione a tre chunk usando il massimo}
+\caption{Classification Report per CodeBERT con aggregazione a tre chunk usando il massimo}
 \end{table}
 
-
+\subsection{CodeBERT con Concatenazione}
 \subsubsection{CodeBert Concatenazione di due chunk}
-L'accuratezza del modello è del 76,26\%. La precision, recall e f1-score per ciascuna delle classi sono mostrate nel classification report sottostante.
+L'accuratezza del modello è del 76,26\%. Di seguito il classification report del modello:
 
 \begin{table}[H]
     \centering
@@ -246,24 +268,75 @@ L'accuratezza del modello è del 76,26\%. La precision, recall e f1-score per ci
     \caption{Classification Report per CodeBERT con concatenazione di due chunk}
     \end{table}
 \subsubsection{CodeBert Concatenazione di tre chunk}
-L'accuratezza del modello è del 79,39\%. La precision, recall e f1-score per ciascuna delle classi sono mostrate nel classification report sottostante.
+L'accuratezza del modello è del 76.80\%. Di seguito il classification report del modello:
 
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{lcccc}
+    \hline
+    \textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+    \hline
+    access-control & 0.84 & 0.79 & 0.82 & 2331 \\
+    arithmetic & 0.87 & 0.73 & 0.80 & 2708 \\
+    other & 0.84 & 0.81 & 0.83 & 4193 \\
+    reentrancy & 0.90 & 0.84 & 0.87 & 4838 \\
+    unchecked-calls & 0.92 & 0.92 & 0.92 & 7276 \\
+    \hline
+    \textbf{Micro avg} & 0.8862 & 0.8435 & 0.8643 & 21346 \\
+    \textbf{Macro avg} & 0.8749 & 0.8197 & 0.8457 & 21346 \\
+    \textbf{Weighted avg} & 0.8856 & 0.8435 & 0.8634 & 21346 \\
+    \textbf{Samples avg} & 0.57 & 0.55 & 0.55 & 21346 \\
+    \hline
+    \end{tabular}
+    \caption{Classification Report per il modello CodeBERT concatenando tre chunk}
+\end{table}
 
 \subsection{Analisi}
-Per i modelli allenati sul bytecode i risultati migliori sono stati ottenuti utilizzando il modello CodeBERT che supera il modello BERT in tutte le metriche di valutazione, tranne che che per la recall della classe unchecked-calls. Completati gli altri esperimenti, per i quali si è deciso di utilizzare il modello CodeBERT poichè è stato quello che ha ottenuto i risultati migliori, si è notato che il passaggio da due a tre chunk non ha portato a un miglioramento significativo delle prestazioni del modello. Il miglior modello seppur di decimi è stato quello con aggregazione di tre chunk con funzione di aggregazione Mean con un'accuratezza sul test set del 76,75\% ed un F1 Micro del 86,26\%.\\
-Per quanto riguarda l'analisi delle performance per le singole classi da classificare, si può notare come il miglior modello abbia anche le migliori performance in termini di precision, recall e f1-score per reentrancy, unchecked-calls, arithmetic e other. Per quanto riguarda la classe access-control il modello con aggregazione a tre chunk con funzione di aggregazione Max ha invece ottenuto la migliore recall, dimostrando di essere il modello migliore per identificare le istanze di questa classe. 
+Per i modelli allenati sul bytecode, i risultati migliori, sugli esperimenti iniziali utilizzando un blocco di codice da 512 token per la classificazione, sono stati ottenuti utilizzando il modello CodeBERT, che ha superato il modello BERT in tutte le metriche di valutazione, eccetto per la recall della classe "unchecked-calls". Di conseguenza, è stato utilizzato il modello CodeBERT per le ulteriori analisi, poiché è stato quello con le migliori performance.
+
+Successivamente, si è esaminato l'effetto dell'aumento del numero di chunk da due a tre. Tuttavia, non si è osservato un miglioramento significativo delle prestazioni del modello con il passaggio da due a tre chunk di codice. Il miglior modello, seppur con un vantaggio di pochi decimi, è stato quello che ha utilizzato la concatenazione di tre chunk, raggiungendo un'accuratezza del 76,80\% e un F1 Micro dell'86,43\% sul test set.
+
+Analizzando, però, le performance per le singole classi, si è osservato che il miglior modello in termini di accuratezza non ha ottenuto le migliori performance in termini di recall per nessuna classe specifica. In dettaglio:
+\begin{itemize}
+    \item Per la classe "arithmetic", la miglior performance in termini di recall è stata offerta dal modello con aggregazione di tre chunk utilizzando la funzione di media (mean).
+    \item Per le restanti classi, il miglior modello in termini di recall è stato quello con aggregazione di tre chunk utilizzando la funzione massima (max).
+\end{itemize}
+Poichè la metrica di valutazione più importante per il nostro problema è la recall, il modello con aggregazione di tre chunk utilizzando la funzione max è stato scelto come il miglior modello per la classificazione del bytecode.
 
 
 \section{Risultati sul Codice Sorgente Solidity}
 
-Questa sezione presenta i risultati ottenuti nei modelli di classificazione utilizzati che prendevano in input in codice sorgente Solidity. Anche in questo caso, i  modelli utilizzati sono stati allenati sul dataset di training, validati sul dataset di validazione e testati sul dataset di test ed i risultati ottenuti sono stati calcolati utilizzando le metriche di valutazione precedentemente descritte.\\
-Allo stesso modo del bytecode, è stato dapprima utilizzato un modello BERT ed un modello CodeBert per la classificazione del codice sorgente Solidity utilizzando 512 token in input. Successivamente, poichè i risultati migliori sono stati ottenuti dal modello CodeBert,  è stato utilizzato questo modello per gli esperimenti successivi in cui si utilizzavano porzioni piu ampie dei dati a disposizione.\\
-\subsubsection{BERT}
-\subsubsection{CodeBert}
+Questa sezione presenta i risultati ottenuti dai modelli di classificazione applicati al codice sorgente Solidity. Anche in questo caso, i modelli sono stati allenati sul dataset di training, validati sul dataset di validazione e testati sul dataset di test. I risultati sono stati valutati utilizzando le metriche di valutazione precedentemente descritte.
 
-\subsubsection{DistilBert}
+Analogamente al bytecode, sono stati inizialmente utilizzati un modello BERT e un modello CodeBERT per la classificazione del codice sorgente Solidity, impiegando 512 token in input. Successivamente, poiché anche in questo caso i migliori risultati sono stati ottenuti con il modello CodeBERT, questo è stato utilizzato per gli esperimenti successivi, che prevedevano l'uso di porzioni più ampie dei dati disponibili.
+\subsection{BERT}
+\subsection{CodeBert}
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{lcccc}
+    \hline
+    \textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+    \hline
+    access-control & 0.81 & 0.74 & 0.77 & 2346 \\
+    arithmetic & 0.81 & 0.77 & 0.79 & 2715 \\
+    other & 0.78 & 0.76 & 0.77 & 4209 \\
+    reentrancy & 0.88 & 0.81 & 0.84 & 4846 \\
+    unchecked-calls & 0.91 & 0.91 & 0.91 & 7289 \\
+    \hline
+    \textbf{Micro avg} & 0.8563 & 0.8199 & 0.8377 & 21405 \\
+    \textbf{Macro avg} & 0.8391 & 0.7969 & 0.8172 & 21405 \\
+    \textbf{Weighted avg} & 0.8558 & 0.8199 & 0.8372 & 21405 \\
+    \textbf{Samples avg} & 0.5609 & 0.5480 & 0.5429 & 21405 \\
+    \hline
+    \end{tabular}
+    \caption{Classification Report per il modello di CodeBERT}
+    \end{table}
+\section{DistilBert}
+\subsection{CodeBERT con concatenazione}
 \subsubsection{CodeBert Concatenazione di due chunk}
-L'accuratezza del modello è del 76,36\%. La precision, recall e f1-score per ciascuna delle classi sono mostrate nel classification report sottostante.
+L'accuratezza del modello è del 76,36\%. Di seguito il classification report del modello:
 
 \begin{table}[H]
 \centering
@@ -284,10 +357,10 @@ unchecked-calls & 0.94 & 0.91 & 0.93 & 7276 \\
 \textbf{Samples avg} & 0.5700 & 0.5600 & 0.5500 & 21346 \\
 \hline
 \end{tabular}
-\caption{Classification Report del modello codeBERT con concatenazione di due chunk}
+\caption{Classification Report del modello CodeBERT con concatenazione di due chunk}
 \end{table}
 \subsubsection{CodeBert Concatenazione di tre chunk}
-L'accuratezza del modello è del 79,39\%. La precision, recall e f1-score per ciascuna delle classi sono mostrate nel classification report sottostante.
+L'accuratezza del modello è del 79,39\%. Di seguito il classification report del modello:
 
 \begin{table}[H]
 \centering
@@ -311,9 +384,9 @@ unchecked-calls & 0.95 & 0.93 & 0.94 & 7276 \\
 \caption{Classification Report del modello codeBERT con concatenazione di tre chunk}
 \end{table}
 
-\subsubsection{CodeBert Aggregazione di due chunk}
-\textbf{Aggregazione con funzione Max}\\
-L'accuratezza del modello è del 76.50\%. La precisione, il recall e l'F1-score per ciascuna delle classi sono mostrati nel classification report sottostante.
+\subsection{CodeBert Aggregazione di due chunk}
+\subsubsection{Aggregazione con funzione Max}
+L'accuratezza del modello è del 76.50\%. Di seguito il classification report del modello:
 
 \begin{table}[H]
     \centering
@@ -337,8 +410,8 @@ L'accuratezza del modello è del 76.50\%. La precisione, il recall e l'F1-score 
     \caption{Classification Report del modello codeBERT con aggregazione di due chunk}
     \end{table}
 
-\textbf{Aggregazione con funzione Mean}\\
-L'accuratezza del modello è del 75.84\%. La precisione, il recall e l'F1-score per ciascuna delle classi sono mostrati nel classification report sottostante.
+\subsubsection{Aggregazione con funzione Mean}
+L'accuratezza del modello è del 75.84\%. Di seguito il classification report del modello:
 \begin{table}[H]
     \centering
     \small
@@ -358,14 +431,14 @@ L'accuratezza del modello è del 75.84\%. La precisione, il recall e l'F1-score 
     \textbf{Samples avg} & 0.5700 & 0.5500 & 0.5500 & 21346 \\
     \hline
     \end{tabular}
-    \caption{Classification Report del modello con aggregazione di due chunk}
+    \caption{Classification Report del modello CodeBERT con aggregazione di due chunk}
     \end{table}
 
 
     
-\subsubsection{CodeBert Aggregazione di tre chunk}
-\textbf{Aggregazione con funzione Max}\\
-L'accuratezza del modello è del 79.08\%. La precisione, il recall e l'F1-score per ciascuna delle classi sono mostrati nel classification report sottostante.
+\subsection{CodeBert Aggregazione di tre chunk}
+\subsubsection{Aggregazione con funzione Max}
+L'accuratezza del modello è del 79.08\%. Di seguito il classification report del modello:
 \begin{table}[H]
     \centering
     \small
@@ -385,12 +458,12 @@ L'accuratezza del modello è del 79.08\%. La precisione, il recall e l'F1-score 
     \textbf{Samples avg} & 0.5900 & 0.5800 & 0.5700 & 21346 \\
     \hline
     \end{tabular}
-    \caption{Classification Report del modello con aggregazione di tre chunk e funzione Max}
+    \caption{Classification Report del modello con aggregazione di tre chunk usando la funzione Max}
     \end{table}
     
 
-\textbf{Aggregazione con funzione Mean}\\
-L'accuratezza del modello è del 78.97\%. La precisione, il recall e l'F1-score per ciascuna delle classi sono mostrati nel classification report sottostante.
+\subsubsection{Aggregazione con funzione Mean}
+L'accuratezza del modello è del 78.97\%. Di seguito il classification report del modello:
 
 \begin{table}[H]
     \centering
@@ -411,54 +484,53 @@ L'accuratezza del modello è del 78.97\%. La precisione, il recall e l'F1-score 
     \textbf{Samples avg} & 0.5900 & 0.5700 & 0.5700 & 21346 \\
     \hline
     \end{tabular}
-    \caption{Classification Report del modello codeBERT con aggregazione mean di tre chunk}
+    \caption{Classification Report del modello con aggregazione di tre chunk usando la funzione Mean}
     \end{table}
 \subsection{Analisi}
-Anche in questo caso, nei primi test effettuati il modello CodeBERT supera il modello BERT in tutte le metriche di valutazione. Di conseguenza, si è deciso di utilizzare il modello CodeBERT per gli esperimenti successivi in cui si utilizzavano porzioni piu ampie dei dati a disposizione.\\
-Il miglior modello in questo caso si è dimostrato essere quello con concatenazione di tre chunk  con un'accuratezza sul test set del 79,39\% ed un F1 Micro del 88,24\%, che condivide con il modello con aggregazione di tre chunk con funzione di aggregazione Max che ha però un'accuratezza leggermente inferiore. I due modelli differiscono però nelle statistiche per classe, dove il modello con concatenazione risulta essere più preciso mentre il modello con aggregazione risulta essere più sensibile, avendo una recall più alta.\\
+I risultati ottenuti dai modelli  sul codice sorgente Solidity riflettono tendenze simili a quelle riscontrate nel bytecode.
 
+Innanzitutto, anche in questo caso si evidenzia un netto miglioramento del modello CodeBERT rispetto a BERT nei test iniziali con 512 token in input. Di conseguenza, è stato scelto di focalizzarsi sul modello CodeBERT per gli esperimenti successivi, che hanno coinvolto porzioni più ampie dei dati a disposizione.
 
+Il modello che ha mostrato le migliori performance in termini di accuratezza e F1-Score è stato quello con concatenazione di tre chunk, come nel caso dei modelli addestrati sul bytecode, registrando un'accuratezza del 79,39\% e un F1 Micro dell'88,24\% sul test set. Questo risultato in F1-Score è condiviso con il modello che utilizza l'aggregazione di tre chunk con funzione Max, il quale ha però un'accuratezza leggermente inferiore. Rispetto ai risultati ottenuti sul bytecode, l'aumento da due a tre chunk ha prodotto miglioramenti significativi in tutti gli esperimenti condotti sul codice sorgente Solidity. Questo fenomeno, potrebbe probabilmente essere dovuto alla lunghezza media del bytecode rispetto a quella del codice sorgente (ricordiamo circa 8000 contro circa 1500), quindi l'utilizzo di tre chunk di codice sorgente Solidity permette di catturare più informazioni utili rispetto al bytecode.
+
+Nonostante il modello con concatenazione di tre chunk abbia ottenuto i migliori risultati in termini di accuratezza complessiva, è importante notare che in termini di recall per le singole classi, il modello con aggregazione di tre chunk e funzione Max ha dimostrato di essere il migliore per tutte le classi, tranne che per la classe "Other". In quest'ultimo caso, il modello con aggregazione di tre chunk e funzione Mean ha ottenuto i risultati migliori.
+
+Basandosi sull'analisi dei risultati, il modello con aggregazione di tre chunk e funzione Max è stato selezionato come il miglior modello per la classificazione del codice sorgente Solidity. 
 
 \section{Risultati Stacking}
-In questa sezione verranno presentati i risultati ottenuti a partire dai meta-classificatori allenati sulle predizioni dei modelli di classificazione del bytecode e del codice sorgente Solidity. I risultati ottenuti sono stati calcolati utilizzando le metriche di valutazione precedentemente descritte.\\
-I modelli base scelti sono stati il CodeBERT con tre chunk e aggregazione con la funzione Max per il codice sorgente Solidity e il CodeBERT con tre chunk e aggregazione con la funzione Mean per il bytecode.\\
-\subsection{Alberi di Decisione}
-L'accuratezza del modello è del 79.59\%. La precisione, il recall e l'F1-score per ciascuna delle classi sono mostrati nel classification report sottostante.
+In questa sezione vengono presentati i risultati dei meta-classificatori addestrati sulle predizioni dei modelli di classificazione per il bytecode e il codice sorgente Solidity. Entrambi i modelli base selezionati utilizzano CodeBERT con aggregazione di tre chunk e funzione Max.\\
 
-\begin{table}[H]
+\subsection{Risultati meta-classificatori}
+Di seguito, mostriamo i risultati dei meta classificatori utilizzati. Per questi modelli verranno presentate delle statistiche aggregate in quanto i risultati ottenuti sono molto simili tra loro.\\
+\begin{table}[ht]
     \centering
-    \small
-    \begin{tabular}{lcccc}
-    \hline
-    \textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
-    \hline
-    access-control & 0.88 & 0.83 & 0.86 & 2331 \\
-    arithmetic & 0.86 & 0.84 & 0.85 & 2708 \\
-    other & 0.83 & 0.86 & 0.84 & 4193 \\
-    reentrancy & 0.90 & 0.85 & 0.88 & 4838 \\
-    unchecked-calls & 0.95 & 0.94 & 0.94 & 7276 \\
-    \hline
-    \textbf{Micro avg} & 0.895 & 0.880 & 0.887 & 21346 \\
-    \textbf{Macro avg} & 0.883 & 0.865 & 0.874 & 21346 \\
-    \textbf{Weighted avg} & 0.895 & 0.880 & 0.887 & 21346 \\
-    \textbf{Samples avg} & 0.590 & 0.580 & 0.580 & 21346 \\
-    \hline
+    \begin{tabular}{lccccc}
+        \hline
+        & \textbf{Gaussian NB} & \textbf{SVC} & \textbf{GBoost} & \textbf{Decision Tree} & \textbf{Random Forest} \\
+        \hline
+        \textbf{Accuracy} & 0.8111 & 0.8256 & 0.8295 & 0.7959 & \textbf{0.8346} \\
+        \textbf{Precision (Micro)} & 0.9038 & 0.9238 & 0.9252 & 0.8945 & \textbf{0.9287} \\
+        \textbf{Precision (Macro)} & 0.8922 & 0.9153 & 0.9163 & 0.8834 & \textbf{0.9212} \\
+        \textbf{Precision (Weighted)} & 0.9040 & 0.9235 & 0.9249 & 0.8952 & \textbf{0.9283} \\
+        \textbf{Recall (Micro)} & \textbf{0.8944} & 0.8900 & 0.8930 & 0.8797 & 0.8939 \\
+        \textbf{Recall (Macro)} & \textbf{0.8816} & 0.8752 & 0.8789 & 0.8653 & 0.8801 \\
+        \textbf{Recall (Weighted)} & \textbf{0.8944} & 0.8900 & 0.8930 & 0.8797 & 0.8939 \\
+        \textbf{F1 Score (Micro)} & 0.8990 & 0.9066 & 0.9088 & 0.8871 & \textbf{0.9110} \\
+        \textbf{F1 Score (Macro)} & 0.8867 & 0.8947 & 0.8971 & 0.8740 & \textbf{0.9001} \\
+        \textbf{F1 Score (Weighted)} & 0.8990 & 0.9063 & 0.9086 & 0.8872 & \textbf{0.9107} \\
+        \hline
     \end{tabular}
-    \caption{Classification Report per il modello Decision Tree}
+    \caption{Confronto delle performance dei cinque modelli}
+    \label{tab:comparison}
 \end{table}
-Gli iperparametri scelti per il modello di decision tree sono stati: 
-\begin{itemize}
-    \item \textbf{Criterion}: gini
-    \item \textbf{Max Depth}: 15
-    \item \textbf{Min Samples Leaf}: 1
-    \item \textbf{Min Samples Split}: 2
-    \item \textbf{Splitter}: random
-\end{itemize}
+I risultati delle metriche di valutazione indicano chiaramente che il Random Forest ha ottenuto le performance più elevate in termini di Accuracy, Precision e F1 Score tra tutti i meta-classificatori testati. Tuttavia, per le metriche di Recall, il modello Gaussian Naive Bayes ha mostrato risultati marginalmente superiori.
 
-Il modello si dimostra migliorativo, seppur di pochissimo rispetto ai modelli base, in tutte le metriche di valutazione, migliorando di ben quattro punti percentuali la recall sulla classe Other.\\
+Nonostante ciò, nessuno dei modelli esaminati è stato selezionato come il miglior candidato. Questa decisione è motivata dal fatto che tutti i modelli, al momento della valutazione sui dati di training, hanno mostrato segni di overfitting, fenomeno osservato in misura differente tra i vari modelli,  presentando metriche significativamente superiori rispetto a quelle ottenute sui dati di test. Il Random Forest, è emerso come il modello più affetto da overfitting mentre il modello di Gaussian Naive Bayes è risultato essere il meno affetto. Questa disparità può essere facilmente attribuibile alla natura stessa dei modelli: il Random Forest essendo un modello complesso che combina un numero molto alto di alberi decisionali, è più incline a sovradattarsi ai dati di training rispetto ad un modello più semplice come il Gaussian Naive Bayes.\\
+
+Nel tentativo di mitigare questo problema attraverso cross-validation e semplificando gli iperparametri dei modelli (ad esempio costruendo modelli Random Forest più piccoli e meno profondi), i risultati migliorativi non sono stati sufficienti per raggiungere un livello di generalizzazione adeguato per l'implementazione pratica del modello.
 
 \subsection{Regressione Logistica}
-L'accuratezza del modello è del 81.30\%. La precisione, il recall e l'F1-score per ciascuna delle classi sono mostrati nel classification report sottostante.
+Il modello di regressione logistica si è dimostrato il miglior classificatore ottenuto, confermando i risultati emersi nello studio di \cite{Deng}. L'accuratezza del modello è del 81.30\%. Di seguito il classification report del modello:
 
 \begin{table}[H]
     \centering
@@ -481,41 +553,16 @@ L'accuratezza del modello è del 81.30\%. La precisione, il recall e l'F1-score 
     \end{tabular}
     \caption{Classification Report per il modello di Regressione Logistica}
 \end{table}
-Il modello di regressione logistica si dimostra migliorativo rispetto ai modelli base in tutte le metriche di valutazione, migliorando notevolmente la precisione e la recall. Ottiene risultati peggiori solo sulla recall della classe access-control, la classe minoritaria di questo lavoro di classificazione.\\
+Rispetto agli altri modelli utilizzati come meta-classificatori, la regressione logistica mostra miglioramenti significativi in tutte le metriche di valutazione, particolarmente evidenti nella precisione e nel recall. L'unica eccezione è rappresentata dal recall per la classe access-control, la quale è la classe minoritaria in questo contesto di classificazione.
 
-\subsection{Random forest}
-L'accuratezza del modello è del 83.46\%. La precisione, il recall e l'F1-score per ciascuna delle classi sono mostrati nel classification report sottostante.
+Inoltre, a differenza degli altri modelli utilizzati come meta-classificatori, la regressione logistica non mostra segni di overfitting. Questo suggerisce che un approccio più semplice possa essere più adatto per questo tipo di problemi di classificazione.
 
-\begin{table}[H]
-    \centering
-    \small
-    \begin{tabular}{lcccc}
-    \hline
-    \textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
-    \hline
-    access-control & 0.91 & 0.85 & 0.88 & 2331 \\
-    arithmetic & 0.91 & 0.86 & 0.89 & 2708 \\
-    other & 0.89 & 0.87 & 0.88 & 4193 \\
-    reentrancy & 0.92 & 0.88 & 0.90 & 4838 \\
-    unchecked-calls & 0.96 & 0.95 & 0.95 & 7276 \\
-    \hline
-    \textbf{Micro avg} & 0.9287 & 0.8939 & 0.9110 & 21346 \\
-    \textbf{Macro avg} & 0.9212 & 0.8801 & 0.9001 & 21346 \\
-    \textbf{Weighted avg} & 0.9283 & 0.8939 & 0.9107 & 21346 \\
-    \textbf{Samples avg} & 0.6000 & 0.5900 & 0.5900 & 21346 \\
-    \hline
-    \end{tabular}
-    \caption{Classification Report per il modello Random Forest}
-\end{table}
-Il modello si presenta dopo il tuning degli iperparametri come il migliore tra tutti i modelli proposti. Un'analisi però delle performance sull dataset di train mostra come le performance sul dataset di train siano molto alte, con un F1 Score, Precision e Recall del 98\%, indicando un possibile overfitting del modello.\\
-Riaddestrando il modello con un numero minore di alberi, si è ottenuto un modello che non overfitta ma che mantiene delle performance in linea con i modelli base.\\ 
 
-\subsection{SVM, NaiveBayes, }
 
 \section{Risultati Gemini}
 
-In questa sezione verranno presentati i risultati ottenuti a partire dalle API del modello Gemini. I risultati ottenuti sono stati calcolati utilizzando le metriche di valutazione precedentemente descritte.\\
-L'accuratezza del modello è del 27.54\%. La precisione, il recall e l'F1-score per ciascuna delle classi sono mostrati nel classification report sottostante.
+In questa sezione verranno presentati i risultati ottenuti utilizzando le API del modello Gemini, valutati secondo le metriche descritte in precedenza.\\
+L'accuratezza del modello è del 27.54\%. Di seguito il classification report del modello:
 
 
 \begin{table}[H]
@@ -540,10 +587,9 @@ L'accuratezza del modello è del 27.54\%. La precisione, il recall e l'F1-score 
     \caption{Classification Report del modello Gemini}
     \end{table}
     
-
-I risultati del modello Gemini mostrano una performance complessivamente scarsa nelle metriche di valutazione. L'Accuracy del 27.54\% suggerisce che meno di un terzo delle previsioni del modello sono corrette. La Precision micro di 32.71\% indica che, tra le istanze classificate positivamente, solo un terzo sono effettivamente corrette, mentre la Precision macro e weighted, rispettivamente 31.37\% e 34.90\%, mostrano una variabilità nella performance sulle diverse classi. Il Recall micro di 18.72\% evidenzia che il modello riesce a identificare meno di un quinto delle istanze rilevanti, con valori macro e weighted simili, indicando che il modello ha difficoltà a catturare tutte le istanze corrette. L'F1 Score, che bilancia precision e recall, è basso in tutte le versioni, suggerendo un compromesso non soddisfacente tra la capacità del modello di evitare falsi positivi e falsi negativi.\\
-Analizzando le performance per classe, si può notare come il modello abbia ottenuto risultati migliori solo per la classe Other, con una recall del 49\%. Interessante è il risultato sulla classe reentrancy, che nonostante sia una delle vulnerabilità più comuni, ha ottenuto una recall del 8\%.\\
-Complessivamente, quindi, il modello Gemini non ha ottenuto risultati soddisfacenti nella classificazione delle vulnerabilità del codice sorgente.
+    I risultati del modello Gemini indicano una performance complessivamente scarsa nelle metriche di valutazione. L'Accuracy del 27.54\% evidenzia che meno di un terzo delle previsioni del modello sono corrette. La Precision micro del 32.71\% indica che solo un terzo delle istanze classificate positivamente sono effettivamente corrette, mentre la Precision macro e weighted, rispettivamente 31.37\% e 34.90\%, mostrano variazioni nella performance tra le diverse classi. Il Recall micro dell'18.72\% suggerisce che il modello riesce a identificare meno di un quinto delle istanze rilevanti, con valori macro e weighted simili, indicando che il modello ha difficoltà a catturare tutte le istanze corrette. L'F1 Score, che bilancia precision e recall, è basso in tutte le versioni, suggerendo un compromesso non soddisfacente tra la capacità del modello di evitare falsi positivi e falsi negativi.\\
+    Analizzando le performance per classe, si osserva che il modello ha ottenuto risultati migliori solo per la classe "Other", con un Recall del 49\%. Interessante è il risultato per la classe "reentrancy", una delle vulnerabilità più comuni, che ha ottenuto un Recall dell'8\%. Questo evidenzia una specifica difficoltà del modello nel riconoscere questa particolare categoria di vulnerabilità.\\
+    Complessivamente, il modello Gemini non ha raggiunto risultati soddisfacenti nella classificazione delle vulnerabilità del codice sorgente. Le metriche di valutazione indicano la necessità di miglioramenti significativi per rendere il modello più affidabile e preciso nella sua capacità di identificare correttamente le vulnerabilità del codice sorgente Solidity, mostrando la necessità di avere modelli ad hoc per task specifici e complessi come questo.
 \begin{figure}[h!]
     \centering
     \begin{subfigure}[b]{0.1999\textwidth}
