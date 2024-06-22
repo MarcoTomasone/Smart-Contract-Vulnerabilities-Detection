@@ -311,6 +311,28 @@ Questa sezione presenta i risultati ottenuti dai modelli di classificazione appl
 
 Analogamente al bytecode, sono stati inizialmente utilizzati un modello BERT e un modello CodeBERT per la classificazione del codice sorgente Solidity, impiegando 512 token in input. Successivamente, poiché anche in questo caso i migliori risultati sono stati ottenuti con il modello CodeBERT, questo è stato utilizzato per gli esperimenti successivi, che prevedevano l'uso di porzioni più ampie dei dati disponibili.
 \subsection{BERT}
+L'accuratezza del modello è del 70.46\%. Di seguito il classification report del modello:
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{lcccc}
+    \hline
+    \textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+    \hline
+    access-control & 0.82 & 0.60 & 0.69 & 2346 \\
+    arithmetic & 0.79 & 0.73 & 0.76 & 2715 \\
+    other & 0.79 & 0.71 & 0.75 & 4209 \\
+    reentrancy & 0.87 & 0.77 & 0.82 & 4846 \\
+    unchecked-calls & 0.91 & 0.88 & 0.89 & 7289 \\
+    \hline
+    \textbf{Micro avg} & 0.8568 & 0.7702 & 0.8112 & 21405 \\
+    \textbf{Macro avg} & 0.8384 & 0.7370 & 0.7828 & 21405 \\
+    \textbf{Weighted avg} & 0.8550 & 0.7702 & 0.8093 & 21405 \\
+    \textbf{Samples avg} & 0.5400 & 0.5200 & 0.5200 & 21405 \\
+    \hline
+    \end{tabular}
+    \caption{Classification Report per il modello BERT sul codice sorgente Solidity}
+\end{table}
 \subsection{CodeBert}
 \begin{table}[H]
     \centering
@@ -334,6 +356,30 @@ Analogamente al bytecode, sono stati inizialmente utilizzati un modello BERT e u
     \caption{Classification Report per il modello di CodeBERT}
     \end{table}
 \section{DistilBert}
+L'accuratezza del modello è del 70.35\%. Di seguito il classification report del modello:
+
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{lcccc}
+    \hline
+    \textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+    \hline
+    access-control & 0.82 & 0.60 & 0.69 & 2346 \\
+    arithmetic & 0.79 & 0.71 & 0.75 & 2715 \\
+    other & 0.78 & 0.72 & 0.75 & 4209 \\
+    reentrancy & 0.86 & 0.78 & 0.81 & 4846 \\
+    unchecked-calls & 0.91 & 0.88 & 0.89 & 7289 \\
+    \hline
+    \textbf{Micro avg} & 0.8487 & 0.7734 & 0.8093 & 21405 \\
+    \textbf{Macro avg} & 0.8308 & 0.7378 & 0.7799 & 21405 \\
+    \textbf{Weighted avg} & 0.8466 & 0.7734 & 0.8072 & 21405 \\
+    \textbf{Samples avg} & 0.5500 & 0.5200 & 0.5200 & 21405 \\
+    \hline
+    \end{tabular}
+    \caption{Classification Report per il modello DistilBert sul codice sorgente}
+\end{table}
+
 \subsection{CodeBERT con concatenazione}
 \subsubsection{CodeBert Concatenazione di due chunk}
 L'accuratezza del modello è del 76,36\%. Di seguito il classification report del modello:
