@@ -14,6 +14,11 @@ Rachit Agarwal, Tanmay Thapliyal, and Sandeep~Kumar Shukla.
   smart contracts.
 \newblock {\em CoRR}, abs/2106.13422, 2021.
 
+\bibitem{Longformer}
+Iz~Beltagy, Matthew~E. Peters, and Arman Cohan.
+\newblock Longformer: The long-document transformer.
+\newblock {\em CoRR}, abs/2004.05150, 2020.
+
 \bibitem{Tassonomia}
 Vitalik Buterin.
 \newblock On public and private blockchains.
@@ -301,6 +306,13 @@ Yonghui Wu, Mike Schuster, Zhifeng Chen, Quoc~V. Le, Mohammad Norouzi, Wolfgang
 Tom Young, Devamanyu Hazarika, Soujanya Poria, and Erik Cambria.
 \newblock Recent trends in deep learning based natural language processing.
 \newblock {\em CoRR}, abs/1708.02709, 2017.
+
+\bibitem{BigBird}
+Manzil Zaheer, Guru Guruganesh, Avinava Dubey, Joshua Ainslie, Chris Alberti,
+  Santiago Onta{\~{n}}{\'{o}}n, Philip Pham, Anirudh Ravula, Qifan Wang,
+  Li~Yang, and Amr Ahmed.
+\newblock Big bird: Transformers for longer sequences.
+\newblock {\em CoRR}, abs/2007.14062, 2020.
 
 \bibitem{Peercoin}
 Wenbing Zhao, Shunkun Yang, Xiong Luo, and Jiong Zhou.

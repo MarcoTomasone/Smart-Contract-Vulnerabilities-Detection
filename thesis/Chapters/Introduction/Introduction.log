@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  13 JUN 2024 22:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  22 JUN 2024 20:05
 entering extended mode
 **c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Introduction/Introduction.tex
 (c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Introduction/Introduction.tex
@@ -599,13 +599,11 @@ LaTeX Info: Redefining \nameref on input line 4.
 
 Capitolo 1.
 Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¹ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
+Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 
-LaTeX Warning: Citation `DataAct' on page 1 undefined on input line 7.
+LaTeX Warning: Citation `DataAct' on page 1 undefined on input line 8.
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
@@ -625,16 +623,6 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¹ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 [1
@@ -642,6 +630,16 @@ Missing character: There is no   in font cmr12!
 
 {C:/Users/tomas/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¹ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
@@ -653,21 +651,18 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
-
- []
-
+[2]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-[2]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -696,13 +691,13 @@ Package rerunfilecheck Info: File `Introduction.out' has not changed.
 Here is how much of TeX's memory you used:
  23523 strings out of 478927
  428855 string characters out of 2852536
- 724820 words of memory out of 3000000
+ 725820 words of memory out of 3000000
  40974 multiletter control sequences out of 15000+600000
  404978 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,5n,125p,1207b,395s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 122i,6n,125p,1207b,341s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Introduction\Introduction.pdf (3 pages, 40595 bytes).
+Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Introduction\Introduction.pdf (3 pages, 41650 bytes).
 PDF statistics:
  42 PDF objects out of 1000 (max. 8388607)
  5 named destinations out of 1000 (max. 500000)

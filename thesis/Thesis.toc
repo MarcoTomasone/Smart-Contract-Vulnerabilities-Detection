@@ -63,20 +63,20 @@
 \contentsline {subsection}{\numberline {4.2.6}Analisi}{67}{subsection.4.2.6}%
 \contentsline {section}{\numberline {4.3}Risultati sul Codice Sorgente Solidity}{68}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}BERT}{68}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}CodeBert}{68}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.2}CodeBert}{69}{subsection.4.3.2}%
 \contentsline {section}{\numberline {4.4}DistilBert}{69}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}CodeBERT con concatenazione}{69}{subsection.4.4.1}%
-\contentsline {subsubsection}{CodeBert Concatenazione di due chunk}{69}{section*.48}%
-\contentsline {subsubsection}{CodeBert Concatenazione di tre chunk}{69}{section*.50}%
+\contentsline {subsubsection}{CodeBert Concatenazione di due chunk}{69}{section*.50}%
+\contentsline {subsubsection}{CodeBert Concatenazione di tre chunk}{70}{section*.52}%
 \contentsline {subsection}{\numberline {4.4.2}CodeBert Aggregazione di due chunk}{70}{subsection.4.4.2}%
-\contentsline {subsubsection}{Aggregazione con funzione Max}{70}{section*.52}%
-\contentsline {subsubsection}{Aggregazione con funzione Mean}{70}{section*.54}%
-\contentsline {subsection}{\numberline {4.4.3}CodeBert Aggregazione di tre chunk}{70}{subsection.4.4.3}%
-\contentsline {subsubsection}{Aggregazione con funzione Max}{70}{section*.56}%
-\contentsline {subsubsection}{Aggregazione con funzione Mean}{71}{section*.58}%
-\contentsline {subsection}{\numberline {4.4.4}Analisi}{71}{subsection.4.4.4}%
-\contentsline {section}{\numberline {4.5}Risultati Stacking}{72}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Risultati meta-classificatori}{72}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Regressione Logistica}{73}{subsection.4.5.2}%
-\contentsline {section}{\numberline {4.6}Risultati Gemini}{74}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Conclusioni}{76}{chapter.5}%
+\contentsline {subsubsection}{Aggregazione con funzione Max}{70}{section*.54}%
+\contentsline {subsubsection}{Aggregazione con funzione Mean}{71}{section*.56}%
+\contentsline {subsection}{\numberline {4.4.3}CodeBert Aggregazione di tre chunk}{71}{subsection.4.4.3}%
+\contentsline {subsubsection}{Aggregazione con funzione Max}{71}{section*.58}%
+\contentsline {subsubsection}{Aggregazione con funzione Mean}{72}{section*.60}%
+\contentsline {subsection}{\numberline {4.4.4}Analisi}{72}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}Risultati Stacking}{73}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Risultati meta-classificatori}{73}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Regressione Logistica}{74}{subsection.4.5.2}%
+\contentsline {section}{\numberline {4.6}Risultati Gemini}{75}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{77}{chapter.5}%

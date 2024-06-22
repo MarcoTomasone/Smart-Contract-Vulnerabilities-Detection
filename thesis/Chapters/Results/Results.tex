@@ -638,31 +638,7 @@ L'accuratezza del modello è del 27.54\%. Di seguito il classification report de
     Complessivamente, il modello Gemini non ha raggiunto risultati soddisfacenti nella classificazione delle vulnerabilità del codice sorgente. Le metriche di valutazione indicano la necessità di miglioramenti significativi per rendere il modello più affidabile e preciso nella sua capacità di identificare correttamente le vulnerabilità del codice sorgente Solidity, mostrando la necessità di avere modelli ad hoc per task specifici e complessi come questo.
 \begin{figure}[h!]
     \centering
-    \begin{subfigure}[b]{0.1999\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_access-control}
-        \caption{Access-Control}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.1999\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_arithmetic}
-        \caption{Arithmetic}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.1999\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_other}
-        \caption{Other}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.1999\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_reentrancy}
-        \caption{Reentrancy}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.1999\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{C:/Users/tomas/Desktop/Results/resultsGeminiTest/test_confusion_matrix_label_unchecked-calls}
-        \caption{Unchecked Calls}
-    \end{subfigure}
+    \includegraphics[width=1.10\textwidth]{../../img/CF-Gemini.png}
     \caption{Confusion Matrices per le diverse classi}
 \end{figure}
 \end{document}
