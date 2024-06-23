@@ -32,6 +32,14 @@ Erik Cambria and Bebo White.
   [review article].
 \newblock {\em IEEE Computational Intelligence Magazine}, 9(2):48--57, 2014.
 
+\bibitem{DataAct}
+European Commission.
+\newblock Regulation of the european parliament and of the council on
+  harmonised rules on fair access to and use of data (data act).
+\newblock
+  \url{https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=COM%3A2022%3A68%3AFIN},
+  2022.
+
 \bibitem{DAO}
 Phil Daian.
 \newblock Analysis of the dao exploit.
@@ -68,6 +76,10 @@ Zhangyin Feng, Daya Guo, Duyu Tang, Nan Duan, Xiaocheng Feng, Ming Gong, Linjun
 \newblock Codebert: {A} pre-trained model for programming and natural
   languages.
 \newblock {\em CoRR}, abs/2002.08155, 2020.
+
+\bibitem{hinton2015distilling}
+Geoffrey Hinton, Oriol Vinyals, and Jeff Dean.
+\newblock Distilling the knowledge in a neural network, 2015.
 
 \bibitem{LSTM}
 Sepp Hochreiter and J\"{u}rgen Schmidhuber.
@@ -211,7 +223,7 @@ Gernot Salzer and Monika Di~Angelo.
 \newblock A survey of tools for analyzing ethereum smart contracts.
 \newblock 04 2019.
 
-\bibitem{DistillBERT}
+\bibitem{DistilBERT}
 Victor Sanh, Lysandre Debut, Julien Chaumond, and Thomas Wolf.
 \newblock Distilbert, a distilled version of {BERT:} smaller, faster, cheaper
   and lighter.

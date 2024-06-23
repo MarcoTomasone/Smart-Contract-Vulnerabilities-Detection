@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  20 JUN 2024 18:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  23 JUN 2024 17:48
 entering extended mode
 **c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/RelatedWork/RelatedWork.tex
 (c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/RelatedWork/RelatedWork.tex
@@ -636,6 +636,10 @@ Missing character: There is no   in font cmbx12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ² in font cmr12!
+Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
@@ -645,14 +649,14 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
-<../../img/Blockchain.png, id=57, 815.29594pt x 322.95656pt>
+<../../img/Blockchain.png, id=61, 815.29594pt x 322.95656pt>
 File: ../../img/Blockchain.png Graphic file (type png)
 <use ../../img/Blockchain.png>
-Package pdftex.def Info: ../../img/Blockchain.png  used on input line 27.
+Package pdftex.def Info: ../../img/Blockchain.png  used on input line 29.
 (pdftex.def)             Requested size: 360.00137pt x 142.60396pt.
 
 
-LaTeX Warning: Citation `Tassonomia' on page 2 undefined on input line 31.
+LaTeX Warning: Citation `Tassonomia' on page 2 undefined on input line 33.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -660,9 +664,11 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
+Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¹ in font cmr12!
 [2]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
@@ -671,6 +677,8 @@ Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¹ in font cmr12!
+Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
@@ -687,17 +695,18 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¹ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
+Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
+ [3 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/Blockchain.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -716,10 +725,10 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 
 
-LaTeX Warning: Citation `Blackcoin' on page 3 undefined on input line 40.
+LaTeX Warning: Citation `Blackcoin' on page 4 undefined on input line 43.
 
 
-LaTeX Warning: Citation `Peercoin' on page 3 undefined on input line 40.
+LaTeX Warning: Citation `Peercoin' on page 4 undefined on input line 43.
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
@@ -732,16 +741,15 @@ Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¹ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¹ in font cmr12!
-Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-[3 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/Blockchain.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -750,40 +758,9 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
 
+LaTeX Warning: Citation `Ethereum' on page 4 undefined on input line 51.
 
-LaTeX Warning: Citation `Ethereum' on page 4 undefined on input line 45.
-
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ² in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ² in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
-
- []
-
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-
-LaTeX Warning: Citation `SCReview' on page 4 undefined on input line 51.
-
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -792,11 +769,31 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
+Missing character: There is no ² in font cmr12!
+Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¹ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+
+
+LaTeX Warning: Citation `SCReview' on page 5 undefined on input line 60.
+
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -812,18 +809,15 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 
+LaTeX Warning: Citation `SCReview' on page 5 undefined on input line 65.
 
-LaTeX Warning: Citation `SCReview' on page 5 undefined on input line 56.
-
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
 [5]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
 Missing character: There is no Ã in font cmbx12!
 Missing character: There is no   in font cmbx12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmbx12!
@@ -860,7 +854,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 
 
-LaTeX Warning: Citation `SCEnhancement' on page 6 undefined on input line 64.
+LaTeX Warning: Citation `SCEnhancement' on page 6 undefined on input line 74.
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
@@ -869,41 +863,42 @@ Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
-LaTeX Warning: Citation `SmartCheck' on page 6 undefined on input line 65.
+LaTeX Warning: Citation `SmartCheck' on page 6 undefined on input line 75.
 
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ² in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-
-LaTeX Warning: Citation `sc-vulnerabilities' on page 6 undefined on input line 72.
-
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ² in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 [6]
 Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ² in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+
+
+LaTeX Warning: Citation `sc-vulnerabilities' on page 7 undefined on input line 82.
+
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ² in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
@@ -916,8 +911,7 @@ Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 
-
-LaTeX Warning: Citation `sc-vulnerabilities' on page 7 undefined on input line 90.
+LaTeX Warning: Citation `sc-vulnerabilities' on page 7 undefined on input line 100.
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
@@ -944,7 +938,7 @@ Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
-LaTeX Warning: Citation `DAO' on page 7 undefined on input line 95.
+LaTeX Warning: Citation `DAO' on page 7 undefined on input line 105.
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
@@ -955,15 +949,15 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
-LaTeX Warning: Citation `reentrancy-historical' on page 7 undefined on input line 95.
+LaTeX Warning: Citation `reentrancy-historical' on page 7 undefined on input line 105.
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 
-LaTeX Warning: Citation `Zeus' on page 7 undefined on input line 95.
+LaTeX Warning: Citation `Zeus' on page 7 undefined on input line 105.
 
 
-LaTeX Warning: Citation `Vulnerabilities' on page 7 undefined on input line 95.
+LaTeX Warning: Citation `Vulnerabilities' on page 7 undefined on input line 105.
 
 [7]
 Missing character: There is no Ã in font cmr12!
@@ -987,7 +981,7 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 104.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 114.
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1001,6 +995,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+ [9]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1010,12 +1005,12 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
-Overfull \hbox (7.40717pt too wide) in paragraph at lines 153--154
+Overfull \hbox (7.40717pt too wide) in paragraph at lines 163--164
 \OT1/cmr/m/n/12 Come  pos-si-bi-le ve-de-re, no-no-stan-te en-tram-be le fun-zio-ni ab-bia-no il mo-di-fier \OT1/cmtt/m/n/12 nonReentrant\OT1/cmr/m/n/12 ,
  []
 
 
-Overfull \hbox (14.12965pt too wide) in paragraph at lines 153--154
+Overfull \hbox (14.12965pt too wide) in paragraph at lines 163--164
 \OT1/cmr/m/n/12 cpo-mun-que pos-si-bi-le per un at-tac-can-te chia-ma-te \OT1/cmtt/m/n/12 B.claim \OT1/cmr/m/n/12 du-ran-te la call-back in \OT1/cmtt/m/n/12 A.withdraw
  []
 
@@ -1026,24 +1021,20 @@ Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
-Overfull \hbox (18.95068pt too wide) in paragraph at lines 157--158
+Overfull \hbox (18.95068pt too wide) in paragraph at lines 167--168
 []\OT1/cmr/m/n/12 Questa clas-se di vul-ne-ra-bi-lit ri-ca-de sem-pre nel-la ca-te-go-ria di vul-ne-ra-bi-lit inter-contractual
  []
 
-[9]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
+LaTeX Warning: Citation `SurveySC' on page 10 undefined on input line 169.
 
-LaTeX Warning: Citation `SurveySC' on page 10 undefined on input line 159.
 
+LaTeX Warning: Citation `careSC' on page 10 undefined on input line 169.
 
-LaTeX Warning: Citation `careSC' on page 10 undefined on input line 159.
-
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1082,10 +1073,12 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
+[10]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 
-LaTeX Warning: Citation `sc-vulnerabilities' on page 10 undefined on input line 179.
+
+LaTeX Warning: Citation `sc-vulnerabilities' on page 11 undefined on input line 189.
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
@@ -1101,15 +1094,15 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 179.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 189.
 (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 179.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 189.
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 179.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 189.
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -1119,7 +1112,6 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
- [10]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1133,11 +1125,15 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
  [11]
-<../../img/BECPrice.png, id=174, 502.87875pt x 353.82187pt>
+<../../img/BECPrice.png, id=178, 502.87875pt x 353.82187pt>
 File: ../../img/BECPrice.png Graphic file (type png)
 <use ../../img/BECPrice.png>
-Package pdftex.def Info: ../../img/BECPrice.png  used on input line 213.
+Package pdftex.def Info: ../../img/BECPrice.png  used on input line 223.
 (pdftex.def)             Requested size: 360.00137pt x 253.29384pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1146,7 +1142,21 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
- [12 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/BECPrice.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--231
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--231
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--231
+
+ []
+
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1163,6 +1173,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+[12]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1179,7 +1190,17 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
- [13]
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--236
+
+ []
+
+[13 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/BECPrice.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1204,7 +1225,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 
 
-LaTeX Warning: Citation `sc-vulnerabilities' on page 14 undefined on input line 248.
+LaTeX Warning: Citation `sc-vulnerabilities' on page 14 undefined on input line 262.
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
@@ -1235,13 +1256,11 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
 
-LaTeX Warning: Citation `Suicidal' on page 15 undefined on input line 270.
+LaTeX Warning: Citation `Suicidal' on page 15 undefined on input line 284.
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
@@ -1253,12 +1272,12 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 [15]
 Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
@@ -1292,74 +1311,75 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 
 
-LaTeX Warning: Citation `Maian' on page 16 undefined on input line 309.
+LaTeX Warning: Citation `Maian' on page 16 undefined on input line 324.
 
 
-LaTeX Warning: Citation `Maian2' on page 16 undefined on input line 309.
+LaTeX Warning: Citation `Maian2' on page 16 undefined on input line 324.
 
 
-LaTeX Warning: Citation `Oyente' on page 16 undefined on input line 309.
+LaTeX Warning: Citation `Oyente' on page 16 undefined on input line 324.
 
 
-LaTeX Warning: Citation `Oyente2' on page 16 undefined on input line 309.
+LaTeX Warning: Citation `Oyente2' on page 16 undefined on input line 324.
 
 
-LaTeX Warning: Citation `Mythril' on page 16 undefined on input line 309.
+LaTeX Warning: Citation `Mythril' on page 16 undefined on input line 324.
 
 
-LaTeX Warning: Citation `Manticore' on page 16 undefined on input line 309.
-
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-
-LaTeX Warning: Citation `Slither' on page 16 undefined on input line 310.
-
-
-LaTeX Warning: Citation `Securify' on page 16 undefined on input line 310.
-
-
-LaTeX Warning: Citation `SmartCheck' on page 16 undefined on input line 310.
-
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-
-LaTeX Warning: Citation `ContractWard' on page 16 undefined on input line 311.
-
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¹ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-
-LaTeX Warning: Citation `Mezina' on page 16 undefined on input line 311.
+LaTeX Warning: Citation `Manticore' on page 16 undefined on input line 324.
 
 [16]
 Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+
+
+LaTeX Warning: Citation `Slither' on page 17 undefined on input line 326.
+
+
+LaTeX Warning: Citation `Securify' on page 17 undefined on input line 326.
+
+
+LaTeX Warning: Citation `SmartCheck' on page 17 undefined on input line 326.
+
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+
+LaTeX Warning: Citation `ContractWard' on page 17 undefined on input line 328.
+
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¹ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+
+LaTeX Warning: Citation `Mezina' on page 17 undefined on input line 328.
+
+Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
@@ -1368,8 +1388,7 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 
-
-LaTeX Warning: Citation `RossiniPaper1' on page 17 undefined on input line 313.
+LaTeX Warning: Citation `RossiniPaper1' on page 17 undefined on input line 330.
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
@@ -1387,40 +1406,53 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-
-LaTeX Warning: Citation `RossiniPaper2' on page 17 undefined on input line 313.
-
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
-LaTeX Warning: Citation `Huang' on page 17 undefined on input line 313.
+LaTeX Warning: Citation `Huang' on page 17 undefined on input line 330.
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
+[17]
 
-LaTeX Warning: Citation `Deng' on page 17 undefined on input line 314.
+LaTeX Warning: Citation `Deng' on page 18 undefined on input line 332.
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-[17] [18] (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\RelatedWork\RelatedWork.aux)
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+
+LaTeX Warning: Citation `CodeBERTPaper' on page 18 undefined on input line 334.
+
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+[18] (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\RelatedWork\RelatedWork.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `RelatedWork.out' has not changed.
-(rerunfilecheck)             Checksum: 8BDB1EA456F6A2F2C1507F6DCB091E61;1488.
+(rerunfilecheck)             Checksum: B9BD5B23940B8A2C7BDD0FF6AC382074;1620.
  ) 
 Here is how much of TeX's memory you used:
  24082 strings out of 478927
- 436310 string characters out of 2852536
- 852060 words of memory out of 3000000
+ 436324 string characters out of 2852536
+ 858060 words of memory out of 3000000
  41335 multiletter control sequences out of 15000+600000
  411838 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,7n,125p,2014b,1931s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 122i,7n,125p,1991b,1948s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\RelatedWork\RelatedWork.pdf (18 pages, 322427 bytes).
+Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\RelatedWork\RelatedWork.pdf (18 pages, 324659 bytes).
 PDF statistics:
- 350 PDF objects out of 1000 (max. 8388607)
+ 354 PDF objects out of 1000 (max. 8388607)
  171 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 119 words of extra memory for PDF output out of 10000 (max. 10000000)
 

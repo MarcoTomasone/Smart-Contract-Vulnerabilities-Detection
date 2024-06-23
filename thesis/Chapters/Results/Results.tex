@@ -241,6 +241,10 @@ unchecked-calls & 0.92 & 0.92 & 0.92 & 7276 \\
 \end{tabular}
 \caption{Classification Report per CodeBERT con aggregazione a tre chunk usando il massimo}
 \end{table}
+\begin{figure}[H]
+    \includegraphics[width=1.05\textwidth]{../../img/CFMax3-BC.png}
+    \caption{Confusion Matrices per le diverse classi del modello CodeBERT con aggregazione di tre chunk usando la funzione max sul bytecode}
+\end{figure}
 
 \subsection{CodeBERT con Concatenazione}
 \subsubsection{CodeBert Concatenazione di due chunk}
@@ -291,6 +295,11 @@ L'accuratezza del modello è del 76.80\%. Di seguito il classification report de
     \end{tabular}
     \caption{Classification Report per il modello CodeBERT concatenando tre chunk}
 \end{table}
+
+\begin{figure}[H]
+    \includegraphics[width=1.05\textwidth]{../../img/CFConcat3-BC.png}
+    \caption{Confusion Matrices per le diverse classi del modello CodeBERT con concatenazione di tre chunk sul bytecode}
+\end{figure}
 
 \subsection{Analisi}
 Per i modelli allenati sul bytecode, i risultati migliori, sugli esperimenti iniziali utilizzando un blocco di codice da 512 token per la classificazione, sono stati ottenuti utilizzando il modello CodeBERT, che ha superato il modello BERT in tutte le metriche di valutazione, eccetto per la recall della classe "unchecked-calls". Di conseguenza, è stato utilizzato il modello CodeBERT per le ulteriori analisi, poiché è stato quello con le migliori performance.
@@ -355,7 +364,7 @@ L'accuratezza del modello è del 70.46\%. Di seguito il classification report de
     \end{tabular}
     \caption{Classification Report per il modello di CodeBERT}
     \end{table}
-\section{DistilBert}
+\subsection{DistilBert}
 L'accuratezza del modello è del 70.35\%. Di seguito il classification report del modello:
 
 \begin{table}[H]
@@ -429,6 +438,11 @@ unchecked-calls & 0.95 & 0.93 & 0.94 & 7276 \\
 \end{tabular}
 \caption{Classification Report del modello codeBERT con concatenazione di tre chunk}
 \end{table}
+
+\begin{figure}[H]
+    \includegraphics[width=1.05\textwidth]{../../img/CFConcat3-SC.png}
+    \caption{Confusion Matrices per le diverse classi del modello CodeBERT con concatenazione di tre chunk sul codice sorgente Solidity}
+\end{figure}
 
 \subsection{CodeBert Aggregazione di due chunk}
 \subsubsection{Aggregazione con funzione Max}
@@ -506,6 +520,11 @@ L'accuratezza del modello è del 79.08\%. Di seguito il classification report de
     \end{tabular}
     \caption{Classification Report del modello con aggregazione di tre chunk usando la funzione Max}
     \end{table}
+
+    \begin{figure}[H]
+        \includegraphics[width=1.05\textwidth]{../../img/CFMax3-SC.png}
+        \caption{Confusion Matrices per le diverse classi del modello CodeBERT con aggregazione di tre chunk usando la funzione Max sul codice sorgente Solidity}
+    \end{figure}
     
 
 \subsubsection{Aggregazione con funzione Mean}
@@ -599,6 +618,12 @@ Il modello di regressione logistica si è dimostrato il miglior classificatore o
     \end{tabular}
     \caption{Classification Report per il modello di Regressione Logistica}
 \end{table}
+
+\begin{figure}[H]
+    \includegraphics[width=1.05\textwidth]{../../img/CF-LR.png}
+    \caption{Confusion Matrices per le diverse classi del modello Logistic Regression}
+\end{figure}
+
 Rispetto agli altri modelli utilizzati come meta-classificatori, la regressione logistica mostra miglioramenti significativi in tutte le metriche di valutazione, particolarmente evidenti nella precisione e nel recall. L'unica eccezione è rappresentata dal recall per la classe access-control, la quale è la classe minoritaria in questo contesto di classificazione.
 
 Inoltre, a differenza degli altri modelli utilizzati come meta-classificatori, la regressione logistica non mostra segni di overfitting. Questo suggerisce che un approccio più semplice possa essere più adatto per questo tipo di problemi di classificazione.
@@ -629,16 +654,15 @@ L'accuratezza del modello è del 27.54\%. Di seguito il classification report de
     \textbf{Weighted avg} & 0.3490 & 0.1872 & 0.2056 & 1490 \\
     \textbf{Samples avg} & 0.1800 & 0.1200 & 0.1300 & 1490 \\
     \hline
-    \end{tabular}
-    \caption{Classification Report del modello Gemini}
-    \end{table}
-    
+\end{tabular}
+\caption{Classification Report del modello Gemini}
+\end{table}
+
+\begin{figure}[H]
+    \includegraphics[width=1.05\textwidth]{../../img/CF-Gemini.png}
+    \caption{Confusion Matrices per le diverse classi del modello Gemini}
+\end{figure}
     I risultati del modello Gemini indicano una performance complessivamente scarsa nelle metriche di valutazione. L'Accuracy del 27.54\% evidenzia che meno di un terzo delle previsioni del modello sono corrette. La Precision micro del 32.71\% indica che solo un terzo delle istanze classificate positivamente sono effettivamente corrette, mentre la Precision macro e weighted, rispettivamente 31.37\% e 34.90\%, mostrano variazioni nella performance tra le diverse classi. Il Recall micro dell'18.72\% suggerisce che il modello riesce a identificare meno di un quinto delle istanze rilevanti, con valori macro e weighted simili, indicando che il modello ha difficoltà a catturare tutte le istanze corrette. L'F1 Score, che bilancia precision e recall, è basso in tutte le versioni, suggerendo un compromesso non soddisfacente tra la capacità del modello di evitare falsi positivi e falsi negativi.\\
     Analizzando le performance per classe, si osserva che il modello ha ottenuto risultati migliori solo per la classe "Other", con un Recall del 49\%. Interessante è il risultato per la classe "reentrancy", una delle vulnerabilità più comuni, che ha ottenuto un Recall dell'8\%. Questo evidenzia una specifica difficoltà del modello nel riconoscere questa particolare categoria di vulnerabilità.\\
     Complessivamente, il modello Gemini non ha raggiunto risultati soddisfacenti nella classificazione delle vulnerabilità del codice sorgente. Le metriche di valutazione indicano la necessità di miglioramenti significativi per rendere il modello più affidabile e preciso nella sua capacità di identificare correttamente le vulnerabilità del codice sorgente Solidity, mostrando la necessità di avere modelli ad hoc per task specifici e complessi come questo.
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=1.10\textwidth]{../../img/CF-Gemini.png}
-    \caption{Confusion Matrices per le diverse classi}
-\end{figure}
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  22 JUN 2024 21:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  23 JUN 2024 18:29
 entering extended mode
 **c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Thesis.tex
 (c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Thesis.tex
@@ -656,13 +656,8 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-
-LaTeX Warning: Citation `DataAct' on page 7 undefined on input line 8.
-
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -671,6 +666,8 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -706,14 +703,9 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--33
-
- []
-
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-[8]
+ [8]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -764,6 +756,10 @@ Missing character: There is no   in font cmbx12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ² in font cmr12!
+Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
@@ -773,10 +769,10 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
-<Chapters/RelatedWork//../../img/Blockchain.png, id=438, 815.29594pt x 322.95656pt>
+<Chapters/RelatedWork//../../img/Blockchain.png, id=459, 815.29594pt x 322.95656pt>
 File: Chapters/RelatedWork//../../img/Blockchain.png Graphic file (type png)
 <use Chapters/RelatedWork//../../img/Blockchain.png>
-Package pdftex.def Info: Chapters/RelatedWork//../../img/Blockchain.png  used on input line 27.
+Package pdftex.def Info: Chapters/RelatedWork//../../img/Blockchain.png  used on input line 29.
 (pdftex.def)             Requested size: 360.00137pt x 142.60396pt.
 
 
@@ -785,9 +781,11 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
+Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¹ in font cmr12!
 [11]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
@@ -796,6 +794,8 @@ Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¹ in font cmr12!
+Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
@@ -812,55 +812,55 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¹ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ² in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¹ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¹ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
  [12 <./Chapters/RelatedWork//../../img/Blockchain.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ² in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¹ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ² in font cmr12!
+Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
@@ -872,23 +872,15 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ² in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
+ [13]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
-
- []
-
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -896,10 +888,7 @@ Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-[13]
+Missing character: There is no © in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -907,7 +896,7 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
+Missing character: There is no © in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -922,15 +911,13 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
  [14]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
 Missing character: There is no Ã in font cmbx12!
 Missing character: There is no   in font cmbx12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmbx12!
@@ -971,35 +958,35 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ² in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ² in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
  [15]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ² in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ² in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1068,7 +1055,7 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 104.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 114.
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1082,6 +1069,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+ [18]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1091,12 +1079,12 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
-Overfull \hbox (7.40717pt too wide) in paragraph at lines 153--154
+Overfull \hbox (7.40717pt too wide) in paragraph at lines 163--164
 \OT1/cmr/m/n/12 Come  pos-si-bi-le ve-de-re, no-no-stan-te en-tram-be le fun-zio-ni ab-bia-no il mo-di-fier \OT1/cmtt/m/n/12 nonReentrant\OT1/cmr/m/n/12 ,
  []
 
 
-Overfull \hbox (14.12965pt too wide) in paragraph at lines 153--154
+Overfull \hbox (14.12965pt too wide) in paragraph at lines 163--164
 \OT1/cmr/m/n/12 cpo-mun-que pos-si-bi-le per un at-tac-can-te chia-ma-te \OT1/cmtt/m/n/12 B.claim \OT1/cmr/m/n/12 du-ran-te la call-back in \OT1/cmtt/m/n/12 A.withdraw
  []
 
@@ -1107,15 +1095,12 @@ Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
-Overfull \hbox (18.95068pt too wide) in paragraph at lines 157--158
+Overfull \hbox (18.95068pt too wide) in paragraph at lines 167--168
 []\OT1/cmr/m/n/12 Questa clas-se di vul-ne-ra-bi-lit ri-ca-de sem-pre nel-la ca-te-go-ria di vul-ne-ra-bi-lit inter-contractual
  []
 
-[18]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1156,6 +1141,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
+[19]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1178,7 +1164,6 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
- [19]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1192,11 +1177,15 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
  [20]
-<Chapters/RelatedWork//../../img/BECPrice.png, id=584, 502.87875pt x 353.82187pt>
+<Chapters/RelatedWork//../../img/BECPrice.png, id=605, 502.87875pt x 353.82187pt>
 File: Chapters/RelatedWork//../../img/BECPrice.png Graphic file (type png)
 <use Chapters/RelatedWork//../../img/BECPrice.png>
-Package pdftex.def Info: Chapters/RelatedWork//../../img/BECPrice.png  used on input line 213.
+Package pdftex.def Info: Chapters/RelatedWork//../../img/BECPrice.png  used on input line 223.
 (pdftex.def)             Requested size: 360.00137pt x 253.29384pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1205,7 +1194,21 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
- [21 <./Chapters/RelatedWork//../../img/BECPrice.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--231
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--231
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--231
+
+ []
+
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1222,6 +1225,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+[21]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1238,7 +1242,17 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
- [22]
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--236
+
+ []
+
+[22 <./Chapters/RelatedWork//../../img/BECPrice.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1291,8 +1305,6 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
@@ -1304,12 +1316,12 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
  [24]
 Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
@@ -1339,44 +1351,44 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¹ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
  [25]
 Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¹ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
@@ -1400,17 +1412,30 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-
-
-LaTeX Warning: Citation `RossiniPaper2' on page 26 undefined on input line 313.
-
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
+ [26]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-[26]) (Chapters/Methodology/Methodology.tex [27]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+
+
+LaTeX Warning: Citation `CodeBERTPaper' on page 27 undefined on input line 334.
+
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+) (Chapters/Methodology/Methodology.tex [27]
 Capitolo 3.
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
@@ -1456,8 +1481,6 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
-Missing character: There is no ² in font cmr12!
-Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
@@ -1481,10 +1504,6 @@ Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
 Missing character: There is no © in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
@@ -1499,20 +1518,25 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-<Chapters/Methodology//../../img/SCTokensPreprocessed.png, id=734, 854.2314pt x 450.9648pt>
+<Chapters/Methodology//../../img/SCTokensPreprocessed.png, id=755, 854.2314pt x 450.9648pt>
 File: Chapters/Methodology//../../img/SCTokensPreprocessed.png Graphic file (type png)
 <use Chapters/Methodology//../../img/SCTokensPreprocessed.png>
-Package pdftex.def Info: Chapters/Methodology//../../img/SCTokensPreprocessed.png  used on input line 81.
+Package pdftex.def Info: Chapters/Methodology//../../img/SCTokensPreprocessed.png  used on input line 80.
 (pdftex.def)             Requested size: 220.50247pt x 116.40857pt.
-<Chapters/Methodology//../../img/BCTokensPreprocessed.png, id=735, 860.7357pt x 450.9648pt>
+<Chapters/Methodology//../../img/BCTokensPreprocessed.png, id=756, 860.7357pt x 450.9648pt>
 File: Chapters/Methodology//../../img/BCTokensPreprocessed.png Graphic file (type png)
 <use Chapters/Methodology//../../img/BCTokensPreprocessed.png>
-Package pdftex.def Info: Chapters/Methodology//../../img/BCTokensPreprocessed.png  used on input line 88.
+Package pdftex.def Info: Chapters/Methodology//../../img/BCTokensPreprocessed.png  used on input line 87.
 (pdftex.def)             Requested size: 220.50247pt x 115.52779pt.
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
- [30] [31 <./Chapters/Methodology//../../img/SCTokensPreprocessed.png> <./Chapters/Methodology//../../img/BCTokensPreprocessed.png>]
+ [30]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1521,6 +1545,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
+[31 <./Chapters/Methodology//../../img/SCTokensPreprocessed.png> <./Chapters/Methodology//../../img/BCTokensPreprocessed.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1534,45 +1559,45 @@ Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
-Overfull \hbox (28.11864pt too wide) in paragraph at lines 122--136
+Overfull \hbox (28.11864pt too wide) in paragraph at lines 121--135
  [][] 
  []
 
-<Chapters/Methodology//../../img/class-distribution-relative.png, id=752, 497.2176pt x 475.5366pt>
+<Chapters/Methodology//../../img/class-distribution-relative.png, id=773, 497.2176pt x 475.5366pt>
 File: Chapters/Methodology//../../img/class-distribution-relative.png Graphic file (type png)
 <use Chapters/Methodology//../../img/class-distribution-relative.png>
-Package pdftex.def Info: Chapters/Methodology//../../img/class-distribution-relative.png  used on input line 144.
+Package pdftex.def Info: Chapters/Methodology//../../img/class-distribution-relative.png  used on input line 143.
 (pdftex.def)             Requested size: 202.49863pt x 193.67242pt.
-<Chapters/Methodology//../../img/class-distribution-absolute.png, id=753, 739.3221pt x 560.0925pt>
+<Chapters/Methodology//../../img/class-distribution-absolute.png, id=774, 739.3221pt x 560.0925pt>
 File: Chapters/Methodology//../../img/class-distribution-absolute.png Graphic file (type png)
 <use Chapters/Methodology//../../img/class-distribution-absolute.png>
-Package pdftex.def Info: Chapters/Methodology//../../img/class-distribution-absolute.png  used on input line 150.
+Package pdftex.def Info: Chapters/Methodology//../../img/class-distribution-absolute.png  used on input line 149.
 (pdftex.def)             Requested size: 202.49863pt x 153.4063pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[32]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
+[32]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-<Chapters/Methodology//../../img/TrainCo-occurrency.png, id=762, 714.7503pt x 570.933pt>
+<Chapters/Methodology//../../img/TrainCo-occurrency.png, id=783, 714.7503pt x 570.933pt>
 File: Chapters/Methodology//../../img/TrainCo-occurrency.png Graphic file (type png)
 <use Chapters/Methodology//../../img/TrainCo-occurrency.png>
-Package pdftex.def Info: Chapters/Methodology//../../img/TrainCo-occurrency.png  used on input line 172.
+Package pdftex.def Info: Chapters/Methodology//../../img/TrainCo-occurrency.png  used on input line 171.
 (pdftex.def)             Requested size: 314.99863pt x 251.62074pt.
  [33 <./Chapters/Methodology//../../img/class-distribution-relative.png> <./Chapters/Methodology//../../img/class-distribution-absolute.png>]
-<Chapters/Methodology//../../img/TestCo-occurrency.png, id=770, 714.7503pt x 570.933pt>
+<Chapters/Methodology//../../img/TestCo-occurrency.png, id=791, 714.7503pt x 570.933pt>
 File: Chapters/Methodology//../../img/TestCo-occurrency.png Graphic file (type png)
 <use Chapters/Methodology//../../img/TestCo-occurrency.png>
-Package pdftex.def Info: Chapters/Methodology//../../img/TestCo-occurrency.png  used on input line 179.
+Package pdftex.def Info: Chapters/Methodology//../../img/TestCo-occurrency.png  used on input line 178.
 (pdftex.def)             Requested size: 314.99863pt x 251.62074pt.
-<Chapters/Methodology//../../img/ValCo-occurrency.png, id=771, 714.7503pt x 570.933pt>
+<Chapters/Methodology//../../img/ValCo-occurrency.png, id=792, 714.7503pt x 570.933pt>
 File: Chapters/Methodology//../../img/ValCo-occurrency.png Graphic file (type png)
 <use Chapters/Methodology//../../img/ValCo-occurrency.png>
-Package pdftex.def Info: Chapters/Methodology//../../img/ValCo-occurrency.png  used on input line 186.
+Package pdftex.def Info: Chapters/Methodology//../../img/ValCo-occurrency.png  used on input line 185.
 (pdftex.def)             Requested size: 314.99863pt x 251.62074pt.
 
 
@@ -1618,14 +1643,16 @@ Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
 Missing character: There is no © in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
+[35 <./Chapters/Methodology//../../img/ValCo-occurrency.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¬ in font cmr12!
-[35 <./Chapters/Methodology//../../img/ValCo-occurrency.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1636,6 +1663,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+ [36]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1644,13 +1672,11 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
- [36]
-Overfull \hbox (0.79622pt too wide) in paragraph at lines 238--238
+
+Overfull \hbox (0.79622pt too wide) in paragraph at lines 235--235
 []\OT1/cmr/bx/n/14.4 BERT, Bi-di-rec-tio-nal En-co-der Re-pre-sen-ta-tions from Tran-
  []
 
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1677,7 +1703,7 @@ Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¬ in font cmr12!
 
-Overfull \hbox (3.91705pt too wide) in paragraph at lines 246--247
+Overfull \hbox (3.91705pt too wide) in paragraph at lines 243--244
 []\OT1/cmr/m/n/12 Le \OT1/cmr/bx/n/12 at-ten-tion heads \OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A$\OT1/cmr/m/n/12 ) so-no un com-po-nen-te cru-cia-le del mec-ca-ni-smo di self-attention
  []
 
@@ -1699,12 +1725,12 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-<Chapters/Methodology//../../img/bert_base_large.jpg, id=813, 692.5875pt x 417.05812pt>
+[38]
+<Chapters/Methodology//../../img/bert_base_large.jpg, id=841, 692.5875pt x 417.05812pt>
 File: Chapters/Methodology//../../img/bert_base_large.jpg Graphic file (type jpg)
 <use Chapters/Methodology//../../img/bert_base_large.jpg>
-Package pdftex.def Info: Chapters/Methodology//../../img/bert_base_large.jpg  used on input line 269.
+Package pdftex.def Info: Chapters/Methodology//../../img/bert_base_large.jpg  used on input line 266.
 (pdftex.def)             Requested size: 450.0pt x 270.98274pt.
-[38]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1715,37 +1741,28 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¬ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
  [39 <./Chapters/Methodology//../../img/bert_base_large.jpg>]
-<Chapters/Methodology//../../img/bert-input.png, id=827, 617.30624pt x 189.70876pt>
+<Chapters/Methodology//../../img/bert-input.png, id=848, 617.30624pt x 189.70876pt>
 File: Chapters/Methodology//../../img/bert-input.png Graphic file (type png)
 <use Chapters/Methodology//../../img/bert-input.png>
-Package pdftex.def Info: Chapters/Methodology//../../img/bert-input.png  used on input line 287.
+Package pdftex.def Info: Chapters/Methodology//../../img/bert-input.png  used on input line 284.
 (pdftex.def)             Requested size: 450.0pt x 138.29518pt.
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
 
-LaTeX Warning: Citation `Taylor1953' on page 40 undefined on input line 295.
+LaTeX Warning: Citation `Taylor1953' on page 40 undefined on input line 292.
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
-Overfull \hbox (13.46524pt too wide) in paragraph at lines 296--297
+Overfull \hbox (13.46524pt too wide) in paragraph at lines 293--294
 []\OT1/cmr/bx/n/12 Next Sen-ten-ce Pre-dic-tion (NSP)\OT1/cmr/m/n/12 : in mol-ti ta-sk di NLP, co-me Question-Answering
  []
 
@@ -1755,7 +1772,7 @@ Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 
-Overfull \hbox (20.64372pt too wide) in paragraph at lines 305--306
+Overfull \hbox (20.64372pt too wide) in paragraph at lines 302--303
 []\OT1/cmr/m/n/12 Il pro-ces-so di fine-tuning ri-chie-de me-no ri-sor-se com-pu-ta-zio-na-li ri-spet-to al pre-allenamento.
  []
 
@@ -1765,9 +1782,6 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
-
-LaTeX Warning: Citation `DistilBERT' on page 41 undefined on input line 308.
-
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1778,8 +1792,6 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1800,17 +1812,14 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-
-LaTeX Warning: Citation `Hinton2015' on page 41 undefined on input line 318.
-
 [41]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
@@ -1834,10 +1843,10 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-<Chapters/Methodology//../../img/DistilBERT-Architecture.png, id=840, 284.39583pt x 133.83333pt>
+<Chapters/Methodology//../../img/DistilBERT-Architecture.png, id=862, 284.39583pt x 133.83333pt>
 File: Chapters/Methodology//../../img/DistilBERT-Architecture.png Graphic file (type png)
 <use Chapters/Methodology//../../img/DistilBERT-Architecture.png>
-Package pdftex.def Info: Chapters/Methodology//../../img/DistilBERT-Architecture.png  used on input line 338.
+Package pdftex.def Info: Chapters/Methodology//../../img/DistilBERT-Architecture.png  used on input line 335.
 (pdftex.def)             Requested size: 450.0pt x 211.77899pt.
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
@@ -1926,6 +1935,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
+ [45]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1948,7 +1958,6 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
- [45]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1959,13 +1968,13 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
+) [46]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 400.
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 401.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 397.
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 398.
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [46]
+)
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1979,7 +1988,7 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
-Overfull \hbox (4.08228pt too wide) in paragraph at lines 425--426
+Overfull \hbox (4.08228pt too wide) in paragraph at lines 422--423
 []\OT1/cmr/m/n/12 Di se-gui-to vie-ne ri-por-ta-to un esem-pio di im-ple-men-ta-zio-ne di una clas-se \OT1/cmtt/m/n/12 CustomDataset
  []
 
@@ -2005,6 +2014,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+ [49]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -2023,7 +2033,6 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
- [49]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -2051,13 +2060,14 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+ [51]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
- [51] [52]
+ [52]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -2089,18 +2099,18 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
  [54]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
@@ -2114,11 +2124,15 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
-<Chapters/Methodology//../../img/fusion_methods.png, id=1080, 408.77719pt x 152.82094pt>
+<Chapters/Methodology//../../img/fusion_methods.png, id=1105, 408.77719pt x 152.82094pt>
 File: Chapters/Methodology//../../img/fusion_methods.png Graphic file (type png)
 <use Chapters/Methodology//../../img/fusion_methods.png>
-Package pdftex.def Info: Chapters/Methodology//../../img/fusion_methods.png  used on input line 631.
+Package pdftex.def Info: Chapters/Methodology//../../img/fusion_methods.png  used on input line 628.
 (pdftex.def)             Requested size: 450.0pt x 168.2411pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -2126,15 +2140,15 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 
-Overfull \hbox (16.40488pt too wide) in paragraph at lines 638--639
+Overfull \hbox (16.40488pt too wide) in paragraph at lines 635--636
 []\OT1/cmr/m/n/12 Questo ap-proc-cio  sta-to te-sta-to con dif-fe-ren-ti mo-del-li uti-liz-za-ti co-me meta-+classificatori,
  []
 
-[55 <./Chapters/Methodology//../../img/fusion_methods.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+[55]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -2149,6 +2163,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+ [56 <./Chapters/Methodology//../../img/fusion_methods.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -2165,7 +2180,6 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
- [56]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -2332,11 +2346,32 @@ Missing character: There is no ¨ in font cmr12!
  [65]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+<Chapters/Results//../../img/CFMax3-BC.png, id=1173, 1600.0578pt x 382.3083pt>
+File: Chapters/Results//../../img/CFMax3-BC.png Graphic file (type png)
+<use Chapters/Results//../../img/CFMax3-BC.png>
+Package pdftex.def Info: Chapters/Results//../../img/CFMax3-BC.png  used on input line 245.
+(pdftex.def)             Requested size: 472.50137pt x 112.89664pt.
+
+Overfull \hbox (22.50137pt too wide) in paragraph at lines 245--246
+[][] 
+ []
+
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
- [66]
+[66 <./Chapters/Results//../../img/CFMax3-BC.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+<Chapters/Results//../../img/CFConcat3-BC.png, id=1181, 1600.0578pt x 382.3083pt>
+File: Chapters/Results//../../img/CFConcat3-BC.png Graphic file (type png)
+<use Chapters/Results//../../img/CFConcat3-BC.png>
+Package pdftex.def Info: Chapters/Results//../../img/CFConcat3-BC.png  used on input line 300.
+(pdftex.def)             Requested size: 472.50137pt x 112.89664pt.
+
+Overfull \hbox (22.50137pt too wide) in paragraph at lines 300--301
+[][] 
+ []
+
+[67]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -2353,7 +2388,6 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
- [67]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -2366,17 +2400,13 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+ [68 <./Chapters/Results//../../img/CFConcat3-BC.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no © in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
- [68]
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
  [69]
@@ -2387,11 +2417,37 @@ Missing character: There is no ¨ in font cmr12!
  [70]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+<Chapters/Results//../../img/CFConcat3-SC.png, id=1202, 1600.0578pt x 382.3083pt>
+File: Chapters/Results//../../img/CFConcat3-SC.png Graphic file (type png)
+<use Chapters/Results//../../img/CFConcat3-SC.png>
+Package pdftex.def Info: Chapters/Results//../../img/CFConcat3-SC.png  used on input line 443.
+(pdftex.def)             Requested size: 472.50137pt x 112.89664pt.
+
+Overfull \hbox (22.50137pt too wide) in paragraph at lines 443--444
+[][] 
+ []
+
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
- [71]
+[71 <./Chapters/Results//../../img/CFConcat3-SC.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+ [72]
+<Chapters/Results//../../img/CFMax3-SC.png, id=1217, 1600.0578pt x 382.3083pt>
+File: Chapters/Results//../../img/CFMax3-SC.png Graphic file (type png)
+<use Chapters/Results//../../img/CFMax3-SC.png>
+Package pdftex.def Info: Chapters/Results//../../img/CFMax3-SC.png  used on input line 525.
+(pdftex.def)             Requested size: 472.50137pt x 112.89664pt.
+
+Overfull \hbox (22.50137pt too wide) in paragraph at lines 525--526
+[][] 
+ []
+
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+[73 <./Chapters/Results//../../img/CFMax3-SC.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -2404,23 +2460,23 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
- [72]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--548
+Underfull \hbox (badness 10000) in paragraph at lines 566--567
 
  []
 
 
-Overfull \hbox (72.24149pt too wide) in paragraph at lines 553--569
+Overfull \hbox (72.24149pt too wide) in paragraph at lines 572--588
  [][] 
  []
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
+[74]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -2444,18 +2500,27 @@ Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 574--575
+Underfull \hbox (badness 10000) in paragraph at lines 593--594
 
  []
 
-[73]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
- [74]
+[75]
+<Chapters/Results//../../img/CF-LR.png, id=1233, 1600.0578pt x 382.3083pt>
+File: Chapters/Results//../../img/CF-LR.png Graphic file (type png)
+<use Chapters/Results//../../img/CF-LR.png>
+Package pdftex.def Info: Chapters/Results//../../img/CF-LR.png  used on input line 623.
+(pdftex.def)             Requested size: 472.50137pt x 112.89664pt.
+
+Overfull \hbox (22.50137pt too wide) in paragraph at lines 623--624
+[][] 
+ []
+
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -2466,45 +2531,46 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¹ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¹ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-<Chapters/Results//../../img/CF-Gemini.png, id=1196, 1600.0578pt x 382.3083pt>
+[76 <./Chapters/Results//../../img/CF-LR.png>]
+<Chapters/Results//../../img/CF-Gemini.png, id=1239, 1600.0578pt x 382.3083pt>
 File: Chapters/Results//../../img/CF-Gemini.png Graphic file (type png)
 <use Chapters/Results//../../img/CF-Gemini.png>
-Package pdftex.def Info: Chapters/Results//../../img/CF-Gemini.png  used on input line 641.
-(pdftex.def)             Requested size: 539.99863pt x 129.0264pt.
+Package pdftex.def Info: Chapters/Results//../../img/CF-Gemini.png  used on input line 662.
+(pdftex.def)             Requested size: 472.50137pt x 112.89664pt.
 
-Overfull \hbox (89.99863pt too wide) in paragraph at lines 641--642
- [][] 
+Overfull \hbox (22.50137pt too wide) in paragraph at lines 662--663
+[][] 
  []
 
-) [75] (Chapters/Conclusion/Conclusion.tex [76 <./Chapters/Results//../../img/CF-Gemini.png>]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¹ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¹ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+) [77 <./Chapters/Results//../../img/CF-Gemini.png>] (Chapters/Conclusion/Conclusion.tex [78]
 Capitolo 5.
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
@@ -2540,7 +2606,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-[77
+[79
 
 ]
 Missing character: There is no Ã in font cmr12!
@@ -2557,7 +2623,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-) (Thesis.bbl [78] [79
+) (Thesis.bbl [80] [81
 
 ]
 Missing character: There is no â in font cmr12!
@@ -2566,7 +2632,7 @@ Missing character: There is no “ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
- [80] [81]
+ [82] [83]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
@@ -2575,48 +2641,48 @@ Missing character: There is no ¼ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [82]
-Underfull \hbox (badness 4441) in paragraph at lines 277--282
+ [84]
+Underfull \hbox (badness 4441) in paragraph at lines 289--294
 []\OT1/cmr/m/n/12 Wikipedia.  Ge-mi-ni (lan-gua-ge mo-del) --- Wi-ki-pe-dia, the free en-cy-clo-
  []
 
 
-Underfull \hbox (badness 1092) in paragraph at lines 277--282
+Underfull \hbox (badness 1092) in paragraph at lines 289--294
 \OT1/cmr/m/n/12 pe-dia.  []$\OT1/cmtt/m/n/12 http : / / en . wikipedia . org / w / index . php ? title = Gemini % 20(language %
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--289
+Underfull \hbox (badness 10000) in paragraph at lines 296--301
 \OT1/cmtt/m/n/12 wikipedia . org / w / index . php ? title = Google % 20DeepMind & oldid = 1228075682$[]\OT1/cmr/m/n/12 ,
  []
 
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
-) (Chapters/Appendix/Appendix.tex [83] [84
+[85]) (Chapters/Appendix/Appendix.tex [86] [87
 
 ]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-) [85] (Thesis.aux)
+) [88] (Thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: F758AA56855798C493528830ADDA0D6D;8872.
+(rerunfilecheck)             Checksum: 2E3C4CAA46E0BFFDC6B7EF87934705C6;9011.
  ) 
 Here is how much of TeX's memory you used:
- 25414 strings out of 478927
- 459058 string characters out of 2852536
- 1146482 words of memory out of 3000000
- 42188 multiletter control sequences out of 15000+600000
+ 25467 strings out of 478927
+ 460904 string characters out of 2852536
+ 1152428 words of memory out of 3000000
+ 42226 multiletter control sequences out of 15000+600000
  416908 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,13n,108p,2035b,2425s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 102i,13n,108p,2003b,2157s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1000.pk> <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsltt10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Thesis.pdf (86 pages, 1265162 bytes).
+Output written on Thesis.pdf (89 pages, 1436952 bytes).
 PDF statistics:
- 1474 PDF objects out of 1728 (max. 8388607)
- 580 named destinations out of 1000 (max. 500000)
- 539 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1524 PDF objects out of 1728 (max. 8388607)
+ 590 named destinations out of 1000 (max. 500000)
+ 572 words of extra memory for PDF output out of 10000 (max. 10000000)
 
