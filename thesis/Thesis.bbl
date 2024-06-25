@@ -8,6 +8,13 @@ Mythril github repository.
 Opyente.
 \newblock https://pypi.org/project/oyente/.
 
+\bibitem{DistilbertImage}
+Hadeer Adel, Abdelghani Dahou, Alhassan Mabrouk, Mohamed Elsayed Abd~Elaziz,
+  Mohammed Kayed, Ibrahim El-henawy, Samah Alshathri, and Abdelmgeid Ali.
+\newblock Improving crisis events detection using distilbert with hunger games
+  search algorithm.
+\newblock {\em Mathematics}, 10:447, 01 2022.
+
 \bibitem{DBLP:journals/corr/abs-2106-13422}
 Rachit Agarwal, Tanmay Thapliyal, and Sandeep~Kumar Shukla.
 \newblock Vulnerability and transaction behavior based detection of malicious
@@ -120,6 +127,10 @@ Zulfiqar~Ali Khan and Akbar Siami~Namin.
 \newblock Ethereum smart contracts: Vulnerabilities and their classifications.
 \newblock In {\em 2020 IEEE International Conference on Big Data (Big Data)},
   pages 1--10, 2020.
+
+\bibitem{BertImage}
+Sushant Kumar.
+\newblock Bert: Bidirectional encoder representations from transformers, 2024.
 
 \bibitem{RoBERTa}
 Yinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer
@@ -260,7 +271,7 @@ Petar Tsankov, Andrei Dan, Dana Drachsler-Cohen, Arthur Gervais, Florian
 
 \bibitem{Blackcoin}
 Pavel Vasin.
-\newblock Blackcoin’s proof-of-stake protocol v2.
+\newblock Blackcoin's proof-of-stake protocol v2.
 \newblock {\em URL: https://blackcoin. co/blackcoin-pos-protocol-v2-whitepaper.
   pdf}, 71, 2014.
 

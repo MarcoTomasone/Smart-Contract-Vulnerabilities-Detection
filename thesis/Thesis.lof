@@ -10,15 +10,15 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Matrice di Co-occorrenza nel Dataset di Addestramento\relax }}{34}{figure.caption.17}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Matrice di Co-occorrenza nel Dataset di Test\relax }}{34}{figure.caption.18}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Matrice di Co-occorrenza nel Dataset di Validazione\relax }}{35}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Architettura di Transformers, BERT\textsubscript {BASE} e BERT\textsubscript {LARGE}\relax }}{39}{figure.caption.23}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Rappresentazione degli input di BERT\relax }}{40}{figure.caption.24}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Architettura di DistilBERT\relax }}{43}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Architettura di Transformers, BERT\textsubscript {BASE} e BERT\textsubscript {LARGE}. Immagine di \cite {BertImage}\relax }}{39}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Rappresentazione degli input di BERT. Immagine di \cite {BERT}\relax }}{40}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Architettura di DistilBERT, Immagine di \cite {DistilbertImage}\relax }}{43}{figure.caption.28}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Confronto tra i tre metodi di fusione. (a) Fusione basata su caratteristiche. (b) Fusione basata su decisioni. (c) Fusione Ibrida.\relax }}{56}{figure.caption.31}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Confusion Matrices per le diverse classi del modello CodeBERT con aggregazione di tre chunk usando la funzione max sul bytecode\relax }}{66}{figure.caption.42}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Confusion Matrices per le diverse classi del modello CodeBERT con concatenazione di tre chunk sul bytecode\relax }}{68}{figure.caption.47}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Confusion Matrices per le diverse classi del modello CodeBERT con concatenazione di tre chunk sul codice sorgente Solidity\relax }}{71}{figure.caption.55}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Confusion Matrices per le diverse classi del modello CodeBERT con aggregazione di tre chunk usando la funzione Max sul codice sorgente Solidity\relax }}{73}{figure.caption.62}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Confusion Matrices per le diverse classi del modello Logistic Regression\relax }}{76}{figure.caption.67}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Confusion Matrices per le diverse classi del modello Gemini\relax }}{77}{figure.caption.69}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Confusion Matrices per le diverse classi del modello CodeBERT con aggregazione di tre chunk usando la funzione max sul bytecode\relax }}{67}{figure.caption.42}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Confusion Matrices per le diverse classi del modello CodeBERT con concatenazione di tre chunk sul bytecode\relax }}{69}{figure.caption.47}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Confusion Matrices per le diverse classi del modello CodeBERT con concatenazione di tre chunk sul codice sorgente Solidity\relax }}{72}{figure.caption.55}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Confusion Matrices per le diverse classi del modello CodeBERT con aggregazione di tre chunk usando la funzione Max sul codice sorgente Solidity\relax }}{74}{figure.caption.62}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Confusion Matrices per le diverse classi del modello Logistic Regression\relax }}{77}{figure.caption.67}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Confusion Matrices per le diverse classi del modello Gemini\relax }}{78}{figure.caption.69}%
 \addvspace {10\p@ }

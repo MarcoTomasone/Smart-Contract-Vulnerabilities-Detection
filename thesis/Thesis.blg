@@ -15,48 +15,46 @@ Warning--empty booktitle in SVM
 Warning--empty journal in Bitcoin
 Warning--empty booktitle in SurveySC
 Warning--empty booktitle in Securify
-Warning--empty journal in Ethereum
-Warning--empty year in Ethereum
 Warning--empty booktitle in Blockchain
-You've used 57 entries,
+You've used 59 entries,
             2118 wiz_defined-function locations,
-            822 strings with 14715 characters,
-and the built_in function-call counts, 19796 in all, are:
-= -- 1781
-> -- 1359
+            833 strings with 15108 characters,
+and the built_in function-call counts, 20454 in all, are:
+= -- 1836
+> -- 1409
 < -- 10
-+ -- 545
-- -- 482
-* -- 1401
-:= -- 3437
-add.period$ -- 169
-call.type$ -- 57
-change.case$ -- 410
++ -- 565
+- -- 500
+* -- 1446
+:= -- 3550
+add.period$ -- 174
+call.type$ -- 59
+change.case$ -- 425
 chr.to.int$ -- 0
 cite$ -- 66
-duplicate$ -- 673
-empty$ -- 1293
-format.name$ -- 482
-if$ -- 4023
+duplicate$ -- 688
+empty$ -- 1342
+format.name$ -- 500
+if$ -- 4157
 int.to.chr$ -- 0
-int.to.str$ -- 57
+int.to.str$ -- 59
 missing$ -- 45
-newline$ -- 282
-num.names$ -- 112
-pop$ -- 457
+newline$ -- 291
+num.names$ -- 116
+pop$ -- 475
 preamble$ -- 1
-purify$ -- 353
+purify$ -- 366
 quote$ -- 0
-skip$ -- 557
+skip$ -- 576
 stack$ -- 0
-substring$ -- 557
-swap$ -- 151
+substring$ -- 576
+swap$ -- 154
 text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 226
-warning$ -- 9
-while$ -- 132
-width$ -- 59
-write$ -- 600
-(There were 12 warnings)
+type$ -- 234
+warning$ -- 7
+while$ -- 137
+width$ -- 61
+write$ -- 619
+(There were 10 warnings)

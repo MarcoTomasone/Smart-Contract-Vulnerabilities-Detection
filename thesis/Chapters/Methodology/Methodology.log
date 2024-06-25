@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  23 JUN 2024 19:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  25 JUN 2024 22:48
 entering extended mode
 **c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Methodology/Methodology.tex
 (c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Methodology/Methodology.tex
@@ -935,11 +935,18 @@ Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 [11]
-<../../img/bert_base_large.jpg, id=182, 692.5875pt x 417.05812pt>
-File: ../../img/bert_base_large.jpg Graphic file (type jpg)
-<use ../../img/bert_base_large.jpg>
-Package pdftex.def Info: ../../img/bert_base_large.jpg  used on input line 266.
-(pdftex.def)             Requested size: 450.0pt x 270.98274pt.
+<../../img/bert_base_large.png, id=182, 1846.9pt x 1112.155pt>
+File: ../../img/bert_base_large.png Graphic file (type png)
+<use ../../img/bert_base_large.png>
+Package pdftex.def Info: ../../img/bert_base_large.png  used on input line 266.
+(pdftex.def)             Requested size: 450.0pt x 270.9785pt.
+
+
+LaTeX Warning: Citation `BertImage' on page 12 undefined on input line 267.
+
+
+LaTeX Warning: Citation `BertImage' on page 12 undefined on input line 267.
+
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -951,22 +958,27 @@ Missing character: There is no ¬ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
-
 LaTeX Warning: Citation `WordPiece' on page 12 undefined on input line 277.
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
-[12 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/bert_base_large.jpg>]
-<../../img/bert-input.png, id=189, 617.30624pt x 189.70876pt>
+[12 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/bert_base_large.png>]
+<../../img/bert-input.png, id=190, 2051.665pt x 622.325pt>
 File: ../../img/bert-input.png Graphic file (type png)
 <use ../../img/bert-input.png>
 Package pdftex.def Info: ../../img/bert-input.png  used on input line 284.
-(pdftex.def)             Requested size: 450.0pt x 138.29518pt.
+(pdftex.def)             Requested size: 450.0pt x 136.4941pt.
+
+
+LaTeX Warning: Citation `BERT' on page 13 undefined on input line 285.
+
+
+LaTeX Warning: Citation `BERT' on page 13 undefined on input line 285.
+
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-
 
 LaTeX Warning: Citation `Taylor1953' on page 13 undefined on input line 292.
 
@@ -979,7 +991,7 @@ Overfull \hbox (13.46524pt too wide) in paragraph at lines 293--294
 []\OT1/cmr/bx/n/12 Next Sen-ten-ce Pre-dic-tion (NSP)\OT1/cmr/m/n/12 : in mol-ti ta-sk di NLP, co-me Question-Answering
  []
 
-[13 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/bert-input.png (PNG copy)>]
+[13 <c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/img/bert-input.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1063,11 +1075,17 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-<../../img/DistilBERT-Architecture.png, id=201, 284.39583pt x 133.83333pt>
+<../../img/DistilBERT-Architecture.png, id=203, 284.39583pt x 133.83333pt>
 File: ../../img/DistilBERT-Architecture.png Graphic file (type png)
 <use ../../img/DistilBERT-Architecture.png>
 Package pdftex.def Info: ../../img/DistilBERT-Architecture.png  used on input line 335.
 (pdftex.def)             Requested size: 450.0pt x 211.77899pt.
+
+LaTeX Warning: Citation `DistilbertImage' on page 15 undefined on input line 336.
+
+
+LaTeX Warning: Citation `DistilbertImage' on page 15 undefined on input line 336.
+
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
@@ -1390,7 +1408,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
-<../../img/fusion_methods.png, id=433, 408.77719pt x 152.82094pt>
+<../../img/fusion_methods.png, id=435, 408.77719pt x 152.82094pt>
 File: ../../img/fusion_methods.png Graphic file (type png)
 <use ../../img/fusion_methods.png>
 Package pdftex.def Info: ../../img/fusion_methods.png  used on input line 634.
@@ -1493,17 +1511,17 @@ Package rerunfilecheck Info: File `Methodology.out' has not changed.
 (rerunfilecheck)             Checksum: 16B4AB7A25D803E63397677E27266D8D;3226.
  ) 
 Here is how much of TeX's memory you used:
- 24616 strings out of 478927
- 445326 string characters out of 2852536
- 1144471 words of memory out of 3000000
+ 24615 strings out of 478927
+ 445322 string characters out of 2852536
+ 1144544 words of memory out of 3000000
  41771 multiletter control sequences out of 15000+600000
  412304 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  122i,13n,125p,1618b,2061s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1000.pk> <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsltt10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Methodology\Methodology.pdf (32 pages, 830225 bytes).
+Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Methodology\Methodology.pdf (32 pages, 2285968 bytes).
 PDF statistics:
- 595 PDF objects out of 1000 (max. 8388607)
+ 597 PDF objects out of 1000 (max. 8388607)
  250 named destinations out of 1000 (max. 500000)
  220 words of extra memory for PDF output out of 10000 (max. 10000000)
 
