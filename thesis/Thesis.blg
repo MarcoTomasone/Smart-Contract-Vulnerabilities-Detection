@@ -7,8 +7,6 @@ Reallocating 'name_of_file' (item size: 1) to 17 items.
 Database file #1: Bibliography.bib
 Warning--entry type for "careSC" isn't style-file defined
 --line 693 of file Bibliography.bib
-Warning--I didn't find a database entry for "CodeBERTPaper"
-Warning--I didn't find a database entry for "Taylor1953"
 Warning--to sort, need author or key in Oyente
 Warning--to sort, need author or key in Mythril
 Warning--empty booktitle in SVM
@@ -16,45 +14,45 @@ Warning--empty journal in Bitcoin
 Warning--empty booktitle in SurveySC
 Warning--empty booktitle in Securify
 Warning--empty booktitle in Blockchain
-You've used 59 entries,
+You've used 61 entries,
             2118 wiz_defined-function locations,
-            833 strings with 15108 characters,
-and the built_in function-call counts, 20454 in all, are:
-= -- 1836
-> -- 1409
+            844 strings with 15407 characters,
+and the built_in function-call counts, 21093 in all, are:
+= -- 1897
+> -- 1444
 < -- 10
-+ -- 565
-- -- 500
-* -- 1446
-:= -- 3550
-add.period$ -- 174
-call.type$ -- 59
-change.case$ -- 425
++ -- 579
+- -- 512
+* -- 1494
+:= -- 3664
+add.period$ -- 180
+call.type$ -- 61
+change.case$ -- 437
 chr.to.int$ -- 0
-cite$ -- 66
-duplicate$ -- 688
-empty$ -- 1342
-format.name$ -- 500
-if$ -- 4157
+cite$ -- 68
+duplicate$ -- 709
+empty$ -- 1387
+format.name$ -- 512
+if$ -- 4285
 int.to.chr$ -- 0
-int.to.str$ -- 59
-missing$ -- 45
-newline$ -- 291
-num.names$ -- 116
-pop$ -- 475
+int.to.str$ -- 61
+missing$ -- 47
+newline$ -- 301
+num.names$ -- 120
+pop$ -- 483
 preamble$ -- 1
-purify$ -- 366
+purify$ -- 376
 quote$ -- 0
-skip$ -- 576
+skip$ -- 591
 stack$ -- 0
-substring$ -- 576
-swap$ -- 154
+substring$ -- 613
+swap$ -- 156
 text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 234
+type$ -- 242
 warning$ -- 7
-while$ -- 137
-width$ -- 61
-write$ -- 619
-(There were 10 warnings)
+while$ -- 142
+width$ -- 63
+write$ -- 641
+(There were 8 warnings)

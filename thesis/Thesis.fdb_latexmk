@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex Thesis"] 1719348463 "Thesis.aux" "Thesis.bbl" "Thesis" 1719348471
-  "Bibliography.bib" 1719348401 36234 d50bf1f5246357d44a0cade9bd3ba81b ""
+["bibtex Thesis"] 1719348827 "Thesis.aux" "Thesis.bbl" "Thesis" 1719348835
+  "Bibliography.bib" 1719348817 36535 7a839288d04f1da1130d86884e9f89eb ""
   "C:/Users/tomas/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291868336 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "Thesis.aux" 1719348469 27126 477a1f841f9737e4330a8915b1611235 "pdflatex"
+  "Thesis.aux" 1719348833 27179 a4f66cd7f5cf41f005aa89ad07e7469f "pdflatex"
   (generated)
   "Thesis.bbl"
   "Thesis.blg"
-["pdflatex"] 1719348463 "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Thesis.tex" "Thesis.pdf" "Thesis" 1719348471
+["pdflatex"] 1719348827 "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Thesis.tex" "Thesis.pdf" "Thesis" 1719348835
   "C:/Users/tomas/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1630670581 14064 d1d06bbff9d4f1ae03b03f90fd21ef9f ""
   "C:/Users/tomas/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tctt1000.pk" 1718287646 9492 e78b0bc3bf55946554c90eea65135d91 ""
   "C:/Users/tomas/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1630670499 9715383 c310c5e10878a246b2c909d39885981b ""
@@ -216,7 +216,7 @@
   "Chapters/Methodology//../../img/class-distribution-absolute.png" 1716736871 37300 0777e4bd77fff857978c533b37f877c8 ""
   "Chapters/Methodology//../../img/class-distribution-relative.png" 1716736889 43636 70a995a28570027f584a025c0d27a9d6 ""
   "Chapters/Methodology//../../img/fusion_methods.png" 1718905065 32965 b394bc424c3a19f7f69198545ad143c3 ""
-  "Chapters/Methodology/Methodology.tex" 1719348437 75731 4468c81fbe35ecf21ea9e6ad7812e9fa ""
+  "Chapters/Methodology/Methodology.tex" 1719348481 75731 9b5028b34d1fd4e527cfb232f1015eee ""
   "Chapters/RelatedWork//../../img/BECPrice.png" 1715112404 93199 51773457699b0d1985b74b2e9fadca6b ""
   "Chapters/RelatedWork//../../img/Blockchain.png" 1718657234 65632 33d8e81179c2744aa06138d10d350cf0 ""
   "Chapters/RelatedWork/RelatedWork.tex" 1719157706 46147 4d4b6632c38a5ae250e5d7c127e3d16d ""
@@ -227,13 +227,13 @@
   "Chapters/Results//../../img/CFMax3-BC.png" 1719084299 34342 11b116af15e1528245edc83eb854da12 ""
   "Chapters/Results//../../img/CFMax3-SC.png" 1719084085 33493 92616ad24c1609ef0f14d25eb30fd339 ""
   "Chapters/Results/Results.tex" 1719342491 41013 91f503d0860e70991b623e48b4355c70 ""
-  "Thesis.aux" 1719348469 27126 477a1f841f9737e4330a8915b1611235 "pdflatex"
-  "Thesis.bbl" 1719348463 13861 e451025459b0b805e6ae88f67421b9b4 "bibtex Thesis"
-  "Thesis.lof" 1719348469 3049 5887ef2a7f9f9e4c8d249b4a091ddde3 "pdflatex"
-  "Thesis.lot" 1719348469 4274 e6e5c57154aadd2531bbc299368e3444 "pdflatex"
-  "Thesis.out" 1719348469 9021 07039d5871a3cc2d48800a42f50b6cd2 "pdflatex"
+  "Thesis.aux" 1719348833 27179 a4f66cd7f5cf41f005aa89ad07e7469f "pdflatex"
+  "Thesis.bbl" 1719348827 14289 0bc43f221d227d98fb18d31903c0e2bf "bibtex Thesis"
+  "Thesis.lof" 1719348833 3049 65aa2467f2e455aa90938a0cf3c542f4 "pdflatex"
+  "Thesis.lot" 1719348833 4274 e6e5c57154aadd2531bbc299368e3444 "pdflatex"
+  "Thesis.out" 1719348833 9021 07039d5871a3cc2d48800a42f50b6cd2 "pdflatex"
   "Thesis.tex" 1719343501 2914 efe7073a00fb2633578a8a1dd8e907ca ""
-  "Thesis.toc" 1719348469 6708 6c737374bfa1a6729e71ee2006591e9c "pdflatex"
+  "Thesis.toc" 1719348833 6708 6c737374bfa1a6729e71ee2006591e9c "pdflatex"
   "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Thesis.tex" 1719343501 2914 efe7073a00fb2633578a8a1dd8e907ca ""
   "solidity-highlighting.tex" 1712519765 2763 2b2925b59ea41ef6732bcf2aa822b574 ""
   "use Chapters/Methodology//../../img/BCTokensPreprocessed.png" 1716139187 54197 28cdf48a5528a18177415d43d3f1c824 ""
@@ -256,10 +256,10 @@
   "use Chapters/Results//../../img/CFMax3-BC.png" 1719084299 34342 11b116af15e1528245edc83eb854da12 ""
   "use Chapters/Results//../../img/CFMax3-SC.png" 1719084085 33493 92616ad24c1609ef0f14d25eb30fd339 ""
   (generated)
-  "Thesis.toc"
+  "Thesis.out"
   "Thesis.log"
+  "Thesis.toc"
   "Thesis.lot"
   "Thesis.aux"
-  "Thesis.out"
   "Thesis.pdf"
   "Thesis.lof"

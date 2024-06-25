@@ -12,7 +12,7 @@
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Matrice di Co-occorrenza nel Dataset di Validazione\relax }}{35}{figure.caption.19}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Architettura di Transformers, BERT\textsubscript {BASE} e BERT\textsubscript {LARGE}. Immagine di \cite {BertImage}\relax }}{39}{figure.caption.23}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Rappresentazione degli input di BERT. Immagine di \cite {BERT}\relax }}{40}{figure.caption.24}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Architettura di DistilBERT, Immagine di \cite {DistilbertImage}\relax }}{43}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Architettura di DistilBERT. Immagine di \cite {DistilbertImage}\relax }}{43}{figure.caption.28}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Confronto tra i tre metodi di fusione. (a) Fusione basata su caratteristiche. (b) Fusione basata su decisioni. (c) Fusione Ibrida.\relax }}{56}{figure.caption.31}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Confusion Matrices per le diverse classi del modello CodeBERT con aggregazione di tre chunk usando la funzione max sul bytecode\relax }}{67}{figure.caption.42}%
