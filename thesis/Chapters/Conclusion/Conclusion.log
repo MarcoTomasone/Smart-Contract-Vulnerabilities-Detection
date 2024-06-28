@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  22 JUN 2024 17:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  28 JUN 2024 17:22
 entering extended mode
 **c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Conclusion/Conclusion.tex
 (c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Conclusion/Conclusion.tex
@@ -50,6 +50,10 @@ Language: italian 2020/05/21 v.1.4.04 Italian support for the babel system
 )) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count196
+) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
 ) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/base\newlfont.sty
 Package: newlfont 1998/08/17 v2.2m Standard LaTeX package
 LaTeX Info: Redefining \em on input line 57.
@@ -63,7 +67,7 @@ LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 \WF@size=\dimen141
 \c@WF@wrappedlines=\count197
 \WF@box=\box50
-\WF@everypar=\toks16
+\WF@everypar=\toks18
 Package: wrapfig 2003/01/31  v 3.6
 ) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2021/04/20 v2.17j AMS math features
@@ -74,7 +78,7 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2000/06/29 v2.01 AMS text
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks17
+\@emptytoks=\toks19
 \ex@=\dimen142
 )) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
@@ -102,21 +106,21 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \dotsspace@=\muskip16
 \c@parentequation=\count271
 \dspbrk@lvl=\count272
-\tag@help=\toks18
+\tag@help=\toks20
 \row@=\count273
 \column@=\count274
 \maxfields@=\count275
-\andhelp@=\toks19
+\andhelp@=\toks21
 \eqnshift@=\dimen145
 \alignsep@=\dimen146
 \tagshift@=\dimen147
 \tagwidth@=\dimen148
 \totwidth@=\dimen149
 \lineht@=\dimen150
-\@envbody=\toks20
+\@envbody=\toks22
 \multlinegap=\skip50
 \multlinetaggap=\skip51
-\mathdisplay@stack=\toks21
+\mathdisplay@stack=\toks23
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 ) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
@@ -130,15 +134,15 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks22
-\thm@bodyfont=\toks23
-\thm@headfont=\toks24
-\thm@notefont=\toks25
-\thm@headpunct=\toks26
+\thm@style=\toks24
+\thm@bodyfont=\toks25
+\thm@headfont=\toks26
+\thm@notefont=\toks27
+\thm@headpunct=\toks28
 \thm@preskip=\skip52
 \thm@postskip=\skip53
 \thm@headsep=\skip54
-\dth@everypar=\toks27
+\dth@everypar=\toks29
 ) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
@@ -161,11 +165,11 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
 ) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks28
+\KV@toks@=\toks30
 )
 \lst@mode=\count276
 \lst@gtempboxa=\box53
-\lst@token=\toks29
+\lst@token=\toks31
 \lst@length=\count277
 \lst@currlwidth=\dimen151
 \lst@column=\count278
@@ -185,7 +189,7 @@ File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks30
+\pgfutil@everybye=\toks32
 \pgfutil@tempdima=\dimen155
 \pgfutil@tempdimb=\dimen156
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common-lists.tex)) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
@@ -210,10 +214,10 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 ) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
 Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks31
-\pgfkeys@temptoks=\toks32
+\pgfkeys@pathtoks=\toks33
+\pgfkeys@temptoks=\toks34
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex
-\pgfkeys@tmptoks=\toks33
+\pgfkeys@tmptoks=\toks35
 ))
 \pgf@x=\dimen159
 \pgf@y=\dimen160
@@ -231,9 +235,9 @@ Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
 \c@pgf@countb=\count285
 \c@pgf@countc=\count286
 \c@pgf@countd=\count287
-\t@pgf@toka=\toks34
-\t@pgf@tokb=\toks35
-\t@pgf@tokc=\toks36
+\t@pgf@toka=\toks36
+\t@pgf@tokb=\toks37
+\t@pgf@tokc=\toks38
 \pgf@sys@id@count=\count288
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
@@ -255,9 +259,9 @@ Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
 \pgfmath@dimen=\dimen169
 \pgfmath@count=\count291
 \pgfmath@box=\box56
-\pgfmath@toks=\toks37
-\pgfmath@stack@operand=\toks38
-\pgfmath@stack@operation=\toks39
+\pgfmath@toks=\toks39
+\pgfmath@stack@operand=\toks40
+\pgfmath@stack@operation=\toks41
 ) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex))) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count292
 )) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
@@ -341,8 +345,8 @@ Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)
 \pgffor@iter=\dimen196
 \pgffor@skip=\dimen197
-\pgffor@stack=\toks40
-\pgffor@toks=\toks41
+\pgffor@stack=\toks42
+\pgffor@toks=\toks43
 )) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
@@ -380,9 +384,9 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 ) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count305
-\float@exts=\toks42
+\float@exts=\toks44
 \float@box=\box66
-\@float@everytoks=\toks43
+\@float@everytoks=\toks45
 \@floatcapt=\box67
 ) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
@@ -563,12 +567,12 @@ italian.ldf    on input line 4.
 \scratchbox=\box69
 \nofMPsegments=\count322
 \nofMParguments=\count323
-\everyMPshowfont=\toks44
+\everyMPshowfont=\toks46
 \MPscratchCnt=\count324
 \MPscratchDim=\dimen276
 \MPnumerator=\count325
 \makeMPintoPDFobject=\count326
-\everyMPtoPDFconversion=\toks45
+\everyMPtoPDFconversion=\toks47
 ) (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -598,66 +602,17 @@ LaTeX Info: Redefining \nameref on input line 4.
 
 
 Capitolo 1.
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¹ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¹ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¹ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¹ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ² in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
 [1
 
 
 {C:/Users/tomas/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
+
+LaTeX Warning: Citation `BigBird' on page 2 undefined on input line 19.
 
 
-LaTeX Warning: Citation `BigBird' on page 2 undefined on input line 16.
+LaTeX Warning: Citation `Longformer' on page 2 undefined on input line 19.
 
-
-LaTeX Warning: Citation `Longformer' on page 2 undefined on input line 16.
-
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¹ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
-[2] (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Conclusion\Conclusion.aux)
+[2] [3] (c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Conclusion\Conclusion.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -665,17 +620,17 @@ Package rerunfilecheck Info: File `Conclusion.out' has not changed.
 (rerunfilecheck)             Checksum: 0F30F21F5C0F33179D79F705105C7E4E;197.
  ) 
 Here is how much of TeX's memory you used:
- 23520 strings out of 478927
- 428764 string characters out of 2852536
- 723868 words of memory out of 3000000
- 40973 multiletter control sequences out of 15000+600000
+ 23547 strings out of 478927
+ 429270 string characters out of 2852536
+ 726364 words of memory out of 3000000
+ 40996 multiletter control sequences out of 15000+600000
  404641 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,5n,125p,1615b,341s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 122i,5n,125p,1329b,341s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Conclusion\Conclusion.pdf (2 pages, 39579 bytes).
+Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Conclusion\Conclusion.pdf (3 pages, 42566 bytes).
 PDF statistics:
- 33 PDF objects out of 1000 (max. 8388607)
- 4 named destinations out of 1000 (max. 500000)
+ 37 PDF objects out of 1000 (max. 8388607)
+ 5 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
