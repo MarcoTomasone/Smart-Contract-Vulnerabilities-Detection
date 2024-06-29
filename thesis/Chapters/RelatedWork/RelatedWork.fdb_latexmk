@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1719592852 "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/RelatedWork/RelatedWork.tex" "Chapters/RelatedWork/RelatedWork.pdf" "RelatedWork" 1719592857
+["pdflatex"] 1719656384 "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/RelatedWork/RelatedWork.tex" "Chapters/RelatedWork/RelatedWork.pdf" "RelatedWork" 1719656389
   "C:/Users/tomas/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1630670581 14064 d1d06bbff9d4f1ae03b03f90fd21ef9f ""
   "C:/Users/tomas/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1630670499 9715383 c310c5e10878a246b2c909d39885981b ""
   "C:/Users/tomas/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1718140795 96335 df8c010454e20aca8cd003881ce07551 ""
@@ -182,18 +182,18 @@
   "Chapters/RelatedWork/../../Thesis.tex" 1719588319 3041 39cb6f2962bd090d557b4eef629db6d1 ""
   "Chapters/RelatedWork/../../img/BECPrice.png" 1715112404 93199 51773457699b0d1985b74b2e9fadca6b ""
   "Chapters/RelatedWork/../../img/Blockchain.png" 1718657234 65632 33d8e81179c2744aa06138d10d350cf0 ""
-  "Chapters/RelatedWork/RelatedWork.aux" 1719592857 4110 3ef89cdc4510dbccabf011368e29319b "pdflatex"
-  "Chapters/RelatedWork/RelatedWork.out" 1719592857 1618 44f8b92468432dd24d657f03acdbb9da "pdflatex"
-  "Chapters/RelatedWork/RelatedWork.tex" 1719592852 46443 1ed634fd202fbd3fed059e08bc591cef ""
+  "Chapters/RelatedWork/RelatedWork.aux" 1719656388 4110 3ef89cdc4510dbccabf011368e29319b "pdflatex"
+  "Chapters/RelatedWork/RelatedWork.out" 1719656388 1618 44f8b92468432dd24d657f03acdbb9da "pdflatex"
+  "Chapters/RelatedWork/RelatedWork.tex" 1719656382 46443 d74b00ec1166e430679b234f25601865 ""
   "Thesis.tex" 1719588319 3041 39cb6f2962bd090d557b4eef629db6d1 ""
-  "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/RelatedWork/RelatedWork.tex" 1719592852 46443 1ed634fd202fbd3fed059e08bc591cef ""
+  "c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/RelatedWork/RelatedWork.tex" 1719656382 46443 d74b00ec1166e430679b234f25601865 ""
   "img/BECPrice.png" 1715112404 93199 51773457699b0d1985b74b2e9fadca6b ""
   "img/Blockchain.png" 1718657234 65632 33d8e81179c2744aa06138d10d350cf0 ""
   "solidity-highlighting.tex" 1712519765 2763 2b2925b59ea41ef6732bcf2aa822b574 ""
   "use ../../img/BECPrice.png" 1715112404 93199 51773457699b0d1985b74b2e9fadca6b ""
   "use ../../img/Blockchain.png" 1718657234 65632 33d8e81179c2744aa06138d10d350cf0 ""
   (generated)
+  "Chapters/RelatedWork/RelatedWork.pdf"
+  "Chapters/RelatedWork/RelatedWork.aux"
   "Chapters/RelatedWork/RelatedWork.log"
   "Chapters/RelatedWork/RelatedWork.out"
-  "Chapters/RelatedWork/RelatedWork.aux"
-  "Chapters/RelatedWork/RelatedWork.pdf"

@@ -60,11 +60,11 @@
 \contentsline {subsection}{\numberline {4.2.5}CodeBERT con Concatenazione}{68}{subsection.4.2.5}%
 \contentsline {subsubsection}{CodeBert Concatenazione di due chunk}{68}{section*.43}%
 \contentsline {subsubsection}{CodeBert Concatenazione di tre chunk}{68}{section*.45}%
-\contentsline {subsection}{\numberline {4.2.6}Analisi}{69}{subsection.4.2.6}%
-\contentsline {section}{\numberline {4.3}Risultati sul Codice Sorgente Solidity}{70}{section.4.3}%
+\contentsline {subsection}{\numberline {4.2.6}Analisi}{68}{subsection.4.2.6}%
+\contentsline {section}{\numberline {4.3}Risultati sul Codice Sorgente Solidity}{69}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}BERT}{70}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}CodeBert}{70}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}DistilBert}{71}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.3}DistilBert}{70}{subsection.4.3.3}%
 \contentsline {subsection}{\numberline {4.3.4}CodeBERT con concatenazione}{71}{subsection.4.3.4}%
 \contentsline {subsubsection}{CodeBert Concatenazione di due chunk}{71}{section*.51}%
 \contentsline {subsubsection}{CodeBert Concatenazione di tre chunk}{71}{section*.53}%

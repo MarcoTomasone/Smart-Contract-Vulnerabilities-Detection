@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  28 JUN 2024 20:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  29 JUN 2024 19:57
 entering extended mode
 **c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Thesis.tex
 (c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Thesis.tex
@@ -618,7 +618,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--73
 {C:/Users/tomas/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.91     \end{dedication}
+l.90     \end{dedication}
                           [1] (Thesis.toc [2
 
 
@@ -821,11 +821,11 @@ Overfull \hbox (4.08228pt too wide) in paragraph at lines 423--424
  []
 
 [47] [48] [49] [50] [51] [52] [53] [54]
-<Chapters/Methodology//../../img/fusion_methods.png, id=1123, 408.77719pt x 152.82094pt>
+<Chapters/Methodology//../../img/fusion_methods.png, id=1123, 980.16188pt x 397.485pt>
 File: Chapters/Methodology//../../img/fusion_methods.png Graphic file (type png)
 <use Chapters/Methodology//../../img/fusion_methods.png>
 Package pdftex.def Info: Chapters/Methodology//../../img/fusion_methods.png  used on input line 634.
-(pdftex.def)             Requested size: 450.0pt x 168.2411pt.
+(pdftex.def)             Requested size: 450.0pt x 182.48747pt.
  [55]
 Overfull \hbox (12.48825pt too wide) in paragraph at lines 641--642
 []\OT1/cmr/m/n/12 Questo ap-proc-cio e sta-to te-sta-to con dif-fe-ren-ti mo-del-li uti-liz-za-ti co-me meta-classificatori,
@@ -856,6 +856,9 @@ Package pdftex.def Info: Chapters/Results//../../img/CFConcat3-BC.png  used on i
 Overfull \hbox (22.50137pt too wide) in paragraph at lines 291--292
 [][] 
  []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [68] [69 <./Chapters/Results//../../img/CFConcat3-BC.png>] [70] [71]
 <Chapters/Results//../../img/CFConcat3-SC.png, id=1225, 1600.0578pt x 382.3083pt>
@@ -974,13 +977,13 @@ Package rerunfilecheck Info: File `Thesis.out' has not changed.
 Here is how much of TeX's memory you used:
  25500 strings out of 478927
  461516 string characters out of 2852536
- 1134167 words of memory out of 3000000
+ 1134165 words of memory out of 3000000
  42253 multiletter control sequences out of 15000+600000
  416908 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,13n,108p,2017b,2162s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1000.pk> <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsltt10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Thesis.pdf (90 pages, 2902937 bytes).
+Output written on Thesis.pdf (90 pages, 2913756 bytes).
 PDF statistics:
  1546 PDF objects out of 1728 (max. 8388607)
  594 named destinations out of 1000 (max. 500000)
