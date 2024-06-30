@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  29 JUN 2024 15:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.3)  30 JUN 2024 17:59
 entering extended mode
 **c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Methodology/Methodology.tex
 (c:/Users/tomas/Desktop/Smart-Contract-Vulnerabilities-Detection/thesis/Chapters/Methodology/Methodology.tex
@@ -822,12 +822,13 @@ LaTeX Warning: Citation `CodeBERTPaper' on page 27 undefined on input line 613.
 
 LaTeX Warning: Citation `Deng' on page 28 undefined on input line 623.
 
-<../../img/fusion_methods.png, id=435, 408.77719pt x 152.82094pt>
+[28]
+<../../img/fusion_methods.png, id=440, 980.16188pt x 397.485pt>
 File: ../../img/fusion_methods.png Graphic file (type png)
 <use ../../img/fusion_methods.png>
 Package pdftex.def Info: ../../img/fusion_methods.png  used on input line 634.
-(pdftex.def)             Requested size: 450.0pt x 168.2411pt.
-[28]
+(pdftex.def)             Requested size: 450.0pt x 182.48747pt.
+
 Overfull \hbox (12.48825pt too wide) in paragraph at lines 641--642
 []\OT1/cmr/m/n/12 Questo ap-proc-cio e sta-to te-sta-to con dif-fe-ren-ti mo-del-li uti-liz-za-ti co-me meta-classificatori,
  []
@@ -849,13 +850,13 @@ Package rerunfilecheck Info: File `Methodology.out' has not changed.
 Here is how much of TeX's memory you used:
  24641 strings out of 478927
  445823 string characters out of 2852536
- 1126031 words of memory out of 3000000
+ 1127031 words of memory out of 3000000
  41794 multiletter control sequences out of 15000+600000
  412304 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  122i,13n,125p,1622b,2061s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1000.pk> <C:\Users\tomas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsltt10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Methodology\Methodology.pdf (32 pages, 2287428 bytes).
+Output written on c:\Users\tomas\Desktop\Smart-Contract-Vulnerabilities-Detection\thesis\Chapters\Methodology\Methodology.pdf (32 pages, 2298848 bytes).
 PDF statistics:
  597 PDF objects out of 1000 (max. 8388607)
  250 named destinations out of 1000 (max. 500000)

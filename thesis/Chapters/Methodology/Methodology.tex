@@ -190,7 +190,7 @@ In questa sezione, vengono presentate le matrici di co-occorrenza per ogni split
 Analizzando le matrici di co-occorrenza, notiamo che:
 
 \begin{itemize}
-    \item La classe safe, che rappresenta i contratti privi di vulnerabilit\`a, correttamente non apparte contemporaneamente a nessuna delle altre classi. 
+    \item La classe safe, che rappresenta i contratti privi di vulnerabilit\`a, correttamente non appare contemporaneamente a nessuna delle altre classi. 
     \item Le classi `unchecked-calls' co-occorrono frequentemente con `reentrancy', `other', e `access-control'. Questo suggerisce che i contratti con chiamate non verificate spesso presentano anche altri tipi di vulnerabilit\`a.
     \item Le classi `arithmetic' e `reentrancy' mostrano una co-occorrenza significativa, suggerendo che le vulnerabilit\`a aritmetiche possono spesso essere associate a problemi di rientro.
 \end{itemize}
@@ -214,7 +214,7 @@ Si \`e analizzata a questo punto, la percentuale di volte, per ogni classe, per 
     \caption{Percentuale delle classi in cui la classe stessa non \`e l'unica vulnerabilit\`a presente.}
     \label{tab:multi_vuln}
 \end{table}
-Interessante \`e il risultato relativo alla classe Reentrancy, che pur non essendo la classe pi\`u presente all'interno del dataset, \`e quella che pi\`u frequentemente appare in concomitanza con altre classi di vulnerabilit\`a, allo stesso modo della classe Access-Control, che pur essendo la classe minoritaria, apparte in concomitanza con altre classi di vulnerabilit\`a in una percentuale molto alta.
+Interessante \`e il risultato relativo alla classe Reentrancy, che pur non essendo la classe pi\`u presente all'interno del dataset, \`e quella che pi\`u frequentemente appare in concomitanza con altre classi di vulnerabilit\`a, allo stesso modo della classe Access-Control, che pur essendo la classe minoritaria, appare in concomitanza con altre classi di vulnerabilit\`a in una percentuale molto alta.
 Questi risultati evidenziano l'importanza di considerare la co-occorrenza delle classi quando si analizzano le vulnerabilit\`a negli smart contracts, poich\`e molte vulnerabilit\`a non si verificano in isolamento ma tendono a manifestarsi insieme ad altre.
 
 
@@ -536,7 +536,7 @@ Anche il modello CodeBERT \`e stato costruito in modo simile ai modelli BERT e D
             output = self.fc(pooled_output)
             return output
 \end{python}
-Anche in questo caso, il modello \`e stato addestrato utilizzando l'ottimizzatore Adam con un learning rate di $1 \times 10^{-5}$ e una dimensione del batch di 8 e la funzione di loss BCEWithLogitsLoss. Come per i modelli BERT e DistilBERT, il layer di Dropout \`e stato aggiunto per evitare l'overfitting del modello.
+Anche in questo caso, il modello \`e stato addestrato utilizzando l'ottimizzatore Adam con un learning rate di $1 \times 10^{-5}$ e una dimensione del batch di 8 e la funzione di loss BCEWithLogitsLoss. Come per i modelli BERT e DistilBERT, il layer di Dropout \`e stato aggiunto per evitare l'overfitting del modello. Questo modello, come descritto successivamente ha ottenuto i migliori risultati sia sul bytecode che sul codice sorgente, per questo motivo \`e stato selezionato come modello di riferimento per gli esperimenti successivi.
 
 \subsection{CodeBERT con aggregazione}
 Una delle principali limitazioni riscontrate nel training dei precedenti modelli, \`e che i modelli della famiglia BERT hanno una capacit\`a massima in input di 512 token. I nostri smart contract, come visto nella sezione \ref{sec:eda} hanno una lunghezza media di circa 1500 token, dare quindi in input al modello solo 512 token significa far si che il modello analizzi, in molti casi, solo una piccola porzione iniziale dei nostri contratti. Per ovviare a questo problema, \`e stato deciso di dividere i nostri contratti in sotto-contratti di lunghezza massima 512 token e poi aggregare gli embedding prodotti da CodeBERT per ogni sotto-contratto tramite delle funzioni di aggregazione come media e massimo. Questo approccio permette di far si che il modello possa analizzare l'intero contratto, anche se in sotto-parti. Mostriamo ora il codice per la costruzione del modello: 
@@ -610,7 +610,7 @@ Un altro approccio complementare alla risoluzione del problema legato al massimo
 \end{python}
 In questo caso, si divide la stringa in input in chunk da 512 token e si ottengono gli embedding prodotti da codeBERT per ognuno di questi chunk. Questi embedding vengono poi concatenati e passati ad un layer di classificazione lineare. Anche in questo caso l'approccio \`e stato testato sia con due che con tre blocchi di codice, quindi si classificavano rispettivamente 1024 e 1536 token. 
 
-La scelta di utilizzare aggregazioni e concatenazioni per ovviare alla limitazione dei token in input per il modello BERT \`e stata sostenuta dai risultati ottenuti da \cite{CodeBERTPaper}, che hanno mostrato come la classificazione delle varie sottoparti e la successiva aggregazione delle predizioni porti a risultati peggiori. Questo \`e probabilmente dovuto al fatto che suddividendo il contratto in sottoparti mantenendo la label di vulnerabilit\`a pu\`o portare a confusione nel modello, in quanto si andrebbero a indicare parti come soggette ad una certa vulnerabilit\`a in quanto non lo sono. Per questo motivo, sono stati evitati approcci come Sliding Window sul testo (che sarebbero risultate anche pi\`u computazionalmente onerose) e si \`e preferito utilizzare aggregazioni e concatenazioni, classificando sempre l'intero contratto e non le sue singole parti. 
+La scelta di utilizzare aggregazioni e concatenazioni per ovviare alla limitazione dei token in input per il modello BERT \`e stata sostenuta dai risultati ottenuti da \cite{CodeBERTPaper}, che hanno mostrato come la classificazione delle varie sottoparti e la successiva aggregazione delle predizioni porti a risultati peggiori. Questo \`e probabilmente dovuto al fatto che suddividendo il contratto in sottoparti mantenendo la label di vulnerabilit\`a pu\`o portare a confusione nel modello, in quanto si andrebbero a indicare parti come soggette ad una certa vulnerabilit\`a in quanto non lo sono. Per questo motivo, sono stati evitati approcci come Sliding Window sul testo (che sarebbero risultate anche pi\`u computazionalmente onerose) e si \`e preferito utilizzare aggregazioni e concatenazioni degli embeddings, classificando sempre l'intero contratto e non le sue singole parti. 
 
 \subsection{Train e Validation}
 Tutti i modelli sono stati addestrati (o fine-tunati) per 20 epoche, con un learning rate di $1 \times 10^{-5}$. Per evitare l'overfitting, \`e stato utilizzato un layer di Dropout con un rate del 30\%. La funzione di loss impiegata \`e stata la BCEWithLogitsLoss, scelta per la classificazione multilabel. Come ottimizzatore \`e stato utilizzato Adam. Gli addestramenti sono stati eseguiti su una GPU NVIDIA 2080Ti.
