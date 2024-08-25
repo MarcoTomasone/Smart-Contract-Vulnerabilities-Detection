@@ -1,11 +1,12 @@
 import torch
-from transformers import AutoModel
-class CodeBERTAggregatedClass(torch.nn.Module):
+from transformers import BertModel
+# BERT Model Class
+class BERTAggregatedClass(torch.nn.Module):
     def __init__(self, num_classes, aggregation='mean', dropout=0.3):
-        super(CodeBERTAggregatedClass, self).__init__()
-        self.codebert = AutoModel.from_pretrained('microsoft/codebert-base', cache_dir="./cache")
+        super(BERTAggregatedClass, self).__init__()
+        self.bert = BertModel.from_pretrained('bert-base-uncased', cache_dir="./cache")
         self.dropout = torch.nn.Dropout(dropout)
-        self.fc = torch.nn.Linear(self.codebert.config.hidden_size, num_classes)
+        self.fc = torch.nn.Linear(self.bert.config.hidden_size, num_classes)
         self.aggregation = aggregation
 
     def forward(self, input_ids, attention_masks):
@@ -16,9 +17,9 @@ class CodeBERTAggregatedClass(torch.nn.Module):
         input_ids = input_ids[:, :512*num_chunks].view(batch_size * num_chunks, 512)
         attention_masks = attention_masks[:, :512*num_chunks].view(batch_size * num_chunks, 512)
 
-        outputs = self.codebert(input_ids=input_ids, attention_mask=attention_masks)
+        # Ottieni l'output del modello BERT
+        _, last_hidden_states = self.bert(input_ids=input_ids, attention_mask=attention_masks, return_dict=False)
 
-        last_hidden_states = outputs.last_hidden_state
         cls_tokens = last_hidden_states[:, 0, :]
 
         cls_tokens = cls_tokens.view(batch_size, num_chunks, -1)
